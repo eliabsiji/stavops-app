@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\AcademicAperFormController;
 use Spatie\Permission\Contracts\Role;
 
 /*
@@ -36,5 +37,5 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/updateuserrole',[RoleController::class, 'updateuserrole'])->name('roles.updateuserrole');
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
    
-    
+    Route::resource('academicaperform', AcademicAperFormController::class);
 });
