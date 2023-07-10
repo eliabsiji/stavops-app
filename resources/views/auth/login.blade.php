@@ -195,11 +195,9 @@
              
                 <!--begin::Links-->
                 <div class="d-flex fw-semibold text-primary fs-base gap-5">
-                    <a href="{{ asset('html/assets/pages/team.html')}}" target="_blank">Terms</a>
+                    <a href="#" target="_blank">About Qudroid systems</a>
 
-                    <a href="{{ asset('html/assets/pages/pricing/column.html')}}" target="_blank">Plans</a>
-                    
-                    <a href="{{ asset('html/assets/pages/contact.html')}}" target="_blank">Contact Us</a>
+                   
                 </div>
                 <!--end::Links-->
             </div>
