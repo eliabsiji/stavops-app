@@ -28,6 +28,7 @@ class PermissionTableSeeder extends Seeder
            'permission-create',
            'permission-show',
            'permission-delete',
+           'dashboard-list',
            
         ];
         
@@ -43,6 +44,8 @@ class PermissionTableSeeder extends Seeder
                 Permission::create(['name' => $permission,'title'=>"Role Management"]);
                 if($word == "permission")
                 Permission::create(['name' => $permission,'title'=>"Permission Management"]);
+                if($word == "dashboard")
+                Permission::create(['name' => $permission,'title'=>"Dashboard Pages"]);
             }
             //  Permission::create(['name' => $permission]);
         }

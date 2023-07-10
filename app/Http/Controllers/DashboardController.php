@@ -6,23 +6,35 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+
+    function __construct()
+    {
+         $this->middleware('permission:dashboard-list', ['only' => ['index','store']]);
+        //  $this->middleware('permission:user-create', ['only' => ['create','store']]);
+        //  $this->middleware('permission:user-edit', ['only' => ['edit','update']]);
+        //  $this->middleware('permission:user-delete', ['only' => ['destroy']]);
+    }
+
     /**
      * Display a listing of the resource.
      * 
      * 
      */
-
-     public function __construct()
-     {
-         $this->middleware('auth');
-     }
-
+  
      
 
     public function index()
     {
-        return view('dashboard');
+        if(auth()->user()->can('dashboard-list')){
+
+          return view('dashboard');
+
+        }
+        
+          return view('userdashboard');
     }
+        
+      
 
     /**
      * Show the form for creating a new resource.
