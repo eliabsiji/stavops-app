@@ -1210,13 +1210,13 @@ Create        </a>
 <!--begin::Input group-->
 <div class="row mb-6">
     <!--begin::Label-->
-    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Research in progress: (brief description of research project being undertaken, if any) </label>
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Research in progress: </label>
     <!--end::Label-->
 
      <!--begin::Col-->
      <div class="col-lg-8 fv-row">
         <textarea type="" name="research" class="form-control form-control-lg form-control-solid" 
-        placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required></textarea>
+        placeholder="brief description of research project being undertaken, if any" required></textarea>
     </div>
     <!--end::Col-->
     </div>
