@@ -189,7 +189,7 @@ Create        </a>
 <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
 <!--begin::Card title-->
 <div class="card-title m-0">
-<h3 class="fw-bold m-0">PART A (To be the staff)</h3>
+<h3 class="fw-bold m-0">PART A (To be completed by staff)</h3>
 </div>
 <!--end::Card title-->
 </div>
@@ -773,62 +773,424 @@ Create        </a>
 
 
 
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Present Salary/Step</label>
+    <!--end::Label-->
 
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label fw-semibold fs-6">
-            <span class="required">Appointment Confirmed ?</span>
+    <!--begin::Col-->
+    <div class="col-lg-8">
+        <!--begin::Row-->
+        <div class="row">
+            <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+                Salary:<input type="date" name="salary" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                 placeholder="Presnet salary" required />
+            </div>
+            <!--end::Col-->
 
-            
-<span class="ms-1"  data-bs-toggle="tooltip" title="Country of origination" >
-<i class="ki-duotone ki-information-5 text-gray-500 fs-6"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i></span>                    </label>
-        <!--end::Label-->
+            <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+               step/Level: <input type="text" name="step" class="form-control form-control-lg form-control-solid" 
+               placeholder="Step"  required />
+            </div>
+            <!--end::Col-->
+        </div>
+        <!--end::Row-->
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Input group-->
 
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <select name="confirmapp" aria-label="Select a Country" data-control="select2" data-placeholder="Select your answer" 
-            class="form-select form-select-solid form-select-lg fw-semibold" required>
+
+    
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Courses attended during the period of Report</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8 fv-row">
+        <input type="text" name="courses" class="form-control form-control-lg form-control-solid" 
+        placeholder="Courses attended during the period of Report" required />
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Input group-->
+
+<!--begin::Notice-->
+<div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+            <!--begin::Content-->
+    <div class=" fw-semibold">
+    <div class="fs-6 text-gray-700 ">ACADEMIC  QUALIFICATIONS </div>
+    </div>
+    <!--end::Content-->
+    
+    </div>
+    <!--end::Wrapper-->  
+    </div>
+    <!--end::Notice-->
+
+
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Qualifications 1</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8">
+        <!--begin::Row-->
+        <div class="row">
+            <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+          University/HND  <select name="unihnd1" aria-label="Select a Country" data-control="select2" data-placeholder="Select your answer" 
+            class="form-control form-control-lg form-control-solid" required>
                 <option value="">Select your answer...</option>                 
-                <option  value="Yes">Yes</option>
-                <option  value="No">No</option>
-                <option  value="Not Yet">Not Yet</option>
+                <option  value="University Degree">University Degree</option>
+                <option  value="HND">HND</option>
             </select>
         </div>
         <!--end::Col-->
+            <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+              Class: <input type="text" name="unihndclass1" class="form-control form-control-lg form-control-solid" 
+               placeholder="class if any"  required />
+            </div>
+            <!--end::Col-->
+             <!--begin::Col-->
+             <div class="col-lg-6 fv-row">
+                Institution: <input type="text" name="institution1" class="form-control form-control-lg form-control-solid" 
+                placeholder="institution"  required />
+             </div>
+             <!--end::Col-->
+              <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+                Date Of Award: <input type="date" name="dateofaward1" class="form-control form-control-lg form-control-solid" 
+                placeholder="Date of Award"  required />
+             </div>
+             <!--end::Col-->
+        </div>
+        <!--end::Row-->
     </div>
-    <!--end::Input group-->
+    <!--end::Col-->
 
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label fw-semibold fs-6">
-            <span class="required">Appointment Confirmed ?</span>
+</div>
+<!--end::Input group-->
 
-            
-<span class="ms-1"  data-bs-toggle="tooltip" title="Country of origination" >
-<i class="ki-duotone ki-information-5 text-gray-500 fs-6"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i></span>                    </label>
-        <!--end::Label-->
 
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <select name="confirmapp" aria-label="Select a Country" data-control="select2" data-placeholder="Select your answer" 
-            class="form-select form-select-solid form-select-lg fw-semibold" required>
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Qualifications 2</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8">
+        <!--begin::Row-->
+        <div class="row">
+            <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+          University/HND  <select name="unihnd2" aria-label="Select a Country" data-control="select2" data-placeholder="Select your answer" 
+            class="form-control form-control-lg form-control-solid" required>
                 <option value="">Select your answer...</option>                 
-                <option  value="Yes">Yes</option>
-                <option  value="No">No</option>
-                <option  value="Not Yet">Not Yet</option>
+                <option  value="University Degree">University Degree</option>
+                <option  value="HND">HND</option>
             </select>
         </div>
         <!--end::Col-->
+            <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+              Class: <input type="text" name="unihndclass2" class="form-control form-control-lg form-control-solid" 
+               placeholder="class if any"  required />
+            </div>
+            <!--end::Col-->
+             <!--begin::Col-->
+             <div class="col-lg-6 fv-row">
+                Institution: <input type="text" name="institution2" class="form-control form-control-lg form-control-solid" 
+                placeholder="institution"  required />
+             </div>
+             <!--end::Col-->
+              <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+                Date Of Award: <input type="date" name="dateofaward2" class="form-control form-control-lg form-control-solid" 
+                placeholder="Date of Award"  required />
+             </div>
+             <!--end::Col-->
+        </div>
+        <!--end::Row-->
     </div>
-    <!--end::Input group-->
+    <!--end::Col-->
+
+</div>
+<!--end::Input group-->
 
 
-   
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Qualifications 3</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8">
+        <!--begin::Row-->
+        <div class="row">
+            <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+          University/HND  <select name="unihnd3" aria-label="Select a Country" data-control="select2" data-placeholder="Select your answer" 
+            class="form-control form-control-lg form-control-solid" required>
+                <option value="">Select your answer...</option>                 
+                <option  value="University Degree">University Degree</option>
+                <option  value="HND">HND</option>
+            </select>
+        </div>
+        <!--end::Col-->
+            <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+              Class: <input type="text" name="unihndclass3" class="form-control form-control-lg form-control-solid" 
+               placeholder="class if any"  required />
+            </div>
+            <!--end::Col-->
+             <!--begin::Col-->
+             <div class="col-lg-6 fv-row">
+                Institution: <input type="text" name="institution3" class="form-control form-control-lg form-control-solid" 
+                placeholder="institution"  required />
+             </div>
+             <!--end::Col-->
+              <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+                Date Of Award: <input type="date" name="dateofaward3" class="form-control form-control-lg form-control-solid" 
+                placeholder="Date of Award"  required />
+             </div>
+             <!--end::Col-->
+        </div>
+        <!--end::Row-->
+    </div>
+    <!--end::Col-->
+
+</div>
+<!--end::Input group-->
+
+<!--begin::Notice-->
+<div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-700 ">PROFESSIONAL QUALIFICATIONS </div>
+            </div>
+            <!--end::Content-->
+            
+            </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+
+
+
+
+
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Professional Qualifications 1</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8">
+        <!--begin::Row-->
+        <div class="row">
+           
+            <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+             Qualification 1: <input type="text" name="pqualification1" class="form-control form-control-lg form-control-solid" 
+               placeholder="Professional qualification"  required />
+            </div>
+            <!--end::Col-->
+             <!--begin::Col-->
+             <div class="col-lg-6 fv-row">
+                AwardingBody/society: <input type="text" name="abody1" class="form-control form-control-lg form-control-solid" 
+                placeholder="awarding Body"  required />
+             </div>
+             <!--end::Col-->
+              <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+                Date Of Award: <input type="date" name="pdateofaward1" class="form-control form-control-lg form-control-solid" 
+                placeholder="Date of Award"  required />
+             </div>
+             <!--end::Col-->
+        </div>
+        <!--end::Row-->
+    </div>
+    <!--end::Col-->
+
+</div>
+<!--end::Input group-->
+
+
+
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Professional Qualifications 2</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8">
+        <!--begin::Row-->
+        <div class="row">
+           
+            <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+             Qualification 2: <input type="text" name="pqualification2" class="form-control form-control-lg form-control-solid" 
+               placeholder="Professional qualification"  required />
+            </div>
+            <!--end::Col-->
+             <!--begin::Col-->
+             <div class="col-lg-6 fv-row">
+                AwardingBody/society: <input type="text" name="abody2" class="form-control form-control-lg form-control-solid" 
+                placeholder="awarding Body"  required />
+             </div>
+             <!--end::Col-->
+              <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+                Date Of Award: <input type="date" name="pdateofaward2" class="form-control form-control-lg form-control-solid" 
+                placeholder="Date of Award"  required />
+             </div>
+             <!--end::Col-->
+        </div>
+        <!--end::Row-->
+    </div>
+    <!--end::Col-->
+
+</div>
+<!--end::Input group-->
+
+
+
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Professional Qualifications 1</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8">
+        <!--begin::Row-->
+        <div class="row">
+           
+            <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+             Qualification 3: <input type="text" name="pqualification3" class="form-control form-control-lg form-control-solid" 
+               placeholder="Professional qualification"  required />
+            </div>
+            <!--end::Col-->
+             <!--begin::Col-->
+             <div class="col-lg-6 fv-row">
+                AwardingBody/society: <input type="text" name="abody3" class="form-control form-control-lg form-control-solid" 
+                placeholder="awarding Body"  required />
+             </div>
+             <!--end::Col-->
+              <!--begin::Col-->
+            <div class="col-lg-6 fv-row">
+                Date Of Award: <input type="date" name="pdateofaward3" class="form-control form-control-lg form-control-solid" 
+                placeholder="Date of Award"  required />
+             </div>
+             <!--end::Col-->
+        </div>
+        <!--end::Row-->
+    </div>
+    <!--end::Col-->
+
+</div>
+<!--end::Input group-->
+
+
+
+<!--begin::Notice-->
+<div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-700 ">EXPERIENCE</div>
+            </div>
+            <!--end::Content-->
+            
+            </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Teaching Experience: (please indicate Institution, your designation, your area of Specialization, Subject taught and dates</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8 fv-row">
+        <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
+        placeholder="Teaching Experience" required />
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Input group-->
+
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Courses taught within the Current Academic Session</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8 fv-row">
+        <input type="text" name="coursestought" class="form-control form-control-lg form-control-solid" 
+        placeholder="Teaching Experience" required />
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Input group-->
+
+
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">supervisions</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8 fv-row">
+        <input type="text" name="supervision" class="form-control form-control-lg form-control-solid" 
+        placeholder="supervision" required />
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Input group-->
+
+
+
 
 </div>
 <!--end::Card body-->
+
+
 
 <!--begin::Actions-->
 <div class="card-footer d-flex justify-content-end py-6 px-9">
@@ -1016,9 +1378,8 @@ Create        </a>
 <div class="d-flex flex-stack flex-grow-1 ">
         <!--begin::Content-->
 <div class=" fw-semibold">
-    
-                        <div class="fs-6 text-gray-700 ">Two-factor authentication adds an extra layer of security to your account. To log in, in you'll need to provide a 4 digit amazing code. <a href="#" class="fw-bold">Learn More</a></div>
-                </div>
+<div class="fs-6 text-gray-700 ">Two-factor authentication adds an extra layer of security to your account. To log in, in you'll need to provide a 4 digit amazing code. <a href="#" class="fw-bold">Learn More</a></div>
+</div>
 <!--end::Content-->
 
 </div>
