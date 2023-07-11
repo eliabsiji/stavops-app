@@ -1141,13 +1141,15 @@ Create        </a>
 <!--begin::Input group-->
 <div class="row mb-6">
     <!--begin::Label-->
-    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Teaching Experience: (please indicate Institution, your designation, your area of Specialization, Subject taught and dates</label>
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Teaching Experience: (please indicate Institution, your designation, your area of Specialization, Subject taught and dates)</label>
     <!--end::Label-->
 
-    <!--begin::Col-->
-    <div class="col-lg-8 fv-row">
-        <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-        placeholder="Teaching Experience" required />
+     <!--begin::Col-->
+     <div class="col-lg-8 fv-row">
+        <textarea type="" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
+        placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required></textarea>
+    </div>
+    <!--end::Col-->
     </div>
     <!--end::Col-->
 </div>
@@ -1161,8 +1163,8 @@ Create        </a>
 
     <!--begin::Col-->
     <div class="col-lg-8 fv-row">
-        <input type="text" name="coursestought" class="form-control form-control-lg form-control-solid" 
-        placeholder="Teaching Experience" required />
+        <textarea type="" name="coursestaught" class="form-control form-control-lg form-control-solid" 
+        placeholder="Courses taught within the Current Academic Session" required></textarea>
     </div>
     <!--end::Col-->
 </div>
@@ -1177,12 +1179,83 @@ Create        </a>
 
     <!--begin::Col-->
     <div class="col-lg-8 fv-row">
-        <input type="text" name="supervision" class="form-control form-control-lg form-control-solid" 
-        placeholder="supervision" required />
+        <textarea type="" name="supervision" class="form-control form-control-lg form-control-solid" 
+        placeholder="supervision" required></textarea>
     </div>
     <!--end::Col-->
 </div>
 <!--end::Input group-->
+
+
+
+<!--begin::Notice-->
+<div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-700 ">RESEARCH</div>
+            </div>
+            <!--end::Content-->
+            
+            </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Research in progress: (brief description of research project being undertaken, if any) </label>
+    <!--end::Label-->
+
+     <!--begin::Col-->
+     <div class="col-lg-8 fv-row">
+        <textarea type="" name="research" class="form-control form-control-lg form-control-solid" 
+        placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required></textarea>
+    </div>
+    <!--end::Col-->
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Input group-->
+
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Courses taught within the Current Academic Session</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8 fv-row">
+        <textarea type="" name="coursestaught" class="form-control form-control-lg form-control-solid" 
+        placeholder="Courses taught within the Current Academic Session" required></textarea>
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Input group-->
+
+
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">supervisions</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8 fv-row">
+        <textarea type="" name="supervision" class="form-control form-control-lg form-control-solid" 
+        placeholder="supervision" required></textarea>
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Input group-->
+
+
 
 
 
