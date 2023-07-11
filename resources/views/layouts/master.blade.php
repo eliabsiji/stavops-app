@@ -194,6 +194,9 @@
         @if (Route::is('permissions.*'))
              @include('layouts.pages-assets.js.permissions-list-js')
         @endif
+        @if (Route::is('academicaperform.*'))
+        @include('layouts.pages-assets.js.permissions-list-js')
+   @endif
 
         
             </body>
