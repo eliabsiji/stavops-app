@@ -851,7 +851,7 @@ Create        </a>
         <div class="row">
             <!--begin::Col-->
             <div class="col-lg-6 fv-row">
-          University/HND  <select name="unihnd1" aria-label="Select a Country" data-control="select2" data-placeholder="Select your answer" 
+          University Degree/HND  <select name="unihnd1" aria-label="Select a Country" data-control="select2" data-placeholder="Select your answer" 
             class="form-control form-control-lg form-control-solid" required>
                 <option value="">Select your answer...</option>                 
                 <option  value="University Degree">University Degree</option>
@@ -898,7 +898,7 @@ Create        </a>
         <div class="row">
             <!--begin::Col-->
             <div class="col-lg-6 fv-row">
-          University/HND  <select name="unihnd2" aria-label="Select a Country" data-control="select2" data-placeholder="Select your answer" 
+          University Degree/HND  <select name="unihnd2" aria-label="Select a Country" data-control="select2" data-placeholder="Select your answer" 
             class="form-control form-control-lg form-control-solid" required>
                 <option value="">Select your answer...</option>                 
                 <option  value="University Degree">University Degree</option>
@@ -945,7 +945,7 @@ Create        </a>
         <div class="row">
             <!--begin::Col-->
             <div class="col-lg-6 fv-row">
-          University/HND  <select name="unihnd3" aria-label="Select a Country" data-control="select2" data-placeholder="Select your answer" 
+          University Degree/HND  <select name="unihnd3" aria-label="Select a Country" data-control="select2" data-placeholder="Select your answer" 
             class="form-control form-control-lg form-control-solid" required>
                 <option value="">Select your answer...</option>                 
                 <option  value="University Degree">University Degree</option>
@@ -1132,7 +1132,7 @@ Create        </a>
             </div>
             <!--end::Content-->
             
-            </div>
+     </div>
             <!--end::Wrapper-->  
 </div>
     <!--end::Notice-->
@@ -1146,14 +1146,14 @@ Create        </a>
 
      <!--begin::Col-->
      <div class="col-lg-8 fv-row">
-        <textarea type="" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
+        <textarea name="teachingexperience" class="form-control form-control-lg form-control-solid" 
         placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required></textarea>
     </div>
     <!--end::Col-->
-    </div>
-    <!--end::Col-->
+   
 </div>
 <!--end::Input group-->
+
 
 <!--begin::Input group-->
 <div class="row mb-6">
@@ -1161,107 +1161,30 @@ Create        </a>
     <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Courses taught within the Current Academic Session</label>
     <!--end::Label-->
 
-    <!--begin::Col-->
-    <div class="col-lg-8 fv-row">
-        <textarea type="" name="coursestaught" class="form-control form-control-lg form-control-solid" 
+     <!--begin::Col-->
+     <div class="col-lg-8 fv-row">
+        <textarea name="coursestaught" class="form-control form-control-lg form-control-solid" 
         placeholder="Courses taught within the Current Academic Session" required></textarea>
     </div>
     <!--end::Col-->
+  
 </div>
 <!--end::Input group-->
-
-
-<!--begin::Input group-->
-<div class="row mb-6">
-    <!--begin::Label-->
-    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">supervisions</label>
-    <!--end::Label-->
-
-    <!--begin::Col-->
-    <div class="col-lg-8 fv-row">
-        <textarea type="" name="supervision" class="form-control form-control-lg form-control-solid" 
-        placeholder="supervision" required></textarea>
-    </div>
-    <!--end::Col-->
-</div>
-<!--end::Input group-->
-
-
-
-<!--begin::Notice-->
-<div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
-    <!--begin::Icon-->
-    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
-    
-    <!--begin::Wrapper-->
-    <div class="d-flex flex-stack flex-grow-1 ">
-                    <!--begin::Content-->
-            <div class=" fw-semibold">
-            <div class="fs-6 text-gray-700 ">RESEARCH</div>
-            </div>
-            <!--end::Content-->
-            
-            </div>
-            <!--end::Wrapper-->  
-</div>
-    <!--end::Notice-->
-
-
-<!--begin::Input group-->
-<div class="row mb-6">
-    <!--begin::Label-->
-    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Research in progress: </label>
-    <!--end::Label-->
-
-     <!--begin::Col-->
-     <div class="col-lg-8 fv-row">
-        <textarea type="" name="research" class="form-control form-control-lg form-control-solid" 
-        placeholder="brief description of research project being undertaken, if any" required></textarea>
-    </div>
-    <!--end::Col-->
-    </div>
-    <!--end::Col-->
-</div>
-<!--end::Input group-->
-
-<!--begin::Input group-->
-<div class="row mb-6">
-    <!--begin::Label-->
-    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Research completed but not yet published</label>
-    <!--end::Label-->
-
-    <!--begin::Col-->
-    <div class="col-lg-8 fv-row">
-        <textarea type="" name="researchcompleted" class="form-control form-control-lg form-control-solid" 
-        placeholder="Research completed but not yet published" required></textarea>
-    </div>
-    <!--end::Col-->
-</div>
-<!--end::Input group-->
-
-
-<!--begin::Input group-->
-<div class="row mb-6">
-    <!--begin::Label-->
-    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">supervisions</label>
-    <!--end::Label-->
-
-    <!--begin::Col-->
-    <div class="col-lg-8 fv-row">
-        <textarea type="" name="supervision" class="form-control form-control-lg form-control-solid" 
-        placeholder="supervision" required></textarea>
-    </div>
-    <!--end::Col-->
-</div>
-<!--end::Input group-->
-
-
-
 
 
 
 </div>
 <!--end::Card body-->
+
+
+
+
+
+
+
+
+
+
 
 
 
