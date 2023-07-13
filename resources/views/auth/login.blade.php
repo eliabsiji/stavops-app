@@ -90,7 +90,7 @@
 
             <!--begin::Title-->
             <h2 class="text-white fw-normal m-0"> 
-                Staff tools designed for organisation daily operations
+                Staff App designed for organisation daily operations
             </h2>  
             <!--end::Title-->         
         </div>

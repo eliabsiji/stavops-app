@@ -37,5 +37,5 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/updateuserrole',[RoleController::class, 'updateuserrole'])->name('roles.updateuserrole');
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
    
-    Route::resource('academicaperform', AcademicAperFormController::class);
+    Route::resource('academicaper', AcademicAperFormController::class);
 });

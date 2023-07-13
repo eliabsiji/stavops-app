@@ -11,7 +11,7 @@ class AcademicAperFormController extends Controller
      */
     public function index()
     {
-        return view('aperacedemic.index');
+        return view('aperacademic.hod');
     }
 
     /**
