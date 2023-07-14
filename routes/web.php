@@ -11,6 +11,7 @@ use App\Http\Controllers\AcademicAperAController;
 use App\Http\Controllers\AcademicAperBController;
 use App\Http\Controllers\AcademicAperCController;
 use App\Http\Controllers\AcademicAperDController;
+use App\Http\Controllers\AcademicAperEController;
 use Spatie\Permission\Contracts\Role;
 
 /*
@@ -44,4 +45,5 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('academic_aper_part_b', AcademicAperBController::class);
     Route::resource('academic_aper_part_c', AcademicAperCController::class);
     Route::resource('academic_aper_part_d', AcademicAperDController::class);
+    Route::resource('academic_aper_part_e', AcademicAperEController::class);
 });

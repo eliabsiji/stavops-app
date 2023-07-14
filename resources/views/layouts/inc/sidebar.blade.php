@@ -11,9 +11,9 @@
 <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
     <!--begin::Logo image-->
     <a href="/dashboard">
-                    <img alt="Logo" src="{{ asset('html/assets/assets/media/logos/default-dark.svg')}}" class="h-25px app-sidebar-logo-default"/>
-        
-        <img alt="Logo" src="{{ asset('html/assets/assets/media/logos/default-small.svg')}}" class="h-20px app-sidebar-logo-minimize"/>
+        <img alt="Logo" src="{{ asset('html/assets/assets/media/logos/logo1.PNG')}}" class="h-90px app-sidebar-logo-default"/>
+     
+       
     </a>
     
         <div 
@@ -905,6 +905,19 @@
                                         <span class="bullet bullet-dot"></span>
                                     </span>
                                     <span class="menu-title">Part D</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+                            <!--end:Menu item-->
+
+                              <!--begin:Menu item-->
+                              <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="{{ route('academic_aper_part_e.index') }}">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Part E</span>
                                 </a>
                                 <!--end:Menu link-->
                             </div>

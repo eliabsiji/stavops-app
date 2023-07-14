@@ -110,12 +110,18 @@
         @csrf
     <!--begin::Heading-->
     <div class="text-center mb-11">
+        <a href="/dashboard">
+            <img alt="Logo" src="{{ asset('html/assets/assets/media/logos/logo1.PNG')}}" class="h-100px app-sidebar-logo-default"/>
+         
+           
+        </a>
         <!--begin::Title-->
         <h1 class="text-dark fw-bolder mb-3">
             Sign In
         </h1>
         <!--end::Title-->
-
+      
+        
        
     </div>
     <!--begin::Heading-->

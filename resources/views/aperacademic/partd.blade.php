@@ -74,25 +74,25 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">A</label>
+        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Assessment of Teaching and Professional Competence</label>
         <!--end::Label-->
     
          <!--begin::Col-->
          <div class="col-lg-8 fv-row">
             <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-            placeholder="" required />
+            placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
         </div>
         <!--end::Col-->
          <!--begin::Col-->
          <div class="col-lg-8 fv-row">
             <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-            placeholder="" required />
+            placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
         </div>
         <!--end::Col-->
          <!--begin::Col-->
          <div class="col-lg-8 fv-row">
             <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-            placeholder="" required />
+            placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
         </div>
         <!--end::Col-->
        
