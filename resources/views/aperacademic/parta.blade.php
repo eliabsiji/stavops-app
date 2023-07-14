@@ -1167,7 +1167,7 @@
         <!--begin::Col-->
         <div class="col-lg-8 fv-row">
             <textarea type="" name="researchcomplete" class="form-control form-control-lg form-control-solid" 
-            placeholder="Articles that have already appeared in learned Journals: (asterisk those that have appeared since your promotion)" required></textarea>
+            placeholder="Exmaple: *mypublished books..." required></textarea>
         </div>
         <!--end::Col-->
     </div>
@@ -1188,82 +1188,7 @@
     </div>
     <!--end::Input group-->
     
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Research completed but not yet published</label>
-        <!--end::Label-->
-    
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <textarea type="" name="researchcomplete" class="form-control form-control-lg form-control-solid" 
-            placeholder="Research completed but not yet published" required></textarea>
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
-    
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Research completed but not yet published</label>
-        <!--end::Label-->
-    
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <textarea type="" name="researchcomplete" class="form-control form-control-lg form-control-solid" 
-            placeholder="Research completed but not yet published" required></textarea>
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
-    
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Research completed but not yet published</label>
-        <!--end::Label-->
-    
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <textarea type="" name="researchcomplete" class="form-control form-control-lg form-control-solid" 
-            placeholder="Research completed but not yet published" required></textarea>
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
-    
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Research completed but not yet published</label>
-        <!--end::Label-->
-    
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <textarea type="" name="researchcomplete" class="form-control form-control-lg form-control-solid" 
-            placeholder="Research completed but not yet published" required></textarea>
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
-    
-    
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Research completed but not yet published</label>
-        <!--end::Label-->
-    
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <textarea type="" name="researchcomplete" class="form-control form-control-lg form-control-solid" 
-            placeholder="Research completed but not yet published" required></textarea>
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
-    
+   
     <!--begin::Notice-->
     <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
         <!--begin::Icon-->

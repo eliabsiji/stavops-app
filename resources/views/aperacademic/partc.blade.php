@@ -71,7 +71,7 @@
         <div class="d-flex flex-stack flex-grow-1 ">
                         <!--begin::Content-->
                 <div class=" fw-semibold">
-                <div class="fs-6 text-gray-700 ">Comments of the Head of Department</div>
+                <div class="fs-6 text-gray-700 ">Comments of staff</div>
                 </div>
                 <!--end::Content-->
                 
@@ -84,13 +84,13 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Assessment of Teaching and Professional Competence</label>
+        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Comments of staff Report on (if any):</label>
         <!--end::Label-->
     
          <!--begin::Col-->
          <div class="col-lg-8 fv-row">
             <textarea name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-            placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required></textarea>
+            placeholder="" required></textarea>
         </div>
         <!--end::Col-->
        
