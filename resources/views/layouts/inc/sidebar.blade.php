@@ -169,15 +169,15 @@
 
 
 
-             <!--begin:Menu item-->
-             <div class="menu-item pt-5">
-                <!--begin:Menu content-->
-                <div class="menu-content">
-                    <span class="menu-heading fw-bold text-uppercase fs-7">USER ACCOUNT</span>
-                </div>
-                <!--end:Menu content-->
-            </div>
-            <!--end:Menu item-->
+                    <!--begin:Menu item-->
+                    <div class="menu-item pt-5">
+                        <!--begin:Menu content-->
+                        <div class="menu-content">
+                            <span class="menu-heading fw-bold text-uppercase fs-7">USER ACCOUNT</span>
+                        </div>
+                        <!--end:Menu content-->
+                    </div>
+                    <!--end:Menu item-->
 
 
             
@@ -855,7 +855,7 @@
                                     <span class="path2"></span>
                                 </i>
                             </span>
-                            <span class="menu-title"> APER </span>
+                            <span class="menu-title">APER</span>
                             <span class="menu-arrow"></span>
                         </span>
                         <!--end:Menu link-->
@@ -864,11 +864,11 @@
                             <!--begin:Menu item-->
                             <div class="menu-item">
                                 <!--begin:Menu link-->
-                                <a class="menu-link" href="{{ route('academicaper.index') }}">
+                                <a class="menu-link" href="{{ route('academic_aper_part_a.index') }}">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
-                                    <span class="menu-title">Academic Staff</span>
+                                    <span class="menu-title">Part A</span>
                                 </a>
                                 <!--end:Menu link-->
                             </div>
@@ -876,11 +876,11 @@
                             <!--begin:Menu item-->
                             <div class="menu-item">
                                 <!--begin:Menu link-->
-                                <a class="menu-link" href="http://127.0.0.1:8000/html/assets/layouts/dark-sidebar.html">
+                                <a class="menu-link" href="{{ route('academic_aper_part_b.index') }}">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
-                                    <span class="menu-title">Senior Staff (Non Academic)</span>
+                                    <span class="menu-title">Part B</span>
                                 </a>
                                 <!--end:Menu link-->
                             </div>
@@ -888,21 +888,36 @@
                             <!--begin:Menu item-->
                             <div class="menu-item">
                                 <!--begin:Menu link-->
-                                <a class="menu-link" href="http://127.0.0.1:8000/html/assets/layouts/light-header.html">
+                                <a class="menu-link" href="{{ route('academic_aper_part_c.index') }}">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
-                                    <span class="menu-title">Junior Staff (Non Academic)</span>
+                                    <span class="menu-title">Part C</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+                            <!--end:Menu item-->
+                            <!--begin:Menu item-->
+                            <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="{{ route('academic_aper_part_d.index') }}">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Part D</span>
                                 </a>
                                 <!--end:Menu link-->
                             </div>
                             <!--end:Menu item-->
                            
+                          
                         </div>
                         <!--end:Menu sub-->
                     </div>
                     <!--end:Menu item-->
-                   
+
+
+                
                     <!--begin:Menu item-->
                     <div class="menu-item">
                         <!--begin:Menu link-->
@@ -1001,7 +1016,7 @@
                             <!--begin:Menu item-->
                             <div class="menu-item">
                                 <!--begin:Menu link-->
-                                <a class="menu-link" href="{{ route('academicaper.index') }}">
+                                <a class="menu-link" href="#">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
