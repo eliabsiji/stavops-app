@@ -11,7 +11,7 @@
 <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
     <!--begin::Logo image-->
     <a href="/dashboard">
-        <img alt="Logo" src="{{ asset('html/assets/assets/media/logos/logo1.PNG')}}" class="h-90px app-sidebar-logo-default"/>
+        <img alt="Logo" src="{{ asset('html/assets/assets/media/logos/logo1.png')}}" class="h-90px app-sidebar-logo-default"/>
      
        
     </a>
