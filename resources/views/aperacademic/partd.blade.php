@@ -7,7 +7,16 @@
   <!--begin::Content container-->
   <div id="kt_app_content_container" class="app-container  container-xxl ">
     
-   
+    <!--begin::Navbar-->
+    <div class="card mb-5 mb-xl-10">
+        <div class="card-body pt-9 pb-0">
+            <!--begin::Details-->
+       
+         @include('layouts.inc.academicnavbar')
+
+        </div>
+    </div>
+    <!--end::Navbar-->
     
     <!--begin::Basic info-->
     <div class="card mb-5 mb-xl-10">
@@ -15,8 +24,15 @@
     <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
     <!--begin::Card title-->
     <div class="card-title m-0">
-    <h3 class="fw-bold m-0">PART E (To be completed by the Registrar)</h3>
+    <h3 class="fw-bold m-0">PART D (To be completed by the Dean of programmes)</h3>
+  
     </div>
+       <!--begin::Actions-->
+       <div class="card-footer d-flex justify-content-end py-6 px-9">
+        <button type="reset" class="btn btn-light btn-active-light-primary me-2" disabled>FORM STATUS</button>
+        <button type="submit" class="btn btn-success" id="kt_account_profile_details_submit" disabled>Signed</button>
+    </div>
+    <!--end::Actions-->
     <!--end::Card title-->
     </div>
     <!--begin::Card header-->
@@ -82,29 +98,55 @@
             <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
             placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
         </div>
-        <!--end::Col-->
-         <!--begin::Col-->
-         <div class="col-lg-8 fv-row">
-            <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-            placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
-        </div>
-        <!--end::Col-->
-         <!--begin::Col-->
-         <div class="col-lg-8 fv-row">
-            <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-            placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
-        </div>
-        <!--end::Col-->
-       
+        <!--end::Col-->      
     </div>
     <!--end::Input group-->
     
- 
+ <!--begin::Input group-->
+ <div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Assessment of Teaching and Professional Competence</label>
+    <!--end::Label-->
+
+     <!--begin::Col-->
+     <div class="col-lg-8 fv-row">
+        <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
+        placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
+    </div>
+    <!--end::Col-->      
+</div>
+<!--end::Input group-->
+
+<!--begin::Input group-->
+<div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Assessment of Teaching and Professional Competence</label>
+    <!--end::Label-->
+
+     <!--begin::Col-->
+     <div class="col-lg-8 fv-row">
+        <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
+        placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
+    </div>
+    <!--end::Col-->      
+</div>
+<!--end::Input group-->
     
     </div>
     <!--end::Card body-->
     
-    
+       <!--begin::Col-->
+       <div class="col-lg-8 fv-row">
+        <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
+        placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
+    </div>
+    <!--end::Col-->
+     <!--begin::Col-->
+     <div class="col-lg-8 fv-row">
+        <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
+        placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
+    </div>
+    <!--end::Col-->
     
     <!--begin::Actions-->
     <div class="card-footer d-flex justify-content-end py-6 px-9">
@@ -119,16 +161,7 @@
     </div>
     <!--end::Basic info-->
 
-
-
-
-
 </div>
-<!--end::Content container-->
+<!--end::Content container-->	
 
-
- </div>
-<!--end::Content container-->
-
-   	
 @endsection   

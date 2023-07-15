@@ -16,7 +16,15 @@
     <!--begin::Card title-->
     <div class="card-title m-0">
     <h3 class="fw-bold m-0">PART E (To be completed by the Registrar)</h3>
+     
     </div>
+
+    <!--begin::Actions-->
+    <div class="card-footer d-flex justify-content-end py-6 px-9">
+        <button type="reset" class="btn btn-light btn-active-light-primary me-2" disabled>FORM STATUS</button>
+        <button type="submit" class="btn btn-success" id="kt_account_profile_details_submit" disabled>Signed</button>
+    </div>
+    <!--end::Actions-->
     <!--end::Card title-->
     </div>
     <!--begin::Card header-->

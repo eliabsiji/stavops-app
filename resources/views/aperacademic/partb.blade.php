@@ -27,7 +27,14 @@
         <!--begin::Card title-->
         <div class="card-title m-0">
         <h3 class="fw-bold m-0">PART B (To be completed by Head of Department)</h3>
+       
         </div>
+          <!--begin::Actions-->
+     <div class="card-footer d-flex justify-content-end py-6 px-9">
+        <button type="reset" class="btn btn-light btn-active-light-primary me-2" disabled>FORM STATUS</button>
+        <button type="submit" class="btn btn-success" id="kt_account_profile_details_submit" disabled>Signed</button>
+    </div>
+    <!--end::Actions-->
         <!--end::Card title-->
         </div>
         <!--begin::Card header-->
@@ -480,68 +487,8 @@
         <!--end::Form-->
 
 
-             <!--begin::Notice-->
-             <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
-                <!--begin::Icon-->
-                <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
-                
-                <!--begin::Wrapper-->
-                <div class="d-flex flex-stack flex-grow-1 ">
-                                <!--begin::Content-->
-                        <div class=" fw-semibold">
-                        <div class="fs-6 text-gray-700 ">Staff must sign in this section to confirm satisfaction  </div>
-                        <div class="fs-6 text-gray-900 ">Upload a snapshot of your Signature  </div>
-                       
-                        <!--end::Content-->
-                        
-                        </div>
-                        <!--end::Wrapper-->  
-            </div>
-               
-            </div>
-             <!--end::Notice-->
-
-           <form>
-             
-        <!--begin::Input group-->
-        <div class="row mb-6">
-            <!--begin::Label-->
-            <label class="col-lg-4 col-form-label required fw-semibold fs-6">Signature of member of Staff and Date</label>
-            <!--end::Label-->
-        
-            <!--begin::Col-->
-            <div class="col-lg-8">
-                <!--begin::Row-->
-                <div class="row">
-                   
-                    <!--begin::Col-->
-                    <div class="col-lg-6 fv-row">
-                    Date: <input type="date" name="pqualification3" class="form-control form-control-lg form-control-solid" 
-                       placeholder="Professional qualification"  required />
-                    </div>
-                    <!--end::Col-->
-                     <!--begin::Col-->
-                     <div class="col-lg-6 fv-row">
-                        Signature: <input type="file" name="signature" class="form-control form-control-lg form-control-solid" 
-                        placeholder="awarding Body"  required />
-                     </div>
-                     <!--end::Col-->
-                     
-                </div>
-                <!--end::Row-->
-            </div>
-            <!--end::Col-->
-        
-        </div>
-        <!--end::Input group-->
-           <!--begin::Actions-->
-           <div class="card-footer d-flex justify-content-end py-6 px-9">
-            <button type="reset" class="btn btn-light btn-active-light-primary me-2">Discard</button>
-            <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">Save Changes</button>
-        </div>
-        <!--end::Actions-->
-        </form>
-        <!--end::Form-->
+           
+          
         </div>
         <!--end::Content-->
         </div>
@@ -551,8 +498,6 @@
           </div>
         <!--end::Content container-->
     
-    
-    </div>
-    <!--end::Content-->		
+
    	
 @endsection   
