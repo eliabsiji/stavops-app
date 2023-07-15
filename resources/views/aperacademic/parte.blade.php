@@ -7,7 +7,16 @@
   <!--begin::Content container-->
   <div id="kt_app_content_container" class="app-container  container-xxl ">
     
-   
+    <!--begin::Navbar-->
+    <div class="card mb-5 mb-xl-10">
+        <div class="card-body pt-9 pb-0">
+            <!--begin::Details-->
+       
+         @include('layouts.inc.academicnavbar')
+
+        </div>
+    </div>
+    <!--end::Navbar-->
     
     <!--begin::Basic info-->
     <div class="card mb-5 mb-xl-10">
@@ -79,35 +88,57 @@
         <!--end::Notice-->
     
     
-    <!--begin::Input group-->
-    <div class="row mb-6">
+
+     <!--begin::Input group-->
+     <div class="row mb-6">
         <!--begin::Label-->
         <label class="col-lg-4 col-form-label required  fw-semibold fs-6">A</label>
         <!--end::Label-->
     
          <!--begin::Col-->
          <div class="col-lg-8 fv-row">
-            <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-            placeholder="" required />
-        </div>
-        <!--end::Col-->
-         <!--begin::Col-->
-         <div class="col-lg-8 fv-row">
-            <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-            placeholder="" required />
-        </div>
-        <!--end::Col-->
-         <!--begin::Col-->
-         <div class="col-lg-8 fv-row">
-            <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-            placeholder="" required />
+            <textarea name="teachingexperience" class="form-control form-control-lg form-control-solid" 
+            placeholder="" required></textarea>
         </div>
         <!--end::Col-->
        
     </div>
     <!--end::Input group-->
     
- 
+   <!--begin::Input group-->
+   <div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">B</label>
+    <!--end::Label-->
+
+     <!--begin::Col-->
+     <div class="col-lg-8 fv-row">
+        <textarea name="teachingexperience" class="form-control form-control-lg form-control-solid" 
+        placeholder="" required></textarea>
+    </div>
+    <!--end::Col-->
+   
+</div>
+<!--end::Input group-->
+
+  <!--begin::Input group-->
+  <div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">C</label>
+    <!--end::Label-->
+
+     <!--begin::Col-->
+     <div class="col-lg-8 fv-row">
+        <textarea name="teachingexperience" class="form-control form-control-lg form-control-solid" 
+        placeholder="" required></textarea>
+    </div>
+    <!--end::Col-->
+   
+</div>
+<!--end::Input group-->
+
+
+
     
     </div>
     <!--end::Card body-->

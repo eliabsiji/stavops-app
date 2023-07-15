@@ -24,15 +24,8 @@
     <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
     <!--begin::Card title-->
     <div class="card-title m-0">
-    <h3 class="fw-bold m-0">PART D (To be completed by the Dean of programmes)</h3>
-  
+    <h3 class="fw-bold m-0">PART D (To be completed by the Dean of Programmes)</h3>
     </div>
-       <!--begin::Actions-->
-       <div class="card-footer d-flex justify-content-end py-6 px-9">
-        <button type="reset" class="btn btn-light btn-active-light-primary me-2" disabled>FORM STATUS</button>
-        <button type="submit" class="btn btn-success" id="kt_account_profile_details_submit" disabled>Signed</button>
-    </div>
-    <!--end::Actions-->
     <!--end::Card title-->
     </div>
     <!--begin::Card header-->
@@ -77,7 +70,7 @@
         <div class="d-flex flex-stack flex-grow-1 ">
                         <!--begin::Content-->
                 <div class=" fw-semibold">
-                <div class="fs-6 text-gray-700 ">Average score for the years:</div>
+                <div class="fs-6 text-gray-700 ">Remark of the School’s Appointment and Promotion Committee.</div>
                 </div>
                 <!--end::Content-->
                 
@@ -98,55 +91,237 @@
             <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
             placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
         </div>
-        <!--end::Col-->      
+        <!--end::Col-->
+        
     </div>
     <!--end::Input group-->
     
+     
+
+     <!--begin::Notice-->
+     <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+        <!--begin::Icon-->
+        <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+        
+        <!--begin::Wrapper-->
+        <div class="d-flex flex-stack flex-grow-1 ">
+                        <!--begin::Content-->
+                <div class=" fw-semibold">
+                <div class="fs-6 text-gray-700 ">Recommendation for Confirmation</div>
+                </div>
+                <!--end::Content-->
+                
+         </div>
+                <!--end::Wrapper-->  
+    </div>
+        <!--end::Notice-->
+
+
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">I recommend that:</label>
+        <!--end::Label-->
+    
+         <!--begin::Col-->
+         <div class="col-lg-8 fv-row">
+            I.	His/her appointment be confirmed to retiring age
+           <!--begin::Radio-->
+            <div class="form-check form-check-custom form-check-solid me-5">
+                <input class="form-check-input" type="radio" value="" name="retireage" 
+                id="category_product_count_yes" checked  required/>
+                <label class="form-check-label" for="category_product_count_yes">
+                    Yes
+                </label>
+            </div>
+
+            <div class="form-check form-check-custom form-check-solid">
+                <input class="form-check-input" type="radio" value="" 
+                name="retireage" id="category_product_count_no" required/>
+                <label class="form-check-label" for="category_product_count_no">
+                    No
+                </label>
+            </div>
+            <!--end::Radio-->
+        </div>
+        <!--end::Col-->
+        
+    </div>
+    <!--end::Input group-->
+
+
+
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">I recommend that:</label>
+        <!--end::Label-->
+    
+         <!--begin::Col-->
+         <div class="col-lg-8 fv-row">
+            II.	His/her appointment be further extended for six months
+           <!--begin::Radio-->
+            <div class="form-check form-check-custom form-check-solid me-5">
+                <input class="form-check-input" type="radio" value="" name="sixmonth" 
+                id="category_product_count_yes" checked required/>
+                <label class="form-check-label" for="category_product_count_yes">
+                    Yes
+                </label>
+            </div>
+
+            <div class="form-check form-check-custom form-check-solid">
+                <input class="form-check-input" type="radio" value="" name="sixmonth" 
+                id="category_product_count_no" required />
+                <label class="form-check-label" for="category_product_count_no">
+                    No
+                </label>
+            </div>
+            <!--end::Radio-->
+        </div>
+        <!--end::Col-->
+        
+    </div>
+    <!--end::Input group-->
+
+
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">I recommend that:</label>
+        <!--end::Label-->
+    
+         <!--begin::Col-->
+         <div class="col-lg-8 fv-row">
+            III.	His/her appointment to terminated with effect from:
+            <input type="date" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
+            placeholder="" required />
+           
+        </div>
+        <!--end::Col-->
+        
+    </div>
+    <!--end::Input group-->
+ 
+    
+
  <!--begin::Input group-->
  <div class="row mb-6">
     <!--begin::Label-->
-    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Assessment of Teaching and Professional Competence</label>
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Justification for recommendation</label>
     <!--end::Label-->
 
-     <!--begin::Col-->
-     <div class="col-lg-8 fv-row">
-        <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-        placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
+    <!--begin::Col-->
+    <div class="col-lg-8 fv-row">
+        <textarea type="" name="researchcomplete" class="form-control form-control-lg form-control-solid" 
+        placeholder="" required></textarea>
     </div>
-    <!--end::Col-->      
+    <!--end::Col-->
 </div>
 <!--end::Input group-->
 
-<!--begin::Input group-->
-<div class="row mb-6">
+
+
+ <!--begin::Input group-->
+ <div class="row mb-6">
     <!--begin::Label-->
-    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Assessment of Teaching and Professional Competence</label>
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Recommendation for promotion: </label>
     <!--end::Label-->
 
-     <!--begin::Col-->
-     <div class="col-lg-8 fv-row">
-        <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-        placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
+    <!--begin::Col-->
+    <div class="col-lg-8 fv-row">
+        <textarea type="" name="researchcomplete" class="form-control form-control-lg form-control-solid" 
+        placeholder="" required></textarea>
     </div>
-    <!--end::Col-->      
+    <!--end::Col-->
 </div>
 <!--end::Input group-->
+
+
+
+ <!--begin::Input group-->
+ <div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Justification for recommendation</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8 fv-row">
+        <textarea type="" name="researchcomplete" class="form-control form-control-lg form-control-solid" 
+        placeholder="" required></textarea>
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Input group-->
+
+ <!--begin::Input group-->
+ <div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Recommendation for annual increment</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8 fv-row">
+        <textarea type="" name="researchcomplete" class="form-control form-control-lg form-control-solid" 
+        placeholder="" required></textarea>
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Input group-->
+
+
+
+ <!--begin::Input group-->
+ <div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Justification for recommendation</label>
+    <!--end::Label-->
+
+    <!--begin::Col-->
+    <div class="col-lg-8 fv-row">
+        <textarea type="" name="researchcomplete" class="form-control form-control-lg form-control-solid" 
+        placeholder="" required></textarea>
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Input group-->
+
+  
+     <!--begin::Input group-->
+     <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Signature of Head of Department and Date</label>
+        <!--end::Label-->
     
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <!--begin::Row-->
+            <div class="row">
+               
+                <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                Date: <input type="date" name="pqualification3" class="form-control form-control-lg form-control-solid" 
+                   placeholder="Professional qualification"  required />
+                </div>
+                <!--end::Col-->
+                 <!--begin::Col-->
+                 <div class="col-lg-6 fv-row">
+                    Signature: <input type="file" name="signature" class="form-control form-control-lg form-control-solid" 
+                    placeholder="awarding Body"  required />
+                 </div>
+                 <!--end::Col-->
+                 
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Col-->
+    
+    </div>
+    <!--end::Input group-->
+    
+
+    
+
     </div>
     <!--end::Card body-->
     
-       <!--begin::Col-->
-       <div class="col-lg-8 fv-row">
-        <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-        placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
-    </div>
-    <!--end::Col-->
-     <!--begin::Col-->
-     <div class="col-lg-8 fv-row">
-        <input type="text" name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-        placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required />
-    </div>
-    <!--end::Col-->
+    
     
     <!--begin::Actions-->
     <div class="card-footer d-flex justify-content-end py-6 px-9">
@@ -161,7 +336,16 @@
     </div>
     <!--end::Basic info-->
 
-</div>
-<!--end::Content container-->	
 
+
+
+
+</div>
+<!--end::Content container-->
+
+
+ </div>
+<!--end::Content container-->
+
+   	
 @endsection   

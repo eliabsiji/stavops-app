@@ -11,7 +11,7 @@ class AcademicAperEController extends Controller
      */
     public function index()
     {
-      return view('aperacademic.parte')
+      return view('aperacademic.parte');
     }
 
     /**
