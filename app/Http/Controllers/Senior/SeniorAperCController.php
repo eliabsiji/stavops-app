@@ -1,17 +1,17 @@
 <?php
+namespace App\Http\Controllers\Senior;
 
-namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-class AcademicAperEController extends Controller
+use App\Http\Controllers\Controller;
+class SeniorAperCController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-      return view('aperacademic.parte');
+        //
     }
 
     /**

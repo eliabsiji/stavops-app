@@ -7,11 +7,21 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PermissionController;
-use App\Http\Controllers\AcademicAperAController;
-use App\Http\Controllers\AcademicAperBController;
-use App\Http\Controllers\AcademicAperCController;
-use App\Http\Controllers\AcademicAperDController;
-use App\Http\Controllers\AcademicAperEController;
+use App\Http\Controllers\Academics\AcademicAperAController;
+use App\Http\Controllers\Academics\AcademicAperBController;
+use App\Http\Controllers\Academics\AcademicAperCController;
+use App\Http\Controllers\Academics\AcademicAperDController;
+use App\Http\Controllers\Academics\AcademicAperEController;
+use App\Http\Controllers\Senior\SeniorAperAController;
+use App\Http\Controllers\Senior\SeniorAperBController;
+use App\Http\Controllers\Senior\SeniorAperCController;
+use App\Http\Controllers\Senior\SeniorAperDController;
+use App\Http\Controllers\Senior\SeniorAperEController;
+use App\Http\Controllers\Junior\JuniorAperAController;
+use App\Http\Controllers\Junior\JuniorAperBController;
+use App\Http\Controllers\Junior\JuniorAperCController;
+use App\Http\Controllers\Junior\JuniorAperDController;
+use App\Http\Controllers\Junior\JuniorAperEController;
 use Spatie\Permission\Contracts\Role;
 
 /*
@@ -46,4 +56,18 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('academic_aper_part_c', AcademicAperCController::class);
     Route::resource('academic_aper_part_d', AcademicAperDController::class);
     Route::resource('academic_aper_part_e', AcademicAperEController::class);
+
+    Route::resource('senior_aper_part_a', SeniorAperAController::class);
+    Route::resource('senior_aper_part_b', SeniorAperBController::class);
+    Route::resource('senior_aper_part_c', SeniorAperCController::class);
+    Route::resource('senior_aper_part_d', SeniorAperDController::class);
+    Route::resource('senior_aper_part_e', SeniorAperEController::class);
+
+    Route::resource('junior_aper_part_a', JuniorAperAController::class);
+    Route::resource('junior_aper_part_b', JuniorAperBController::class);
+    Route::resource('junior_aper_part_c', JuniorAperCController::class);
+    Route::resource('junior_aper_part_d', JuniorAperDController::class);
+    Route::resource('junior_aper_part_e', JuniorAperEController::class);
+
+
 });
