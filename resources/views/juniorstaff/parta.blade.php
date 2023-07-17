@@ -1212,10 +1212,12 @@
     
     
     
+
+      
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Professional Qualifications 1</label>
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Service Course 2</label>
         <!--end::Label-->
     
         <!--begin::Col-->
@@ -1225,20 +1227,334 @@
                
                 <!--begin::Col-->
                 <div class="col-lg-6 fv-row">
-                 Qualification 3: <input type="text" name="pqualification3" class="form-control form-control-lg form-control-solid" 
-                   placeholder="Professional qualification"  required />
+                 Date: <input type="date" name="pqualification2" class="form-control form-control-lg form-control-solid" 
+                   placeholder=""  required />
                 </div>
                 <!--end::Col-->
+                  <!--begin::Col-->
+                  <div class="col-lg-6 fv-row">
+                    Course Title: <input type="text" name="pqualification2" class="form-control form-control-lg form-control-solid" 
+                      placeholder=""  required />
+                   </div>
+                   <!--end::Col-->
+                     <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                   Institution: <input type="text" name="pqualification2" class="form-control form-control-lg form-control-solid" 
+                      placeholder=""  required />
+                   </div>
+                   <!--end::Col-->
                  <!--begin::Col-->
                  <div class="col-lg-6 fv-row">
-                    AwardingBody/society: <input type="text" name="abody3" class="form-control form-control-lg form-control-solid" 
-                    placeholder="awarding Body"  required />
+                    Duration: <input type="text" name="abody2" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  required />
                  </div>
                  <!--end::Col-->
                   <!--begin::Col-->
                 <div class="col-lg-6 fv-row">
-                    Date Of Award: <input type="date" name="pdateofaward3" class="form-control form-control-lg form-control-solid" 
-                    placeholder="Date of Award"  required />
+                    Award: <input type="text" name="pdateofaward2" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  required />
+                 </div>
+                 <!--end::Col-->
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Col-->
+    
+    </div>
+    <!--end::Input group-->
+    
+
+
+      
+    <!--begin::Input group-->
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Service Course 3</label>
+        <!--end::Label-->
+    
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <!--begin::Row-->
+            <div class="row">
+               
+                <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                 Date: <input type="date" name="pqualification2" class="form-control form-control-lg form-control-solid" 
+                   placeholder=""  required />
+                </div>
+                <!--end::Col-->
+                  <!--begin::Col-->
+                  <div class="col-lg-6 fv-row">
+                    Course Title: <input type="text" name="pqualification2" class="form-control form-control-lg form-control-solid" 
+                      placeholder=""  required />
+                   </div>
+                   <!--end::Col-->
+                     <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                   Institution: <input type="text" name="pqualification2" class="form-control form-control-lg form-control-solid" 
+                      placeholder=""  required />
+                   </div>
+                   <!--end::Col-->
+                 <!--begin::Col-->
+                 <div class="col-lg-6 fv-row">
+                    Duration: <input type="text" name="abody2" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    Award: <input type="text" name="pdateofaward2" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  required />
+                 </div>
+                 <!--end::Col-->
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Col-->
+    
+    </div>
+    <!--end::Input group-->
+    
+
+
+      
+    <!--begin::Input group-->
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Service Course 4</label>
+        <!--end::Label-->
+    
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <!--begin::Row-->
+            <div class="row">
+               
+                <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                 Date: <input type="date" name="pqualification2" class="form-control form-control-lg form-control-solid" 
+                   placeholder=""  required />
+                </div>
+                <!--end::Col-->
+                  <!--begin::Col-->
+                  <div class="col-lg-6 fv-row">
+                    Course Title: <input type="text" name="pqualification2" class="form-control form-control-lg form-control-solid" 
+                      placeholder=""  required />
+                   </div>
+                   <!--end::Col-->
+                     <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                   Institution: <input type="text" name="pqualification2" class="form-control form-control-lg form-control-solid" 
+                      placeholder=""  required />
+                   </div>
+                   <!--end::Col-->
+                 <!--begin::Col-->
+                 <div class="col-lg-6 fv-row">
+                    Duration: <input type="text" name="abody2" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    Award: <input type="text" name="pdateofaward2" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  required />
+                 </div>
+                 <!--end::Col-->
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Col-->
+    
+    </div>
+    <!--end::Input group-->
+    
+<!--begin::Notice-->
+<div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-700 ">
+                State type of in-service training required
+
+            </div>
+            </div>
+            <!--end::Content-->
+            
+            </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+    <!--begin::Input group-->
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">In-service training  1</label>
+        <!--end::Label-->
+    
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <!--begin::Row-->
+            <div class="row">
+               
+                <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                Course Title 3: <input type="text" name="pqualification3" class="form-control form-control-lg form-control-solid" 
+                   placeholder=""  required />
+                </div>
+                <!--end::Col-->
+                 <!--begin::Col-->
+                 <div class="col-lg-6 fv-row">
+                    Institution: <input type="text" name="abody3" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    From: <input type="date" name="pdateofaward3" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    To: <input type="date" name="pdateofaward3" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""   />
+                 </div>
+                 <!--end::Col-->
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Col-->
+    
+    </div>
+    <!--end::Input group-->
+
+
+      <!--begin::Input group-->
+      <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">In-service training  2</label>
+        <!--end::Label-->
+    
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <!--begin::Row-->
+            <div class="row">
+               
+                <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                Course Title 3: <input type="text" name="pqualification3" class="form-control form-control-lg form-control-solid" 
+                   placeholder=""  required />
+                </div>
+                <!--end::Col-->
+                 <!--begin::Col-->
+                 <div class="col-lg-6 fv-row">
+                    Institution: <input type="text" name="abody3" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    From: <input type="date" name="pdateofaward3" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    To: <input type="date" name="pdateofaward3" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""   />
+                 </div>
+                 <!--end::Col-->
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Col-->
+    
+    </div>
+    <!--end::Input group-->
+
+
+
+      <!--begin::Input group-->
+      <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">In-service training  3</label>
+        <!--end::Label-->
+    
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <!--begin::Row-->
+            <div class="row">
+               
+                <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                Course Title 3: <input type="text" name="pqualification3" class="form-control form-control-lg form-control-solid" 
+                   placeholder=""  required />
+                </div>
+                <!--end::Col-->
+                 <!--begin::Col-->
+                 <div class="col-lg-6 fv-row">
+                    Institution: <input type="text" name="abody3" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    From: <input type="date" name="pdateofaward3" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    To: <input type="date" name="pdateofaward3" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""   />
+                 </div>
+                 <!--end::Col-->
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Col-->
+    
+    </div>
+    <!--end::Input group-->
+
+
+
+      <!--begin::Input group-->
+      <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">In-service training  4</label>
+        <!--end::Label-->
+    
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <!--begin::Row-->
+            <div class="row">
+               
+                <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                Course Title 3: <input type="text" name="pqualification3" class="form-control form-control-lg form-control-solid" 
+                   placeholder=""  required />
+                </div>
+                <!--end::Col-->
+                 <!--begin::Col-->
+                 <div class="col-lg-6 fv-row">
+                    Institution: <input type="text" name="abody3" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    From: <input type="date" name="pdateofaward3" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    To: <input type="date" name="pdateofaward3" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""   />
                  </div>
                  <!--end::Col-->
             </div>
@@ -1260,7 +1576,12 @@
         <div class="d-flex flex-stack flex-grow-1 ">
                         <!--begin::Content-->
                 <div class=" fw-semibold">
-                <div class="fs-6 text-gray-700 ">EXPERIENCE</div>
+                <div class="fs-6 text-gray-700 ">SECTION B:   NATURE OF ASSIGNMENT DURING THE PERIOD
+                    (To be completed by all employees)
+                    </div>
+                    <div class="fs-6 text-gray-700 ">
+                        (To be completed by all employees)
+                        </div>
                 </div>
                 <!--end::Content-->
                 
@@ -1273,13 +1594,15 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Teaching Experience: (please indicate Institution, your designation, your area of Specialization, Subject taught and dates)</label>
+        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">
+        State your main duties during the period covered by this Report
+        </label>
         <!--end::Label-->
     
          <!--begin::Col-->
          <div class="col-lg-8 fv-row">
             <textarea name="teachingexperience" class="form-control form-control-lg form-control-solid" 
-            placeholder="please indicate Institution, your designation, your area of Specialization, Subject taught and dates" required></textarea>
+            placeholder="" required></textarea>
         </div>
         <!--end::Col-->
        
@@ -1290,13 +1613,16 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Courses taught within the Current Academic Session</label>
+        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">
+            What major difficulties did you encounter in the 
+            performance of your duties? Offer suggestions for their solution
+        </label>
         <!--end::Label-->
     
          <!--begin::Col-->
          <div class="col-lg-8 fv-row">
             <textarea name="coursestaught" class="form-control form-control-lg form-control-solid" 
-            placeholder="Courses taught within the Current Academic Session" required></textarea>
+            placeholder="" required></textarea>
         </div>
         <!--end::Col-->
       
@@ -1306,229 +1632,23 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Supervision</label>
+        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Any other useful information peculiar to your duty 
+            during the period covered by this Report?</label>
         <!--end::Label-->
     
          <!--begin::Col-->
          <div class="col-lg-8 fv-row">
             <textarea name="supervision" class="form-control form-control-lg form-control-solid" 
-            placeholder="Supervision" required></textarea>
+            placeholder="" required></textarea>
         </div>
         <!--end::Col-->
       
     </div>
     <!--end::Input group-->
     
-    <!--begin::Notice-->
-    <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
-        <!--begin::Icon-->
-        <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
-        
-        <!--begin::Wrapper-->
-        <div class="d-flex flex-stack flex-grow-1 ">
-                        <!--begin::Content-->
-                <div class=" fw-semibold">
-                <div class="fs-6 text-gray-700 ">RESEARCH</div>
-                </div>
-                <!--end::Content-->
-                
-                </div>
-                <!--end::Wrapper-->  
-    </div>
-        <!--end::Notice-->
-    
-    
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Research in progress: (brief description of research project being undertaken, if any) </label>
-        <!--end::Label-->
-    
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <textarea type="" name="researchprogress" class="form-control form-control-lg form-control-solid" 
-            placeholder="brief description of research project being undertaken, if any" required></textarea>
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
-    
-    
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Research completed but not yet published</label>
-        <!--end::Label-->
-    
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <textarea type="" name="researchcomplete" class="form-control form-control-lg form-control-solid" 
-            placeholder="Research completed but not yet published" required></textarea>
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
-    
-    <!--begin::Notice-->
-    <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
-        <!--begin::Icon-->
-        <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
-        
-        <!--begin::Wrapper-->
-        <div class="d-flex flex-stack flex-grow-1 ">
-                        <!--begin::Content-->
-                <div class=" fw-semibold">
-                <div class="fs-6 text-gray-700 ">Publications</div>
-                <div class="fs-6 text-gray-900 ">(Please list publication under the following broad headings, state dates and publication clearly)</div>
-                </div>
-                <!--end::Content-->
-                
-                </div>
-                <!--end::Wrapper-->  
-    </div>
-        <!--end::Notice-->
-    
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Thesis/Dissertation</label>
-        <!--end::Label-->
-    
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <textarea type="" name="thesis" class="form-control form-control-lg form-control-solid" 
-            placeholder=" Thesis/Dissertation" required></textarea>
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
-    
-    
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Books/Monographs</label>
-        <!--end::Label-->
-    
-        <!--begin::Col-->
-        <div class="col-lg-8">
-            <!--begin::Row-->
-            <div class="row">
-               
-                  <!--begin::Col-->
-                  <div class="col-lg-6 fv-row">
-                    Books/Monographs: <input type="text" name="books" class="form-control form-control-lg form-control-solid" 
-                      placeholder="Book or monographs"  required />
-                   </div>
-                   <!--end::Col-->
-    
-                <!--begin::Col-->
-                <div class="col-lg-6 fv-row">
-                i. Authored Book: <input type="text" name="authored" class="form-control form-control-lg form-control-solid" 
-                   placeholder="Authored Books"  required />
-                </div>
-                <!--end::Col-->
-                 <!--begin::Col-->
-                 <div class="col-lg-6 fv-row">
-                    II.	Edited Books: <input type="text" name="editedbooks" class="form-control form-control-lg form-control-solid" 
-                    placeholder="Edited Books"  required />
-                 </div>
-                 <!--end::Col-->
-                  <!--begin::Col-->
-                <div class="col-lg-6 fv-row">
-                    III.Contribution to Books: <input type="text" name="conbooks" class="form-control form-control-lg form-control-solid" 
-                    placeholder="Contribution to Books"  required />
-                 </div>
-                 <!--end::Col-->
-            </div>
-            <!--end::Row-->
-        </div>
-        <!--end::Col-->
-    
-    </div>
-    <!--end::Input group-->
-    
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Articles that have already appeared in learned Journals: (asterisk those that have appeared since your promotion)</label>
-        <!--end::Label-->
-    
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <textarea type="" name="researchcomplete" class="form-control form-control-lg form-control-solid" 
-            placeholder="Exmaple: *mypublished books..." required></textarea>
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
-    
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Research completed but not yet published</label>
-        <!--end::Label-->
-    
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <textarea type="" name="researchcomplete" class="form-control form-control-lg form-control-solid" 
-            placeholder="Research completed but not yet published" required></textarea>
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
-    
    
-    <!--begin::Notice-->
-    <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
-        <!--begin::Icon-->
-        <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
-        
-        <!--begin::Wrapper-->
-        <div class="d-flex flex-stack flex-grow-1 ">
-                        <!--begin::Content-->
-                <div class=" fw-semibold">
-                <div class="fs-6 text-gray-700 ">Extra Curricula Activities</div>
-               
-                <!--end::Content-->
-                
-                </div>
-                <!--end::Wrapper-->  
-    </div>
-       
-    </div>
-     <!--end::Notice-->
+   
     
-    
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Activities within the Polytechnic</label>
-        <!--end::Label-->
-    
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <textarea type="" name="activitywithinpoly" class="form-control form-control-lg form-control-solid" 
-            placeholder="Activities within the Polytechnic" required></textarea>
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
-    
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Activities outside the polytechnic</label>
-        <!--end::Label-->
-    
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <textarea type="" name="activityoutsidepoly" class="form-control form-control-lg form-control-solid" 
-            placeholder="Activities outside the polytechnic" required></textarea>
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
     
     
     <!--begin::Notice-->

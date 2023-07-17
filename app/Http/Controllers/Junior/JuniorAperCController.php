@@ -12,7 +12,7 @@ class JuniorAperCController extends Controller
      */
     public function index()
     {
-        //
+        return view('juniorstaff.partc');
     }
 
     /**
