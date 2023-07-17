@@ -11,7 +11,7 @@ class SeniorAperCController extends Controller
      */
     public function index()
     {
-        //
+        return view('seniorstaff.partc');
     }
 
     /**

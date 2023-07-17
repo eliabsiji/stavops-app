@@ -12,7 +12,7 @@ class SeniorAperDController extends Controller
      */
     public function index()
     {
-        //
+        return view('seniorstaff.partd');
     }
 
     /**

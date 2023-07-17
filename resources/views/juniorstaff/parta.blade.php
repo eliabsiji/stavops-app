@@ -556,6 +556,23 @@
     </div>
     <!--end::Input group-->
     
+     <!--begin::Input group-->
+     <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">
+        Ref. Number of letter of Confirmation of Appointment
+        </label>
+        <!--end::Label-->
+    
+        <!--begin::Col-->
+        <div class="col-lg-8 fv-row">
+            <input type="text" name="school" class="form-control form-control-lg form-control-solid" 
+            placeholder="" required />
+        </div>
+        <!--end::Col-->
+    </div>
+    <!--end::Input group-->
+    
     
     
     <!--begin::Input group-->
@@ -652,21 +669,7 @@
     <!--end::Input group-->
     
     
-        
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">Courses attended during the period of Report</label>
-        <!--end::Label-->
-    
-        <!--begin::Col-->
-        <div class="col-lg-8 fv-row">
-            <input type="text" name="courses" class="form-control form-control-lg form-control-solid" 
-            placeholder="Courses attended during the period of Report" required />
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
+   
     
     <!--begin::Notice-->
     <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
@@ -709,19 +712,19 @@
             <!--end::Col-->
                 <!--begin::Col-->
                 <div class="col-lg-6 fv-row">
-                  Class: <input type="text" name="unihndclass1" class="form-control form-control-lg form-control-solid" 
+                  Qualification: <input type="text" name="unihndclass1" class="form-control form-control-lg form-control-solid" 
                    placeholder="class if any"  required />
                 </div>
                 <!--end::Col-->
                  <!--begin::Col-->
                  <div class="col-lg-6 fv-row">
-                    Institution: <input type="text" name="institution1" class="form-control form-control-lg form-control-solid" 
+                   From: <input type="text" name="institution1" class="form-control form-control-lg form-control-solid" 
                     placeholder="institution"  required />
                  </div>
                  <!--end::Col-->
                   <!--begin::Col-->
                 <div class="col-lg-6 fv-row">
-                    Date Of Award: <input type="date" name="dateofaward1" class="form-control form-control-lg form-control-solid" 
+                    To: <input type="date" name="dateofaward1" class="form-control form-control-lg form-control-solid" 
                     placeholder="Date of Award"  required />
                  </div>
                  <!--end::Col-->
@@ -756,22 +759,22 @@
             <!--end::Col-->
                 <!--begin::Col-->
                 <div class="col-lg-6 fv-row">
-                  Class: <input type="text" name="unihndclass2" class="form-control form-control-lg form-control-solid" 
-                   placeholder="class if any"  required />
-                </div>
-                <!--end::Col-->
-                 <!--begin::Col-->
-                 <div class="col-lg-6 fv-row">
-                    Institution: <input type="text" name="institution2" class="form-control form-control-lg form-control-solid" 
-                    placeholder="institution"  required />
-                 </div>
-                 <!--end::Col-->
-                  <!--begin::Col-->
-                <div class="col-lg-6 fv-row">
-                    Date Of Award: <input type="date" name="dateofaward2" class="form-control form-control-lg form-control-solid" 
-                    placeholder="Date of Award"  required />
-                 </div>
-                 <!--end::Col-->
+                    Qualification: <input type="text" name="unihndclass1" class="form-control form-control-lg form-control-solid" 
+                     placeholder="class if any"  required />
+                  </div>
+                  <!--end::Col-->
+                   <!--begin::Col-->
+                   <div class="col-lg-6 fv-row">
+                     From: <input type="text" name="institution1" class="form-control form-control-lg form-control-solid" 
+                      placeholder="institution"  required />
+                   </div>
+                   <!--end::Col-->
+                    <!--begin::Col-->
+                  <div class="col-lg-6 fv-row">
+                      To: <input type="date" name="dateofaward1" class="form-control form-control-lg form-control-solid" 
+                      placeholder="Date of Award"  required />
+                   </div>
+                   <!--end::Col-->
             </div>
             <!--end::Row-->
         </div>
@@ -801,24 +804,24 @@
                 </select>
             </div>
             <!--end::Col-->
+               <!--begin::Col-->
+               <div class="col-lg-6 fv-row">
+                Qualification: <input type="text" name="unihndclass1" class="form-control form-control-lg form-control-solid" 
+                 placeholder="class if any"  required />
+              </div>
+              <!--end::Col-->
+               <!--begin::Col-->
+               <div class="col-lg-6 fv-row">
+                 From: <input type="text" name="institution1" class="form-control form-control-lg form-control-solid" 
+                  placeholder="institution"  required />
+               </div>
+               <!--end::Col-->
                 <!--begin::Col-->
-                <div class="col-lg-6 fv-row">
-                  Class: <input type="text" name="unihndclass3" class="form-control form-control-lg form-control-solid" 
-                   placeholder="class if any"  required />
-                </div>
-                <!--end::Col-->
-                 <!--begin::Col-->
-                 <div class="col-lg-6 fv-row">
-                    Institution: <input type="text" name="institution3" class="form-control form-control-lg form-control-solid" 
-                    placeholder="institution"  required />
-                 </div>
-                 <!--end::Col-->
-                  <!--begin::Col-->
-                <div class="col-lg-6 fv-row">
-                    Date Of Award: <input type="date" name="dateofaward3" class="form-control form-control-lg form-control-solid" 
-                    placeholder="Date of Award"  required />
-                 </div>
-                 <!--end::Col-->
+              <div class="col-lg-6 fv-row">
+                  To: <input type="date" name="dateofaward1" class="form-control form-control-lg form-control-solid" 
+                  placeholder="Date of Award"  required />
+               </div>
+               <!--end::Col-->
             </div>
             <!--end::Row-->
         </div>
@@ -827,6 +830,28 @@
     </div>
     <!--end::Input group-->
     
+
+     <!--begin::Input group-->
+     <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">
+            Any change in status or emolument during the period covered by this report?
+                (Additional sheet may be used)
+
+        </label>
+        <!--end::Label-->
+    
+         <!--begin::Col-->
+         <div class="col-lg-8 fv-row">
+            <textarea name="coursestaught" class="form-control form-control-lg form-control-solid" 
+            placeholder="" required></textarea>
+        </div>
+        <!--end::Col-->
+      
+    </div>
+    <!--end::Input group-->
+
+
     <!--begin::Notice-->
     <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
         <!--begin::Icon-->
@@ -836,7 +861,11 @@
         <div class="d-flex flex-stack flex-grow-1 ">
                         <!--begin::Content-->
                 <div class=" fw-semibold">
-                <div class="fs-6 text-gray-700 ">PROFESSIONAL QUALIFICATIONS </div>
+                <div class="fs-6 text-gray-700 ">
+                    Record of service since joining the Polytechnic. (Details of movement to be stated with dates).
+      (Additional sheet may be used)
+
+                </div>
                 </div>
                 <!--end::Content-->
                 
@@ -853,9 +882,14 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Professional Qualifications 1</label>
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Record 1</label>
         <!--end::Label-->
-    
+     <!--begin::Col-->
+     <div class="col-lg-6 fv-row">
+        Departmant: <input type="text" name="pqualification1" class="form-control form-control-lg form-control-solid" 
+          placeholder=""  required />
+       </div>
+       <!--end::Col-->
         <!--begin::Col-->
         <div class="col-lg-8">
             <!--begin::Row-->
@@ -863,19 +897,25 @@
                
                 <!--begin::Col-->
                 <div class="col-lg-6 fv-row">
-                 Qualification 1: <input type="text" name="pqualification1" class="form-control form-control-lg form-control-solid" 
+                 Post/Grade: <input type="text" name="pqualification1" class="form-control form-control-lg form-control-solid" 
                    placeholder="Professional qualification"  required />
                 </div>
                 <!--end::Col-->
                  <!--begin::Col-->
                  <div class="col-lg-6 fv-row">
-                    AwardingBody/society: <input type="text" name="abody1" class="form-control form-control-lg form-control-solid" 
+                    Officer under whom you served <input type="text" name="abody1" class="form-control form-control-lg form-control-solid" 
                     placeholder="awarding Body"  required />
                  </div>
                  <!--end::Col-->
                   <!--begin::Col-->
                 <div class="col-lg-6 fv-row">
-                    Date Of Award: <input type="date" name="pdateofaward1" class="form-control form-control-lg form-control-solid" 
+                    From: <input type="date" name="pdateofaward1" class="form-control form-control-lg form-control-solid" 
+                    placeholder="Date of Award"  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    To: <input type="date" name="pdateofaward1" class="form-control form-control-lg form-control-solid" 
                     placeholder="Date of Award"  required />
                  </div>
                  <!--end::Col-->
@@ -887,12 +927,244 @@
     </div>
     <!--end::Input group-->
     
+     
+
+       
+    <!--begin::Input group-->
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Record 2</label>
+        <!--end::Label-->
+     <!--begin::Col-->
+     <div class="col-lg-6 fv-row">
+        Departmant: <input type="text" name="pqualification1" class="form-control form-control-lg form-control-solid" 
+          placeholder=""  required />
+       </div>
+       <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <!--begin::Row-->
+            <div class="row">
+               
+                <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                 Post/Grade: <input type="text" name="pqualification1" class="form-control form-control-lg form-control-solid" 
+                   placeholder="Professional qualification"  required />
+                </div>
+                <!--end::Col-->
+                 <!--begin::Col-->
+                 <div class="col-lg-6 fv-row">
+                    Officer under whom you served <input type="text" name="abody1" class="form-control form-control-lg form-control-solid" 
+                    placeholder="awarding Body"  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    From: <input type="date" name="pdateofaward1" class="form-control form-control-lg form-control-solid" 
+                    placeholder="Date of Award"  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    To: <input type="date" name="pdateofaward1" class="form-control form-control-lg form-control-solid" 
+                    placeholder="Date of Award"  required />
+                 </div>
+                 <!--end::Col-->
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Col-->
+    
+    </div>
+    <!--end::Input group-->
+    
+
+
+
+       
+    <!--begin::Input group-->
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Record 3</label>
+        <!--end::Label-->
+     <!--begin::Col-->
+     <div class="col-lg-6 fv-row">
+        Departmant: <input type="text" name="pqualification1" class="form-control form-control-lg form-control-solid" 
+          placeholder=""  required />
+       </div>
+       <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <!--begin::Row-->
+            <div class="row">
+               
+                <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                 Post/Grade: <input type="text" name="pqualification1" class="form-control form-control-lg form-control-solid" 
+                   placeholder="Professional qualification"  required />
+                </div>
+                <!--end::Col-->
+                 <!--begin::Col-->
+                 <div class="col-lg-6 fv-row">
+                    Officer under whom you served <input type="text" name="abody1" class="form-control form-control-lg form-control-solid" 
+                    placeholder="awarding Body"  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    From: <input type="date" name="pdateofaward1" class="form-control form-control-lg form-control-solid" 
+                    placeholder="Date of Award"  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    To: <input type="date" name="pdateofaward1" class="form-control form-control-lg form-control-solid" 
+                    placeholder="Date of Award"  required />
+                 </div>
+                 <!--end::Col-->
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Col-->
+    
+    </div>
+    <!--end::Input group-->
+    
+
+
+
+
+       
+    <!--begin::Input group-->
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Record 4</label>
+        <!--end::Label-->
+     <!--begin::Col-->
+     <div class="col-lg-6 fv-row">
+        Departmant: <input type="text" name="pqualification1" class="form-control form-control-lg form-control-solid" 
+          placeholder=""  required />
+       </div>
+       <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <!--begin::Row-->
+            <div class="row">
+               
+                <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                 Post/Grade: <input type="text" name="pqualification1" class="form-control form-control-lg form-control-solid" 
+                   placeholder="Professional qualification"  required />
+                </div>
+                <!--end::Col-->
+                 <!--begin::Col-->
+                 <div class="col-lg-6 fv-row">
+                    Officer under whom you served <input type="text" name="abody1" class="form-control form-control-lg form-control-solid" 
+                    placeholder="awarding Body"  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    From: <input type="date" name="pdateofaward1" class="form-control form-control-lg form-control-solid" 
+                    placeholder="Date of Award"  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    To: <input type="date" name="pdateofaward1" class="form-control form-control-lg form-control-solid" 
+                    placeholder="Date of Award"  required />
+                 </div>
+                 <!--end::Col-->
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Col-->
+    
+    </div>
+    <!--end::Input group-->
+    
+
+
+
+       
+    <!--begin::Input group-->
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Record 5</label>
+        <!--end::Label-->
+     <!--begin::Col-->
+     <div class="col-lg-6 fv-row">
+        Departmant: <input type="text" name="pqualification1" class="form-control form-control-lg form-control-solid" 
+          placeholder=""  required />
+       </div>
+       <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <!--begin::Row-->
+            <div class="row">
+               
+                <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                 Post/Grade: <input type="text" name="pqualification1" class="form-control form-control-lg form-control-solid" 
+                   placeholder="Professional qualification"  required />
+                </div>
+                <!--end::Col-->
+                 <!--begin::Col-->
+                 <div class="col-lg-6 fv-row">
+                    Officer under whom you served <input type="text" name="abody1" class="form-control form-control-lg form-control-solid" 
+                    placeholder="awarding Body"  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    From: <input type="date" name="pdateofaward1" class="form-control form-control-lg form-control-solid" 
+                    placeholder="Date of Award"  required />
+                 </div>
+                 <!--end::Col-->
+                  <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                    To: <input type="date" name="pdateofaward1" class="form-control form-control-lg form-control-solid" 
+                    placeholder="Date of Award"  required />
+                 </div>
+                 <!--end::Col-->
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Col-->
+    
+    </div>
+    <!--end::Input group-->
+
+
+
+
+    
+    <!--begin::Notice-->
+    <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+        <!--begin::Icon-->
+        <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+        
+        <!--begin::Wrapper-->
+        <div class="d-flex flex-stack flex-grow-1 ">
+                        <!--begin::Content-->
+                <div class=" fw-semibold">
+                <div class="fs-6 text-gray-700 ">
+                    In Service courses Undertaken to Date.
+
+                </div>
+                </div>
+                <!--end::Content-->
+                
+                </div>
+                <!--end::Wrapper-->  
+    </div>
+        <!--end::Notice-->
     
     
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Professional Qualifications 2</label>
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Service Course 1</label>
         <!--end::Label-->
     
         <!--begin::Col-->
@@ -902,20 +1174,32 @@
                
                 <!--begin::Col-->
                 <div class="col-lg-6 fv-row">
-                 Qualification 2: <input type="text" name="pqualification2" class="form-control form-control-lg form-control-solid" 
-                   placeholder="Professional qualification"  required />
+                 Date: <input type="date" name="pqualification2" class="form-control form-control-lg form-control-solid" 
+                   placeholder=""  required />
                 </div>
                 <!--end::Col-->
+                  <!--begin::Col-->
+                  <div class="col-lg-6 fv-row">
+                    Course Title: <input type="text" name="pqualification2" class="form-control form-control-lg form-control-solid" 
+                      placeholder=""  required />
+                   </div>
+                   <!--end::Col-->
+                     <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                   Institution: <input type="text" name="pqualification2" class="form-control form-control-lg form-control-solid" 
+                      placeholder=""  required />
+                   </div>
+                   <!--end::Col-->
                  <!--begin::Col-->
                  <div class="col-lg-6 fv-row">
-                    AwardingBody/society: <input type="text" name="abody2" class="form-control form-control-lg form-control-solid" 
-                    placeholder="awarding Body"  required />
+                    Duration: <input type="text" name="abody2" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  required />
                  </div>
                  <!--end::Col-->
                   <!--begin::Col-->
                 <div class="col-lg-6 fv-row">
-                    Date Of Award: <input type="date" name="pdateofaward2" class="form-control form-control-lg form-control-solid" 
-                    placeholder="Date of Award"  required />
+                    Award: <input type="text" name="pdateofaward2" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  required />
                  </div>
                  <!--end::Col-->
             </div>

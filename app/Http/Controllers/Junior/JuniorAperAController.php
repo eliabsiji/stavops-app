@@ -12,7 +12,7 @@ class JuniorAperAController extends Controller
      */
     public function index()
     {
-        //
+        return view('juniorstaff.parta');
     }
 
     /**

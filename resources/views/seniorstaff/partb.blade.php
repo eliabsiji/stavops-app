@@ -1710,70 +1710,35 @@
 
 
 
-
-
-
-
-
-
-
-
-
-                
-                
-            <!--begin::Input group-->
-            <div class="row mb-6">
-                <!--begin::Label-->
-                <label class="col-lg-4 col-form-label required fw-semibold fs-6">Relationship with staff and student</label>
-                <!--end::Label-->
-        
-                <!--begin::Col-->
-                <div class="col-lg-8 fv-row">
-                    <input type="text" name="relationship" class="form-control form-control-lg form-control-solid" 
-                    placeholder="Relationship with staff and student" required/>
-                </div>
-                <!--end::Col-->
+  <!--begin::Notice-->
+  <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-900 ">
+                JUDGEMENT
             </div>
-            <!--end::Input group-->
-             
-             <!--begin::Input group-->
-             <div class="row mb-6">
-                <!--begin::Label-->
-                <label class="col-lg-4 col-form-label required fw-semibold fs-6">Punctuality and Appearance</label>
-                <!--end::Label-->
-        
-                <!--begin::Col-->
-                <div class="col-lg-8 fv-row">
-                    <input type="text" name="punctuality" class="form-control form-control-lg form-control-solid" 
-                    placeholder="Punctuality and Appearance" required/>
-                </div>
-                <!--end::Col-->
             </div>
-            <!--end::Input group-->
-        
-           
-        
-        
-        
-            <!--begin::Input group-->
-            <div class="row mb-6">
+            <!--end::Content-->
+            
+     </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+
+
+    
+               <!--begin::Input group-->
+               <div class="row mb-6">
                 <!--begin::Label-->
-                <label class="col-lg-4 col-form-label fw-semibold fs-6">General Remarks by Head of Department</label>
-                <!--end::Label-->
-        
-                <!--begin::Col-->
-                <div class="col-lg-8 fv-row">
-                    <input type="text" name="remarks" class="form-control form-control-lg form-control-solid" 
-                    placeholder="General Remarks by Head of Department" required />
-                </div>
-                <!--end::Col-->
-            </div>
-            <!--end::Input group-->
-        
-            <!--begin::Input group-->
-            <div class="row mb-6">
-                <!--begin::Label-->
-                <label class="col-lg-4 col-form-label required fw-semibold fs-6">The officer has served under me from</label>
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                    1.	Ability to make sensible decisions about what to do and when to do it
+                </label>
                 <!--end::Label-->
             
                 <!--begin::Col-->
@@ -1782,15 +1747,1538 @@
                     <div class="row">
                         <!--begin::Col-->
                         <div class="col-lg-6 fv-row">
-                            From:<input type="date" name="fromdate" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
-                             placeholder="From" required/>
+                            <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                            <h5>2.0</h5>
+                            
                         </div>
                         <!--end::Col-->
             
                         <!--begin::Col-->
                         <div class="col-lg-6 fv-row">
-                           To: <input type="date" name="todate" class="form-control form-control-lg form-control-solid" 
-                           placeholder="To" required/>
+                            <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                            <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                           placeholder="Score"  required />
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <!--end::Row-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Input group-->
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">2.	His / Her decisions or proposals are consistently sound </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>3.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+                
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Sub Total</label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>5.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+  <!--begin::Notice-->
+  <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-900 ">
+                LEVEL OF EFFICENCY AND EFFECTIVENESS 
+            </div>
+            </div>
+            <!--end::Content-->
+            
+     </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+
+
+    
+               <!--begin::Input group-->
+               <div class="row mb-6">
+                <!--begin::Label-->
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                    1.	Gets a great deal done within a set time 
+                </label>
+                <!--end::Label-->
+            
+                <!--begin::Col-->
+                <div class="col-lg-8">
+                    <!--begin::Row-->
+                    <div class="row">
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                            <h5>1.0</h5>
+                            
+                        </div>
+                        <!--end::Col-->
+            
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                            <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                           placeholder="Score"  required />
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <!--end::Row-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Input group-->
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        2.	Maintain very high standard
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>1.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        3.	Work is virtually error proof 
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>1.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+                
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        4.	Able to get something done well without wasting time, money or energy
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>1.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+                
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        5.	Works in a way that produces result that was intended, that is successful 
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>1.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+                
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Sub Total</label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>5.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+  <!--begin::Notice-->
+  <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-900 ">
+                DRIVE AND DETERMINATION
+            </div>
+            </div>
+            <!--end::Content-->
+            
+     </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+
+
+    
+               <!--begin::Input group-->
+               <div class="row mb-6">
+                <!--begin::Label-->
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                    1.	Energy for work
+                </label>
+                <!--end::Label-->
+            
+                <!--begin::Col-->
+                <div class="col-lg-8">
+                    <!--begin::Row-->
+                    <div class="row">
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                            <h5>1.0</h5>
+                            
+                        </div>
+                        <!--end::Col-->
+            
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                            <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                           placeholder="Score"  required />
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <!--end::Row-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Input group-->
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        2.	Passion for the work
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>2.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        3.	Carried task through to the end 
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>2.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+                
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Sub Total</label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>5.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+
+  <!--begin::Notice-->
+  <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-900 ">
+                JUDGEMENT
+            </div>
+            </div>
+            <!--end::Content-->
+            
+     </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+
+
+    
+               <!--begin::Input group-->
+               <div class="row mb-6">
+                <!--begin::Label-->
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                    1.	Ability to make sensible decisions about what to do and when to do it
+                </label>
+                <!--end::Label-->
+            
+                <!--begin::Col-->
+                <div class="col-lg-8">
+                    <!--begin::Row-->
+                    <div class="row">
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                            <h5>2.0</h5>
+                            
+                        </div>
+                        <!--end::Col-->
+            
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                            <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                           placeholder="Score"  required />
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <!--end::Row-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Input group-->
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        2.	His / Her decisions or proposals are consistently sound     
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>3.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+                
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Sub Total</label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>5.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+
+                  <!--begin::Notice-->
+  <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-900 ">
+                LEVEL OF EFFICENCY AND EFFECTIVENESS 
+            </div>
+            </div>
+            <!--end::Content-->
+            
+     </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+
+
+    
+               <!--begin::Input group-->
+               <div class="row mb-6">
+                <!--begin::Label-->
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                    1.	Gets a great deal done within a set time 
+                </label>
+                <!--end::Label-->
+            
+                <!--begin::Col-->
+                <div class="col-lg-8">
+                    <!--begin::Row-->
+                    <div class="row">
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                            <h5>1.0</h5>
+                            
+                        </div>
+                        <!--end::Col-->
+            
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                            <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                           placeholder="Score"  required />
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <!--end::Row-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Input group-->
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        2.	Maintain very high standard
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>1.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        3.	Work is virtually error proof 
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>1.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+                
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        4.	Able to get something done well without wasting time, money or energy
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>1.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+                
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        5.	Works in a way that produces result that was intended, that is successful 
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>1.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+                
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Sub Total</label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>5.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+                
+
+
+  <!--begin::Notice-->
+  <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-900 ">
+                DRIVE AND DETERMINATION
+            </div>
+            </div>
+            <!--end::Content-->
+            
+     </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+
+
+    
+               <!--begin::Input group-->
+               <div class="row mb-6">
+                <!--begin::Label-->
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                    1.	Energy for work
+                </label>
+                <!--end::Label-->
+            
+                <!--begin::Col-->
+                <div class="col-lg-8">
+                    <!--begin::Row-->
+                    <div class="row">
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                            <h5>1.0</h5>
+                            
+                        </div>
+                        <!--end::Col-->
+            
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                            <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                           placeholder="Score"  required />
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <!--end::Row-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Input group-->
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        2.	Passion for the work
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>2.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+                <!--begin::Input group-->
+                <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        3.	Carried task through to the end 
+                    </label>
+                    <!--end::Label-->
+
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>2.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                            placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+                
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Sub Total</label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>5.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+                  <!--begin::Notice-->
+  <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-900 ">
+                LEADERSHIP QUALITY
+            </div>
+            </div>
+            <!--end::Content-->
+            
+     </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+
+
+    
+               <!--begin::Input group-->
+               <div class="row mb-6">
+                <!--begin::Label-->
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                    1.	Ability to give direction 
+                </label>
+                <!--end::Label-->
+            
+                <!--begin::Col-->
+                <div class="col-lg-8">
+                    <!--begin::Row-->
+                    <div class="row">
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                            <h5>1.0</h5>
+                            
+                        </div>
+                        <!--end::Col-->
+            
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                            <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                           placeholder="Score"  required />
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <!--end::Row-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Input group-->
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        2.	Ability to provide guidance to others
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>1.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+                         <!--begin::Input group-->
+                         <div class="row mb-6">
+                            <!--begin::Label-->
+                            <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                                3.	Ability to motivate others 
+                            </label>
+                            <!--end::Label-->
+                        
+                            <!--begin::Col-->
+                            <div class="col-lg-8">
+                                <!--begin::Row-->
+                                <div class="row">
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6 fv-row">
+                                        <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                        <h5>1.0</h5>
+                                        
+                                    </div>
+                                    <!--end::Col-->
+                        
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6 fv-row">
+                                        <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                        <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                                       placeholder="Score"  required />
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+                                <!--end::Row-->
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Input group-->
+
+                        
+                                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        4.	Ability to influence others to achieve goals 
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>2.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+                
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Sub Total</label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>5.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+                  <!--begin::Notice-->
+  <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-900 ">
+                TECHNICAL ATTRIBUTES: PROFESSIONAL KNOWLEDGE 
+            </div>
+            </div>
+            <!--end::Content-->
+            
+     </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+
+
+    
+               <!--begin::Input group-->
+               <div class="row mb-6">
+                <!--begin::Label-->
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                    1.	Wide knowledge of the Polytechnic system
+                </label>
+                <!--end::Label-->
+            
+                <!--begin::Col-->
+                <div class="col-lg-8">
+                    <!--begin::Row-->
+                    <div class="row">
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                            <h5>2.0</h5>
+                            
+                        </div>
+                        <!--end::Col-->
+            
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                            <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                           placeholder="Score"  required />
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <!--end::Row-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Input group-->
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        2.	Application of specialist knowledge in relevant area to profession
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>3.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+                
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Sub Total</label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>5.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+                  <!--begin::Notice-->
+  <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-900 ">
+                PUNCTUALITY AND REGULARITY AT WORK
+            </div>
+            </div>
+            <!--end::Content-->
+            
+     </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+
+
+    
+               <!--begin::Input group-->
+               <div class="row mb-6">
+                <!--begin::Label-->
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                    1.	Arrival at the work at the appointed time
+                </label>
+                <!--end::Label-->
+            
+                <!--begin::Col-->
+                <div class="col-lg-8">
+                    <!--begin::Row-->
+                    <div class="row">
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                            <h5>2.0</h5>
+                            
+                        </div>
+                        <!--end::Col-->
+            
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                            <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                           placeholder="Score"  required />
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <!--end::Row-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Input group-->
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                        2.	Conformity to accepted frequency at work     
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>3.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+                
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Sub Total</label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>5.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+
+                  <!--begin::Notice-->
+  <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-900 ">
+                APPLICATION OF PROFESSIONAL/TECHNICAL KNOWLEDGE
+            </div>
+            </div>
+            <!--end::Content-->
+            
+     </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+
+
+    
+               <!--begin::Input group-->
+               <div class="row mb-6">
+                <!--begin::Label-->
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                    1.	Proficiency based on application of  professional / technical knowledge 
+                </label>
+                <!--end::Label-->
+            
+                <!--begin::Col-->
+                <div class="col-lg-8">
+                    <!--begin::Row-->
+                    <div class="row">
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                            <h5>5.0</h5>
+                            
+                        </div>
+                        <!--end::Col-->
+            
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                            <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                           placeholder="Score"  required />
                         </div>
                         <!--end::Col-->
                     </div>
@@ -1801,39 +3289,528 @@
             <!--end::Input group-->
                 
 
-        
-         <!--begin::Input group-->
-         <div class="row mb-6">
-            <!--begin::Label-->
-            <label class="col-lg-4 col-form-label required fw-semibold fs-6">Signature of Head of Department and Date</label>
-            <!--end::Label-->
-        
-            <!--begin::Col-->
-            <div class="col-lg-8">
-                <!--begin::Row-->
-                <div class="row">
-                   
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Sub Total</label>
+                    <!--end::Label-->
+                
                     <!--begin::Col-->
-                    <div class="col-lg-6 fv-row">
-                    Date: <input type="date" name="pqualification3" class="form-control form-control-lg form-control-solid" 
-                       placeholder="Professional qualification"  required />
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>5.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
                     </div>
                     <!--end::Col-->
-                     <!--begin::Col-->
-                     <div class="col-lg-6 fv-row">
-                        Signature: <input type="file" name="signature" class="form-control form-control-lg form-control-solid" 
-                        placeholder="awarding Body"  required />
-                     </div>
-                     <!--end::Col-->
-                     
                 </div>
-                <!--end::Row-->
+                <!--end::Input group-->
+
+
+
+
+                  <!--begin::Notice-->
+  <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-900 ">
+                COST CONSCIOUSNESS
             </div>
-            <!--end::Col-->
-        
+            </div>
+            <!--end::Content-->
+            
+     </div>
+            <!--end::Wrapper-->  
+</div>
+    <!--end::Notice-->
+
+
+
+    
+               <!--begin::Input group-->
+               <div class="row mb-6">
+                <!--begin::Label-->
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+                    1.	Sensitivity to cost saving in carrying out tasks / assignment 
+                </label>
+                <!--end::Label-->
+            
+                <!--begin::Col-->
+                <div class="col-lg-8">
+                    <!--begin::Row-->
+                    <div class="row">
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                            <h5>5.0</h5>
+                            
+                        </div>
+                        <!--end::Col-->
+            
+                        <!--begin::Col-->
+                        <div class="col-lg-6 fv-row">
+                            <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                            <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                           placeholder="Score"  required />
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <!--end::Row-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Input group-->
+
+
+
+
+                
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Sub Total</label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Maximum Score</h4></div> 
+                                <h5>5.0</h5>
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Actual Score</h4></div> 
+                                <input type="number" name="contributionscore" class="form-control form-control-lg form-control-solid" 
+                               placeholder="Score"  required />
+                            </div>
+                            <!--end::Col-->
+                            
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+  <!--begin::Notice-->
+  <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-1000 ">
+                Indicate overall performance of duties by ticking the appropriate box below. (This assessment should reflect the performance actually achieved in the 
+                circumstances which prevailed as presented in the assessment box).
+            </div>
+            </div>
+            <!--end::Content-->
+            
+         </div>
+            <!--end::Wrapper-->  
+      </div>
+    <!--end::Notice-->
+  
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label fw-semibold fs-6">
+                        
+                        A   Outstanding                                  
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>Exceptionally effective</h4></div> 
+                             
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>(90 - 100)</h4></div> 
+                               
+                            </div>
+                            <!--end::Col-->
+
+                              <!--begin::Col-->
+                              <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "></div> 
+                                <input class="form-check-input" type="radio" value="" name="retireage" 
+                                id="category_product_count_yes"   required/>
+                              
+                            </div>
+                            <!--end::Col-->
+                            
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label fw-semibold fs-6">
+                        
+                        B  Very Good                            
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>More than generally effective
+                                    but not positively outstanding
+                                </h4></div> 
+                             
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>(70 - 89.9)</h4></div> 
+                               
+                            </div>
+                            <!--end::Col-->
+
+                              <!--begin::Col-->
+                              <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "></div> 
+                                <input class="form-check-input" type="radio" value="" name="retireage" 
+                                id="category_product_count_yes"   required/>
+                               
+                            </div>
+                            <!--end::Col-->
+                            
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label fw-semibold fs-6">
+                        
+                        C     Good                                 
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>
+                                    Generally effective
+                                </h4></div> 
+                             
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>(50 - 69.9)</h4></div> 
+                               
+                            </div>
+                            <!--end::Col-->
+
+                              <!--begin::Col-->
+                              <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "></div> 
+                                <input class="form-check-input" type="radio" value="" name="retireage" 
+                                id="category_product_count_yes"   required/>
+                               
+                            </div>
+                            <!--end::Col-->
+                            
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label fw-semibold fs-6">
+                        
+                        D  Fair                                 
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>
+                                    Performs duties moderately Well without serious shortcomings
+
+                                </h4></div> 
+                             
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>(30 - 49.9)</h4></div> 
+                               
+                            </div>
+                            <!--end::Col-->
+
+                              <!--begin::Col-->
+                              <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "></div> 
+                                <input class="form-check-input" type="radio" value="" name="retireage" 
+                                id="category_product_count_yes"   required/>
+                              
+                            </div>
+                            <!--end::Col-->
+                            
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+
+
+
+                 <!--begin::Input group-->
+                 <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label fw-semibold fs-6">
+                        
+                        E   Unsatisfactory                           
+                    </label>
+                    <!--end::Label-->
+                
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>
+                                    Definitely ineffective and not up to the duties
+                                </h4></div> 
+                             
+                                
+                            </div>
+                            <!--end::Col-->
+                
+                            <!--begin::Col-->
+                            <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "><h4>(0 - 29.9)</h4></div> 
+                               
+                            </div>
+                            <!--end::Col-->
+
+                              <!--begin::Col-->
+                              <div class="col-lg-4 fv-row">
+                                <div class="fs-6 text-gray-900 "></div> 
+                                <input class="form-check-input" type="radio" value="" name="retireage" 
+                                id="category_product_count_yes"   required/>
+                               
+                            </div>
+                            <!--end::Col-->
+                            
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+
+                 
+        <!--begin::Actions-->
+        <div class="card-footer d-flex justify-content-end py-6 px-9">
+            <button type="reset" class="btn btn-light btn-active-light-primary me-2">Discard</button>
+            <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">Save Changes</button>
         </div>
-        <!--end::Input group-->
+        <!--end::Actions-->
+
+<!--begin::Notice-->
+<div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+    <!--begin::Icon-->
+    <i class="ki-duotone ki-design-1 fs-2tx text-primary me-4"></i>        <!--end::Icon-->
+    
+    <!--begin::Wrapper-->
+    <div class="d-flex flex-stack flex-grow-1 ">
+                    <!--begin::Content-->
+            <div class=" fw-semibold">
+            <div class="fs-6 text-gray-1000 ">
+                For senior non- teaching staff to be promoted, after three years, he/she must score a minimum of 50 in the Annual Performance Evaluation Report.
+            </div>
+            </div>
+            <!--end::Content-->
+            
+         </div>
+            <!--end::Wrapper-->  
+      </div>
+    <!--end::Notice-->
+
+
+ <!--begin::Input group-->
+ <div class="row mb-6">
+    <!--begin::Label-->
+    <label class="col-lg-4 col-form-label required  fw-semibold fs-6">
         
+        I certify that I have read the contents of this 
+        report and that my Head of Department has discussed them with me. 
+        I have the following comments to add
+           
+    </label>
+    <!--end::Label-->
+
+     <!--begin::Col-->
+     <div class="col-lg-8 fv-row">
+        <textarea name="coursestaught" class="form-control form-control-lg form-control-solid" 
+        placeholder="" required></textarea>
+    </div>
+    <!--end::Col-->
+  
+</div>
+<!--end::Input group-->
+
+
+
+    <!--begin::Input group-->
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">
+            Signature of Officer Reported on
+        </label>
+        <!--end::Label-->
+    
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <!--begin::Row-->
+            <div class="row">
+               
+                <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                Date: <input type="date" name="signdate" class="form-control form-control-lg form-control-solid" 
+                   placeholder="Professional qualification"  required />
+                </div>
+                <!--end::Col-->
+                 <!--begin::Col-->
+                 <div class="col-lg-6 fv-row">
+                    Signature: <input type="file" name="signature" class="form-control form-control-lg form-control-solid" 
+                    placeholder="awarding Body"  required />
+                 </div>
+                 <!--end::Col-->
+                 
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Col-->
+    
+    </div>
+    <!--end::Input group-->
+    
+
+</form>
+
+
+<form>
+    <!--begin::Input group-->
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required  fw-semibold fs-6">
+            Job title of Officer Reported on
+        </label>
+        <!--end::Label-->
+    
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <!--begin::Row-->
+            <div class="row">
+               
+                <!--begin::Col-->
+                <div class="col-lg-6 fv-row">
+                Grade Level: <input type="text" name="signdate" class="form-control form-control-lg form-control-solid" 
+                   placeholder=""  required />
+                </div>
+                <!--end::Col-->
+                 <!--begin::Col-->
+                 <div class="col-lg-6 fv-row">
+                    Job Title: <input type="text" name="signature" class="form-control form-control-lg form-control-solid" 
+                    placeholder=""  required />
+                 </div>
+                 <!--end::Col-->
+                 
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Col-->
+    
+    </div>
+    <!--end::Input group-->
+
+
         
         </div>
         <!--end::Card body-->
