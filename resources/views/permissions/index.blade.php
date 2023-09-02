@@ -102,7 +102,7 @@ use Spatie\Permission\Models\Role;
     <div class="card-body pt-0">
     
  <!--begin::Table-->
-        <table class="table align-middle table-row-dashed fs-6 gy-5 mb-0" id="kt_permissions_table">
+        <table class="table align-middle table-row-dashed fs-6 gy-5 mb-0" >
             <thead>
                 <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
                     <th class="min-w-125px">Name</th>
@@ -121,7 +121,7 @@ use Spatie\Permission\Models\Role;
                     $rolePermissions = DB::table("role_has_permissions")->where("role_has_permissions.permission_id",$permission->id)
                     ->leftJoin('roles', 'roles.id','=','role_has_permissions.role_id')
                     ->get(['roles.name as name']);  
-                     ?>
+                ?>
                       
                     <tr>
                         <td>
@@ -148,14 +148,10 @@ use Spatie\Permission\Models\Role;
                         </td>
                     </tr>
                     
-                        <?php
-                    }  
-                
-                 
-                ?>
+                <?php } ?>
 
                              
-                            </tbody>
+             </tbody>
         </table>
         <!--end::Table-->
     </div>
