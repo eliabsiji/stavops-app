@@ -172,7 +172,7 @@
 
 
 <!--begin::Add user-->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_user">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal">
     <i class="ki-duotone ki-plus fs-2"></i>        Add User
 </button>
 <!--end::Add user-->
@@ -222,7 +222,7 @@
                 @csrf
                 <!--begin::Scroll-->
                 <div class="d-flex flex-column scroll-y me-n7 pe-7" id="kt_modal_add_user_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_add_user_header" data-kt-scroll-wrappers="#kt_modal_add_user_scroll" data-kt-scroll-offset="300px">
-                    <!--begin::Input group-->
+                    {{-- <!--begin::Input group-->
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
                         <label class="d-block fw-semibold fs-6 mb-5">Avatar</label>
@@ -272,7 +272,7 @@
                         <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
                         <!--end::Hint-->
                     </div>
-                    <!--end::Input group-->
+                    <!--end::Input group--> --}}
 
                     <!--begin::Input group-->
                     <div class="fv-row mb-7">
@@ -380,7 +380,8 @@
 </div>
 <!--end::Modal dialog-->
 </div>
-<!--end::Modal - Add task-->        </div>
+<!--end::Modal - Add task-->       
+ </div>
     <!--end::Card toolbar-->
 </div>
 <!--end::Card header-->
