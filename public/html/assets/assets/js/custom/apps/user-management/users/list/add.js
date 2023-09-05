@@ -130,7 +130,7 @@ var KTUsersAddUser = function () {
                     cancelButton: "btn btn-active-light"
                 }
             }).then(function (result) {
-                if (result.value) {
+                if (result.value){
                     form.reset(); // Reset form			
                     modal.hide();	
                 } else if (result.dismiss === 'cancel') {
