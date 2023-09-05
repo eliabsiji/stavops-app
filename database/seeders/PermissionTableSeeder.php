@@ -26,7 +26,7 @@ class PermissionTableSeeder extends Seeder
            'role-updateuserrole',
            'permission-list',
            'permission-create',
-           'permission-edit',
+           'permission-show',
            'permission-delete',
            'dashboard-list',
            
