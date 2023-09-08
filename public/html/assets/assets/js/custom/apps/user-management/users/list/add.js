@@ -1,4 +1,4 @@
-"use strict";
+
 
 // Class definition
 var KTUsersAddUser = function () {

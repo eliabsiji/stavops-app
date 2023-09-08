@@ -281,7 +281,7 @@
                         <!--end::Label-->
 
                         <!--begin::Input-->
-                        <input type="text" name="name" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Full name"  />
+                        <input type="text" name="name" id="name" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Full name"  />
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
@@ -293,7 +293,7 @@
                         <!--end::Label-->
 
                         <!--begin::Input-->
-                        <input type="email" name="email" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="example@domain.com"  />
+                        <input type="email" name="email" id="email" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="example@domain.com"  />
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
@@ -313,7 +313,7 @@
                                     <!--begin::Input-->
                                     {{-- <input class="form-check-input me-3" name="roles" type="radio" value="0" id="kt_modal_update_role_option_0" checked='checked' /> --}}
                                     <!--end::Input-->
-                                    <select name ="roles[]" id="select2-example-multiple" class="form-control form-control-solid mb-3 mb-lg-0" multiple="multiple" >
+                                    <select name ="roles[]" id="role" class="form-control form-control-solid mb-3 mb-lg-0" multiple="multiple" >
                                         @foreach ($roles as $role => $name )
                                          <option value="{{$name}}">{{ $name }}</option>
                                         @endforeach
@@ -333,7 +333,7 @@
                         <!--end::Label-->
 
                         <!--begin::Input-->
-                        <input type="password" name="password" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Passowrd"  />
+                        <input type="password" name="password" id="password" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Passowrd"  />
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
@@ -491,7 +491,7 @@
                             <!--begin::Menu item-->
                             <div class="menu-item px-3" id="del_user">
                                 {!! Form::open(['id'=>'kt_modal_del_user_form','method' => 'DELETE','route' => ['users.destroy', $user->id],]) !!}
-                                    <input type="hidden" id="userid" value="{{ $user->name }}">
+                                    <input type="hidden"  value="{{ $user->name }}">
                                 {!! Form::submit('Delete', ['class' => "menu-link px-3" ,'data-kt-users-table-filter'=>"delete_row"]) !!}
                                 {!! Form::close() !!}               
                             </div>
@@ -508,7 +508,8 @@
 
         </tbody>
      </table>
-<!--end::Table-->    </div>
+<!--end::Table-->  
+  </div>
 <!--end::Card body-->
    </div>
 <!--end::Card-->       
