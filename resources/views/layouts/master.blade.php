@@ -201,7 +201,7 @@
              @include('layouts.pages-assets.js.permissions-list-js')
         @endif
        
-      begin::Global Javascript Bundle(mandatory for all pages)-->
+     <!-- begin::Global Javascript Bundle(mandatory for all pages)-->
       <!-- <script src="{{ asset('html/assets/assets/plugins/global/plugins.bundle.js')}}"></script>
       <script src="{{ asset('html/assets/assets/js/scripts.bundle.js')}}"></script> -->
   <!--end::Global Javascript Bundle-->
@@ -221,9 +221,9 @@
       <script src="{{ asset('html/assets/assets/js/custom/utilities/modals/create-app.js')}}"></script>
       <script src="{{ asset('html/assets/assets/js/custom/utilities/modals/users-search.js')}}"></script> -->
   <!--end::Custom Javascript-->
-<!--end::Javascript
+
         
             </body>
-    <!--end::Body-->
+   
 
 </html>
