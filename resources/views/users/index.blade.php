@@ -1,18 +1,18 @@
 @extends('layouts.master')
 @section('content')
-          
+
             <!--begin::Main-->
             <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
                 <!--begin::Content wrapper-->
                 <div class="d-flex flex-column flex-column-fluid">
-                                            
+
 <!--begin::Toolbar-->
 <div id="kt_app_toolbar" class="app-toolbar  py-3 py-lg-6 ">
 
             <!--begin::Toolbar container-->
         <div id="kt_app_toolbar_container" class="app-container  container-xxl d-flex flex-stack ">
-            
-    
+
+
 
 <!--begin::Page title-->
 <div  class="page-title d-flex flex-column justify-content-center flex-wrap me-3 ">
@@ -22,7 +22,7 @@
             </h1>
     <!--end::Title-->
 
-            
+
         <!--begin::Breadcrumb-->
         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                             <!--begin::Item-->
@@ -35,11 +35,11 @@
                         <span class="bullet bg-gray-400 w-5px h-2px"></span>
                     </li>
                     <!--end::Item-->
-                                        
+
                             <!--begin::Item-->
                                     <li class="breadcrumb-item text-muted">Users list </li>
                                 <!--end::Item-->
-                                        
+
                     </ul>
         <!--end::Breadcrumb-->
     </div>
@@ -71,17 +71,17 @@
         </div>
         <!--end::Toolbar container-->
     </div>
-<!--end::Toolbar-->                                        
-                    
+<!--end::Toolbar-->
+
 
 <div id="kt_app_content" class="app-content  flex-column-fluid " >
-    
-           
+
+
     <!--begin::Content container-->
     <div id="kt_app_content_container" class="app-container  container-xxl ">
 
 
-        
+
 
 
 <!--begin::Toolbar-->
@@ -93,7 +93,7 @@
     </h2>
     <!--end::Heading-->
 
-   
+
 </div>
 <!--end::Toolbar-->
 
@@ -142,7 +142,7 @@
             @foreach ($role_perm as $role)
             <option value="{{ $role->name }}">{{ $role->name }}</option>
             @endforeach
-          
+
         </select>
     </div>
     <!--end::Input group-->
@@ -213,8 +213,8 @@
             <!--end::Close-->
         </div>
         <!--end::Modal header-->
-    
-    
+
+
         <!--begin::Modal body-->
         <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
             <!--begin::Form-->
@@ -228,7 +228,7 @@
                         <label class="d-block fw-semibold fs-6 mb-5">Avatar</label>
                         <!--end::Label-->
 
-                        
+
                                 <!--begin::Image placeholder-->
                                 <style>
                                 .image-input-placeholder {
@@ -237,7 +237,7 @@
 
                                         [data-bs-theme="dark"] .image-input-placeholder {
                                         background-image: url('{{ asset('html/assets/assets/media/svg/files/blank-image-dark.svg')}}');
-                                    }               
+                                    }
                                 </style>
                                 <!--end::Image placeholder-->
                         <!--begin::Image input-->
@@ -305,11 +305,11 @@
                         <!--end::Label-->
 
                         <!--begin::Roles-->
-                    
-                
+
+
                              <!--begin::Input row-->
                              <div class="fv-row mb-7">
-                             
+
                                     <!--begin::Input-->
                                     {{-- <input class="form-check-input me-3" name="roles" type="radio" value="0" id="kt_modal_update_role_option_0" checked='checked' /> --}}
                                     <!--end::Input-->
@@ -318,14 +318,14 @@
                                          <option value="{{$name}}">{{ $name }}</option>
                                         @endforeach
                                     </select>
-                                   
-                            
+
+
                             </div>
                             <!--end::Input row-->
                         </div>
                         <!--end::Input group-->
-                        
-                          
+
+
                     <!--begin::Input group-->
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
@@ -338,7 +338,7 @@
                     </div>
                     <!--end::Input group-->
 
-                    
+
                     <!--begin::Input group-->
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
@@ -351,7 +351,7 @@
                     </div>
                     <!--end::Input group-->
                                                                                     <!--end::Roles-->
-                    
+
                 </div>
                 <!--end::Scroll-->
 
@@ -380,7 +380,7 @@
 </div>
 <!--end::Modal dialog-->
 </div>
-<!--end::Modal - Add task-->       
+<!--end::Modal - Add task-->
  </div>
     <!--end::Card toolbar-->
 </div>
@@ -449,7 +449,7 @@
                 </div>
                 <!--begin::User details-->
             </td>
-            
+
             <td>
                 @if(!empty($user->getRoleNames()))
                     @foreach($user->getRoleNames() as $val)
@@ -493,11 +493,11 @@
                                 {!! Form::open(['id'=>'kt_modal_del_user_form','method' => 'DELETE','route' => ['users.destroy', $user->id],]) !!}
                                     <input type="hidden"  value="{{ $user->name }}">
                                 {!! Form::submit('Delete', ['class' => "menu-link px-3" ,'data-kt-users-table-filter'=>"delete_row"]) !!}
-                                {!! Form::close() !!}               
+                                {!! Form::close() !!}
                             </div>
                             <!--end::Menu item-->
                             @endcan
-                           
+
                     </div>
                            <!--end::Menu-->
             </td>
@@ -508,17 +508,16 @@
 
         </tbody>
      </table>
-<!--end::Table-->  
+<!--end::Table-->
   </div>
 <!--end::Card body-->
    </div>
-<!--end::Card-->       
+<!--end::Card-->
   </div>
-  
+
     <!--end::Content container-->
 </div>
-<!--end::Content-->		
-@endsection   
+<!--end::Content-->
+@endsection
 
 
-    

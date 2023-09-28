@@ -22,6 +22,9 @@ use App\Http\Controllers\Junior\JuniorAperBController;
 use App\Http\Controllers\Junior\JuniorAperCController;
 use App\Http\Controllers\Junior\JuniorAperDController;
 use App\Http\Controllers\Junior\JuniorAperEController;
+
+//user journal...
+use App\Http\Controllers\Journal\JournalCategoryController;
 use Spatie\Permission\Contracts\Role;
 
 /*
@@ -50,7 +53,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/adduser/{id}',[RoleController::class, 'adduser'])->name('roles.adduser');
     Route::get('/updateuserrole',[RoleController::class, 'updateuserrole'])->name('roles.updateuserrole');
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-   
+
+    //journal routes...
+    Route::resource('journalcategory', JournalCategoryController::class);
+
     Route::resource('academic_aper_part_a', AcademicAperAController::class);
     Route::resource('academic_aper_part_b', AcademicAperBController::class);
     Route::resource('academic_aper_part_c', AcademicAperCController::class);

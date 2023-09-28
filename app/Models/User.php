@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -48,7 +50,7 @@ class User extends Authenticatable
 
     public function staffPicture(): HasOne
     {
-        return $this->hasOne(StaffPictureModel::class);
+        return $this->hasOne(StaffPictureModel::class,'staff_id');
     }
 
     /**
@@ -58,7 +60,7 @@ class User extends Authenticatable
      */
     public function staffemploymentDetails(): HasOne
     {
-        return $this->hasOne(staffemploymentDetailsModel::class);
+        return $this->hasOne(staffemploymentDetailsModel::class,'staff_');
     }
 
     /**
@@ -69,6 +71,11 @@ class User extends Authenticatable
     public function staffBio(): HasOne
     {
         return $this->hasOne(staffBioModel::class);
+    }
+
+    public function journal(): HasMany
+    {
+        return $this->hasMany(Journals::class,'user_id');
     }
 
 }

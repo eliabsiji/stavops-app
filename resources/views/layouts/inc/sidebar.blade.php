@@ -1,28 +1,28 @@
 
 
-                                               
+
 <!--begin::Sidebar-->
-<div id="kt_app_sidebar" class="app-sidebar  flex-column " 
-     data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle"      
+<div id="kt_app_sidebar" class="app-sidebar  flex-column "
+     data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle"
      >
 
-            
+
 <!--begin::Logo-->
 <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
     <!--begin::Logo image-->
     <a href="/dashboard">
-        <img alt="Logo" src="{{ asset('html/assets/assets/media/logos/logo1.png')}}" class="h-90px app-sidebar-logo-default"/>
+        <img alt="Logo" src="{{ asset('html/assets/assets/media/logos/logo1.png')}}" class="h-70px app-sidebar-logo-default"/>
     </a>
-    
-        <div 
-            id="kt_app_sidebar_toggle" 
-            class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary body-bg h-30px w-30px position-absolute top-50 start-100 translate-middle rotate " 
-            data-kt-toggle="true" 
-            data-kt-toggle-state="active" 
-            data-kt-toggle-target="body" 
+
+        <div
+            id="kt_app_sidebar_toggle"
+            class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary body-bg h-30px w-30px position-absolute top-50 start-100 translate-middle rotate "
+            data-kt-toggle="true"
+            data-kt-toggle-state="active"
+            data-kt-toggle-target="body"
             data-kt-toggle-name="app-sidebar-minimize"
             >
-            
+
             <i class="ki-duotone ki-double-left fs-2 rotate-180"><span class="path1"></span><span class="path2"></span></i>        </div>
         <!--end::Sidebar toggle-->
     </div>
@@ -34,9 +34,9 @@
             <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
                 <!--begin::Menu-->
                 <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
-              
+
                 @role('dashboard-list')
-                    @include('layouts.inc.dashboard') 
+                    @include('layouts.inc.dashboard')
                 @else
                     @include('layouts.inc.userdashboard')
                 @endrole
@@ -78,7 +78,7 @@
                                     <span class="menu-arrow"></span>
                                 </span>
                                 <!--end:Menu link-->
-                                
+
                                 <!--begin:Menu sub-->
                                 <div class="menu-sub menu-sub-accordion">
                                     @can('user-list')
@@ -95,12 +95,12 @@
                                     </div>
                                     <!--end:Menu item-->
                                     @endcan
-                                   
+
                                 </div>
                                 <!--end:Menu sub-->
                             </div>
                             <!--end:Menu item-->
-                           
+
                             <!--begin:Menu item-->
                             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                                 <!--begin:Menu link-->
@@ -178,8 +178,8 @@
                     <!--end:Menu item-->
 
 
-            
-            
+
+
                     <!--begin:Menu item-->
                     <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <!--begin:Menu link-->
@@ -311,7 +311,7 @@
                     <!--end:Menu item-->
 
 
-    
+
 
 
                        <!--begin:Menu item-->
@@ -766,7 +766,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Classic</span>
+                                        <span class="menu-title">Category Management</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
@@ -778,7 +778,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">SaaS</span>
+                                        <span class="menu-title">Volume &  Number</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
@@ -790,7 +790,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Accounting</span>
+                                        <span class="menu-title">Journal Year</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
@@ -802,7 +802,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Extended</span>
+                                        <span class="menu-title">Authors</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
@@ -814,7 +814,33 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Reports</span>
+                                        <span class="menu-title">Editors</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+
+                                <!--begin:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/reports.html">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Reviewers</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+
+                                <!--begin:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/reports.html">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Publishers</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
@@ -823,16 +849,16 @@
                             <!--end:Menu sub-->
                         </div>
                         <!--end:Menu item-->
-    
-                 
-                  
+
+
+
                   {{-- user profile here --}}
 
-                   
-                   
-                 
-                   
-                
+
+
+
+
+
                     <!--begin:Menu item-->
                     <div class="menu-item pt-5">
                         <!--begin:Menu content-->
@@ -920,8 +946,8 @@
                                 <!--end:Menu link-->
                             </div>
                             <!--end:Menu item-->
-                           
-                          
+
+
                         </div>
                         <!--end:Menu sub-->
                     </div>
@@ -1007,8 +1033,8 @@
                                 <!--end:Menu link-->
                             </div>
                             <!--end:Menu item-->
-                           
-                          
+
+
                         </div>
                         <!--end:Menu sub-->
                     </div>
@@ -1093,29 +1119,121 @@
                                 <!--end:Menu link-->
                             </div>
                             <!--end:Menu item-->
-                           
-                          
+
+
                         </div>
                         <!--end:Menu sub-->
                     </div>
                     <!--end:Menu item-->
-                
+
                     <!--begin:Menu item-->
-                    <div class="menu-item">
+                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <!--begin:Menu link-->
-                        <a class="menu-link" href="http://127.0.0.1:8000/html/assets/layout-builder.html">
+                        <span class="menu-link">
                             <span class="menu-icon">
-                                <i class="ki-duotone ki-abstract-13 fs-2">
+                                <i class="ki-duotone ki-text-align-center fs-2">
                                     <span class="path1"></span>
                                     <span class="path2"></span>
+                                    <span class="path3"></span>
+                                    <span class="path4"></span>
                                 </i>
                             </span>
-                            <span class="menu-title">Journal & Publications</span>
-                        </a>
+                            <span class="menu-title">Journal & Publication Management</span>
+                            <span class="menu-arrow"></span>
+                        </span>
                         <!--end:Menu link-->
+                        <!--begin:Menu sub-->
+                        <div class="menu-sub menu-sub-accordion">
+                            <!--begin:Menu item-->
+                            <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/classic.html">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Category Management</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+                            <!--end:Menu item-->
+                            <!--begin:Menu item-->
+                            <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/saas.html">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Volume &  Number</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+                            <!--end:Menu item-->
+                            <!--begin:Menu item-->
+                            <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/accounting.html">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Journal Year</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+                            <!--end:Menu item-->
+                            <!--begin:Menu item-->
+                            <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/extended.html">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Authors</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+                            <!--end:Menu item-->
+                            <!--begin:Menu item-->
+                            <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/reports.html">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Editors</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+                            <!--end:Menu item-->
+
+                            <!--begin:Menu item-->
+                            <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/reports.html">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Reviewers</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+                            <!--end:Menu item-->
+
+                            <!--begin:Menu item-->
+                            <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/reports.html">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Publishers</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+                            <!--end:Menu item-->
+                        </div>
+                        <!--end:Menu sub-->
                     </div>
                     <!--end:Menu item-->
-                   
                     <!--begin:Menu item-->
                     <div class="menu-item">
                         <!--begin:Menu link-->
@@ -1231,12 +1349,12 @@
                                 <!--end:Menu link-->
                             </div>
                             <!--end:Menu item-->
-                           
-                        </div>
+
+                        </div> 
                         <!--end:Menu sub-->
                     </div>
                     <!--end:Menu item-->
-                   
+
                     <!--begin:Menu item-->
                     <div class="menu-item">
                         <!--begin:Menu link-->
@@ -1252,7 +1370,7 @@
                         <!--end:Menu link-->
                     </div>
                     <!--end:Menu item-->
-                   
+
                     <!--begin:Menu item-->
                     <div class="menu-item">
                         <!--begin:Menu link-->
@@ -1305,7 +1423,7 @@
 
 
 
-                   
+
 
 
                 </div>
@@ -1314,6 +1432,6 @@
             <!--end::Menu wrapper-->
         </div>
         <!--end::sidebar menu-->
-        
+
     </div>
     <!--end::Sidebar-->

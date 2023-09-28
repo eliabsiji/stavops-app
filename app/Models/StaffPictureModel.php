@@ -10,7 +10,7 @@ class StaffPictureModel extends Model
 {
     use HasFactory;
 
-    public function staffid(): BelongsTo
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }

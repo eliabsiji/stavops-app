@@ -8,8 +8,8 @@
         <meta charset="utf-8"/>
         <meta name="description" content=" "/>
         <meta name="keywords" content=""/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>      
-   
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
         <link rel="shortcut icon" href="{{ asset('html/assets/assets/media/logos/favicon.ico')}}"/>
 
         <!--begin::Fonts(mandatory for all pages)-->
@@ -19,16 +19,20 @@
              @include('layouts.pages-assets.css.dashboard-css')
         @endif
         @if (Route::is('users.*'))
-            @include('layouts.pages-assets.css.users-list-css')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+            @include('layouts.pages-assets.css.users-list-css')
         @endif
         @if (Route::is('roles.*'))
-            @include('layouts.pages-assets.css.users-list-css')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+            @include('layouts.pages-assets.css.users-list-css')
         @endif
         @if (Route::is('permissions.*'))
-             @include('layouts.pages-assets.css.permission-list-css')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+             @include('layouts.pages-assets.css.permission-list-css')
         @endif
-       
-        
+
+        @if (Route::is('journalcategory.*'))
+           @include('layouts.pages-assets.css.users-list-css')
+       @endif
+
+
         <!--begin::Vendor Stylesheets(used for this page only)-->
         <link href="{{ asset('html/assets/assets/plugins/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css"/>
         <!--end::Vendor Stylesheets-->
@@ -56,7 +60,7 @@
 				themeMode = localStorage.getItem("data-bs-theme");
 			} else {
 				themeMode = defaultThemeMode;
-			}			
+			}
 		}
 
 		if (themeMode === "system") {
@@ -64,28 +68,28 @@
 		}
 
 		document.documentElement.setAttribute("data-bs-theme", themeMode);
-	}            
+	}
 </script>
 
 <!--begin::App-->
 <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
     <!--begin::Page-->
-    <div class="app-page  flex-column flex-column-fluid " id="kt_app_page">     
-        
-                    
+    <div class="app-page  flex-column flex-column-fluid " id="kt_app_page">
+
+
 <!--begin::Header-->
 <div id="kt_app_header" class="app-header ">
 
                         <!--begin::Header container-->
             <div class="app-container  container-fluid d-flex align-items-stretch justify-content-between " id="kt_app_header_container">
-                
+
 	<!--begin::Sidebar mobile toggle-->
 	<div class="d-flex align-items-center d-lg-none ms-n3 me-1 me-md-2" title="Show sidebar menu">
 		<div class="btn btn-icon btn-active-color-primary w-35px h-35px" id="kt_app_sidebar_mobile_toggle">
 			<i class="ki-duotone ki-abstract-14 fs-2 fs-md-1"><span class="path1"></span><span class="path2"></span></i>		</div>
 	</div>
 	<!--end::Sidebar mobile toggle-->
-	
+
 
 	<!--begin::Mobile logo-->
 	<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
@@ -97,12 +101,12 @@
 
 <!--begin::Header wrapper-->
 <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1" id="kt_app_header_wrapper">
-			
+
 <!--begin::Menu wrapper-->
-<div 
+<div
     class="
-        app-header-menu 
-        app-header-mobile-drawer 
+        app-header-menu
+        app-header-mobile-drawer
         align-items-stretch
     "
 
@@ -117,20 +121,20 @@
     data-kt-swapper="true"
     data-kt-swapper-mode="{default: 'append', lg: 'prepend'}"
     data-kt-swapper-parent="{default: '#kt_app_body', lg: '#kt_app_header_wrapper'}"
->   
-  
+>
+
 </div>
 <!--end::Menu wrapper-->
-	
-	
+
+
 @include('layouts.inc.header')
 
         <!--begin::Wrapper-->
         <div class="app-wrapper  flex-column flex-row-fluid " id="kt_app_wrapper">
-            
+
 @include('layouts.inc.sidebar')
 
-  
+
 
 @yield('content')
 
@@ -142,7 +146,7 @@
 
 
 
-                                    
+
 <!--begin::Footer-->
 <div id="kt_app_footer" class="app-footer " >
             <!--begin::Footer container-->
@@ -160,13 +164,13 @@
         <a href="https://keenthemes.com/" target="_blank" class="menu-link px-2">
         About
        </a>
-    <li> 
+    <li>
 </ul>
-<!--end::Menu-->        
+<!--end::Menu-->
      </div>
         <!--end::Footer container-->
     </div>
-<!--end::Footer--> 
+<!--end::Footer-->
      </div>
     <!--end:::Main-->
   </div>
@@ -176,14 +180,14 @@
 </div>
 <!--end::App-->
 
-	
+
 <!--begin::Scrolltop-->
 <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
 	<i class="ki-duotone ki-arrow-up"><span class="path1"></span><span class="path2"></span></i></div>
 <!--end::Scrolltop-->
 
-                   
-        
+
+
         <!--begin::Javascript-->
         <script>
             // var hostUrl = "{{ asset('html/assets/assets/index.html')}}";        </script>
@@ -200,7 +204,12 @@
         @if (Route::is('permissions.*'))
              @include('layouts.pages-assets.js.permissions-list-js')
         @endif
-       
+
+        @if (Route::is('journalcategory.*'))
+             @include('layouts.pages-assets.js.journalcategory-list-js')
+        @endif
+
+
      <!-- begin::Global Javascript Bundle(mandatory for all pages)-->
       <!-- <script src="{{ asset('html/assets/assets/plugins/global/plugins.bundle.js')}}"></script>
       <script src="{{ asset('html/assets/assets/js/scripts.bundle.js')}}"></script> -->
@@ -222,8 +231,8 @@
       <script src="{{ asset('html/assets/assets/js/custom/utilities/modals/users-search.js')}}"></script> -->
   <!--end::Custom Javascript-->
 
-        
+
             </body>
-   
+
 
 </html>
