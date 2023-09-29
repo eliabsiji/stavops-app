@@ -18,7 +18,7 @@
 <div  class="page-title d-flex flex-column justify-content-center flex-wrap me-3 ">
     <!--begin::Title-->
     <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">
-   Journal Category
+     Journal Category
             </h1>
     <!--end::Title-->
 
@@ -27,7 +27,7 @@
         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                             <!--begin::Item-->
                              <li class="breadcrumb-item text-muted">
-                                 <a href="{{ route('users.index') }}" class="text-muted text-hover-primary">Jornal Category </a>
+                                 <a href="{{ route('journalcategory.index') }}" class="text-muted text-hover-primary">Users </a>
                                             </li>
                                 <!--end::Item-->
                                     <!--begin::Item-->
@@ -37,7 +37,7 @@
                     <!--end::Item-->
 
                             <!--begin::Item-->
-                                    <li class="breadcrumb-item text-muted">Journal Category list </li>
+                                    <li class="breadcrumb-item text-muted">Category list </li>
                                 <!--end::Item-->
 
                     </ul>
@@ -88,8 +88,8 @@
 <div class="d-flex flex-wrap flex-stack my-5">
     <!--begin::Heading-->
     <h2 class="fs-2 fw-semibold my-2">
-        Users
-        <span class="fs-6 text-gray-400 ms-1">Database</span>
+        Journal Category
+        <span class="fs-6 text-gray-400 ms-1">List</span>
     </h2>
     <!--end::Heading-->
 
@@ -106,7 +106,9 @@
     <div class="card-title">
         <!--begin::Search-->
         <div class="d-flex align-items-center position-relative my-1">
-            <i class="ki-duotone ki-magnifier fs-3 position-absolute ms-5"><span class="path1"></span><span class="path2"></span></i>                <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-13" placeholder="Search Category" />
+            <i class="ki-duotone ki-magnifier fs-3 position-absolute ms-5"><span class="path1"></span><span class="path2"></span></i>
+             <input type="text" data-kt-user-table-filter="search"
+              class="form-control form-control-solid w-250px ps-13" placeholder="Search Category" />
         </div>
         <!--end::Search-->
     </div>
@@ -116,15 +118,56 @@
     <div class="card-toolbar">
         <!--begin::Toolbar-->
 <div class="d-flex justify-content-end" data-kt-user-table-toolbar="base">
+<!--begin::Filter-->
+<button type="button" class="btn btn-light-primary me-3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+    <i class="ki-duotone ki-filter fs-2"><span class="path1"></span><span class="path2"></span></i>        Filter
+</button>
+<!--begin::Menu 1-->
+<div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true">
+<!--begin::Header-->
+<div class="px-7 py-5">
+    <div class="fs-5 text-dark fw-bold">Filter Options</div>
+</div>
+<!--end::Header-->
+
+<!--begin::Separator-->
+<div class="separator border-gray-200"></div>
+<!--end::Separator-->
+
+<!--begin::Content-->
+<div class="px-7 py-5" data-kt-user-table-filter="form">
+    <!--begin::Input group-->
+    <div class="mb-10">
+
+    </div>
+    <!--end::Input group-->
+
+    <!--begin::Input group-->
+    <div class="mb-10">
+
+    </div>
+    <!--end::Input group-->
+
+    <!--begin::Actions-->
+    <div class="d-flex justify-content-end">
+        <button type="reset" class="btn btn-light btn-active-light-primary fw-semibold me-2 px-6" data-kt-menu-dismiss="true" data-kt-user-table-filter="reset">Reset</button>
+        <button type="submit" class="btn btn-primary fw-semibold px-6"
+        data-kt-menu-dismiss="true" data-kt-user-table-filter="filter">Apply</button>
+    </div>
+    <!--end::Actions-->
+</div>
+<!--end::Content-->
+</div>
+<!--end::Menu 1-->
+<!--end::Filter-->
 
 
 
-
-<!--begin::Add Category-->
+<!--begin::Add user-->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_user">
     <i class="ki-duotone ki-plus fs-2"></i>        Add Category
 </button>
-<!--end::Add Category-->
+<!--end::Add user-->
 </div>
 <!--end::Toolbar-->
 
@@ -153,7 +196,7 @@
         <!--begin::Modal header-->
         <div class="modal-header" id="kt_modal_add_user_header">
             <!--begin::Modal title-->
-            <h2 class="fw-bold">Add Category</h2>
+            <h2 class="fw-bold">Create Category</h2>
             <!--end::Modal title-->
 
             <!--begin::Close-->
@@ -172,21 +215,26 @@
                 <!--begin::Scroll-->
                 <div class="d-flex flex-column scroll-y me-n7 pe-7" id="kt_modal_add_user_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_add_user_header" data-kt-scroll-wrappers="#kt_modal_add_user_scroll" data-kt-scroll-offset="300px">
 
-
                     <!--begin::Input group-->
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
-                        <label class="required fw-semibold fs-6 mb-2">Category Name</label>
+                        <label class="required fw-semibold fs-6 mb-2">Category  Name</label>
                         <!--end::Label-->
 
                         <!--begin::Input-->
-                        <input type="text" name="name" id="name" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Full name"  />
+                        <input type="text" name="journal_category" id="name" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Full name"  />
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
 
+                     <!--begin::Input group-->
+                     <div class="fv-row mb-7">
 
-                                                                                    <!--end::Roles-->
+                        <!--begin::Input-->
+                        <input type="hidden" name="createdBy"  value="{{Auth::user()->name}}" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Full name"  />
+                        <!--end::Input-->
+                    </div>
+                    <!--end::Input group-->
 
                 </div>
                 <!--end::Scroll-->
@@ -247,17 +295,20 @@
     <tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
         <th class="w-10px pe-2">
             <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
-                <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_table_users .form-check-input" value="1" />
+                <input class="form-check-input" type="checkbox" data-kt-check="true"
+                 data-kt-check-target="#kt_table_users .form-check-input" value="1" />
             </div>
         </th>
         <th class="min-w-125px">SN</th>
         <th class="min-w-125px">Name</th>
         <th class="min-w-125px">Date Created</th>
+        <th class="min-w-125px">Created By</th>
         <th class="text-end min-w-100px">Actions</th>
     </tr>
 </thead>
 <tbody class="text-gray-600 fw-semibold">
-        {{-- @foreach ($data as $key => $user)
+    <?php $i = 1; ?>
+        @foreach ($data as $key => $user)
         <tr>
             <td>
                 <div class="form-check form-check-sm form-check-custom form-check-solid">
@@ -265,37 +316,22 @@
                 </div>
             </td>
 
-            <td>{{ ++$i }}</td>
+            <td>{{ $i++ }}</td>
             <td class="d-flex align-items-center">
-                <!--begin:: Avatar -->
-                <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
-                    <a href="view.html">
-                                                        <div class="symbol-label">
-                                <img src="{{ asset('html/assets/assets/media/avatars/300-6.jpg')}}" alt="{{ $user->name }}" class="w-100" />
-                            </div>
-                                                </a>
-                </div>
-                <!--end::Avatar-->
-                <!--begin::User details-->
+
                 <div class="d-flex flex-column">
                     <a href="view.html" class="text-gray-800 text-hover-primary mb-1">{{ $user->name }}</a>
-                    <span>{{ $user->email }}</span>
+                    <span>{{ $user->journal_category }}</span>
                 </div>
                 <!--begin::User details-->
             </td>
 
-            <td>
-                @if(!empty($user->getRoleNames()))
-                    @foreach($user->getRoleNames() as $val)
-                        <label class="badge badge-dark">{{ $val }}</label>
-                    @endforeach
-                @endif
-            </td>
-            <td>
-                {{  $user->email }}
-            </td>
+
             <td>
                 {{  $user->created_at }}
+            </td>
+            <td>
+                {{  $user->createdBy }}
             </td>
             <td class="text-end">
                 <a href="#" class="btn btn-light btn-active-light-primary btn-flex btn-center btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -306,7 +342,7 @@
                         @can('user-edit')
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="{{ route('users.show',$user->id) }}" class="menu-link px-3">
+                                <a href="{{ route('journalcategory.show',$user->id) }}" class="menu-link px-3">
                                 View
                                 </a>
                             </div>
@@ -315,7 +351,7 @@
                         @can('user-edit')
                                 <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="{{ route('users.edit',$user->id) }}" class="menu-link px-3">
+                                <a href="{{ route('journalcategory.edit',$user->id) }}" class="menu-link px-3">
                                     Edit
                                 </a>
                             </div>
@@ -324,9 +360,9 @@
                          @can('user-edit')
                             <!--begin::Menu item-->
                             <div class="menu-item px-3" id="del_user">
-                                {!! Form::open(['id'=>'kt_modal_del_user_form','method' => 'DELETE','route' => ['users.destroy', $user->id],]) !!}
-                                    <input type="hidden"  value="{{ $user->name }}">
-                                {!! Form::submit('Delete', ['class' => "menu-link px-3" ,'data-kt-users-table-filter'=>"delete_row"]) !!}
+                                {!! Form::open(['id'=>'kt_modal_del_user_form','method' => 'DELETE','route' => ['journalcategory.destroy', $user->id],]) !!}
+                                    <input type="hidden"  value="{{ $user->journal_category }}">
+                                {!! Form::submit('Delete', ['class' => "menu-link px-3"]) !!}
                                 {!! Form::close() !!}
                             </div>
                             <!--end::Menu item-->
@@ -336,7 +372,7 @@
                            <!--end::Menu-->
             </td>
         </tr>
-    @endforeach --}}
+    @endforeach
 
 
 

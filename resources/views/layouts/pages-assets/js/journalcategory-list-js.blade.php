@@ -8,7 +8,7 @@
 <!--end::Vendors Javascript-->
 
 <!--begin::Custom Javascript(used for this page only)-->
-    <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/table.js')}}"></script>
+    <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/journalcategorytable.js')}}"></script>
     <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/export-users.js')}}"></script>
     <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/journalcategory.js')}}"></script>
     <script src="{{ asset('html/assets/assets/js/widgets.bundle.js')}}"></script>

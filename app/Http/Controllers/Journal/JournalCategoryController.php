@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Journal;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Journal_category;
 
 class JournalCategoryController extends Controller
 {
@@ -13,7 +14,8 @@ class JournalCategoryController extends Controller
     public function index()
     {
 
-        return view('journal.index');
+        $data = Journal_category::all();
+        return view('journal.index',compact('data'));
     }
 
     /**
@@ -29,7 +31,11 @@ class JournalCategoryController extends Controller
      */
     public function store(Request $request)
     {
-       
+
+        $input = $request->all();
+        Journal_category::create($input);
+        return redirect()->route('journalcategory.index')
+                        ->with('success','Category created successfully');
     }
 
     /**
@@ -61,6 +67,8 @@ class JournalCategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Journal_category::find($id)->delete();
+        return redirect()->route('journalcategory.index')
+                        ->with('success','Category deleted successfully');
     }
 }

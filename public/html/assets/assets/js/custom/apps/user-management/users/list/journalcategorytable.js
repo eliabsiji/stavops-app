@@ -4,8 +4,7 @@ var KTUsersList = function () {
     // Define shared variables
     var table = document.getElementById('kt_table_users');
     const element = document.getElementById('del_user');
-   // const form = element.querySelector('#kt_modal_add_user_form');
-    const form = element.querySelector('#kt_modal_del_user_form');
+    //const form = element.querySelector('#kt_modal_del_user_form');
     var datatable;
     var toolbarBase;
     var toolbarSelected;
@@ -47,8 +46,8 @@ var KTUsersList = function () {
             dateRow[3].setAttribute('data-order', realDate);
 
             // Set real date for joined column
-            const joinedDate = moment(dateRow[5].innerHTML, "DD MMM YYYY, LT").format(); // select date from 5th column in table
-            dateRow[5].setAttribute('data-order', joinedDate);
+            const joinedDate = moment(dateRow[4].innerHTML, "DD MMM YYYY, LT").format(); // select date from 5th column in table
+            dateRow[4].setAttribute('data-order', joinedDate);
         });
 
         // Init datatable --- more info on datatables: https://datatables.net/manual/
@@ -59,7 +58,7 @@ var KTUsersList = function () {
             "lengthChange": false,
             'columnDefs': [
                 { orderable: false, targets: 0 }, // Disable ordering on column 0 (checkbox)
-                { orderable: false, targets: 6 }, // Disable ordering on column 6 (actions)
+                { orderable: false, targets: 5 }, // Disable ordering on column 6 (actions)
             ]
         });
 

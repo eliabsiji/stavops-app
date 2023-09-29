@@ -15,16 +15,18 @@ return new class extends Migration
 
         Schema::create('staff_bio', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("user_id")->contrained("users")->onUpdate('cascade')->onDelete('cascade');
-            $table->string("othernames");
-            $table->string("phone");
-            $table->string("address");
-            $table->string("maritalstatus");
-            $table->string("nationality");
-            $table->string("dob");
-            $table->string("pob");
-            $table->string("dept");
-            $table->string("phone");
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')
+                                        ->on('users')->onUpdate('cascade')->onDelete('cascade');
+           // $table->foreignId('user_id')->contrained('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('othernames');
+            $table->string('phone');
+            $table->string('address');
+            $table->string('maritalstatus');
+            $table->string('nationality');
+            $table->string('dob');
+            $table->string('pob');
+            $table->string('dept');
             $table->timestamps();
         });
     }

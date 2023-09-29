@@ -9,6 +9,12 @@ class Journal_category extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'journal_category',
+        'createdBy'
+    ];
+
+
   public function journal()
   {
       return $this->belongsToMany(Journals::class);

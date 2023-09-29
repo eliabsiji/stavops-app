@@ -15,7 +15,7 @@ var KTUsersAddUser = function () {
             form,
             {
                 fields: {
-                    'name': {
+                    'journal_category': {
                         validators: {
                             notEmpty: {
                                 message: 'Category name is required'

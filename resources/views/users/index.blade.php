@@ -489,7 +489,7 @@
                          @endcan
                          @can('user-edit')
                             <!--begin::Menu item-->
-                            <div class="menu-item px-3" id="del_user">
+                            <div class="menu-item px-3" >
                                 {!! Form::open(['id'=>'kt_modal_del_user_form','method' => 'DELETE','route' => ['users.destroy', $user->id],]) !!}
                                     <input type="hidden"  value="{{ $user->name }}">
                                 {!! Form::submit('Delete', ['class' => "menu-link px-3" ,'data-kt-users-table-filter'=>"delete_row"]) !!}
