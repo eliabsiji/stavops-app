@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('journal_years', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('journal_volId')->constrained('Journal_volumes')->onUpdate('cascade');
-            $table->foreignId('journal_numId')->constrained('Journal_numbers')->onUpdate('cascade');
             $table->string('journal_year');
+            $table->string('createdBy');
             $table->timestamps();
         });
     }

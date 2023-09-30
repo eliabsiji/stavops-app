@@ -50,7 +50,7 @@
                     </div>
                     <!--end:Menu item-->
 
-
+                @can('usermanagement-link')
                       <!--begin:Menu item-->
                       <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <!--begin:Menu link-->
@@ -164,6 +164,7 @@
                         <!--end:Menu sub-->
                     </div>
                     <!--end:Menu item-->
+                @endcan
 
 
 
@@ -323,6 +324,9 @@
                         <!--end:Menu content-->
                     </div>
                     <!--end:Menu item-->
+                @can('staffmanagement-link')
+
+
                       <!--begin:Menu item-->
                       <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <!--begin:Menu link-->
@@ -405,8 +409,11 @@
                         <!--end:Menu sub-->
                     </div>
                     <!--end:Menu item-->
-
+                @endcan
                     <!--begin:Menu item-->
+                @can('academicmanagement-link')
+
+
                     <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <!--begin:Menu link-->
                         <span class="menu-link">
@@ -488,9 +495,12 @@
                         <!--end:Menu sub-->
                     </div>
                     <!--end:Menu item-->
-
+                @endcan
 
                      <!--begin:Menu item-->
+                @can('nonacademicmanagement-link')
+
+
                      <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <!--begin:Menu link-->
                         <span class="menu-link">
@@ -572,9 +582,10 @@
                         <!--end:Menu sub-->
                     </div>
                     <!--end:Menu item-->
-
+                @endcan
 
                      <!--begin:Menu item-->
+                @can('leavemanagement-link')
                      <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <!--begin:Menu link-->
                         <span class="menu-link">
@@ -656,9 +667,10 @@
                         <!--end:Menu sub-->
                     </div>
                     <!--end:Menu item-->
-
+                @endcan
 
                      <!--begin:Menu item-->
+                @can('apparisalmanagement-link')
                      <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <!--begin:Menu link-->
                         <span class="menu-link">
@@ -740,8 +752,9 @@
                         <!--end:Menu sub-->
                     </div>
                     <!--end:Menu item-->
-
+                @endcan
                          <!--begin:Menu item-->
+                @can('journalmanagement-link')
                          <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                             <!--begin:Menu link-->
                             <span class="menu-link">
@@ -759,42 +772,7 @@
                             <!--end:Menu link-->
                             <!--begin:Menu sub-->
                             <div class="menu-sub menu-sub-accordion">
-                                <!--begin:Menu item-->
-                                <div class="menu-item">
-                                    <!--begin:Menu link-->
-                                    <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/classic.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Category Management</span>
-                                    </a>
-                                    <!--end:Menu link-->
-                                </div>
-                                <!--end:Menu item-->
-                                <!--begin:Menu item-->
-                                <div class="menu-item">
-                                    <!--begin:Menu link-->
-                                    <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/saas.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Volume &  Number</span>
-                                    </a>
-                                    <!--end:Menu link-->
-                                </div>
-                                <!--end:Menu item-->
-                                <!--begin:Menu item-->
-                                <div class="menu-item">
-                                    <!--begin:Menu link-->
-                                    <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/accounting.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Journal Year</span>
-                                    </a>
-                                    <!--end:Menu link-->
-                                </div>
-                                <!--end:Menu item-->
+
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
@@ -849,6 +827,7 @@
                             <!--end:Menu sub-->
                         </div>
                         <!--end:Menu item-->
+                @endcan
 
 
 
@@ -955,7 +934,7 @@
 
 
 
-
+                    <!-- APER senior staff -->
                     <!--begin:Menu item-->
                     <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <!--begin:Menu link-->
@@ -1151,7 +1130,7 @@
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
-                                    <span class="menu-title">Category Management</span>
+                                    <span class="menu-title">My Journals</span>
                                 </a>
                                 <!--end:Menu link-->
                             </div>
@@ -1163,73 +1142,16 @@
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
-                                    <span class="menu-title">Volume &  Number</span>
-                                </a>
-                                <!--end:Menu link-->
-                            </div>
-                            <!--end:Menu item-->
-                            <!--begin:Menu item-->
-                            <div class="menu-item">
-                                <!--begin:Menu link-->
-                                <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/accounting.html">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span>
-                                    <span class="menu-title">Journal Year</span>
-                                </a>
-                                <!--end:Menu link-->
-                            </div>
-                            <!--end:Menu item-->
-                            <!--begin:Menu item-->
-                            <div class="menu-item">
-                                <!--begin:Menu link-->
-                                <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/extended.html">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span>
-                                    <span class="menu-title">Authors</span>
-                                </a>
-                                <!--end:Menu link-->
-                            </div>
-                            <!--end:Menu item-->
-                            <!--begin:Menu item-->
-                            <div class="menu-item">
-                                <!--begin:Menu link-->
-                                <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/reports.html">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span>
-                                    <span class="menu-title">Editors</span>
+                                    <span class="menu-title">New Journal</span>
                                 </a>
                                 <!--end:Menu link-->
                             </div>
                             <!--end:Menu item-->
 
-                            <!--begin:Menu item-->
-                            <div class="menu-item">
-                                <!--begin:Menu link-->
-                                <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/reports.html">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span>
-                                    <span class="menu-title">Reviewers</span>
-                                </a>
-                                <!--end:Menu link-->
-                            </div>
-                            <!--end:Menu item-->
 
-                            <!--begin:Menu item-->
-                            <div class="menu-item">
-                                <!--begin:Menu link-->
-                                <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/reports.html">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span>
-                                    <span class="menu-title">Publishers</span>
-                                </a>
-                                <!--end:Menu link-->
-                            </div>
-                            <!--end:Menu item-->
+
+
+
                         </div>
                         <!--end:Menu sub-->
                     </div>
@@ -1284,6 +1206,8 @@
 
 
 
+
+                @can('basicsettingsmanagement-link')
 
 
                     <!--begin:Menu item-->
@@ -1350,26 +1274,72 @@
                             </div>
                             <!--end:Menu item-->
 
-                        </div> 
+                        </div>
                         <!--end:Menu sub-->
                     </div>
                     <!--end:Menu item-->
 
-                    <!--begin:Menu item-->
-                    <div class="menu-item">
-                        <!--begin:Menu link-->
-                        <a class="menu-link" href="http://127.0.0.1:8000/html/assets/layout-builder.html">
-                            <span class="menu-icon">
-                                <i class="ki-duotone ki-abstract-13 fs-2">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                </i>
+
+
+                         <!--begin:Menu item-->
+                         <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                            <!--begin:Menu link-->
+                            <span class="menu-link">
+                                <span class="menu-icon">
+                                    <i class="ki-duotone ki-text-align-center fs-2">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                        <span class="path3"></span>
+                                        <span class="path4"></span>
+                                    </i>
+                                </span>
+                                <span class="menu-title">Journal & Publication Management</span>
+                                <span class="menu-arrow"></span>
                             </span>
-                            <span class="menu-title">Journal & Publications</span>
-                        </a>
-                        <!--end:Menu link-->
-                    </div>
-                    <!--end:Menu item-->
+                            <!--end:Menu link-->
+                            <!--begin:Menu sub-->
+                            <div class="menu-sub menu-sub-accordion">
+                                <!--begin:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link" href="{{ route('journalcategory.index') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Category Management</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <!--begin:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link" href="{{ route('journalvolume.index') }}">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Volume &  Number</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+                                <!--begin:Menu item-->
+                                <div class="menu-item">
+                                    <!--begin:Menu link-->
+                                    <a class="menu-link" href="http://127.0.0.1:8000/html/assets/toolbars/accounting.html">
+                                        <span class="menu-bullet">
+                                            <span class="bullet bullet-dot"></span>
+                                        </span>
+                                        <span class="menu-title">Journal Year</span>
+                                    </a>
+                                    <!--end:Menu link-->
+                                </div>
+                                <!--end:Menu item-->
+
+                            </div>
+                            <!--end:Menu sub-->
+                        </div>
+                        <!--end:Menu item-->
 
                     <!--begin:Menu item-->
                     <div class="menu-item">
@@ -1428,6 +1398,7 @@
 
                 </div>
                 <!--end::Menu-->
+            @endcan
             </div>
             <!--end::Menu wrapper-->
         </div>

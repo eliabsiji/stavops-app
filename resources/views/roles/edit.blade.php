@@ -2,19 +2,19 @@
 @extends('layouts.master')
 @section('content')
 <?php use Spatie\Permission\Models\Permission; ?>
-    
+
             <!--begin::Main-->
             <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
                 <!--begin::Content wrapper-->
                 <div class="d-flex flex-column flex-column-fluid">
-                                            
+
 <!--begin::Toolbar-->
 <div id="kt_app_toolbar" class="app-toolbar  py-3 py-lg-6 " >
-   
+
             <!--begin::Toolbar container-->
         <div id="kt_app_toolbar_container" class="app-container  container-xxl d-flex flex-stack ">
-            
-       
+
+
 
 <!--begin::Page title-->
 <div  class="page-title d-flex flex-column justify-content-center flex-wrap me-3 ">
@@ -24,7 +24,7 @@
             </h1>
     <!--end::Title-->
 
-            
+
         <!--begin::Breadcrumb-->
         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                             <!--begin::Item-->
@@ -38,12 +38,12 @@
                         <span class="bullet bg-gray-400 w-5px h-2px"></span>
                     </li>
                     <!--end::Item-->
-                                        
+
                             <!--begin::Item-->
                                     <li class="breadcrumb-item text-muted">
                                                    User Management                                           </li>
                                 <!--end::Item-->
-                                        
+
                     </ul>
         <!--end::Breadcrumb-->
     </div>
@@ -74,14 +74,14 @@
         </div>
         <!--end::Toolbar container-->
     </div>
-<!--end::Toolbar-->                                        
-                    
+<!--end::Toolbar-->
+
 <!--begin::Content-->
 <div id="kt_app_content" class="app-content  flex-column-fluid " >
-    
+
         <!--begin::Content container-->
         <div id="kt_app_content_container" class="app-container  container-xxl ">
-            
+
 
 <!--end::Navbar-->
 <!--begin::Basic info-->
@@ -94,12 +94,12 @@
         </div>
         <!--end::Card title-->
     </div>
-   
+
  <!--begin::Toolbar-->
  <div class="d-flex justify-content-end" data-kt-user-table-toolbar="base">
     <!--begin::Filter-->
     <a href="{{ route('roles.index') }}" type="button" class="btn btn-light-primary me-3" >
-        <i class="ki-duotone fs-2"><span class="path1"></span><span class="path2"></span></i>   << Back  
+        <i class="ki-duotone fs-2"><span class="path1"></span><span class="path2"></span></i>   << Back
     </a>
     <!--begin::Menu 1-->
     <div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true">
@@ -108,18 +108,18 @@
         <a href="" class="fs-5 text-dark fw-bold"> </a>
     </div>
     <!--end::Header-->
-    
+
     <!--begin::Separator-->
     <div class="separator border-gray-200"></div>
     <!--end::Separator-->
-    
-   
+
+
     </div>
     <!--end::Menu 1-->    <!--end::Filter-->
-    
-    
-    
-   
+
+
+
+
     </div>
     <!--end::Toolbar-->
 
@@ -129,7 +129,7 @@
     <div id="kt_account_settings_profile_details" class="collapse show">
         <div class="modal-body scroll-y mx-5 my-7">
             <!--begin::Form-->
-   
+
                 {!! Form::model($role, ['route' => ['roles.update', $role->id],
                 'method' => 'PATCH','class' => 'form','id'=>'kt_modal_update_role_form']) !!}
 
@@ -166,11 +166,11 @@
                                         <td class="text-gray-800">
                                             Administrator Access
 
-                                            
+
                                             <span class="ms-1"  data-bs-toggle="tooltip" title="Allows a full access to the system" >
                                                 <i class="ki-duotone ki-information-5 text-gray-500 fs-6">
                                                     <span class="path1"></span><span class="path2">
-                                                        </span><span class="path3"></span></i></span>                                          
+                                                        </span><span class="path3"></span></i></span>
                                         </td>
                                         <td>
                                             <!--begin::Checkbox-->
@@ -185,21 +185,21 @@
                                     </tr>
                                     <!--end::Table row-->
                                      <!--begin::Table row-->
-                                      
+
                                      @foreach (array_unique($perm_title) as $value)
                                      <?php
                                       $permission = Permission::where('title',$value)->get();
                                       $word="";
-                                    
+
                                      ?>
-                                 
-                                    <tr>   
+
+                                    <tr>
                                        <!--begin::Label-->
                                        <td class="text-gray-800">{{ $value }}</td>
                                        <!--end::Label-->
-                                    
-                                    
-                                      @foreach ($permission as $key => $v) 
+
+
+                                      @foreach ($permission as $key => $v)
                                       <?php
                                             if(strpos($v->name, "list")){
                                                 $word = "View";
@@ -223,7 +223,7 @@
                                         <div class="d-flex">
                                             <!--begin::Checkbox-->
                                             <label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
-                                             
+
                                                 {{ Form::checkbox('permission[]', $v->id,
                                                  in_array($v->id, $rolePermissions) ? true : false, array('class' => 'form-check-input')) }}
                                                 <span class="form-check-label">
@@ -240,7 +240,7 @@
                                     @endforeach
                                      </tbody>
                                 <!--end::Table body-->
-                               
+
                             </table>
                             <!--end::Table-->
                         </div>
@@ -269,7 +269,7 @@
                 {!! Form::close() !!}
             <!--end::Form-->
         </div>
-      
+
     </div>
     <!--end::Content-->
 </div>
@@ -280,6 +280,6 @@
     </div>
         <!--end::Content container-->
     </div>
-<!--end::Content-->					
-             
-@endsection   
+<!--end::Content-->
+
+@endsection

@@ -18,7 +18,7 @@
 <div  class="page-title d-flex flex-column justify-content-center flex-wrap me-3 ">
     <!--begin::Title-->
     <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">
-     Journal Category
+     Journal Volume & Number
             </h1>
     <!--end::Title-->
 
@@ -27,7 +27,7 @@
         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                             <!--begin::Item-->
                              <li class="breadcrumb-item text-muted">
-                                 <a href="{{ route('journalcategory.index') }}" class="text-muted text-hover-primary">Users </a>
+                                 <a href="{{ route('journalvolume.index') }}" class="text-muted text-hover-primary">Users </a>
                                             </li>
                                 <!--end::Item-->
                                     <!--begin::Item-->
@@ -37,7 +37,7 @@
                     <!--end::Item-->
 
                             <!--begin::Item-->
-                                    <li class="breadcrumb-item text-muted">Category list </li>
+                                    <li class="breadcrumb-item text-muted">Volume & Number list </li>
                                 <!--end::Item-->
 
                     </ul>
@@ -55,9 +55,9 @@
 </div>
 @endif
 
-@if (\Session::has('status'))
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-{{ \Session::get('status') }}
+@if (\Session::has('danger'))
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+{{ \Session::get('danger') }}
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 @endif
@@ -88,7 +88,7 @@
 <div class="d-flex flex-wrap flex-stack my-5">
     <!--begin::Heading-->
     <h2 class="fs-2 fw-semibold my-2">
-        Journal Category
+        Journal Volume & Number
         <span class="fs-6 text-gray-400 ms-1">List</span>
     </h2>
     <!--end::Heading-->
@@ -108,7 +108,7 @@
         <div class="d-flex align-items-center position-relative my-1">
             <i class="ki-duotone ki-magnifier fs-3 position-absolute ms-5"><span class="path1"></span><span class="path2"></span></i>
              <input type="text" data-kt-user-table-filter="search"
-              class="form-control form-control-solid w-250px ps-13" placeholder="Search Category" />
+              class="form-control form-control-solid w-250px ps-13" placeholder="Search Volume & Number" />
         </div>
         <!--end::Search-->
     </div>
@@ -165,7 +165,7 @@
 
 <!--begin::Add user-->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_user">
-    <i class="ki-duotone ki-plus fs-2"></i>        Add Category
+    <i class="ki-duotone ki-plus fs-2"></i>        Add Volume & Number
 </button>
 <!--end::Add user-->
 </div>
@@ -196,7 +196,7 @@
         <!--begin::Modal header-->
         <div class="modal-header" id="kt_modal_add_user_header">
             <!--begin::Modal title-->
-            <h2 class="fw-bold">Create Category</h2>
+            <h2 class="fw-bold">Create Volume & Number</h2>
             <!--end::Modal title-->
 
             <!--begin::Close-->
@@ -210,19 +210,18 @@
         <!--begin::Modal body-->
         <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
             <!--begin::Form-->
-            <form id="kt_modal_add_user_form" class="form" action="{{ route('journalcategory.store') }}" method="POST">
+            <form id="kt_modal_add_user_form" class="form" action="{{ route('journalvolume.store') }}" method="POST">
                 @csrf
                 <!--begin::Scroll-->
                 <div class="d-flex flex-column scroll-y me-n7 pe-7" id="kt_modal_add_user_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_add_user_header" data-kt-scroll-wrappers="#kt_modal_add_user_scroll" data-kt-scroll-offset="300px">
-
-                    <!--begin::Input group-->
-                    <div class="fv-row mb-7">
+                     <!--begin::Input group-->
+                     <div class="fv-row mb-7">
                         <!--begin::Label-->
-                        <label class="required fw-semibold fs-6 mb-2">Category  Name</label>
+                        <label class="required fw-semibold fs-6 mb-2">Journal Volume</label>
                         <!--end::Label-->
 
                         <!--begin::Input-->
-                        <input type="text" name="journal_category" id="name" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Full name"  />
+                        <input type="text" name="journal_volume" id="name2" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Journal Volume"  />
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
@@ -290,97 +289,96 @@
 
 
 <!--begin::Table-->
-<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_table_users">
-<thead>
-    <tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
-        <th class="w-10px pe-2">
-            <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
-                <input class="form-check-input" type="checkbox" data-kt-check="true"
-                 data-kt-check-target="#kt_table_users .form-check-input" value="1" />
-            </div>
-        </th>
-        <th class="min-w-125px">SN</th>
-        <th class="min-w-125px">Name</th>
-        <th class="min-w-125px">Date Created</th>
-        <th class="min-w-125px">Created By</th>
-        <th class="text-end min-w-100px">Actions</th>
-    </tr>
-</thead>
-<tbody class="text-gray-600 fw-semibold">
-    <?php $i = 1; ?>
-        @foreach ($data as $key => $user)
-        <tr>
-            <td>
-                <div class="form-check form-check-sm form-check-custom form-check-solid">
-                    <input class="form-check-input" type="checkbox" value="1" />
-                </div>
-            </td>
-
-            <td>{{ $i++ }}</td>
-            <td class="d-flex align-items-center">
-
-                <div class="d-flex flex-column">
-                    <a href="view.html" class="text-gray-800 text-hover-primary mb-1">{{ $user->name }}</a>
-                    <span>{{ $user->journal_category }}</span>
-                </div>
-                <!--begin::User details-->
-            </td>
-
-
-            <td>
-                {{  $user->created_at }}
-            </td>
-            <td>
-                {{  $user->createdBy }}
-            </td>
-            <td class="text-end">
-                <a href="#" class="btn btn-light btn-active-light-primary btn-flex btn-center btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                    Actions
-                    <i class="ki-duotone ki-down fs-5 ms-1"></i>                    </a>
-                <!--begin::Menu-->
-                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-                        @can('user-edit')
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                                <a href="{{ route('journalcategory.show',$user->id) }}" class="menu-link px-3">
-                                View
-                                </a>
+        <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_table_users">
+            <thead>
+                <tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+                    <th class="w-10px pe-2">
+                        <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+                            <input class="form-check-input" type="checkbox" data-kt-check="true"
+                            data-kt-check-target="#kt_table_users .form-check-input" value="1" />
+                        </div>
+                    </th>
+                    <th class="min-w-125px">SN</th>
+                    <th class="min-w-125px">Volumes</th>
+                    <th class="min-w-125px">Date Created</th>
+                    <th class="min-w-125px">Created By</th>
+                    <th class="text-end min-w-100px">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-600 fw-semibold">
+                <?php $i = 1; ?>
+                    @foreach ($data as $key => $jvol)
+                    <tr>
+                        <td>
+                            <div class="form-check form-check-sm form-check-custom form-check-solid">
+                                <input class="form-check-input" type="checkbox" value="1" />
                             </div>
-                            <!--end::Menu item-->
-                        @endcan
-                        @can('user-edit')
-                                <!--begin::Menu item-->
-                            <div class="menu-item px-3">
-                                <a href="{{ route('journalcategory.edit',$user->id) }}" class="menu-link px-3">
-                                    Edit
-                                </a>
+                        </td>
+
+                        <td>{{ $i++ }}</td>
+                        <td class="d-flex align-items-center">
+
+                            <div class="d-flex flex-column">
+
+                                <span class="text-gray-800 text-hover-primary mb-1">{{ $jvol->journal_volume}}</span>
                             </div>
-                            <!--end::Menu item-->
-                         @endcan
-                         @can('user-edit')
-                            <!--begin::Menu item-->
-                            <div class="menu-item px-3" id="del_user">
-                                {!! Form::open(['id'=>'kt_modal_del_user_form','method' => 'DELETE','route' => ['journalcategory.destroy', $user->id],]) !!}
-                                    <input type="hidden"  value="{{ $user->journal_category }}">
-                                {!! Form::submit('Delete', ['class' => "menu-link px-3"]) !!}
-                                {!! Form::close() !!}
-                            </div>
-                            <!--end::Menu item-->
-                            @endcan
-
-                    </div>
-                           <!--end::Menu-->
-            </td>
-        </tr>
-    @endforeach
+                            <!--begin::User details-->
+                        </td>
 
 
+                        <td>
+                            {{  $jvol->created_at }}
+                        </td>
+                        <td>
+                            {{  $jvol->createdBy }}
+                        </td>
+                        <td class="text-end">
+                            <a href="#" class="btn btn-light btn-active-light-primary btn-flex btn-center btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                Actions
+                                <i class="ki-duotone ki-down fs-5 ms-1"></i>                    </a>
+                            <!--begin::Menu-->
+                                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
 
-        </tbody>
-     </table>
-<!--end::Table-->
-  </div>
+                                    @can('journalvolume-edit')
+                                            <!--begin::Menu item-->
+                                        <div class="menu-item px-3">
+                                            <a href="{{ route('journalvolume.edit',$jvol->id) }}" class="menu-link px-3">
+                                                Edit
+                                            </a>
+                                        </div>
+                                        <!--end::Menu item-->
+                                    @endcan
+                                    @can('journalvolume-delete')
+                                        <!--begin::Menu item-->
+                                        <div class="menu-item px-3" id="del_user">
+                                            {!! Form::open(['id'=>'kt_modal_del_user_form','method' => 'DELETE','route' => ['journalvolume.destroy', $jvol->id],]) !!}
+                                                <input type="hidden"  value="{{ $jvol->journal_volume }}">
+                                            {!! Form::submit('Delete', ['class' => "menu-link px-3"]) !!}
+                                            {!! Form::close() !!}
+                                        </div>
+                                        <!--end::Menu item-->
+                                        @endcan
+
+                                </div>
+                                    <!--end::Menu-->
+                        </td>
+                    </tr>
+                @endforeach
+
+
+
+                    </tbody>
+                </table>
+            <!--end::Table-->
+    </div>
 <!--end::Card body-->
+
+
+
+
+
+
+
    </div>
 <!--end::Card-->
   </div>

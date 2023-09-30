@@ -16,6 +16,11 @@ class Journal_volumes extends Model
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
 
+     protected $fillable = [
+        'journal_volume',
+        'createdBy'
+    ];
+
 
      public function journal()
   {

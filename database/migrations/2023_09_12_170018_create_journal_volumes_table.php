@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('journal_volumes', function (Blueprint $table) {
             $table->id();
             $table->string("journal_volume");
+            $table->string('createdBy');
             $table->timestamps();
         });
     }

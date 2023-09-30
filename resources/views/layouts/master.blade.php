@@ -209,6 +209,9 @@
              @include('layouts.pages-assets.js.journalcategory-list-js')
         @endif
 
+        @if (Route::is('journalvolume.*'))
+             @include('layouts.pages-assets.js.journalvolume-list-js')
+        @endif
 
      <!-- begin::Global Javascript Bundle(mandatory for all pages)-->
       <!-- <script src="{{ asset('html/assets/assets/plugins/global/plugins.bundle.js')}}"></script>

@@ -8,14 +8,22 @@ use App\Models\Journal_category;
 
 class JournalCategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
+
+    function __construct()
+    {
+         $this->middleware('permission:journalcategory-list|journalcategory-create|journalcategory-edit|journalcategory-delete', ['only' => ['index','store']]);
+         $this->middleware('permission:journalcategory-create', ['only' => ['create','store']]);
+         $this->middleware('permission:journalcategory-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:journalcategory-delete', ['only' => ['destroy']]);
+    }
+
+
     public function index()
     {
 
         $data = Journal_category::all();
-        return view('journal.index',compact('data'));
+        return view('journalcategory.index',compact('data'));
     }
 
     /**
@@ -23,7 +31,7 @@ class JournalCategoryController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -32,10 +40,16 @@ class JournalCategoryController extends Controller
     public function store(Request $request)
     {
 
-        $input = $request->all();
-        Journal_category::create($input);
-        return redirect()->route('journalcategory.index')
-                        ->with('success','Category created successfully');
+        if (Journal_category::where('journal_category', $request->journal_category)->exists()) {
+            return redirect()->route('journalcategory.index')
+                    ->with('danger',$request->journal_category.' created already');
+
+        } else {
+            $input = $request->all();
+            Journal_category::create($input);
+            return redirect()->route('journalcategory.index')
+                        ->with('success','Journal category created successfully');
+    }
     }
 
     /**
@@ -43,7 +57,7 @@ class JournalCategoryController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**
@@ -51,7 +65,8 @@ class JournalCategoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $jcat = Journal_category::find($id);
+        return view('journalcategory.edit',compact('jcat'));
     }
 
     /**
@@ -59,7 +74,14 @@ class JournalCategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $this->validate($request, [
+            'journal_category' => 'required',
+        ]);
+        $input = $request->all();
+        $jcat = Journal_category::find($id);
+        $jcat->update($input);
+        return redirect()->route('journalcategory.index')
+        ->with('success','journal Category updated successfully');
     }
 
     /**
