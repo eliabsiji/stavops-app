@@ -13,7 +13,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class UserTableSeeder extends Seeder
 {
-   
+
     use HasRoles;
     /**
      * Run the database seeds.
@@ -30,10 +30,10 @@ class UserTableSeeder extends Seeder
         ]);
 
         // $role = Role::find(1);
-        $role = Role::create(['name' => 'Admin']);
+        $role = Role::create(['name' => 'Admin','badge'=>'badge badge-light']);
         $permissions = Permission::pluck('id', 'id')->all();
         $role->syncPermissions($permissions);
         $user->assignRole([$role->id]);
-        
+
     }
 }

@@ -26,7 +26,8 @@ use App\Http\Controllers\Junior\JuniorAperEController;
 //use journal...
 use App\Http\Controllers\Journal\JournalCategoryController;
 use App\Http\Controllers\Journal\JournalVolumeController;
-use Spatie\Permission\Contracts\Role;
+use App\Http\Controllers\Journal\JournalYearController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -57,7 +58,9 @@ Route::group(['middleware' => ['auth']], function() {
 
     //journal routes...
     Route::resource('journalcategory', JournalCategoryController::class);
-    Route::resource('journalvolume', JournalvolumeController::class);
+    Route::resource('journalvolume', JournalVolumeController::class);
+    Route::resource('journalyear', JournalYearController::class);
+
 
     Route::resource('academic_aper_part_a', AcademicAperAController::class);
     Route::resource('academic_aper_part_b', AcademicAperBController::class);

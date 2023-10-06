@@ -9,7 +9,10 @@ class Journal_year extends Model
 {
     use HasFactory;
 
-
+    protected $fillable = [
+        'journal_year',
+        'createdBy'
+    ];
 
     public function journal()
   {

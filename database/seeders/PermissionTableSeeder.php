@@ -36,6 +36,10 @@ class PermissionTableSeeder extends Seeder
            'journalvolume-create',
            'journalvolume-edit',
            'journalvolume-delete',
+           'journalyear-list',
+           'journalyear-create',
+           'journalyear-edit',
+           'journalyear-delete',
            'dashboard-list',
            'usermanagement-link',
            'staffmanagement-link',
@@ -71,6 +75,10 @@ class PermissionTableSeeder extends Seeder
 
                 if($word == "journalvolume")
                 Permission::create(['name' => $permission,'title'=>"Journal Volume Management"]);
+
+                if($word == "journalyear")
+                Permission::create(['name' => $permission,'title'=>"Journal Year Management"]);
+
 
                 if($word == "usermanagement")
                 Permission::create(['name' => $permission,'title'=>"User Management Link"]);

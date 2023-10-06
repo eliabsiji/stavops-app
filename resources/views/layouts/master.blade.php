@@ -31,6 +31,12 @@
         @if (Route::is('journalcategory.*'))
            @include('layouts.pages-assets.css.users-list-css')
        @endif
+       @if (Route::is('journalvolume.*'))
+           @include('layouts.pages-assets.css.users-list-css')
+       @endif
+       @if (Route::is('journalyear.*'))
+           @include('layouts.pages-assets.css.users-list-css')
+       @endif
 
 
         <!--begin::Vendor Stylesheets(used for this page only)-->
@@ -210,6 +216,9 @@
         @endif
 
         @if (Route::is('journalvolume.*'))
+             @include('layouts.pages-assets.js.journalvolume-list-js')
+        @endif
+        @if (Route::is('journalyear.*'))
              @include('layouts.pages-assets.js.journalvolume-list-js')
         @endif
 

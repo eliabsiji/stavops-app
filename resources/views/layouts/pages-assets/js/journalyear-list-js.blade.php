@@ -8,9 +8,9 @@
 <!--end::Vendors Javascript-->
 
 <!--begin::Custom Javascript(used for this page only)-->
-    <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/roles/list/add.js')}}"></script>
-    <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/roles/list/update-role.js')}}"></script>
-    <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/roles/view/view.js')}}"></script>
+    <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/journalyeartable.js')}}"></script>
+    <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/export-users.js')}}"></script>
+    <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/journalyear.js')}}"></script>
     <script src="{{ asset('html/assets/assets/js/widgets.bundle.js')}}"></script>
     <script src="{{ asset('html/assets/assets/js/custom/widgets.js')}}"></script>
     <script src="{{ asset('html/assets/assets/js/custom/apps/chat/chat.js')}}"></script>

@@ -1,6 +1,10 @@
 @extends('layouts.master')
 @section('content')
-
+<?php
+use Spatie\Permission\Models\Permission;
+use App\Models\User;
+use Spatie\Permission\Models\Role;
+?>
             <!--begin::Main-->
             <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
                 <!--begin::Content wrapper-->
@@ -153,7 +157,7 @@
         <select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-user-table-filter="two-step" data-hide-search="true">
             <option></option>
             <option value="{{ $role->name }}">{{ $role->name }}</option>
-            <option value="pool">pool</option>
+
         </select>
     </div>
     <!--end::Input group-->
@@ -452,8 +456,13 @@
 
             <td>
                 @if(!empty($user->getRoleNames()))
-                    @foreach($user->getRoleNames() as $val)
-                        <label class="badge badge-dark">{{ $val }}</label>
+                    @foreach($user->getRoleNames() as  $val)
+                        @php
+                             $u = Role::join("model_has_roles","model_has_roles.role_id","=","roles.id")
+                                //->join("users","roles.id","=",$user->id)
+                                ->get();
+                        @endphp
+                        <label class="{{ $val }}">{{ $u->id }}</label>
                     @endforeach
                 @endif
             </td>
