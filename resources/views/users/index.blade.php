@@ -462,7 +462,7 @@ use Spatie\Permission\Models\Role;
                                 //->join("users","roles.id","=",$user->id)
                                 ->get();
                         @endphp
-                        <label class="{{ $val }}">{{ $u->id }}</label>
+                        <label class="{{ $val }}">{{ $val }}</label>
                     @endforeach
                 @endif
             </td>

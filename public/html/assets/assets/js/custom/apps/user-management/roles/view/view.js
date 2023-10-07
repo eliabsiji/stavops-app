@@ -53,10 +53,11 @@ var KTUsersViewRole = function () {
 
                 // Get customer name
                 const userName = parent.querySelectorAll('td')[2].innerText;
+                const userid = parent.querySelector('id')[1].innerHTML;
 
                 // SweetAlert2 pop up --- official docs reference: https://sweetalert2.github.io/
                 Swal.fire({
-                    text: "Are you sure you want to delete " + userName + "?",
+                    html: "Are you sure you want to delete <br> "+ userid + " ?",
                     icon: "warning",
                     showCancelButton: true,
                     buttonsStyling: false,
@@ -77,6 +78,13 @@ var KTUsersViewRole = function () {
                                 confirmButton: "btn fw-bold btn-primary",
                             }
                         }).then(function () {
+
+                            var url = "{{route('roles.destroy',$user->id)}}";
+
+                            url = url.replace(':slug', slug);
+
+                            window.location.href=url;
+
                             // Remove current row
                             datatable.row($(parent)).remove().draw();
                         });
@@ -223,3 +231,6 @@ var KTUsersViewRole = function () {
 KTUtil.onDOMContentLoaded(function () {
     KTUsersViewRole.init();
 });
+
+
+

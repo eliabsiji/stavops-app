@@ -93,10 +93,11 @@ class RoleController extends Controller
     public function show($id)//: View
     {
         $userRoleCount = DB::table('model_has_roles')->where('role_id',$id)->count();
-        $usersWithRole = User::join("roles","roles.id","=","users.id")
+        $usersWithRole = User::leftjoin("roles","roles.id","=","users.id")
                        ->join("model_has_roles","model_has_roles.model_id","=","users.id")
                        ->where("model_has_roles.role_id",$id)
-                       ->get();
+                       ->get(['users.id as id','users.name as username','users.email as email','users.created_at as created_at',
+                              'model_has_roles.role_id as roleid']);
 
 
         $role = Role::find($id);
@@ -227,6 +228,24 @@ class RoleController extends Controller
     }
 
 
+    public function removeuserRole(Request $request)
+    {
+        // $user = User::find($request->userid);
+        // $rolename = Role::pluck('name','name')->where('id',$request->roleid)->get();
+
+        echo $request->roleid;
+
+    //     DB::table("roles")
+    //    // ->where('model_id',$userid)
+    //     ->where('role_id',$$userRole)->delete();
+    //     $user->removeRole()
+
+    //     if(session('role_url')){
+    //         return redirect(session('role_url'))
+    //         ->with('success','User withdrawn from role successfully');
+    //     }
+    //        return redirect()->route('roles.index');
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -240,4 +259,6 @@ class RoleController extends Controller
         return redirect()->route('roles.index')
                         ->with('success','Role deleted successfully');
     }
+
+
 }

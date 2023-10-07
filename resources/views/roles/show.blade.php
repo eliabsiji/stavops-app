@@ -396,7 +396,7 @@ use Spatie\Permission\Models\Role;
                                 <input class="form-check-input" type="checkbox" value="1" />
                             </div>
                         </td>
-                        <td>{{ ++$i }}</td>
+                        <td id="{{ $user->id }}">{{ ++$i }}</td>
                         <td class="d-flex align-items-center">
                             <!--begin:: Avatar -->
                             <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
@@ -411,9 +411,8 @@ use Spatie\Permission\Models\Role;
                             <!--begin::User details-->
                             <div class="d-flex flex-column">
 
-                                <span  class="text-gray-800 text-hover-primary mb-1">
-                                    {{ $user->username }}
-                                </span>
+
+                                <span class="text-gray-800 text-hover-primary mb-1" >{{ $user->username }}</span>
                             </div>
                             <!--begin::User details-->
                         </td>
@@ -440,13 +439,16 @@ use Spatie\Permission\Models\Role;
                                     </div>
                                     <!--end::Menu item-->
 
+                                    @can('user-edit')
                                     <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="#" class="menu-link px-3" data-kt-roles-table-filter="delete_row">
-                                                Delete
-                                            </a>
-                                        </div>
-                                        <!--end::Menu item-->
+                                    <div class="menu-item px-3" >
+                                        <form method="post" class="menu-link px-3" data-kt-roles-table-filter="delete_row" data-route="">
+                                            @method('delete')
+                                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                        </form>
+                                    </div>
+                                    <!--end::Menu item-->
+                                    @endcan
                                 </div>
                             <!--end::Menu-->
                         </td>
