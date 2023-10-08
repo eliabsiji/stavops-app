@@ -230,22 +230,45 @@ class RoleController extends Controller
 
     public function removeuserRole(Request $request)
     {
-        // $user = User::find($request->userid);
-        // $rolename = Role::pluck('name','name')->where('id',$request->roleid)->get();
+        $user = User::find($request->userid);
+        $rolename = Role::pluck('name','name')->where('id',$request->roleid)->get();
 
         echo $request->roleid;
 
     //     DB::table("roles")
     //    // ->where('model_id',$userid)
     //     ->where('role_id',$$userRole)->delete();
-    //     $user->removeRole()
+    //     $user->removeRole();
 
-    //     if(session('role_url')){
-    //         return redirect(session('role_url'))
-    //         ->with('success','User withdrawn from role successfully');
-    //     }
-    //        return redirect()->route('roles.index');
+        // if(session('role_url')){
+        //     return redirect(session('role_url'))
+        //     ->with('success','User withdrawn from role successfully');
+        // }
+        //    return redirect()->route('roles.index');
     }
+
+
+    // delete user
+    public function delete($id)
+    {
+        $delete = User::destroy($id);
+
+        // check data deleted or not
+        if ($delete == 1) {
+            $success = true;
+            $message = "User deleted successfully";
+        } else {
+            $success = true;
+            $message = "User not found";
+        }
+
+        //  return response
+        return response()->json([
+            'success' => $success,
+            'message' => $message,
+        ]);
+    }
+
 
     /**
      * Remove the specified resource from storage.

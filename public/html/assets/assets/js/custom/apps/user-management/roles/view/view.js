@@ -53,11 +53,12 @@ var KTUsersViewRole = function () {
 
                 // Get customer name
                 const userName = parent.querySelectorAll('td')[2].innerText;
-                const userid = parent.querySelector('id')[1].innerHTML;
+                var userURL = $(this).data('url');
+
 
                 // SweetAlert2 pop up --- official docs reference: https://sweetalert2.github.io/
                 Swal.fire({
-                    html: "Are you sure you want to delete <br> "+ userid + " ?",
+                    html: "Are you sure you want to delete <br> "+ userName + " ?",
                     icon: "warning",
                     showCancelButton: true,
                     buttonsStyling: false,
@@ -77,15 +78,34 @@ var KTUsersViewRole = function () {
                             customClass: {
                                 confirmButton: "btn fw-bold btn-primary",
                             }
-                        }).then(function () {
+                        }).then(function (e) {
 
-                            var url = "{{route('roles.destroy',$user->id)}}";
+                                if (e.value === true) {
+                                    var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+                                    var id = 1;
 
-                            url = url.replace(':slug', slug);
+                                    $.ajax({
+                                        type: 'GET',
+                                        url: userURL,
+                                        //data: {_token: CSRF_TOKEN},
+                                        dataType: 'JSON',
+                                        success: function (results) {
+                                            if (results.success === true) {
+                                                swal.fire("Done!", results.message, "success");
+                                                // refresh page after 2 seconds
+                                               // setTimeout(function(){
+                                                 //   location.reload();
+                                              //  },1000);
+                                            } else {
+                                                swal.fire("Error!", results.message, "error");
+                                            }
+                                        }
+                                    });
 
-                            window.location.href=url;
+                                } else {
+                                    e.dismiss;
+                                }
 
-                            // Remove current row
                             datatable.row($(parent)).remove().draw();
                         });
                     } else if (result.dismiss === 'cancel') {

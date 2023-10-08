@@ -56,6 +56,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/updateuserrole',[RoleController::class, 'updateuserrole'])->name('roles.updateuserrole');
     Route::get('/removeuserrole/{userid}/{roleid}',[RoleController::class, 'removeuserrole'])->name('roles.removeuserrole');
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/delete/{id}', [RoleController::class, 'delete'])->name('roles.delete');
 
     //journal routes...
     Route::resource('journalcategory', JournalCategoryController::class);

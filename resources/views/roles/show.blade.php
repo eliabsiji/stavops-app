@@ -442,10 +442,16 @@ use Spatie\Permission\Models\Role;
                                     @can('user-edit')
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3" >
-                                        <form method="post" class="menu-link px-3" data-kt-roles-table-filter="delete_row" data-route="">
-                                            @method('delete')
+                                        {{-- <form method="post" class="menu-link px-3" data-kt-roles-table-filter="delete_row" data-route="">
+                                          @csrf
                                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                                        </form>
+                                        </form> --}}
+                                        <a
+                                        href="javascript:void(0)"
+                                        id="show-user"
+                                        data-kt-roles-table-filter="delete_row"
+                                        data-url="{{ route('roles.delete', ['userid'=>'$user->id','roleid'=>'$user->roleid']) }}"
+                                        class="btn btn-danger btn-sm">Delete</a>
                                     </div>
                                     <!--end::Menu item-->
                                     @endcan
