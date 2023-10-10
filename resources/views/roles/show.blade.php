@@ -95,6 +95,9 @@ use Spatie\Permission\Models\Role;
         <!--end::Secondary button-->
 
     <!--begin::Primary button-->
+    @can('role-updateuserrole')
+    <a href="{{ route('roles.adduser',$role->id) }}" class="btn btn-light btn-sm btn-active-success my-1" >Add User </a>
+    @endcan
             <a href="{{ route('roles.index') }}" class="btn btn-sm fw-bold btn-primary">
            < Back       </a>
         <!--end::Primary button-->
@@ -122,7 +125,7 @@ use Spatie\Permission\Models\Role;
     <div class="card-header">
         <!--begin::Card title-->
         <div class="card-title">
-            <h2 class="mb-0">{{ $role->name }}</h2>
+            <h1 class="mb-0 {{ $role->badge }}"> {{ $role->name }}</h1>
         </div>
         <!--end::Card title-->
     </div>
@@ -201,6 +204,31 @@ use Spatie\Permission\Models\Role;
                         <!--end::Input-->
                         </div>
                         <!--end::Input group-->
+
+
+                          <!--begin::Input group-->
+                     <div class="fv-row mb-10">
+                        <!--begin::Label-->
+                        <label class="fs-5 fw-bold form-label mb-2">
+                            <span class="required">Role badge</span>
+                        </label>
+                        <!--end::Label-->
+
+                        <!--begin::Input-->
+                        <select name="badge" class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-user-table-filter="two-step" data-hide-search="true">
+                            <option></option>
+                            <option value="badge badge-light">Light grey</option>
+                            <option value="badge badge-dark"> Dark</option>
+                            <option value="badge badge-primary">Blue</option>
+                            <option value="badge badge-secondary">Light blue</option>
+                            <option value="badge badge-success">Light green</option>
+                            <option value="badge badge-info">Purple</option>
+                            <option value="badge badge-warning">Yellow</option>
+                            <option value="badge badge-danger">Red</option>
+                       </select>
+                        <!--end::Input-->
+                    </div>
+
 
                           <!--begin::Permissions-->
                     <div class="fv-row">
@@ -390,7 +418,7 @@ use Spatie\Permission\Models\Role;
             @foreach ($usersWithRole as $user )
 
 
-                    <tr>
+                    <tr data-url="{{ route('roles.removeuserrole', ['userid'=>$user->id,'roleid'=>$user->roleid]) }}">
                         <td>
                             <div class="form-check form-check-sm form-check-custom form-check-solid">
                                 <input class="form-check-input" type="checkbox" value="1" />
@@ -427,7 +455,7 @@ use Spatie\Permission\Models\Role;
                                 <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3">
-                                                        @can('user-edit')
+                                                        @can('role-edit')
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
                                                                 <a href="{{ route('users.show',$user->id) }}" class="menu-link px-3">
@@ -439,7 +467,7 @@ use Spatie\Permission\Models\Role;
                                     </div>
                                     <!--end::Menu item-->
 
-                                    @can('user-edit')
+                                    @can('role-romove-user-from-role')
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3" >
                                         {{-- <form method="post" class="menu-link px-3" data-kt-roles-table-filter="delete_row" data-route="">
@@ -450,7 +478,7 @@ use Spatie\Permission\Models\Role;
                                         href="javascript:void(0)"
                                         id="show-user"
                                         data-kt-roles-table-filter="delete_row"
-                                        data-url="{{ route('roles.delete', ['userid'=>'$user->id','roleid'=>'$user->roleid']) }}"
+                                        data-url="{{ route('roles.removeuserrole', ['userid'=>$user->id,'roleid'=>$user->roleid]) }}"
                                         class="btn btn-danger btn-sm">Delete</a>
                                     </div>
                                     <!--end::Menu item-->

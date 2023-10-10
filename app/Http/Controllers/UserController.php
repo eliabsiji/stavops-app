@@ -151,4 +151,25 @@ class UserController extends Controller
         return redirect()->route('users.index')
                         ->with('success','User deleted successfully');
     }
+
+     // delete user
+     public function delete($id)
+     {
+         $delete = User::destroy($id);
+
+         // check data deleted or not
+         if ($delete == 1) {
+             $success = true;
+             $message = "User deleted successfully";
+         } else {
+             $success = true;
+             $message = "User not found";
+         }
+
+         //  return response
+         return response()->json([
+             'success' => $success,
+             'message' => $message,
+         ]);
+     }
 }

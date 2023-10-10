@@ -458,11 +458,16 @@ use Spatie\Permission\Models\Role;
                 @if(!empty($user->getRoleNames()))
                     @foreach($user->getRoleNames() as  $val)
                         @php
-                             $u = Role::join("model_has_roles","model_has_roles.role_id","=","roles.id")
-                                //->join("users","roles.id","=",$user->id)
+                             $u = Role::where('roles.name',"=",$val)
                                 ->get();
+
                         @endphp
-                        <label class="{{ $val }}">{{ $val }}</label>
+                        <label class="
+                        @php
+                        foreach ($u as $key => $value) {
+                            echo $value->badge;
+                        }
+                    @endphp">{{ $val }}</label>
                     @endforeach
                 @endif
             </td>
@@ -501,9 +506,10 @@ use Spatie\Permission\Models\Role;
                             <div class="menu-item px-3" >
                                 {!! Form::open(['id'=>'kt_modal_del_user_form','method' => 'DELETE','route' => ['users.destroy', $user->id],]) !!}
                                     <input type="hidden"  value="{{ $user->name }}">
-                                {!! Form::submit('Delete', ['class' => "menu-link px-3" ,'data-kt-users-table-filter'=>"delete_row"]) !!}
+                                {!! Form::submit('Delete', ['class' => "menu-link px-3" ,]) !!}
                                 {!! Form::close() !!}
                             </div>
+
                             <!--end::Menu item-->
                             @endcan
 

@@ -184,7 +184,8 @@ use Spatie\Permission\Models\Role;
                     <div class="card-header">
                         <!--begin::Card title-->
                         <div class="card-title">
-                            <h2>{{ $role->name }}</h2>
+                            <h2>{{ $role->name }}</h2>&nbsp;
+                            <h2 class="{{ $role->badge }}">Role Badge</h2>
                         </div>
                         <!--end::Card title-->
                     </div>
@@ -198,13 +199,24 @@ use Spatie\Permission\Models\Role;
                         // $roles = Role::orderBy('name','DESC')->get();
                         // foreach ($roles as $role => $value) {
                             $roles_num =  DB::table('model_has_roles')->where('role_id',$role->id)->count();
+                            $role_permissions = $role->permissions->pluck('name')->take(3);
                         // }
 
                         ?>
                         <div class="fw-bold text-gray-600 mb-5">Total users with this role: {{ $roles_num }}</div>
                         <!--end::Users-->
+                        <div class="d-flex flex-column text-gray-600">
+                         <!--begin::Permissions-->
+                        @foreach ($role_permissions as $role_permission)
 
-                <!--begin::Users group-->
+                        <div class="d-flex align-items-center py-2"><span class="bullet bg-primary me-3"></span> {{$role_permission}}</div>
+
+                        @endforeach
+                         <div class='d-flex align-items-center py-2'><span class='bullet bg-primary me-3'></span> @can('role-list')<a href="{{ route('roles.show',$role->id) }}" <em>...and more</a>@endcan</em></div>
+                    </div>
+<!--end::Permissions-->
+
+                {{-- <!--begin::Users group-->
                 <div class="symbol-group symbol-hover mb-9">
                     <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Alan Warden">
                                     <span class="symbol-label bg-warning text-inverse-warning fw-bold">A</span>
@@ -212,29 +224,12 @@ use Spatie\Permission\Models\Role;
                     <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Michael Eberon">
                                     <img alt="Pic" src="{{ asset('html/assets/assets/media/avatars/300-11.jpg')}}" />
                             </div>
-                    <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Michelle Swanston">
-                                    <img alt="Pic" src="{{ asset('html/assets/assets/media/avatars/300-7.jpg')}}" />
-                            </div>
-                    <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Francis Mitcham">
-                                    <img alt="Pic" src="{{ asset('html/assets/assets/media/avatars/300-20.jpg')}}" />
-                            </div>
-                    <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Susan Redwood">
-                                    <span class="symbol-label bg-primary text-inverse-primary fw-bold">S</span>
-                            </div>
-                    <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Melody Macy">
-                                    <img alt="Pic" src="{{ asset('html/assets/assets/media/avatars/300-2.jpg')}}" />
-                            </div>
-                    <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Perry Matthew">
-                                    <span class="symbol-label bg-info text-inverse-info fw-bold">P</span>
-                            </div>
-                    <div class="symbol symbol-35px symbol-circle" data-bs-toggle="tooltip" title="Barry Walter">
-                                    <img alt="Pic" src="{{ asset('html/assets/assets/media/avatars/300-12.jpg')}}" />
-                            </div>
-                <a href="#" class="symbol symbol-35px symbol-circle"  data-bs-toggle="modal" data-bs-target="#kt_modal_view_users">
-        <span class="symbol-label bg-dark text-gray-300 fs-8 fw-bold">+42</span>
-    </a>
-</div>
-<!--end::Users group-->
+
+                                <a href="#" class="symbol symbol-35px symbol-circle"  data-bs-toggle="modal" data-bs-target="#kt_modal_view_users">
+                        <span class="symbol-label bg-dark text-gray-300 fs-8 fw-bold">+42</span>
+                    </a>
+                </div>
+                <!--end::Users group--> --}}
 
                     </div>
                     <!--end::Card body-->
@@ -246,8 +241,8 @@ use Spatie\Permission\Models\Role;
                         <a href="{{ route('roles.show',$role->id) }}" class="btn btn-light btn-sm  btn-active-primary my-1 me-2">View </a>
                         @endcan
 
-                        @can('role-edit')
-                        <a href="{{ route('roles.edit',$role->id) }}" class="btn btn-light btn-sm btn-active-success my-1" >Edit </a>
+                        @can('role-updateuserrole')
+                        <a href="{{ route('roles.adduser',$role->id) }}" class="btn btn-light btn-sm btn-active-success my-1" >Add User </a>
                         @endcan
 
                         @can('role-delete')
@@ -257,13 +252,7 @@ use Spatie\Permission\Models\Role;
                         @endcan
                     </div>
                     <!--end::Card footer-->
-                    @can('role-updateuserrole')
-                    <!--begin::Add user-->
-                    <a href="{{ route('roles.adduser',$role->id) }}" type="button" class="btn btn-light btn-sm  btn-active-primary my-1 me-2 ">
-                        <i class="ki-duotone ki-plus fs-2"></i>        Add User
-                    </a>
-                    <!--end::Add user-->
-                    @endcan
+
                 </div>
                 <!--end::Card-->
 
@@ -350,7 +339,7 @@ use Spatie\Permission\Models\Role;
                                 <!--end::Label-->
 
                                 <!--begin::Input-->
-                                <select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-user-table-filter="two-step" data-hide-search="true">
+                                <select name="badge" class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-user-table-filter="two-step" data-hide-search="true">
                                     <option></option>
                                     <option value="badge badge-light">Light grey</option>
                                     <option value="badge badge-dark"> Dark</option>

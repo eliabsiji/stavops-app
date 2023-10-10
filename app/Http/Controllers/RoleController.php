@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\BadgeModel;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use Illuminate\Support\Facades\DB;
@@ -75,10 +76,14 @@ class RoleController extends Controller
         $this->validate($request, [
             'name' => 'required|unique:roles,name',
             'permission' => 'required',
+
         ]);
 
-        $role = Role::create(['name' => $request->input('name'),
-                              'title'=>$request->input('title')]);
+        $role = Role::create([
+            'name' => $request->input('name'),
+            'title'=>$request->input('title'),
+            'badge' => $request->input('badge')
+            ]);
         $role->syncPermissions($request->input('permission'));
 
         return redirect()->route('roles.index')
@@ -169,11 +174,13 @@ class RoleController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
+
             'permission' => 'required',
         ]);
 
         $role = Role::find($id);
         $role->name = $request->input('name');
+        $role->badge = $request->input('badge');
         $role->save();
         $role->syncPermissions($request->input('permission'));
 
@@ -231,20 +238,25 @@ class RoleController extends Controller
     public function removeuserRole(Request $request)
     {
         $user = User::find($request->userid);
-        $rolename = Role::pluck('name','name')->where('id',$request->roleid)->get();
+       $rolename = Role::find($request->roleid);
 
-        echo $request->roleid;
+       $user->removeRole($rolename->name);
 
-    //     DB::table("roles")
-    //    // ->where('model_id',$userid)
-    //     ->where('role_id',$$userRole)->delete();
-    //     $user->removeRole();
+        //check data deleted or not
+        if ($request->userid) {
+            $success = true;
+            $message = "User has been removed";
+        } else {
+            $success = true;
+            $message = "User not found";
+        }
 
-        // if(session('role_url')){
-        //     return redirect(session('role_url'))
-        //     ->with('success','User withdrawn from role successfully');
-        // }
-        //    return redirect()->route('roles.index');
+        //  return response
+        return response()->json([
+            'success' => $success,
+            'message' => $message,
+        ]);
+
     }
 
 
