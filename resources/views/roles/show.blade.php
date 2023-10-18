@@ -467,7 +467,7 @@ use Spatie\Permission\Models\Role;
                                     </div>
                                     <!--end::Menu item-->
 
-                                    @can('role-romove-user-from-role')
+                                    @can('role-romove-fromrole')
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3" >
                                         {{-- <form method="post" class="menu-link px-3" data-kt-roles-table-filter="delete_row" data-route="">

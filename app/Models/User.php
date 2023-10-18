@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Pictures\ImageModel;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -28,6 +29,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'avatar',
         'password',
         'wpassword',
     ];
@@ -54,7 +56,7 @@ class User extends Authenticatable
 
     public function staffPicture(): HasOne
     {
-        return $this->hasOne(StaffPictureModel::class,'staff_id');
+        return $this->hasOne(ImageModel::class,'user_id');
     }
 
     /**
@@ -72,9 +74,9 @@ class User extends Authenticatable
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function staffBio(): HasOne
+    public function bio(): HasOne
     {
-        return $this->hasOne(staffBioModel::class);
+        return $this->hasOne(BioModel::class);
     }
 
     public function journal(): HasMany

@@ -205,10 +205,9 @@
 
                <!--begin:Menu item-->
                <div  data-kt-menu-trigger="click"  class="menu-item {{
-               request()->is('users*') ||
-               request()->is('roles*') ||
-               request()->is('permissions*')
-               ? ' here show menu-accordion' : '' }}" >
+                   request()->is('overview*') ||
+                    request()->is('settings*')
+                    ? ' here show menu-accordion' : '' }}" >
                 <!--begin:Menu link-->
                 <span class="menu-link" >
                     <span  class="menu-icon" >
@@ -219,7 +218,7 @@
                                 </span><span class="path4">
                                 </span></i></span>
                                 <span  class="menu-title" >
-                                  Journal Management
+                                 My Account
                                 </span>
                                 <span  class="menu-arrow" >
                                     </span></span>
@@ -229,14 +228,14 @@
                                         <!--begin:Menu item-->
                                         <div  class="menu-item" >
                                             <!--begin:Menu link-->
-                                            <a class="menu-link  {{ request()->is('users*')
-                                                ? ' active' : '' }}"  href="{{ route('users.index') }}" >
+                                            <a class="menu-link  {{ request()->is('user.overview')
+                                                ? ' active' : '' }}"  href="{{ route('user.overview',Auth::user()->id) }}" >
                                                 <span  class="menu-bullet" >
                                                     <span class="bullet bullet-dot">
                                                         </span>
                                                     </span>
                                                     <span  class="menu-title" >
-                                                      Manage  Authors
+                                                      Overview
                                                     </span>
                                             </a>
                                             <!--end:Menu link-->
@@ -245,126 +244,189 @@
                                         <!--begin:Menu item-->
                                         <div  class="menu-item" >
                                             <!--begin:Menu link-->
-                                            <a class="menu-link {{ request()->is('roles*')
+                                            <a class="menu-link {{ request()->is('settings*')
                                                 ? ' active' : '' }}"
-                                             href="{{ route('roles.index') }}" >
+                                             href="{{ route('user.settings',Auth::user()->id) }}" >
                                                 <span  class="menu-bullet" >
                                                     <span class="bullet bullet-dot">
                                                         </span>
                                                     </span>
                                                     <span  class="menu-title" >
-                                                     Manage   Publihers
+                                                     Settings
                                                     </span>
                                                 </a>
                                                 <!--end:Menu link-->
                                         </div>
                                             <!--end:Menu item-->
-                                            <!--begin:Menu item-->
-                                         <div  class="menu-item" >
-                                                <!--begin:Menu link-->
-                                                <a class="menu-link {{ request()->is('permissions*')
-                                                    ? ' active' : '' }}"
-                                                  href="{{ route('permissions.index') }}" >
-                                                    <span  class="menu-bullet" >
-                                                        <span class="bullet bullet-dot">
-                                                            </span></span>
-                                                            <span  class="menu-title" >
-                                                            Manage  Reviewers
-                                                            </span>
-                                                </a>
-                                               <!--end:Menu link-->
-                                        </div>
-                                            <!--end:Menu item-->
-                                         <!--begin:Menu item-->
-                                         <div  class="menu-item" >
-                                            <!--begin:Menu link-->
-                                            <a class="menu-link {{ request()->is('permissions*')
-                                                ? ' active' : '' }}"
-                                              href="{{ route('permissions.index') }}" >
-                                                <span  class="menu-bullet" >
-                                                    <span class="bullet bullet-dot">
-                                                        </span></span>
-                                                        <span  class="menu-title" >
-                                                         Manage Editors
-                                                        </span>
-                                            </a>
-                                           <!--end:Menu link-->
-                                         </div>
-                                        <!--end:Menu item-->
 
-
-                                        <!--begin:Menu item-->
-                                        <div  class="menu-item" >
-                                            <!--begin:Menu link-->
-                                            <a class="menu-link {{ request()->is('permissions*')
-                                                ? ' active' : '' }}"
-                                              href="{{ route('permissions.index') }}" >
-                                                <span  class="menu-bullet" >
-                                                    <span class="bullet bullet-dot">
-                                                        </span></span>
-                                                        <span  class="menu-title" >
-                                                        Manage Journals
-                                                        </span>
-                                            </a>
-                                           <!--end:Menu link-->
-                                         </div>
-                                        <!--end:Menu item-->
-
-
-                                         <!--begin:Menu item-->
-                                         <div  class="menu-item" >
-                                            <!--begin:Menu link-->
-                                            <a class="menu-link {{ request()->is('permissions*')
-                                                ? ' active' : '' }}"
-                                              href="{{ route('permissions.index') }}" >
-                                                <span  class="menu-bullet" >
-                                                    <span class="bullet bullet-dot">
-                                                        </span></span>
-                                                        <span  class="menu-title" >
-                                                        Manage Editions
-                                                        </span>
-                                            </a>
-                                           <!--end:Menu link-->
-                                         </div>
-                                        <!--end:Menu item-->
-
-                                          <!--begin:Menu item-->
-                                          <div  class="menu-item" >
-                                            <!--begin:Menu link-->
-                                            <a class="menu-link {{ request()->is('permissions*')
-                                                ? ' active' : '' }}"
-                                              href="{{ route('permissions.index') }}" >
-                                                <span  class="menu-bullet" >
-                                                    <span class="bullet bullet-dot">
-                                                        </span></span>
-                                                        <span  class="menu-title" >
-                                                          Manage Publishing
-                                                        </span>
-                                            </a>
-                                           <!--end:Menu link-->
-                                         </div>
-                                        <!--end:Menu item-->
-
-                                         <!--begin:Menu item-->
-                                         <div  class="menu-item" >
-                                            <!--begin:Menu link-->
-                                            <a class="menu-link {{ request()->is('permissions*')
-                                                ? ' active' : '' }}"
-                                              href="{{ route('permissions.index') }}" >
-                                                <span  class="menu-bullet" >
-                                                    <span class="bullet bullet-dot">
-                                                        </span></span>
-                                                        <span  class="menu-title" >
-                                                          Manage Email Templates
-                                                        </span>
-                                            </a>
-                                           <!--end:Menu link-->
-                                         </div>
-                                        <!--end:Menu item-->
                                 </div>
                                   <!--end:Menu sub-->
             </div>
             <!--end:Menu item-->
+
+
+             <!--begin:Menu item-->
+             <div  data-kt-menu-trigger="click"  class="menu-item {{
+                request()->is('authors*') ||
+                request()->is('roles*') ||
+                request()->is('permissions*')
+                ? ' here show menu-accordion' : '' }}" >
+            <!--begin:Menu link-->
+            <span class="menu-link" >
+                <span  class="menu-icon" >
+                    <i class="ki-duotone ki-element-11 fs-2">
+                        <span class="path1">
+                            </span><span class="path2">
+                            </span><span class="path3">
+                            </span><span class="path4">
+                            </span></i></span>
+                            <span  class="menu-title" >
+                              Journal Management
+                            </span>
+                            <span  class="menu-arrow" >
+                                </span></span>
+                                <!--end:Menu link-->
+                                <!--begin:Menu sub-->
+                             <div  class="menu-sub menu-sub-accordion" >
+                                    <!--begin:Menu item-->
+                                    <div  class="menu-item" >
+                                        <!--begin:Menu link-->
+                                        <a class="menu-link  {{ request()->is('authors*')
+                                            ? ' active' : '' }}"  href="{{ route('authors') }}" >
+                                            <span  class="menu-bullet" >
+                                                <span class="bullet bullet-dot">
+                                                    </span>
+                                                </span>
+                                                <span  class="menu-title" >
+                                                  Manage  Authors
+                                                </span>
+                                        </a>
+                                        <!--end:Menu link-->
+                                    </div>
+                                    <!--end:Menu item-->
+                                    <!--begin:Menu item-->
+                                    <div  class="menu-item" >
+                                        <!--begin:Menu link-->
+                                        <a class="menu-link {{ request()->is('roles*')
+                                            ? ' active' : '' }}"
+                                         href="{{ route('roles.index') }}" >
+                                            <span  class="menu-bullet" >
+                                                <span class="bullet bullet-dot">
+                                                    </span>
+                                                </span>
+                                                <span  class="menu-title" >
+                                                 Manage   Publihers
+                                                </span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                    </div>
+                                        <!--end:Menu item-->
+                                        <!--begin:Menu item-->
+                                     <div  class="menu-item" >
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link {{ request()->is('permissions*')
+                                                ? ' active' : '' }}"
+                                              href="{{ route('permissions.index') }}" >
+                                                <span  class="menu-bullet" >
+                                                    <span class="bullet bullet-dot">
+                                                        </span></span>
+                                                        <span  class="menu-title" >
+                                                        Manage  Reviewers
+                                                        </span>
+                                            </a>
+                                           <!--end:Menu link-->
+                                    </div>
+                                        <!--end:Menu item-->
+                                     <!--begin:Menu item-->
+                                     <div  class="menu-item" >
+                                        <!--begin:Menu link-->
+                                        <a class="menu-link {{ request()->is('permissions*')
+                                            ? ' active' : '' }}"
+                                          href="{{ route('permissions.index') }}" >
+                                            <span  class="menu-bullet" >
+                                                <span class="bullet bullet-dot">
+                                                    </span></span>
+                                                    <span  class="menu-title" >
+                                                     Manage Editors
+                                                    </span>
+                                        </a>
+                                       <!--end:Menu link-->
+                                     </div>
+                                    <!--end:Menu item-->
+
+
+                                    <!--begin:Menu item-->
+                                    <div  class="menu-item" >
+                                        <!--begin:Menu link-->
+                                        <a class="menu-link {{ request()->is('permissions*')
+                                            ? ' active' : '' }}"
+                                          href="{{ route('permissions.index') }}" >
+                                            <span  class="menu-bullet" >
+                                                <span class="bullet bullet-dot">
+                                                    </span></span>
+                                                    <span  class="menu-title" >
+                                                    Manage Journals
+                                                    </span>
+                                        </a>
+                                       <!--end:Menu link-->
+                                     </div>
+                                    <!--end:Menu item-->
+
+
+                                     <!--begin:Menu item-->
+                                     <div  class="menu-item" >
+                                        <!--begin:Menu link-->
+                                        <a class="menu-link {{ request()->is('permissions*')
+                                            ? ' active' : '' }}"
+                                          href="{{ route('permissions.index') }}" >
+                                            <span  class="menu-bullet" >
+                                                <span class="bullet bullet-dot">
+                                                    </span></span>
+                                                    <span  class="menu-title" >
+                                                    Manage Editions
+                                                    </span>
+                                        </a>
+                                       <!--end:Menu link-->
+                                     </div>
+                                    <!--end:Menu item-->
+
+                                      <!--begin:Menu item-->
+                                      <div  class="menu-item" >
+                                        <!--begin:Menu link-->
+                                        <a class="menu-link {{ request()->is('permissions*')
+                                            ? ' active' : '' }}"
+                                          href="{{ route('permissions.index') }}" >
+                                            <span  class="menu-bullet" >
+                                                <span class="bullet bullet-dot">
+                                                    </span></span>
+                                                    <span  class="menu-title" >
+                                                      Manage Publishing
+                                                    </span>
+                                        </a>
+                                       <!--end:Menu link-->
+                                     </div>
+                                    <!--end:Menu item-->
+
+                                     <!--begin:Menu item-->
+                                     <div  class="menu-item" >
+                                        <!--begin:Menu link-->
+                                        <a class="menu-link {{ request()->is('permissions*')
+                                            ? ' active' : '' }}"
+                                          href="{{ route('permissions.index') }}" >
+                                            <span  class="menu-bullet" >
+                                                <span class="bullet bullet-dot">
+                                                    </span></span>
+                                                    <span  class="menu-title" >
+                                                      Manage Email Templates
+                                                    </span>
+                                        </a>
+                                       <!--end:Menu link-->
+                                     </div>
+                                    <!--end:Menu item-->
+                            </div>
+                              <!--end:Menu sub-->
+        </div>
+        <!--end:Menu item-->
 
 
 

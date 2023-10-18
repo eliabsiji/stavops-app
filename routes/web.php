@@ -7,16 +7,27 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PermissionController;
+
+use App\Http\Controllers\BiodataController;
+use App\Http\Controllers\OverviewController;
+
+use App\Http\Controllers\Journal\AuthorController;
+
+
 use App\Http\Controllers\Academics\AcademicAperAController;
 use App\Http\Controllers\Academics\AcademicAperBController;
 use App\Http\Controllers\Academics\AcademicAperCController;
 use App\Http\Controllers\Academics\AcademicAperDController;
 use App\Http\Controllers\Academics\AcademicAperEController;
+
+
 use App\Http\Controllers\Senior\SeniorAperAController;
 use App\Http\Controllers\Senior\SeniorAperBController;
 use App\Http\Controllers\Senior\SeniorAperCController;
 use App\Http\Controllers\Senior\SeniorAperDController;
 use App\Http\Controllers\Senior\SeniorAperEController;
+
+
 use App\Http\Controllers\Junior\JuniorAperAController;
 use App\Http\Controllers\Junior\JuniorAperBController;
 use App\Http\Controllers\Junior\JuniorAperCController;
@@ -27,7 +38,7 @@ use App\Http\Controllers\Junior\JuniorAperEController;
 use App\Http\Controllers\Journal\JournalCategoryController;
 use App\Http\Controllers\Journal\JournalVolumeController;
 use App\Http\Controllers\Journal\JournalYearController;
-
+use PharIo\Manifest\Author;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +62,13 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
+
+    Route::resource('biodata', BiodataController::class);
+
+    Route::get('/overview/{id}',[OverviewController::class, 'show'])->name('user.overview');
+    Route::get('/settings/{id}',[BiodataController::class, 'show'])->name('user.settings');
+    Route::post('ajaxemailupdate', [BiodataController::class, 'ajaxemailupdate']);
+    Route::post('ajaxpasswordupdate', [BiodataController::class, 'ajaxpasswordupdate']);
     Route::resource('permissions', PermissionController::class);
     Route::get('/adduser/{id}',[RoleController::class, 'adduser'])->name('roles.adduser');
     Route::get('/updateuserrole',[RoleController::class, 'updateuserrole'])->name('roles.updateuserrole');
@@ -61,6 +79,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('journalcategory', JournalCategoryController::class);
     Route::resource('journalvolume', JournalVolumeController::class);
     Route::resource('journalyear', JournalYearController::class);
+    Route::resource('authors', AuthorController::class);
+
 
 
     Route::resource('academic_aper_part_a', AcademicAperAController::class);

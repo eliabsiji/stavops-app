@@ -441,7 +441,7 @@ use Spatie\Permission\Models\Role;
                 <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
                     <a href="view.html">
                                                         <div class="symbol-label">
-                                <img src="{{ asset('html/assets/assets/media/avatars/300-6.jpg')}}" alt="{{ $user->name }}" class="w-100" />
+                                <img src="{{ asset('images/staffavatar/'.$user->avatar)}}" alt="{{ $user->name }}" class="w-100" />
                             </div>
                                                 </a>
                 </div>

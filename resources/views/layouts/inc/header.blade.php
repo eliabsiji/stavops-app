@@ -665,7 +665,13 @@
             data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
             data-kt-menu-attach="parent"
             data-kt-menu-placement="bottom-end">
-            <img src="{{ asset('html/assets/assets/media/avatars/300-1.jpg')}}" alt="user"/>
+                   @php
+                   use App\Models\User;
+                      $userdata = User::find(Auth::id())
+
+                   @endphp
+
+            <img src="{{ Storage::url('images/staffavatar/'.$userdata->avatar) }}" alt="user"/>
         </div>
 
 <!--begin::User account menu-->
@@ -675,7 +681,15 @@
         <div class="menu-content d-flex align-items-center px-3">
             <!--begin::Avatar-->
             <div class="symbol symbol-50px me-5">
-                <img alt="Logo" src="{{ asset('html/assets/assets/media/avatars/300-1.jpg')}}"/>
+                <?php $image = "";?>
+                    <?php
+                    if ($userdata->avatar == NULL || $userdata->avatar =="" || !isset($userdata->avatar) ){
+                           $image =  'unnamed.png';
+                    }else {
+                       $image =  $userdata->avatar;
+                    }
+                    ?>
+                <img alt="Logo" src="{{ Storage::url('images/staffavatar/'.$image)}}"/>
             </div>
             <!--end::Avatar-->
 
@@ -699,7 +713,7 @@
 
     <!--begin::Menu item-->
     <div class="menu-item px-5">
-        <a href="{{ asset('html/assets/account/overview.html')}}" class="menu-link px-5">
+        <a href="{{ route('user.overview',Auth::user()->id)}}" class="menu-link px-5">
             My Profile
         </a>
     </div>
