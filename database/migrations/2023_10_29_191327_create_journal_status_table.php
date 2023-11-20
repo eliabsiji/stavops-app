@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('author_models', function (Blueprint $table) {
+        Schema::create('journal_status', function (Blueprint $table) {
             $table->id();
+            $table->string('journal_id');
+            $table->string('author_id');
+            $table->string('reviewer_id');
+            $table->string('reviewerstatus');
             $table->timestamps();
         });
     }
@@ -22,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('author_models');
+        Schema::dropIfExists('journal_status');
     }
 };

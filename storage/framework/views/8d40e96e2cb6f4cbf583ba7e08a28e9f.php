@@ -8,19 +8,16 @@
 <!--end::Vendors Javascript-->
 
 <!--begin::Custom Javascript(used for this page only)-->
-    <script src="<?php echo e(asset('html/assets/assets/js/custom/apps/user-management/users/list/table.js')); ?>"></script>
+    <script src="<?php echo e(asset('html/assets/assets/js/custom/apps/user-management/users/list/journalvolumetable.js')); ?>"></script>
     <script src="<?php echo e(asset('html/assets/assets/js/custom/apps/user-management/users/list/export-users.js')); ?>"></script>
-    <script src="<?php echo e(asset('html/assets/assets/js/custom/apps/user-management/users/list/add.js')); ?>"></script>
+    <script src="<?php echo e(asset('html/assets/assets/js/custom/apps/user-management/users/list/journalvolume.js')); ?>"></script>
+    <script src="<?php echo e(asset('html/assets/assets/js/custom/apps/user-management/users/list/addjournal.js')); ?>"></script>
     <script src="<?php echo e(asset('html/assets/assets/js/widgets.bundle.js')); ?>"></script>
     <script src="<?php echo e(asset('html/assets/assets/js/custom/widgets.js')); ?>"></script>
-
     <script src="<?php echo e(asset('html/assets/assets/js/custom/apps/chat/chat.js')); ?>"></script>
     <script src="<?php echo e(asset('html/assets/assets/js/custom/utilities/modals/upgrade-plan.js')); ?>"></script>
     <script src="<?php echo e(asset('html/assets/assets/js/custom/utilities/modals/create-app.js')); ?>"></script>
     <script src="<?php echo e(asset('html/assets/assets/js/custom/utilities/modals/users-search.js')); ?>"></script>
-    <script src="<?php echo e(asset('html/assets/assets/js/custom/account/settings/signin-methods.js')); ?>"></script>
-    <script src="<?php echo e(asset('html/assets/assets/js/custom/account/settings/profile-details.js')); ?>"></script>
-    <script src="<?php echo e(asset('html/assets/assets/js/custom/account/settings/deactivate-account.js')); ?>"></script>
 <!--end::Custom Javascript-->
 <!--end::Javascript-->
-<?php /**PATH C:\xampp\htdocs\stavops-app\resources\views/layouts/pages-assets/js/users-list-js.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\xampp\htdocs\stavops-app\resources\views/layouts/pages-assets/js/journalvolume-list-js.blade.php ENDPATH**/ ?>

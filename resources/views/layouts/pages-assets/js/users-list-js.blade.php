@@ -11,8 +11,10 @@
     <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/table.js')}}"></script>
     <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/export-users.js')}}"></script>
     <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/add.js')}}"></script>
+
     <script src="{{ asset('html/assets/assets/js/widgets.bundle.js')}}"></script>
     <script src="{{ asset('html/assets/assets/js/custom/widgets.js')}}"></script>
+
     <script src="{{ asset('html/assets/assets/js/custom/apps/chat/chat.js')}}"></script>
     <script src="{{ asset('html/assets/assets/js/custom/utilities/modals/upgrade-plan.js')}}"></script>
     <script src="{{ asset('html/assets/assets/js/custom/utilities/modals/create-app.js')}}"></script>

@@ -8,11 +8,14 @@
 <!--end::Vendors Javascript-->
 
 <!--begin::Custom Javascript(used for this page only)-->
-    <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/journalvolumetable.js')}}"></script>
+    <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/journalauthortable.js')}}"></script>
+
     <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/export-users.js')}}"></script>
-    <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/journalvolume.js')}}"></script>
-    <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/addjournal.js')}}"></script>
+    <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/users/list/journalcategory.js')}}"></script>
     <script src="{{ asset('html/assets/assets/js/widgets.bundle.js')}}"></script>
+    <script src="{{ asset('html/assets/js/custom/apps/inbox/listing.js')}}"></script>
+
+
     <script src="{{ asset('html/assets/assets/js/custom/widgets.js')}}"></script>
     <script src="{{ asset('html/assets/assets/js/custom/apps/chat/chat.js')}}"></script>
     <script src="{{ asset('html/assets/assets/js/custom/utilities/modals/upgrade-plan.js')}}"></script>

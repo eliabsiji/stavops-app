@@ -1,13 +1,9 @@
-<?php $__env->startSection('content'); ?>
-<?php
-use Spatie\Permission\Models\Permission;
-use App\Models\User;
-use Spatie\Permission\Models\Role;
-?>
-            <!--begin::Main-->
-            <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
-                <!--begin::Content wrapper-->
-                <div class="d-flex flex-column flex-column-fluid">
+@extends('layouts.master')
+@section('content')
+    <!--begin::Main-->
+    <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+        <!--begin::Content wrapper-->
+        <div class="d-flex flex-column flex-column-fluid">
 
 <!--begin::Toolbar-->
 <div id="kt_app_toolbar" class="app-toolbar  py-3 py-lg-6 ">
@@ -21,7 +17,7 @@ use Spatie\Permission\Models\Role;
 <div  class="page-title d-flex flex-column justify-content-center flex-wrap me-3 ">
     <!--begin::Title-->
     <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">
-     Users & Privileges
+    My Journals
             </h1>
     <!--end::Title-->
 
@@ -30,7 +26,7 @@ use Spatie\Permission\Models\Role;
         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                             <!--begin::Item-->
                              <li class="breadcrumb-item text-muted">
-                                 <a href="<?php echo e(route('users.index')); ?>" class="text-muted text-hover-primary">Users </a>
+                                 <a href="{{ route('users.index') }}" class="text-muted text-hover-primary">Journals & Publications</a>
                                             </li>
                                 <!--end::Item-->
                                     <!--begin::Item-->
@@ -40,38 +36,36 @@ use Spatie\Permission\Models\Role;
                     <!--end::Item-->
 
                             <!--begin::Item-->
-                                    <li class="breadcrumb-item text-muted">Users list </li>
+                                    <li class="breadcrumb-item text-muted">My Journals</li>
                                 <!--end::Item-->
 
                     </ul>
         <!--end::Breadcrumb-->
     </div>
 <!--end::Page title-->
-<?php if($errors->any()): ?>
+@if ($errors->any())
 <div class="alert alert-danger">
     <strong>Whoops!</strong> There were some problems with your input.<br><br>
     <ul>
-        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <li><?php echo e($error); ?></li>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
     </ul>
 </div>
-<?php endif; ?>
+@endif
 
-<?php if(\Session::has('status')): ?>
+@if (\Session::has('status'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">
-<?php echo e(\Session::get('status')); ?>
-
+{{ \Session::get('status') }}
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
-<?php endif; ?>
-<?php if(\Session::has('success')): ?>
+@endif
+@if (\Session::has('success'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">
-<?php echo e(\Session::get('success')); ?>
-
+{{ \Session::get('success') }}
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
-<?php endif; ?>
+@endif
 
         </div>
         <!--end::Toolbar container-->
@@ -93,7 +87,7 @@ use Spatie\Permission\Models\Role;
 <div class="d-flex flex-wrap flex-stack my-5">
     <!--begin::Heading-->
     <h2 class="fs-2 fw-semibold my-2">
-        Users
+      My Journals & Publications
         <span class="fs-6 text-gray-400 ms-1">Database</span>
     </h2>
     <!--end::Heading-->
@@ -121,64 +115,13 @@ use Spatie\Permission\Models\Role;
     <div class="card-toolbar">
         <!--begin::Toolbar-->
 <div class="d-flex justify-content-end" data-kt-user-table-toolbar="base">
-<!--begin::Filter-->
-<button type="button" class="btn btn-light-primary me-3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-    <i class="ki-duotone ki-filter fs-2"><span class="path1"></span><span class="path2"></span></i>        Filter
-</button>
-<!--begin::Menu 1-->
-<div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true">
-<!--begin::Header-->
-<div class="px-7 py-5">
-    <div class="fs-5 text-dark fw-bold">Filter Options</div>
-</div>
-<!--end::Header-->
 
-<!--begin::Separator-->
-<div class="separator border-gray-200"></div>
-<!--end::Separator-->
-
-<!--begin::Content-->
-<div class="px-7 py-5" data-kt-user-table-filter="form">
-    <!--begin::Input group-->
-    <div class="mb-10">
-        <label class="form-label fs-6 fw-semibold">Role:</label>
-        <select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-user-table-filter="role" data-hide-search="true">
-            <option></option>
-            <?php $__currentLoopData = $role_perm; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $role): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <option value="<?php echo e($role->name); ?>"><?php echo e($role->name); ?></option>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-        </select>
-    </div>
-    <!--end::Input group-->
-
-    <!--begin::Input group-->
-    <div class="mb-10">
-        <label class="form-label fs-6 fw-semibold">Two Step Verification:</label>
-        <select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-kt-user-table-filter="two-step" data-hide-search="true">
-            <option></option>
-            <option value="<?php echo e($role->name); ?>"><?php echo e($role->name); ?></option>
-
-        </select>
-    </div>
-    <!--end::Input group-->
-
-    <!--begin::Actions-->
-    <div class="d-flex justify-content-end">
-        <button type="reset" class="btn btn-light btn-active-light-primary fw-semibold me-2 px-6" data-kt-menu-dismiss="true" data-kt-user-table-filter="reset">Reset</button>
-        <button type="submit" class="btn btn-primary fw-semibold px-6" data-kt-menu-dismiss="true" data-kt-user-table-filter="filter">Apply</button>
-    </div>
-    <!--end::Actions-->
-</div>
-<!--end::Content-->
-</div>
-<!--end::Menu 1-->    <!--end::Filter-->
 
 
 
 <!--begin::Add user-->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_user">
-    <i class="ki-duotone ki-plus fs-2"></i>        Add User
+    <i class="ki-duotone ki-plus fs-2"></i>        New Journal
 </button>
 <!--end::Add user-->
 </div>
@@ -209,7 +152,7 @@ use Spatie\Permission\Models\Role;
         <!--begin::Modal header-->
         <div class="modal-header" id="kt_modal_add_user_header">
             <!--begin::Modal title-->
-            <h2 class="fw-bold">Add User</h2>
+            <h2 class="fw-bold">New Journal Publication</h2>
             <!--end::Modal title-->
 
             <!--begin::Close-->
@@ -223,89 +166,52 @@ use Spatie\Permission\Models\Role;
         <!--begin::Modal body-->
         <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
             <!--begin::Form-->
-            <form id="kt_modal_add_user_form" class="form" action="<?php echo e(route('users.store')); ?>" method="POST">
-                <?php echo csrf_field(); ?>
+            <form id="kt_modal_add_user_form" class="form" action="{{ route('myjournals.store') }}" method="POST">
+                @csrf
                 <!--begin::Scroll-->
                 <div class="d-flex flex-column scroll-y me-n7 pe-7" id="kt_modal_add_user_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_add_user_header" data-kt-scroll-wrappers="#kt_modal_add_user_scroll" data-kt-scroll-offset="300px">
-                    
-
                     <!--begin::Input group-->
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
-                        <label class="required fw-semibold fs-6 mb-2">Full Name</label>
+                        <label class="d-block fw-semibold fs-6 mb-5">Upload Document</label>
                         <!--end::Label-->
 
-                        <!--begin::Input-->
-                        <input type="text" name="name" id="name" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Full name"  />
-                        <!--end::Input-->
-                    </div>
-                    <!--end::Input group-->
 
-                    <!--begin::Input group-->
-                    <div class="fv-row mb-7">
-                        <!--begin::Label-->
-                        <label class="required fw-semibold fs-6 mb-2">Email</label>
-                        <!--end::Label-->
-
-                        <!--begin::Input-->
-                        <input type="email" name="email" id="email" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="example@domain.com"  />
-                        <!--end::Input-->
-                    </div>
-                    <!--end::Input group-->
-
-                    <!--begin::Input group-->
-                    <div class="mb-7">
-                        <!--begin::Label-->
-                        <label class="required fw-semibold fs-6 mb-5">Role</label>
-                        <!--end::Label-->
-
-                        <!--begin::Roles-->
+                        <!--begin::Image input-->
+                        <div class="image-input image-input-outline " data-kt-image-input="true">
 
 
-                             <!--begin::Input row-->
-                             <div class="fv-row mb-7">
+                                <!--begin::Inputs-->
+                                <input type="file" name="journalfile" class="form-control form-control-solid mb-3 mb-lg-0" accept=".pdf" />
+                                <input type="hidden" name="avatar_remove" />
+                                <!--end::Inputs-->
+                            </label>
+                            <!--end::Label-->
 
-                                    <!--begin::Input-->
-                                    
-                                    <!--end::Input-->
-                                    <select name ="roles[]" id="role" class="form-control form-control-solid mb-3 mb-lg-0" multiple="multiple" >
-                                        <?php $__currentLoopData = $roles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $role => $name): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                         <option value="<?php echo e($name); ?>"><?php echo e($name); ?></option>
-                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                    </select>
-
-
-                            </div>
-                            <!--end::Input row-->
                         </div>
-                        <!--end::Input group-->
+                        <!--end::Image input-->
 
+                        <!--begin::Hint-->
+                        <div class="form-text">Allowed file types: pdf</div>
+                        <!--end::Hint-->
+                    </div>
+                    <!--end::Input group-->
 
                     <!--begin::Input group-->
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
-                        <label class="required fw-semibold fs-6 mb-2">Password</label>
+                        <label class="required fw-semibold fs-6 mb-2">Title</label>
                         <!--end::Label-->
 
                         <!--begin::Input-->
-                        <input type="password" name="password" id="password" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Passowrd"  />
+                        <input type="text" name="title" id="title" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Journal/Publication Title"  />
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
 
 
-                    <!--begin::Input group-->
-                    <div class="fv-row mb-7">
-                        <!--begin::Label-->
-                        <label class="required fw-semibold fs-6 mb-2">Confirm Password</label>
-                        <!--end::Label-->
 
-                        <!--begin::Input-->
-                        <input type="password" name="password_confirmation" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Confirm Password"  />
-                        <!--end::Input-->
-                    </div>
-                    <!--end::Input group-->
-                                                                                    <!--end::Roles-->
+
 
                 </div>
                 <!--end::Scroll-->
@@ -341,21 +247,21 @@ use Spatie\Permission\Models\Role;
 </div>
 <!--end::Card header-->
 
-<?php if(count($errors) > 0): ?>
+@if (count($errors) > 0)
 <div class="row animated fadeInUp">
-      <?php if(count($errors) > 0): ?>
+      @if (count($errors) > 0)
 <div class="alert alert-warning fade in">
 <a href="#" class="close" data-dismiss="alert">&times;</a>
     <strong>Opps!</strong> Something went wrong, please check below errors.<br><br>
     <ul>
-        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <li><?php echo e($error); ?></li>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
     </ul>
  </div>
- <?php endif; ?>
+ @endif
 </div>
-   <?php endif; ?>
+   @endif
 <!--begin::Card body-->
 <div class="card-body py-4">
 
@@ -378,7 +284,7 @@ use Spatie\Permission\Models\Role;
     </tr>
 </thead>
 <tbody class="text-gray-600 fw-semibold">
-        <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        {{-- @foreach ($data as $key => $user) --}}
         <tr>
             <td>
                 <div class="form-check form-check-sm form-check-custom form-check-solid">
@@ -386,57 +292,55 @@ use Spatie\Permission\Models\Role;
                 </div>
             </td>
 
-            <td><?php echo e(++$i); ?></td>
+            <td></td>
             <td class="d-flex align-items-center">
                 <!--begin:: Avatar -->
                 <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
-                    <a href="<?php echo e(route('users.show',$user->id)); ?>">
-                                                        <div class="symbol-label">
-                    <?php $image = "";?>
+                    <a href="">
+                                <div class="symbol-label">
+                    {{-- <?php $image = "";?>
                     <?php
                     if ($user->avatar == NULL || !isset($user->avatar) ){
                            $image =  'unnamed.png';
                     }else {
                        $image =  $user->avatar;
                     }
-                    ?>
-                                <img src="<?php echo e(Storage::url('images/staffavatar/'.$image)); ?>" alt="<?php echo e($user->name); ?>" class="w-100" />
+                    ?> --}}
+                                <img src="" alt="" class="w-100" />
                             </div>
                                                 </a>
                 </div>
                 <!--end::Avatar-->
                 <!--begin::User details-->
                 <div class="d-flex flex-column">
-                    <a href="<?php echo e(route('users.show',$user->id)); ?>" class="text-gray-800 text-hover-primary mb-1"><?php echo e($user->name); ?></a>
-                    <span><?php echo e($user->email); ?></span>
+                    <a href="" class="text-gray-800 text-hover-primary mb-1"></a>
+                    <span></span>
                 </div>
                 <!--begin::User details-->
             </td>
 
             <td>
-                <?php if(!empty($user->getRoleNames())): ?>
-                    <?php $__currentLoopData = $user->getRoleNames(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $val): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <?php
+                {{-- @if(!empty($user->getRoleNames()))
+                    @foreach($user->getRoleNames() as  $val)
+                        @php
                              $u = Role::where('roles.name',"=",$val)
                                 ->get();
 
-                        ?>
+                        @endphp
                         <label class="
-                        <?php
+                        @php
                         foreach ($u as $key => $value) {
                             echo $value->badge;
                         }
-                    ?>"><?php echo e($val); ?></label>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                <?php endif; ?>
+                    @endphp">{{ $val }}</label>
+                    @endforeach
+                @endif --}}
             </td>
             <td>
-                <?php echo e($user->email); ?>
-
+                {{-- {{  $user->email }} --}}
             </td>
             <td>
-                <?php echo e($user->created_at); ?>
-
+                {{-- {{  $user->created_at }} --}}
             </td>
             <td class="text-end">
                 <a href="#" class="btn btn-light btn-active-light-primary btn-flex btn-center btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -444,44 +348,41 @@ use Spatie\Permission\Models\Role;
                     <i class="ki-duotone ki-down fs-5 ms-1"></i>                    </a>
                 <!--begin::Menu-->
                      <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('user-edit')): ?>
+                        {{-- @can('user-edit') --}}
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="<?php echo e(route('users.show',$user->id)); ?>" class="menu-link px-3">
+                                <a href="" class="menu-link px-3">
                                 View
                                 </a>
                             </div>
                             <!--end::Menu item-->
-                        <?php endif; ?>
-                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('user-edit')): ?>
+                        {{-- @endcan
+                        @can('user-edit') --}}
                                 <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="<?php echo e(route('users.edit',$user->id)); ?>" class="menu-link px-3">
+                                <a href="" class="menu-link px-3">
                                     Edit
                                 </a>
                             </div>
                             <!--end::Menu item-->
-                         <?php endif; ?>
-                         <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('user-edit')): ?>
+                         {{-- @endcan
+                         @can('user-edit') --}}
                             <!--begin::Menu item-->
                             <div class="menu-item px-3" >
-                                <?php echo Form::open(['id'=>'kt_modal_del_user_form','method' => 'DELETE','route' => ['users.destroy', $user->id],]); ?>
-
-                                    <input type="hidden"  value="<?php echo e($user->name); ?>">
-                                <?php echo Form::submit('Delete', ['class' => "menu-link px-3" ,]); ?>
-
-                                <?php echo Form::close(); ?>
-
+                                {{-- {!! Form::open(['id'=>'kt_modal_del_user_form','method' => 'DELETE','route' => ['users.destroy', $user->id],]) !!}
+                                    <input type="hidden"  value="{{ $user->name }}">
+                                {!! Form::submit('Delete', ['class' => "menu-link px-3" ,]) !!}
+                                {!! Form::close() !!} --}}
                             </div>
 
                             <!--end::Menu item-->
-                            <?php endif; ?>
+                            {{-- @endcan --}}
 
                     </div>
                            <!--end::Menu-->
             </td>
         </tr>
-    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    {{-- @endforeach --}}
 
 
 
@@ -497,8 +398,4 @@ use Spatie\Permission\Models\Role;
     <!--end::Content container-->
 </div>
 <!--end::Content-->
-<?php $__env->stopSection(); ?>
-
-
-
-<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\stavops-app\resources\views/users/index.blade.php ENDPATH**/ ?>
+@endsection

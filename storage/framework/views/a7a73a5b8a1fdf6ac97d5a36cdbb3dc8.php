@@ -44,8 +44,11 @@
        <?php if(Route::is('journalyear.*')): ?>
            <?php echo $__env->make('layouts.pages-assets.css.users-list-css', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
        <?php endif; ?>
-       <?php if(Route::is('authors.*')): ?>
+       <?php if(Route::is('authors.*') || Route::is('author.review') || Route::is('author.journal')  ): ?>
             <?php echo $__env->make('layouts.pages-assets.css.users-list-css', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+       <?php endif; ?>
+       <?php if(Route::is('myjournals.*')): ?>
+           <?php echo $__env->make('layouts.pages-assets.css.users-list-css', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
        <?php endif; ?>
 
 
@@ -228,34 +231,17 @@
         <?php if(Route::is('journalyear.*')): ?>
              <?php echo $__env->make('layouts.pages-assets.js.journalvolume-list-js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php endif; ?>
-        <?php if(Route::is('authors.*')): ?>
-             <?php echo $__env->make('layouts.pages-assets.js.journalvolume-list-js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        <?php if(Route::is('authors.*') || Route::is('author.review') || Route::is('author.journal')): ?>
+            <?php echo $__env->make('layouts.pages-assets.js.journal-list-js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        <?php endif; ?>
+        <?php if(Route::is('myjournals.*')): ?>
+            <?php echo $__env->make('layouts.pages-assets.js.journalvolume-list-js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php endif; ?>
 
-     <!-- begin::Global Javascript Bundle(mandatory for all pages)-->
-      <!-- <script src="<?php echo e(asset('html/assets/assets/plugins/global/plugins.bundle.js')); ?>"></script>
-      <script src="<?php echo e(asset('html/assets/assets/js/scripts.bundle.js')); ?>"></script> -->
-  <!--end::Global Javascript Bundle-->
 
-<!--begin::Vendors Javascript(used for this page only)-->
-      <!-- <script src="<?php echo e(asset('html/assets/assets/plugins/custom/datatables/datatables.bundle.js')); ?>"></script> -->
-  <!--end::Vendors Javascript-->
-
-<!--begin::Custom Javascript(used for this page only)-->
-      <!-- <script src="<?php echo e(asset('html/assets/assets/js/custom/apps/user-management/permissions/list.js')); ?>"></script>
-      <script src="<?php echo e(asset('html/assets/assets/js/custom/apps/user-management/permissions/add-permission.js')); ?>"></script>
-      <script src="<?php echo e(asset('html/assets/assets/js/custom/apps/user-management/permissions/update-permission.js')); ?>"></script>
-      <script src="<?php echo e(asset('html/assets/assets/js/widgets.bundle.js')); ?>"></script>
-      <script src="<?php echo e(asset('html/assets/assets/js/custom/widgets.js')); ?>"></script>
-      <script src="<?php echo e(asset('html/assets/assets/js/custom/apps/chat/chat.js')); ?>"></script>
-      <script src="<?php echo e(asset('html/assets/assets/js/custom/utilities/modals/upgrade-plan.js')); ?>"></script>
-      <script src="<?php echo e(asset('html/assets/assets/js/custom/utilities/modals/create-app.js')); ?>"></script>
-      <script src="<?php echo e(asset('html/assets/assets/js/custom/utilities/modals/users-search.js')); ?>"></script> -->
   <!--end::Custom Javascript-->
 
 
-            </body>
-
-
+     </body>
 </html>
 <?php /**PATH C:\xampp\htdocs\stavops-app\resources\views/layouts/master.blade.php ENDPATH**/ ?>

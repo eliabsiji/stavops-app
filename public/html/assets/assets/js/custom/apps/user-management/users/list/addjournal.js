@@ -15,34 +15,21 @@ var KTUsersAddUser = function () {
             form,
             {
                 fields: {
-                    'name': {
+                    'title': {
                         validators: {
                             notEmpty: {
-                                message: 'Full name is required'
+                                message: 'Journal Title  is required'
                             }
                         }
                     },
-                    'email': {
+                    'journalfile': {
                         validators: {
                             notEmpty: {
-                                message: 'Valid email address is required'
+                                message: 'You should select the file to upload'
                             }
                         }
                     },
-                    'password': {
-                        validators: {
-                            notEmpty: {
-                                message: 'Valid password is required'
-                            }
-                        }
-                    },
-                    'password_confirmation': {
-                        validators: {
-                            notEmpty: {
-                                message: 'confirm password is required'
-                            }
-                        }
-                    },
+
                 },
                 plugins: {
                     trigger: new FormValidation.plugins.Trigger(),

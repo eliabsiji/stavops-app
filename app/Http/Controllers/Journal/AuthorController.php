@@ -9,14 +9,25 @@ use Spatie\Permission\Models\Role;
 
 class AuthorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+
+
+    function __construct()
+    {
+         $this->middleware('permission:author-list|author-create|author-edit|author-delete', ['only' => ['index','store']]);
+         $this->middleware('permission:author-create', ['only' => ['create','store']]);
+         $this->middleware('permission:author-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:author-delete', ['only' => ['destroy']]);
+    }
+
+
+
+    public function index(Request $request)
     {
 
-        $users = User::whereHas('roles', function($q){ $q->where('name', '=','Author'); });
-        print_r($users);
+        $data = User::whereHas('roles', function($q){ $q->where('name', '=','Author'); })->get();
+
+        return view('journalauthors.index',compact('data'))
+        ->with('i', ($request->input('page', 1) - 1) * 5);
 
     }
 
@@ -41,9 +52,32 @@ class AuthorController extends Controller
      */
     public function show(string $id)
     {
-        //
+
+        $user = User::find($id);
+        return view('journalauthors.journallists',compact('user'));
     }
 
+
+    /**
+     * Display the specified resource.
+     */
+    public function showreview(string $id)
+    {
+        $user = User::find($id);
+        return view('journalauthors.journalreview',compact('user'));
+    }
+
+
+
+
+    /**
+     * Display the specified resource.
+     */
+    public function showjournal(string $id)
+    {
+        $user = User::find($id);
+        return view('journalauthors.journal',compact('user'));
+    }
     /**
      * Show the form for editing the specified resource.
      */

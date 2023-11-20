@@ -288,11 +288,12 @@
                                 <!--end:Menu link-->
                                 <!--begin:Menu sub-->
                              <div  class="menu-sub menu-sub-accordion" >
+                                @can('author-list')
                                     <!--begin:Menu item-->
                                     <div  class="menu-item" >
                                         <!--begin:Menu link-->
-                                        <a class="menu-link  {{ request()->is('authors*')
-                                            ? ' active' : '' }}"  href="{{ route('authors') }}" >
+                                        <a class="menu-link  {{ request()->is('author*')
+                                            ? ' active' : '' }}"  href="{{ route('authors.index') }}" >
                                             <span  class="menu-bullet" >
                                                 <span class="bullet bullet-dot">
                                                     </span>
@@ -304,6 +305,7 @@
                                         <!--end:Menu link-->
                                     </div>
                                     <!--end:Menu item-->
+                                 @endcan
                                     <!--begin:Menu item-->
                                     <div  class="menu-item" >
                                         <!--begin:Menu link-->
@@ -445,7 +447,7 @@
 
                        <!--begin:Menu item-->
                        <div  data-kt-menu-trigger="click"  class="menu-item {{
-                        request()->is('journalcategory*') ||
+                        request()->is('myjournals*') ||
                         request()->is('journalvolume*')  ||
                         request()->is('journalyear*')
                         ? ' here show menu-accordion' : '' }}" >
@@ -466,11 +468,12 @@
                                             <!--end:Menu link-->
                                             <!--begin:Menu sub-->
                                         <div  class="menu-sub menu-sub-accordion" >
+
                                                 <!--begin:Menu item-->
                                                 <div  class="menu-item" >
                                                     <!--begin:Menu link-->
-                                                    <a class="menu-link  {{ request()->is('journalcategory*')
-                                                        ? ' active' : '' }}"  href="{{ route('journalcategory.index') }}" >
+                                                    <a class="menu-link  {{ request()->is('myjournals*')
+                                                        ? ' active' : '' }}"  href="{{ route('myjournals.index') }}" >
                                                         <span  class="menu-bullet" >
                                                             <span class="bullet bullet-dot">
                                                                 </span>

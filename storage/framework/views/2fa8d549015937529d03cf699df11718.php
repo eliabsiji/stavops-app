@@ -284,11 +284,12 @@
                                 <!--end:Menu link-->
                                 <!--begin:Menu sub-->
                              <div  class="menu-sub menu-sub-accordion" >
+                                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('author-list')): ?>
                                     <!--begin:Menu item-->
                                     <div  class="menu-item" >
                                         <!--begin:Menu link-->
-                                        <a class="menu-link  <?php echo e(request()->is('authors*')
-                                            ? ' active' : ''); ?>"  href="<?php echo e(route('authors')); ?>" >
+                                        <a class="menu-link  <?php echo e(request()->is('author*')
+                                            ? ' active' : ''); ?>"  href="<?php echo e(route('authors.index')); ?>" >
                                             <span  class="menu-bullet" >
                                                 <span class="bullet bullet-dot">
                                                     </span>
@@ -300,6 +301,7 @@
                                         <!--end:Menu link-->
                                     </div>
                                     <!--end:Menu item-->
+                                 <?php endif; ?>
                                     <!--begin:Menu item-->
                                     <div  class="menu-item" >
                                         <!--begin:Menu link-->
@@ -440,7 +442,7 @@
             <!--end:Menu item-->
 
                        <!--begin:Menu item-->
-                       <div  data-kt-menu-trigger="click"  class="menu-item <?php echo e(request()->is('journalcategory*') ||
+                       <div  data-kt-menu-trigger="click"  class="menu-item <?php echo e(request()->is('myjournals*') ||
                         request()->is('journalvolume*')  ||
                         request()->is('journalyear*')
                         ? ' here show menu-accordion' : ''); ?>" >
@@ -461,11 +463,12 @@
                                             <!--end:Menu link-->
                                             <!--begin:Menu sub-->
                                         <div  class="menu-sub menu-sub-accordion" >
+
                                                 <!--begin:Menu item-->
                                                 <div  class="menu-item" >
                                                     <!--begin:Menu link-->
-                                                    <a class="menu-link  <?php echo e(request()->is('journalcategory*')
-                                                        ? ' active' : ''); ?>"  href="<?php echo e(route('journalcategory.index')); ?>" >
+                                                    <a class="menu-link  <?php echo e(request()->is('myjournals*')
+                                                        ? ' active' : ''); ?>"  href="<?php echo e(route('myjournals.index')); ?>" >
                                                         <span  class="menu-bullet" >
                                                             <span class="bullet bullet-dot">
                                                                 </span>

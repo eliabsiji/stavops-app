@@ -1,6 +1,5 @@
-
-    @extends('layouts.master')
-    @section('content')
+    
+    <?php $__env->startSection('content'); ?>
 
 
                 <!--begin::Main-->
@@ -72,7 +71,7 @@
             <div id="kt_app_content_container" class="app-container  container-xxl ">
 
 
-                @include('users.inc.navbar')
+                <?php echo $__env->make('users.inc.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <!--begin::details View-->
     <div class="card mb-5 mb-xl-10" id="kt_profile_details_view">
@@ -85,7 +84,7 @@
             <!--end::Card title-->
 
             <!--begin::Action-->
-            <a href="{{ route('user.settings',Auth::user()->id) }}"  class="btn btn-sm btn-primary align-self-center">Edit Profile</a>
+            <a href="<?php echo e(route('user.settings',Auth::user()->id)); ?>"  class="btn btn-sm btn-primary align-self-center">Edit Profile</a>
             <!--end::Action-->
         </div>
         <!--begin::Card header-->
@@ -100,7 +99,7 @@
 
                 <!--begin::Col-->
                 <div class="col-lg-8">
-                    <span class="fw-bold fs-6 text-gray-800">{{ $userbio->firstname }}  {{ $userbio->lastname }}  {{ $userbio->othernames }}</span>
+                    <span class="fw-bold fs-6 text-gray-800"><?php echo e($userbio->firstname); ?>  <?php echo e($userbio->lastname); ?>  <?php echo e($userbio->othernames); ?></span>
                 </div>
                 <!--end::Col-->
             </div>
@@ -114,7 +113,7 @@
 
                 <!--begin::Col-->
                 <div class="col-lg-8 fv-row">
-                    <span class="fw-semibold text-gray-800 fs-6">{{ $userbio->address }}</span>
+                    <span class="fw-semibold text-gray-800 fs-6"><?php echo e($userbio->address); ?></span>
                 </div>
                 <!--end::Col-->
             </div>
@@ -133,8 +132,8 @@
 
                 <!--begin::Col-->
                 <div class="col-lg-8 d-flex align-items-center">
-                    <span class="fw-bold fs-6 text-gray-800 me-2">{{ $userbio->phone }}</span>
-                    {{-- <span class="badge badge-success">Verified</span> --}}
+                    <span class="fw-bold fs-6 text-gray-800 me-2"><?php echo e($userbio->phone); ?></span>
+                    
                 </div>
                 <!--end::Col-->
             </div>
@@ -148,7 +147,7 @@
 
                 <!--begin::Col-->
                 <div class="col-lg-8">
-                    <a href="#" class="fw-semibold fs-6 text-gray-800 text-hover-primary">{{ $userbio->dob }}</a>
+                    <a href="#" class="fw-semibold fs-6 text-gray-800 text-hover-primary"><?php echo e($userbio->dob); ?></a>
                 </div>
                 <!--end::Col-->
             </div>
@@ -167,7 +166,7 @@
 
                 <!--begin::Col-->
                 <div class="col-lg-8">
-                    <span class="fw-bold fs-6 text-gray-800">{{ $userbio->nationality }}</span>
+                    <span class="fw-bold fs-6 text-gray-800"><?php echo e($userbio->nationality); ?></span>
                 </div>
                 <!--end::Col-->
             </div>
@@ -181,7 +180,7 @@
 
                 <!--begin::Col-->
                 <div class="col-lg-8">
-                    <span class="fw-bold fs-6 text-gray-800">{{ $userbio->gender }}</span>
+                    <span class="fw-bold fs-6 text-gray-800"><?php echo e($userbio->gender); ?></span>
                 </div>
                 <!--end::Col-->
             </div>
@@ -195,7 +194,7 @@
 
                 <!--begin::Label-->
                 <div class="col-lg-8">
-                    <span class="fw-semibold fs-6 text-gray-800">{{ $userbio->maritalstatus }}</span>
+                    <span class="fw-semibold fs-6 text-gray-800"><?php echo e($userbio->maritalstatus); ?></span>
                 </div>
                 <!--begin::Label-->
             </div>
@@ -214,5 +213,7 @@
                     </div>
                     <!--end::Content wrapper-->
 
-    @endsection
+    <?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\stavops-app\resources\views/users/overview.blade.php ENDPATH**/ ?>

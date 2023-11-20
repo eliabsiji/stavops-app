@@ -38,6 +38,10 @@ use App\Http\Controllers\Junior\JuniorAperEController;
 use App\Http\Controllers\Journal\JournalCategoryController;
 use App\Http\Controllers\Journal\JournalVolumeController;
 use App\Http\Controllers\Journal\JournalYearController;
+
+//user apps
+use App\Http\Controllers\Apps\MyJournalsController;
+
 use PharIo\Manifest\Author;
 
 /*
@@ -79,8 +83,14 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('journalcategory', JournalCategoryController::class);
     Route::resource('journalvolume', JournalVolumeController::class);
     Route::resource('journalyear', JournalYearController::class);
-    Route::resource('authors', AuthorController::class);
 
+    Route::resource('authors', AuthorController::class);
+    Route::get('/review/{id}',[AuthorController::class, 'showreview'])->name('author.review');
+    Route::get('/journal/{id}',[AuthorController::class, 'showjournal'])->name('author.journal');
+
+
+    //user apps routes
+    Route::resource('myjournals', MyJournalsController::class);
 
 
     Route::resource('academic_aper_part_a', AcademicAperAController::class);

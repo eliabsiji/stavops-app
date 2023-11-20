@@ -87,10 +87,14 @@ class UserController extends Controller
     public function show($id): View
     {
         $user = User::find($id);
-        return view('users.overview',compact('user'));
+        $userroles = $user->roles->all();
+        $userbio = $user->bio;
+        return view('users.overview',compact('user'),
+        compact('userroles'))
+        ->with("userbio",$userbio);
     }
 
-    
+
 
 
     /**
