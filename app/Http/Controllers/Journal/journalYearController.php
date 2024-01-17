@@ -4,7 +4,7 @@ namespace App\Http\Controllers\journal;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Journal_year;
+use App\Models\Journal\Journal_year;
 
 
 class journalYearController extends Controller

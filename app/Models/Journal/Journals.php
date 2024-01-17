@@ -9,8 +9,17 @@ class Journals extends Model
 {
     use HasFactory;
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
+    protected $fillable = [
+        'userid',
+        'title',
+        'categoryid',
+        'reviewerid',
+        'pending',
+        'underreviewid',
+        'rejected',
+        'accepted',
+        'published',
+    ];
+
+
 }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Journal;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Journal_volumes;
+use App\Models\Journal\Journal_volumes;
 
 class JournalVolumeController extends Controller
 {

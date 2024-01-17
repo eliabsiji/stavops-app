@@ -6,12 +6,12 @@
 <!-- Mirrored from preview.keenthemes.com/metronic8/demo1/authentication/layouts/creative/sign-in.html')}} by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Jun 2023 04:07:02 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-        <title>Login | Adrahstudios</title>
+        <title>Login | AFUED </title>
         <meta charset="utf-8"/>
 
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-        <link rel="shortcut icon" href="{{ asset('html/assets/assets/media/logos/favicon.ico')}}"/>
+        <link rel="shortcut icon" href="{{ asset('html/assets/assets/media/logos/favicon.png')}}"/>
 
         <!--begin::Fonts(mandatory for all pages)-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700"/>        <!--end::Fonts-->
@@ -68,11 +68,11 @@
     <!--begin::Page bg image-->
 <style>
     body {
-        background-image: url('{{ asset('html/assets/assets/media/auth/bg4.jpg')}}');
+        background-image: url('{{ asset('html/assets/assets/media/auth/bg3.jpg')}}');
     }
 
     [data-bs-theme="dark"] body {
-        background-image: url('{{ asset('html/assets/assets/media/auth/bg4-dark.jpg')}}');
+        background-image: url('{{ asset('html/assets/assets/media/auth/bg3-dark.jpg')}}');
     }
 </style>
 <!--end::Page bg image-->
@@ -88,7 +88,7 @@
 
             <!--begin::Title-->
             <h2 class="text-white fw-normal m-0">
-                <img alt="Logo" src="{{ asset('html/assets/assets/media/logos/logo.png')}}" class="h-100px app-sidebar-logo-default"/> Adrahstudios
+                <img alt="Logo" src="{{ asset('html/assets/assets/media/logos/logo1.png')}}" class="h-100px app-sidebar-logo-default"/> JOURNAL MANAGEMENT SYSTEM
             </h2>
             <!--end::Title-->
         </div>

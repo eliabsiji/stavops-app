@@ -4,14 +4,14 @@
     <!--begin::Head-->
 
 <head>
-        <title>Scroll | Dashboard</title>
+        <title>AFUED | Dashboard</title>
         <meta charset="utf-8"/>
         <meta name="description" content=" "/>
         <meta name="keywords" content=""/>
         <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-        <link rel="shortcut icon" href="<?php echo e(asset('html/assets/assets/media/logos/favicon.ico')); ?>"/>
+        <link rel="shortcut icon" href="<?php echo e(asset('html/assets/assets/media/logos/favicon.png')); ?>"/>
 
         <!--begin::Fonts(mandatory for all pages)-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700"/>        <!--end::Fonts-->
@@ -235,7 +235,7 @@
             <?php echo $__env->make('layouts.pages-assets.js.journal-list-js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php endif; ?>
         <?php if(Route::is('myjournals.*')): ?>
-            <?php echo $__env->make('layouts.pages-assets.js.journalvolume-list-js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+            <?php echo $__env->make('layouts.pages-assets.js.myjournal-list-js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php endif; ?>
 
 

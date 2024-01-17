@@ -30,6 +30,14 @@ var KTUsersAddUser = function () {
                         }
                     },
 
+                    'categoryid': {
+                        validators: {
+                            notEmpty: {
+                                message: 'You should select the file to upload'
+                            }
+                        }
+                    },
+
                 },
                 plugins: {
                     trigger: new FormValidation.plugins.Trigger(),

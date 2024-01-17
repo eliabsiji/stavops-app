@@ -91,6 +91,11 @@ Route::group(['middleware' => ['auth']], function() {
 
     //user apps routes
     Route::resource('myjournals', MyJournalsController::class);
+    Route::get('/journalid/{journalid}',[MyJournalsController::class, 'deletejournal'])->name('myjournal.deletejournal');
+
+
+
+
 
 
     Route::resource('academic_aper_part_a', AcademicAperAController::class);

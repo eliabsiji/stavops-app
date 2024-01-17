@@ -39,6 +39,23 @@ class ImageController extends Controller
 
     }
 
+
+    public function fileUploadPost(Request $request)
+    {
+
+        $request->validate(['journalfile' => 'required|file|mimes:pdf|max:2048', ]);
+        $fileName = time().'.'.$request->journalfile->extension();
+        $request->journalfile->move(public_path('journalfiles'), $fileName);
+        $id = $request->post('id');
+
+        /* Store $imageName name in DATABASE from HERE */
+
+        // ImageModel::where("staffId", $id)->update(["picture" => $fileName]);
+        // return back() ->with('success','You have successfully uploaded Picture.');
+        //               //->with('image',$imageName);
+
+    }
+
     public function create()
     {
         //

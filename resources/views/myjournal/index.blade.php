@@ -105,7 +105,8 @@
     <div class="card-title">
         <!--begin::Search-->
         <div class="d-flex align-items-center position-relative my-1">
-            <i class="ki-duotone ki-magnifier fs-3 position-absolute ms-5"><span class="path1"></span><span class="path2"></span></i>                <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-13" placeholder="Search user" />
+            <i class="ki-duotone ki-magnifier fs-3 position-absolute ms-5"><span class="path1"></span><span class="path2"></span></i>
+                  <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-13" placeholder="Search Journal" />
         </div>
         <!--end::Search-->
     </div>
@@ -166,7 +167,7 @@
         <!--begin::Modal body-->
         <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
             <!--begin::Form-->
-            <form id="kt_modal_add_user_form" class="form" action="{{ route('myjournals.store') }}" method="POST">
+            <form id="kt_modal_add_user_form" class="form" action="{{ route('myjournals.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <!--begin::Scroll-->
                 <div class="d-flex flex-column scroll-y me-n7 pe-7" id="kt_modal_add_user_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_add_user_header" data-kt-scroll-wrappers="#kt_modal_add_user_scroll" data-kt-scroll-offset="300px">
@@ -182,7 +183,7 @@
 
 
                                 <!--begin::Inputs-->
-                                <input type="file" name="journalfile" class="form-control form-control-solid mb-3 mb-lg-0" accept=".pdf" />
+                                <input type="file" name="journalfile" class="form-control form-control-solid mb-3 mb-lg-0" accept=".pdf,.doc" />
                                 <input type="hidden" name="avatar_remove" />
                                 <!--end::Inputs-->
                             </label>
@@ -192,7 +193,7 @@
                         <!--end::Image input-->
 
                         <!--begin::Hint-->
-                        <div class="form-text">Allowed file types: pdf</div>
+                        <div class="form-text">Allowed file types: pdf, docs</div>
                         <!--end::Hint-->
                     </div>
                     <!--end::Input group-->
@@ -209,7 +210,27 @@
                     </div>
                     <!--end::Input group-->
 
+                       <!--begin::Input group-->
+                       <div class="mb-7">
+                        <!--begin::Label-->
+                        <label class="required fw-semibold fs-6 mb-5">Select Journal Category</label>
+                        <!--end::Label-->
+                                <!--begin::Input row-->
+                                <div class="fv-row mb-7">
 
+                                        <!--begin::Input-->
+                                        <select name ="categoryid" id="categoryid" class="form-control form-control-solid mb-3 mb-lg-0"  >
+                                            <option value="" selected>Select Category </option>
+                                                @foreach ($category as $jcat => $name )
+                                                <option value="{{$name->id}}">{{ $name->journal_category}}</option>
+                                                @endforeach
+                                        </select>
+                                        <!--end::Input-->
+
+                                </div>
+                                <!--end::Input row-->
+                            </div>
+                            <!--end::Input group-->
 
 
 
@@ -276,15 +297,19 @@
             </div>
         </th>
         <th class="min-w-125px">SN</th>
-        <th class="min-w-125px">Name</th>
-        <th class="min-w-125px">Roles</th>
-        <th class="min-w-125px">Email</th>
-        <th class="min-w-125px">Joined Date</th>
-        <th class="text-end min-w-100px">Actions</th>
+        <th class="min-w-125px">Title</th>
+        <th class="min-w-125px">Journal ID</th>
+        <th class="min-w-125px">Category</th>
+        <th class="min-w-125px">Status</th>
+        <th class="min-w-125px">Submit Date</th>
+        <th class="min-w-100px">Actions</th>
     </tr>
 </thead>
 <tbody class="text-gray-600 fw-semibold">
-        {{-- @foreach ($data as $key => $user) --}}
+    @php
+             $i= 0
+         @endphp
+         @foreach ($journals as $j)
         <tr>
             <td>
                 <div class="form-check form-check-sm form-check-custom form-check-solid">
@@ -292,72 +317,28 @@
                 </div>
             </td>
 
-            <td></td>
-            <td class="d-flex align-items-center">
-                <!--begin:: Avatar -->
-                <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
-                    <a href="">
-                                <div class="symbol-label">
-                    {{-- <?php $image = "";?>
-                    <?php
-                    if ($user->avatar == NULL || !isset($user->avatar) ){
-                           $image =  'unnamed.png';
-                    }else {
-                       $image =  $user->avatar;
-                    }
-                    ?> --}}
-                                <img src="" alt="" class="w-100" />
-                            </div>
-                                                </a>
-                </div>
-                <!--end::Avatar-->
-                <!--begin::User details-->
-                <div class="d-flex flex-column">
-                    <a href="" class="text-gray-800 text-hover-primary mb-1"></a>
-                    <span></span>
-                </div>
-                <!--begin::User details-->
-            </td>
-
-            <td>
-                {{-- @if(!empty($user->getRoleNames()))
-                    @foreach($user->getRoleNames() as  $val)
-                        @php
-                             $u = Role::where('roles.name',"=",$val)
-                                ->get();
-
-                        @endphp
-                        <label class="
-                        @php
-                        foreach ($u as $key => $value) {
-                            echo $value->badge;
-                        }
-                    @endphp">{{ $val }}</label>
-                    @endforeach
-                @endif --}}
-            </td>
-            <td>
-                {{-- {{  $user->email }} --}}
-            </td>
-            <td>
-                {{-- {{  $user->created_at }} --}}
-            </td>
+            <td>{{ ++$i }}</td>
+            <td class="min-w-125px">{{ $j->title }}</td>
+            <td> {{ $j->paperid }}</td>
+            <td>{{ $j->category }} </td>
+            <td>{{ $j->category }} </td>
+            <td>{{ $j->updated_at }} </td>
             <td class="text-end">
                 <a href="#" class="btn btn-light btn-active-light-primary btn-flex btn-center btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
                     Actions
                     <i class="ki-duotone ki-down fs-5 ms-1"></i>                    </a>
                 <!--begin::Menu-->
                      <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-                        {{-- @can('user-edit') --}}
+                        @can('myjournal-viewpaper')
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
                                 <a href="" class="menu-link px-3">
-                                View
+                                View Paper
                                 </a>
                             </div>
                             <!--end::Menu item-->
-                        {{-- @endcan
-                        @can('user-edit') --}}
+                        @endcan
+                        @can('myjournal-edit')
                                 <!--begin::Menu item-->
                             <div class="menu-item px-3">
                                 <a href="" class="menu-link px-3">
@@ -365,24 +346,25 @@
                                 </a>
                             </div>
                             <!--end::Menu item-->
-                         {{-- @endcan
-                         @can('user-edit') --}}
+                         @endcan
+                         @can('myjournal-delete')
                             <!--begin::Menu item-->
                             <div class="menu-item px-3" >
-                                {{-- {!! Form::open(['id'=>'kt_modal_del_user_form','method' => 'DELETE','route' => ['users.destroy', $user->id],]) !!}
-                                    <input type="hidden"  value="{{ $user->name }}">
-                                {!! Form::submit('Delete', ['class' => "menu-link px-3" ,]) !!}
-                                {!! Form::close() !!} --}}
+                                <a
+                                href="javascript:void(0)"
+                                id="show-user"
+                                data-kt-roles-table-filter="delete_row"
+                                data-url="{{ route('myjournal.deletejournal', ['journalid'=>$j->jid]) }}"
+                                class="btn btn-danger btn-sm">Delete</a>
                             </div>
-
                             <!--end::Menu item-->
-                            {{-- @endcan --}}
+                            @endcan
 
                     </div>
                            <!--end::Menu-->
             </td>
         </tr>
-    {{-- @endforeach --}}
+     @endforeach
 
 
 
