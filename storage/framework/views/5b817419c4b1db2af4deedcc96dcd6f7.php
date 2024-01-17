@@ -671,7 +671,7 @@
 
                    ?>
 
-            <img src="<?php echo e(Storage::url('images/staffavatar/'.$userdata->avatar)); ?>" alt="user"/>
+            
         </div>
 
 <!--begin::User account menu-->

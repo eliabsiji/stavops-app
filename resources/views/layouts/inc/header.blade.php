@@ -671,7 +671,7 @@
 
                    @endphp
 
-            {{-- <img src="{{ Storage::url('images/staffavatar/'.$userdata->avatar) }}" alt="user"/> --}}
+            <img src="{{ Storage::url('images/staffavatar/'.$userdata->avatar) }}" alt="user"/>
         </div>
 
 <!--begin::User account menu-->
