@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Journal\Journal_year;
 
 
-class journalYearController extends Controller
+class JournalYearController extends Controller
 {
     function __construct()
     {
