@@ -50,10 +50,10 @@
     <div class="custom-cursor__cursor-two"></div>
 
 
-    <div class="preloader">
+    {{-- <div class="preloader">
         <div class="preloader__image"></div>
     </div>
-    <!-- /.preloader -->
+    <!-- /.preloader --> --}}
 
     <div class="page-wrapper">
 
