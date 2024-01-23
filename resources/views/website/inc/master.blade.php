@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('dapafue/assets/images/favicons/favicon-32x32.png')}}" />
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('dapafue/assets/images/favicons/favicon-16x16.png')}}" />
     <link rel="manifest" href="{{ asset('dapafue/assets/images/favicons/site.webmanifest')}}" />
-    <meta name="description" content="Ontech HTML 5 Template " />
+    <meta name="description" content="" />
 
     <!-- fonts -->
     <link
