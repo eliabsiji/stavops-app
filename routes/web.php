@@ -56,12 +56,10 @@ use PharIo\Manifest\Author;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('website.inc.master');
 });
 
 Auth::routes();
-
-
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);

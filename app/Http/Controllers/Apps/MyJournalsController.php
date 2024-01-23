@@ -26,7 +26,7 @@ class MyJournalsController extends Controller
     }
     /**
      * Display a listing of the resource.
-     */
+     */ 
     public function index()
     {
         $user = auth()->user();
