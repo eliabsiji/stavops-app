@@ -148,7 +148,7 @@
                                             <li class="dropdown">
                                                 <a href="#">Join Us</a>
                                                 <ul>
-                                                    <li><a href="#">Sign In</a></li>
+                                                    <li><a href="/login">Sign In</a></li>
                                                     <li><a href="#">Register</a></li>
                                                 </ul>
                                             </li>

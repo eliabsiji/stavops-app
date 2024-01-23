@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo e(asset('dapafue/assets/images/favicons/favicon-32x32.png')); ?>" />
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo e(asset('dapafue/assets/images/favicons/favicon-16x16.png')); ?>" />
     <link rel="manifest" href="<?php echo e(asset('dapafue/assets/images/favicons/site.webmanifest')); ?>" />
-    <meta name="description" content="Ontech HTML 5 Template " />
+    <meta name="description" content="" />
 
     <!-- fonts -->
     <link
@@ -50,10 +50,7 @@
     <div class="custom-cursor__cursor-two"></div>
 
 
-    <div class="preloader">
-        <div class="preloader__image"></div>
-    </div>
-    <!-- /.preloader -->
+    
 
     <div class="page-wrapper">
 
@@ -148,7 +145,7 @@
                                             <li class="dropdown">
                                                 <a href="#">Join Us</a>
                                                 <ul>
-                                                    <li><a href="#">Sign In</a></li>
+                                                    <li><a href="/login">Sign In</a></li>
                                                     <li><a href="#">Register</a></li>
                                                 </ul>
                                             </li>
