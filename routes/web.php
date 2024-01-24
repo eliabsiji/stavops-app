@@ -1,48 +1,49 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use PharIo\Manifest\Author;
 use Illuminate\Support\Facades\Auth;
 
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\PermissionController;
 
 use App\Http\Controllers\BiodataController;
+use App\Http\Controllers\WebsiteController;
+
 use App\Http\Controllers\OverviewController;
 
+
+use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\Journal\AuthorController;
-
-
-use App\Http\Controllers\Academics\AcademicAperAController;
-use App\Http\Controllers\Academics\AcademicAperBController;
-use App\Http\Controllers\Academics\AcademicAperCController;
-use App\Http\Controllers\Academics\AcademicAperDController;
-use App\Http\Controllers\Academics\AcademicAperEController;
-
-
-use App\Http\Controllers\Senior\SeniorAperAController;
-use App\Http\Controllers\Senior\SeniorAperBController;
-use App\Http\Controllers\Senior\SeniorAperCController;
-use App\Http\Controllers\Senior\SeniorAperDController;
-use App\Http\Controllers\Senior\SeniorAperEController;
-
-
+use App\Http\Controllers\Apps\MyJournalsController;
 use App\Http\Controllers\Junior\JuniorAperAController;
 use App\Http\Controllers\Junior\JuniorAperBController;
+
+
 use App\Http\Controllers\Junior\JuniorAperCController;
 use App\Http\Controllers\Junior\JuniorAperDController;
 use App\Http\Controllers\Junior\JuniorAperEController;
+use App\Http\Controllers\Senior\SeniorAperAController;
+use App\Http\Controllers\Senior\SeniorAperBController;
+
+
+use App\Http\Controllers\Senior\SeniorAperCController;
+use App\Http\Controllers\Senior\SeniorAperDController;
+use App\Http\Controllers\Senior\SeniorAperEController;
+use App\Http\Controllers\Journal\JournalYearController;
+use App\Http\Controllers\Journal\JournalVolumeController;
 
 //use journal...
-use App\Http\Controllers\Journal\JournalCategoryController;
-use App\Http\Controllers\Journal\JournalVolumeController;
-use App\Http\Controllers\Journal\JournalYearController;
+use App\Http\Controllers\Academics\AcademicAperAController;
+use App\Http\Controllers\Academics\AcademicAperBController;
+use App\Http\Controllers\Academics\AcademicAperCController;
 
 //user apps
-use App\Http\Controllers\Apps\MyJournalsController;
+use App\Http\Controllers\Academics\AcademicAperDController;
 
-use PharIo\Manifest\Author;
+use App\Http\Controllers\Academics\AcademicAperEController;
+use App\Http\Controllers\Journal\JournalCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,9 +56,7 @@ use PharIo\Manifest\Author;
 |
 */
 
-Route::get('/', function () {
-    return view('website.inc.master');
-});
+Route::get('/',[WebsiteController::class, 'index'])->name('home');
 
 Auth::routes();
 
