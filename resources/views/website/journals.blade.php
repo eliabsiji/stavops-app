@@ -21,7 +21,7 @@
 
                     </div>
                     <div class="shop-page__single-content">
-                      
+
                         <div class="bottom-text">
                             <div class="text-box text-center">
                                 <h4><a href="shop-details.html">Mike and honey</a></h4>
@@ -38,7 +38,7 @@
 
 
         </div>
-        <ul class="styled-pagination text-center clearfix">
+        {{-- <ul class="styled-pagination text-center clearfix">
             <li class="prev"><a href="#">prev</a>
             </li>
             <li><a href="#" class="active">01</a></li>
@@ -46,7 +46,7 @@
             <li><a href="#">03</a></li>
             <li class="next"><a href="#">next</a>
             </li>
-        </ul>
+        </ul> --}}
     </div>
 </section>
 
