@@ -57,6 +57,13 @@ use App\Http\Controllers\Journal\JournalCategoryController;
 */
 
 Route::get('/',[WebsiteController::class, 'index'])->name('home');
+Route::get('/mission',[WebsiteController::class, 'mission'])->name('mission');
+Route::get('/conference',[WebsiteController::class, 'conference'])->name('conference');
+Route::get('/editors',[WebsiteController::class, 'editors'])->name('editors');
+Route::get('/contact',[WebsiteController::class, 'contact'])->name('contact');
+Route::get('/journal',[WebsiteController::class, 'journals'])->name('journals');
+Route::get('/submission',[WebsiteController::class, 'submission'])->name('submission');
+
 
 Auth::routes();
 

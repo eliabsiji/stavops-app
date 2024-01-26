@@ -126,21 +126,20 @@
                                         <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                         <ul class="main-menu__list">
                                             <li class="dropdown">
-                                                <a href="index.html">Home </a>
+                                                <a href="<?php echo e(route('home')); ?>">Home </a>
                                                </li>
-                                               <li>
-                                                <a href="submission.html">Submission</a>
-                                            </li>
-                                            <li><a href="journal.html">Journal</a></li>
-                                            <li class="dropdown">
-                                                <a href="#">About</a>
+                                               <li class="dropdown">
+                                                <a href="#">Who We Are</a>
                                                 <ul>
-                                                    <li><a href="mission.html">Mission and Vission</a></li>
-                                                    <li><a href="Conference.html">Conference</a></li>
-
-                                                    <li><a href="editor.html">Editorial Board</a> </li>
+                                                    <li><a href="<?php echo e(route('mission')); ?>">Mission and Vission</a></li>
+                                                    <li><a href="<?php echo e(route('conference')); ?>">Conference</a></li>
+                                                    <li><a href="<?php echo e(route('editors')); ?>">Editorial Board</a> </li>
                                                 </ul>
                                             </li>
+                                               <li>
+                                                <a href="<?php echo e(route('submission')); ?>">Paper Submission</a>
+                                            </li>
+                                            <li><a href="<?php echo e(route('journals')); ?>">Journals</a></li>
 
                                             <li class="dropdown">
                                                 <a href="#">Join Us</a>
@@ -149,7 +148,7 @@
                                                     <li><a href="#">Register</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html">Contact Us</a></li>
+                                            <li><a href="<?php echo e(route('contact')); ?>">Contact Us</a></li>
                                         </ul>
                                     </div>
                                 </div>
