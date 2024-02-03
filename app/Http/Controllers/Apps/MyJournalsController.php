@@ -134,7 +134,7 @@ class MyJournalsController extends Controller
         $journals = JournalpaperfilesModel::where('paperid',$id)->first();
 
        // echo $journals->journal;
-        $file = storage_path('journals/$journals->journal');
+        $file = public_path('journals/'.$journals->journal);
 
         if (file_exists($file)) {
             $headers = ['Content-Type' => 'application/pdf'];
