@@ -330,25 +330,25 @@
                     <i class="ki-duotone ki-down fs-5 ms-1"></i>                    </a>
                 <!--begin::Menu-->
                      <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('myjournal-viewpaper')): ?>
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('myjournals-viewpaper')): ?>
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="" class="menu-link px-3">
+                                <a href="<?php echo e(route('myjournal.viewpaper',['journalid'=>$j->paperid])); ?>" class="menu-link px-3">
                                 View Paper
                                 </a>
                             </div>
                             <!--end::Menu item-->
                         <?php endif; ?>
-                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('myjournal-edit')): ?>
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('myjournals-edit')): ?>
                                 <!--begin::Menu item-->
                             <div class="menu-item px-3">
                                 <a href="" class="menu-link px-3">
-                                    Edit
+                                    Edit journal
                                 </a>
                             </div>
                             <!--end::Menu item-->
                          <?php endif; ?>
-                         <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('myjournal-delete')): ?>
+                         <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('myjournals-delete')): ?>
                             <!--begin::Menu item-->
                             <div class="menu-item px-3" >
                                 <a

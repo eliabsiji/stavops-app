@@ -11,6 +11,7 @@ use App\Models\Journal\Journals;
 use App\Models\JournalpaperfilesModel;
 use App\Models\Pictures\ImageModel;
 use Illuminate\Support\Facades\Auth;
+use Spatie\PdfToText\Pdf;
 
 class MyJournalsController extends Controller
 {
@@ -18,7 +19,7 @@ class MyJournalsController extends Controller
 
     function __construct()
     {
-         $this->middleware('permission:myjournals-list|myjournals-create|myjournals-edit|myjournals-delete|deletejournal|myjournals-viewpaper', ['only' => ['index','store']]);
+         $this->middleware('permission:myjournals-list|myjournals-create|myjournals-edit|myjournals-delete|myjournals-viewpaper', ['only' => ['index','store']]);
          $this->middleware('permission:myjournals-create', ['only' => ['create','store']]);
          $this->middleware('permission:myjournals-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:myjournals-delete', ['only' => ['destroy','deletejournal']]);
@@ -26,7 +27,7 @@ class MyJournalsController extends Controller
     }
     /**
      * Display a listing of the resource.
-     */ 
+     */
     public function index()
     {
         $user = auth()->user();
@@ -115,18 +116,33 @@ class MyJournalsController extends Controller
         $id_lenth=strlen($id);
         $stamp = mt_rand(2,100);
         $random_id_length = 1-$id_lenth;
-        $paymentreferenceno = hexdec(uniqid(rand(),1));
-        $paymentreferenceno = strip_tags(stripslashes($paymentreferenceno));
-        $paymentreferenceno = str_replace(".","",$paymentreferenceno);
-        $paymentreferenceno = str_replace("E", "$stamp", $paymentreferenceno);
-        $paymentreferenceno = str_replace("+", "9", $paymentreferenceno);
-        $paymentreferenceno = strrev(str_replace("/","",$paymentreferenceno));
-        $paymentreferenceno = substr($paymentreferenceno,0,$random_id_length);
-        $paymentreference_no = $paymentreferenceno.$id; //payment reference no
-        return md5($paymentreference_no);
+        $ran = hexdec(uniqid(rand(),1));
+        $ran = strip_tags(stripslashes($ran));
+        $ran = str_replace(".","",$ran);
+        $ran = str_replace("E", "$stamp", $ran);
+        $ran = str_replace("+", "9", $ran);
+        $ran = strrev(str_replace("/","",$ran));
+        $ran = substr($ran,0,$random_id_length);
+        $ran_no = $ran.$id; //payment reference no
+        return md5($ran_no);
     }
 
-    public function viewpaper(){
+    public function viewpaper($id){
+
+
+        $user = auth()->user();
+        $journals = JournalpaperfilesModel::where('paperid',$id)->first();
+
+       // echo $journals->journal;
+        $file = storage_path('journals/$journals->journal');
+
+        if (file_exists($file)) {
+            $headers = ['Content-Type' => 'application/pdf'];
+            return response()->download($file, 'Test File', $headers, 'inline');
+        } else {
+            abort(404, 'File not found!');
+        }
+
 
     }
 

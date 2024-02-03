@@ -99,6 +99,7 @@ class ComposerStaticInita484bee88d28b47e1b309c4e24fc9954
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Spatie\\Permission\\' => 18,
+            'Spatie\\PdfToText\\' => 17,
             'Spatie\\LaravelIgnition\\' => 23,
             'Spatie\\Ignition\\' => 16,
             'Spatie\\Html\\' => 12,
@@ -356,6 +357,10 @@ class ComposerStaticInita484bee88d28b47e1b309c4e24fc9954
         'Spatie\\Permission\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/laravel-permission/src',
+        ),
+        'Spatie\\PdfToText\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/pdf-to-text/src',
         ),
         'Spatie\\LaravelIgnition\\' => 
         array (
@@ -640,6 +645,7 @@ class ComposerStaticInita484bee88d28b47e1b309c4e24fc9954
         'App\\Http\\Controllers\\Academics\\AcademicAperDController' => __DIR__ . '/../..' . '/app/Http/Controllers/Academics/AcademicAperDController.php',
         'App\\Http\\Controllers\\Academics\\AcademicAperEController' => __DIR__ . '/../..' . '/app/Http/Controllers/Academics/AcademicAperEController.php',
         'App\\Http\\Controllers\\Ajax\\UserContollerAjax' => __DIR__ . '/../..' . '/app/Http/Controllers/Ajax/UserContollerAjax.php',
+        'App\\Http\\Controllers\\Apps\\MyJournalsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Apps/MyJournalsController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -654,6 +660,7 @@ class ComposerStaticInita484bee88d28b47e1b309c4e24fc9954
         'App\\Http\\Controllers\\Journal\\EditorController' => __DIR__ . '/../..' . '/app/Http/Controllers/Journal/EditorController.php',
         'App\\Http\\Controllers\\Journal\\JournalCategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Journal/JournalCategoryController.php',
         'App\\Http\\Controllers\\Journal\\JournalVolumeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Journal/JournalVolumeController.php',
+        'App\\Http\\Controllers\\Journal\\JournalYearController' => __DIR__ . '/../..' . '/app/Http/Controllers/Journal/JournalYearController.php',
         'App\\Http\\Controllers\\Journal\\PublisherController' => __DIR__ . '/../..' . '/app/Http/Controllers/Journal/PublisherController.php',
         'App\\Http\\Controllers\\Journal\\ReviewerController' => __DIR__ . '/../..' . '/app/Http/Controllers/Journal/ReviewerController.php',
         'App\\Http\\Controllers\\Junior\\JuniorAperAController' => __DIR__ . '/../..' . '/app/Http/Controllers/Junior/JuniorAperAController.php',
@@ -672,6 +679,7 @@ class ComposerStaticInita484bee88d28b47e1b309c4e24fc9954
         'App\\Http\\Controllers\\Senior\\SeniorAperEController' => __DIR__ . '/../..' . '/app/Http/Controllers/Senior/SeniorAperEController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Controllers\\UserDasboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserDasboardController.php',
+        'App\\Http\\Controllers\\WebsiteController' => __DIR__ . '/../..' . '/app/Http/Controllers/WebsiteController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -694,6 +702,7 @@ class ComposerStaticInita484bee88d28b47e1b309c4e24fc9954
         'App\\Models\\Journal\\Journals' => __DIR__ . '/../..' . '/app/Models/Journal/Journals.php',
         'App\\Models\\Journal\\PublisherModel' => __DIR__ . '/../..' . '/app/Models/Journal/PublisherModel.php',
         'App\\Models\\Journal\\ReviewerModel' => __DIR__ . '/../..' . '/app/Models/Journal/ReviewerModel.php',
+        'App\\Models\\JournalpaperfilesModel' => __DIR__ . '/../..' . '/app/Models/JournalpaperfilesModel.php',
         'App\\Models\\Pictures\\ImageModel' => __DIR__ . '/../..' . '/app/Models/Pictures/ImageModel.php',
         'App\\Models\\StaffEmploymentDetails' => __DIR__ . '/../..' . '/app/Models/StaffEmploymentDetails.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
@@ -6843,6 +6852,9 @@ class ComposerStaticInita484bee88d28b47e1b309c4e24fc9954
         'Spatie\\LaravelIgnition\\Support\\StringComparator' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Support/StringComparator.php',
         'Spatie\\LaravelIgnition\\Views\\BladeSourceMapCompiler' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/BladeSourceMapCompiler.php',
         'Spatie\\LaravelIgnition\\Views\\ViewExceptionMapper' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/ViewExceptionMapper.php',
+        'Spatie\\PdfToText\\Exceptions\\CouldNotExtractText' => __DIR__ . '/..' . '/spatie/pdf-to-text/src/Exceptions/CouldNotExtractText.php',
+        'Spatie\\PdfToText\\Exceptions\\PdfNotFound' => __DIR__ . '/..' . '/spatie/pdf-to-text/src/Exceptions/PdfNotFound.php',
+        'Spatie\\PdfToText\\Pdf' => __DIR__ . '/..' . '/spatie/pdf-to-text/src/Pdf.php',
         'Spatie\\Permission\\Commands\\CacheReset' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/CacheReset.php',
         'Spatie\\Permission\\Commands\\CreatePermission' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/CreatePermission.php',
         'Spatie\\Permission\\Commands\\CreateRole' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/CreateRole.php',

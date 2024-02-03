@@ -17,11 +17,11 @@ class DashboardController extends Controller
 
     /**
      * Display a listing of the resource.
-     * 
-     * 
+     *
+     *
      */
-  
-     
+
+
 
     public function index()
     {
@@ -30,11 +30,11 @@ class DashboardController extends Controller
           return view('dashboard');
 
         }
-        
+
           return view('userdashboard');
     }
-        
-      
+
+
 
     /**
      * Show the form for creating a new resource.

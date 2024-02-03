@@ -49,7 +49,7 @@ class PermissionTableSeeder extends Seeder
            'myjournals-create',
            'myjournals-edit',
            'myjournals-delete',
-           'myjournals-vewpaper',
+           'myjournals-viewpaper',
 
            'dashboard-list',
            'usermanagement-link',

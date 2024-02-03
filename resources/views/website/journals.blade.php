@@ -43,7 +43,7 @@
             </li>
             <li><a href="#" class="active">01</a></li>
             <li><a href="#">02</a></li>
-            <li><a href="#">03</a></li>
+            <li><a href="#">03</a></li>;
             <li class="next"><a href="#">next</a>
             </li>
         </ul> --}}

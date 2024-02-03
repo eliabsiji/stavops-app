@@ -329,25 +329,25 @@
                     <i class="ki-duotone ki-down fs-5 ms-1"></i>                    </a>
                 <!--begin::Menu-->
                      <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-                        @can('myjournal-viewpaper')
+                        @can('myjournals-viewpaper')
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="" class="menu-link px-3">
+                                <a href="{{ route('myjournal.viewpaper',['journalid'=>$j->paperid]) }}" class="menu-link px-3">
                                 View Paper
                                 </a>
                             </div>
                             <!--end::Menu item-->
                         @endcan
-                        @can('myjournal-edit')
+                        @can('myjournals-edit')
                                 <!--begin::Menu item-->
                             <div class="menu-item px-3">
                                 <a href="" class="menu-link px-3">
-                                    Edit
+                                    Edit journal
                                 </a>
                             </div>
                             <!--end::Menu item-->
                          @endcan
-                         @can('myjournal-delete')
+                         @can('myjournals-delete')
                             <!--begin::Menu item-->
                             <div class="menu-item px-3" >
                                 <a
