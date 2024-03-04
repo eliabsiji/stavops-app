@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('user_id');
             $table->string('title')->nullable();
+            $table->text('abtract')->nullable();
             $table->string('categoryid')->nullable();
             $table->string('reviewerid')->nullable();
             $table->string('status')->nullable();

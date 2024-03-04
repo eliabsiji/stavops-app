@@ -347,6 +347,15 @@
                             </div>
                             <!--end::Menu item-->
                          @endcan
+                         @can('myjournals-edit')
+                                <!--begin::Menu item-->
+                            <div class="menu-item px-3">
+                                <a href="" class="menu-link px-3">
+                                    Co-authors
+                                </a>
+                            </div>
+                            <!--end::Menu item-->
+                         @endcan
                          @can('myjournals-delete')
                             <!--begin::Menu item-->
                             <div class="menu-item px-3" >

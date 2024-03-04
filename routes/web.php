@@ -9,41 +9,45 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\BiodataController;
+use App\Http\Controllers\Journal\PublishController;
+
 use App\Http\Controllers\WebsiteController;
 
+
 use App\Http\Controllers\OverviewController;
-
-
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\Journal\AuthorController;
 use App\Http\Controllers\Apps\MyJournalsController;
+
+
+
+
 use App\Http\Controllers\Junior\JuniorAperAController;
 use App\Http\Controllers\Junior\JuniorAperBController;
-
-
 use App\Http\Controllers\Junior\JuniorAperCController;
 use App\Http\Controllers\Junior\JuniorAperDController;
 use App\Http\Controllers\Junior\JuniorAperEController;
 use App\Http\Controllers\Senior\SeniorAperAController;
+
+
 use App\Http\Controllers\Senior\SeniorAperBController;
-
-
 use App\Http\Controllers\Senior\SeniorAperCController;
 use App\Http\Controllers\Senior\SeniorAperDController;
 use App\Http\Controllers\Senior\SeniorAperEController;
 use App\Http\Controllers\Journal\JournalYearController;
-use App\Http\Controllers\Journal\JournalVolumeController;
 
 //use journal...
+use App\Http\Controllers\Journal\JournalVolumeController;
 use App\Http\Controllers\Academics\AcademicAperAController;
 use App\Http\Controllers\Academics\AcademicAperBController;
-use App\Http\Controllers\Academics\AcademicAperCController;
 
 //user apps
-use App\Http\Controllers\Academics\AcademicAperDController;
+use App\Http\Controllers\Academics\AcademicAperCController;
 
+use App\Http\Controllers\Academics\AcademicAperDController;
 use App\Http\Controllers\Academics\AcademicAperEController;
 use App\Http\Controllers\Journal\JournalCategoryController;
+use App\Http\Controllers\PublishController as ControllersPublishController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,6 +67,7 @@ Route::get('/editors',[WebsiteController::class, 'editors'])->name('editors');
 Route::get('/contact',[WebsiteController::class, 'contact'])->name('contact');
 Route::get('/journal',[WebsiteController::class, 'journals'])->name('journals');
 Route::get('/submission',[WebsiteController::class, 'submission'])->name('submission');
+Route::get('/journalcategory/{id}',[WebsiteController::class, 'journalcategory'])->name('journalcategory');
 
 
 Auth::routes();
@@ -84,6 +89,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
     //journal routes...
+    Route::resource('paperpublishing', PublishController::class);
     Route::resource('journalcategory', JournalCategoryController::class);
     Route::resource('journalvolume', JournalVolumeController::class);
     Route::resource('journalyear', JournalYearController::class);

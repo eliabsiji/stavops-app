@@ -348,6 +348,15 @@
                             </div>
                             <!--end::Menu item-->
                          <?php endif; ?>
+                         <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('myjournals-edit')): ?>
+                                <!--begin::Menu item-->
+                            <div class="menu-item px-3">
+                                <a href="" class="menu-link px-3">
+                                    Co-authors
+                                </a>
+                            </div>
+                            <!--end::Menu item-->
+                         <?php endif; ?>
                          <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('myjournals-delete')): ?>
                             <!--begin::Menu item-->
                             <div class="menu-item px-3" >

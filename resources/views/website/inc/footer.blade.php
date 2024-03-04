@@ -2,7 +2,7 @@
 
         <!--Start Footer One-->
         <footer class="footer-one">
-            <div class="footer-one__bg" style="background-color: darkblue")>
+            <div class="footer-one__bg" style="background-color: rgb(78, 78, 83)")>
             </div>
             <div class="footer-one__top">
                 <div class="container">

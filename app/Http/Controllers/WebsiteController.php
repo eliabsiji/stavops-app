@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+Use App\Models\Journal\Journal_category;
+use App\Models\Journal\Journals;
 
 class WebsiteController extends Controller
 {
@@ -29,7 +32,22 @@ class WebsiteController extends Controller
 
     public function journals(){
 
-        return view('website.journals');
+        $journals = Journal_category::all();
+
+        return view('website.journals')->with('journals',$journals);
+    }
+
+
+    public function journalcategory($id){
+        $jcat = Journal_category::find($id);
+
+        $journals = Journals::where('journals.categoryid',$id)
+                 ->leftJoin('journal_categories', 'journal_categories.id','=','journals.categoryid')
+                 -> leftJoin('journalpaperfiles', 'journalpaperfiles.journalid','=','journals.id')
+                 ->get(['journals.title as title','journal_categories.journal_category as category']);
+
+            return view('website.journal_category')->with('journals',$journals)
+                                                            ->with('jcat',$jcat);
     }
 
     public function editors(){
@@ -41,4 +59,6 @@ class WebsiteController extends Controller
 
         return view('website.submission');
     }
+
+
 }
