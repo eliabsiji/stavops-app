@@ -25,13 +25,14 @@
 
                                 <div class="bottom-text">
                                     <div class="text-box text-center">
-                                        <h4><a href"">{{ $journal->title }} IS PURCHASING MANAGERS' INDEX (PMI) A GOOD PROXY FOR ECONOMIC ACTIVITY IN NIGERIA?</a></h4>
+
+                                        <h4><a href="{{ route('viewjournal',['journalid'=>$journal->paperid]) }}">{{ $journal->title }} </a></h4>
 
                                     </div>
 
 
                                 </div>
-                                <h6>  Saidi ADELEKAN, Sodiq Tunde AROGUNDADE, Eze Benneth UCHENNA
+                                <h6>  {{ ucfirst($journal->author)}}, Sodiq Tunde AROGUNDADE, Eze Benneth UCHENNA
                                 1-7</h6>
                             </div>
                         </div>
