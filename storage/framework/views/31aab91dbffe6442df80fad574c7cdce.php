@@ -211,6 +211,18 @@
                     </div>
                     <!--end::Input group-->
 
+                    <!--begin::Input group-->
+                    <div class="fv-row mb-7">
+                        <!--begin::Label-->
+                        <label class="required fw-semibold fs-6 mb-2">Abracts </label>
+                        <!--end::Label-->
+
+                        <!--begin::Input-->
+                        <textarea name="abstract" id="kt_docs_formvalidation_textarea"  class="form-control form-control-solid mb-3 mb-lg-0"></textarea>
+                        <!--end::Input-->
+                    </div>
+                    <!--end::Input group-->
+
                        <!--begin::Input group-->
                        <div class="mb-7">
                         <!--begin::Label-->

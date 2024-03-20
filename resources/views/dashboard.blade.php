@@ -74,7 +74,7 @@
     <!--begin::Section-->
     <div class="d-flex flex-column my-7">
         <!--begin::Number-->
-        <span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">0</span>
+        <span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">{{ $users }}</span>
         <!--end::Number-->
 
         <!--begin::Follower-->
@@ -87,13 +87,13 @@
     </div>
     <!--end::Section-->
 
-    <!--begin::Badge-->
+    {{-- <!--begin::Badge-->
     <span class="badge badge-light-success fs-base">
                         <i class="ki-duotone ki-arrow-up fs-5 text-success ms-n1"><span class="path1"></span><span class="path2"></span></i>
 
        New User
     </span>
-    <!--end::Badge-->
+    <!--end::Badge--> --}}
 </div>
 <!--end::Body-->
 </div>
@@ -120,26 +120,26 @@
     <!--begin::Section-->
     <div class="d-flex flex-column my-7">
         <!--begin::Number-->
-        <span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">0</span>
+        <span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">11</span>
         <!--end::Number-->
 
         <!--begin::Follower-->
         <div class="m-0">
                                 <span class="fw-semibold fs-6 text-gray-400">
-                   Published Journals                   </span>
+                    Journals                   </span>
 
         </div>
         <!--end::Follower-->
     </div>
     <!--end::Section-->
 
-    <!--begin::Badge-->
+    {{-- <!--begin::Badge-->
     <span class="badge badge-light-success fs-base">
                         <i class="ki-duotone ki-arrow-up fs-5 text-success ms-n1"><span class="path1"></span><span class="path2"></span></i>
 
-        New Journals
+        Published Journals
     </span>
-    <!--end::Badge-->
+    <!--end::Badge--> --}}
 </div>
 <!--end::Body-->
 </div>
@@ -179,13 +179,13 @@
     </div>
     <!--end::Section-->
 
-    <!--begin::Badge-->
+    {{-- <!--begin::Badge-->
     <span class="badge badge-light-danger fs-base">
                         <i class="ki-duotone ki-arrow-down fs-5 text-danger ms-n1"><span class="path1"></span><span class="path2"></span></i>
 
        New Editors
     </span>
-    <!--end::Badge-->
+    <!--end::Badge--> --}}
 </div>
 <!--end::Body-->
 </div>
@@ -225,13 +225,13 @@
     </div>
     <!--end::Section-->
 
-    <!--begin::Badge-->
+    {{-- <!--begin::Badge-->
     <span class="badge badge-light-success fs-base">
                         <i class="ki-duotone ki-arrow-up fs-5 text-success ms-n1"><span class="path1"></span><span class="path2"></span></i>
 
         New Author
     </span>
-    <!--end::Badge-->
+    <!--end::Badge--> --}}
 </div>
 <!--end::Body-->
 </div>
@@ -271,13 +271,13 @@
     </div>
     <!--end::Section-->
 
-    <!--begin::Badge-->
+    {{-- <!--begin::Badge-->
     <span class="badge badge-light-danger fs-base">
                         <i class="ki-duotone ki-arrow-down fs-5 text-danger ms-n1"><span class="path1"></span><span class="path2"></span></i>
 
 
     </span>
-    <!--end::Badge-->
+    <!--end::Badge--> --}}
 </div>
 <!--end::Body-->
 </div>
@@ -314,14 +314,14 @@
         <!--end::Follower-->
     </div>
     <!--end::Section-->
-
+{{--
     <!--begin::Badge-->
     <span class="badge badge-light-success fs-base">
                         <i class="ki-duotone ki-arrow-up fs-5 text-success ms-n1"><span class="path1"></span><span class="path2"></span></i>
 
 
     </span>
-    <!--end::Badge-->
+    <!--end::Badge--> --}}
 </div>
 <!--end::Body-->
 </div>

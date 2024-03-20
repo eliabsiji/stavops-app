@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Journal;
 
 use App\Http\Controllers\Controller;
+use App\Models\Journal\Journals;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Spatie\Permission\Models\Role;
@@ -54,7 +55,11 @@ class AuthorController extends Controller
     {
 
         $user = User::find($id);
-        return view('journalauthors.journallists',compact('user'));
+        $journals = Journals::where('user_id',$id)
+        ->get();
+        dd($journals);
+        // return view('journalauthors.journallists',compact('user'))
+        //             ->with('journals', $journals);
     }
 
 

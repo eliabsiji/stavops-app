@@ -65,6 +65,7 @@ class MyJournalsController extends Controller
       $request->journalfile->move(public_path('journals'), $fileName);
       $j->user_id = Auth::user()->id;
       $j->title  = $request->title;
+      $j->abtract = $request->abstract;
       $j->categoryid = $request->categoryid;
       $j->save();
       $journalid = $j->id;

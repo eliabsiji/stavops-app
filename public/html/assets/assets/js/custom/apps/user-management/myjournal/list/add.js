@@ -1,5 +1,36 @@
 
 
+// // Define form element
+// const form = document.getElementById('kt_docs_formvalidation_textarea');
+
+// // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
+// var validator = FormValidation.formValidation(
+//     form,
+//     {
+//         fields: {
+//             'abstract': {
+//                 validators: {
+//                     notEmpty: {
+//                         message: 'Textarea input is required'
+//                     }
+//                 }
+//             },
+//         },
+
+//         plugins: {
+//             trigger: new FormValidation.plugins.Trigger(),
+//             bootstrap: new FormValidation.plugins.Bootstrap5({
+//                 rowSelector: '.fv-row',
+//                 eleInvalidClass: '',
+//                 eleValidClass: ''
+//             })
+//         }
+//     }
+// );
+
+
+
+
 // Class definition
 var KTUsersAddUser = function () {
     // Shared variables
@@ -19,6 +50,13 @@ var KTUsersAddUser = function () {
                         validators: {
                             notEmpty: {
                                 message: 'Title is required'
+                            }
+                        }
+                    },
+                    'abstract': {
+                        validators: {
+                            notEmpty: {
+                                message: 'Paper Abtract is required'
                             }
                         }
                     },

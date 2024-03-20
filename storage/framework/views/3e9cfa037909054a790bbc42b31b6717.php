@@ -1,18 +1,13 @@
     
     <?php $__env->startSection('content'); ?>
 
-
-
-
             <!--begin::Main-->
             <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
                 <!--begin::Content wrapper-->
                 <div class="d-flex flex-column flex-column-fluid">
 
 <!--begin::Toolbar-->
-<div id="kt_app_toolbar" class="app-toolbar  py-3 py-lg-6 "
-
-         >
+<div id="kt_app_toolbar" class="app-toolbar  py-3 py-lg-6 ">
 
             <!--begin::Toolbar container-->
         <div id="kt_app_toolbar_container" class="app-container  container-xxl d-flex flex-stack ">
@@ -66,11 +61,7 @@
 
 <!--begin::Menu 1-->
 <div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true" id="kt_menu_6486986aa855d">
-    <!--begin::Header-->
-    <div class="px-7 py-5">
-        <div class="fs-5 text-dark fw-bold">Filter Options</div>
-    </div>
-    <!--end::Header-->
+
 
     <!--begin::Menu separator-->
     <div class="separator border-gray-200"></div>

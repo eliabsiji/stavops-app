@@ -12,6 +12,7 @@ class Journals extends Model
     protected $fillable = [
         'userid',
         'title',
+        'abtract',
         'categoryid',
         'reviewerid',
         'pending',

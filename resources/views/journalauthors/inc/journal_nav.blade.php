@@ -22,7 +22,7 @@
       <!--begin::Aside content-->
       <div class="card-body">
           <!--begin::Button-->
-          <a href="{{ route('authors.index') }}" class="btn btn-primary fw-bold w-100 mb-8">New Message</a>
+          <a href="{{ route('authors.index') }}" class="btn btn-primary fw-bold w-100 mb-8">{{ $user->name }}'s Journals</a>
           <!--end::Button-->
 
           <!--begin::Menu-->

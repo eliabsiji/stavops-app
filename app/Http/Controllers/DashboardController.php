@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -27,7 +28,9 @@ class DashboardController extends Controller
     {
         if(auth()->user()->can('dashboard-list')){
 
-          return view('dashboard');
+            $user = User::count();
+
+          return view('dashboard')->with('users',$user);
 
         }
 
