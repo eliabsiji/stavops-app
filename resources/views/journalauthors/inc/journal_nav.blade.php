@@ -22,7 +22,7 @@
       <!--begin::Aside content-->
       <div class="card-body">
           <!--begin::Button-->
-          <a href="{{ route('authors.index') }}" class="btn btn-primary fw-bold w-100 mb-8">{{ $user->name }}'s Journals</a>
+          <a href="{{ route('authors.index') }}" class="btn btn-primary fw-bold w-100 mb-8">{{ $user->name }}'s Journal Papers</a>
           <!--end::Button-->
 
           <!--begin::Menu-->
@@ -41,7 +41,7 @@
               </div>
               <!--end::Menu item-->
 
-              <!--begin::Menu item-->
+              {{-- <!--begin::Menu item-->
               <div class="menu-item mb-3">
                   <!--begin::Marked-->
                   <span class="menu-link {{ request()->is('author.review') ? 'active' : '' }}">
@@ -52,7 +52,7 @@
                   </span>
                   <!--end::Marked-->
               </div>
-              <!--end::Menu item-->
+              <!--end::Menu item--> --}}
 
 
           </div>

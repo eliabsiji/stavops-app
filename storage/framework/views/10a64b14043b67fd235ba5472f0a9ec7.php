@@ -92,7 +92,7 @@ Published Journals
     <!--end::Search-->
 
     <!--begin::Toggle-->
-    <a href="#" class="btn btn-sm btn-icon btn-color-primary btn-light btn-active-light-primary d-lg-none" data-bs-toggle="tooltip" data-bs-dismiss="click" data-bs-placement="top" title="Toggle inbox menu" id="kt_inbox_aside_toggle">
+    <a href="#" class="btn btn-sm btn-icon btn-color-primary btn btn-active-primary d-lg-none" data-bs-toggle="tooltip" data-bs-dismiss="click" data-bs-placement="top" title="Toggle inbox menu" id="kt_inbox_aside_toggle">
         <i class="ki-duotone ki-burger-menu-2 fs-3 m-0"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span></i>    </a>
     <!--end::Toggle-->
 </div>
@@ -102,65 +102,75 @@ Published Journals
 
 <!--begin::Table-->
 <table class="table table-hover table-row-dashed fs-6 gy-5 my-0" id="kt_inbox_listing">
-    <thead class="d-none">
-        <tr>
-            <th>Checkbox</th>
-            
+    <thead>
+        <tr class="fw-bold">
+            <th></th>
             <th>Author</th>
             <th>Title</th>
-            <th>Date</th>
+            <th>Updated Date</th>
+
         </tr>
     </thead>
     <tbody>
-                    <tr>
-                <td class="ps-9">
-                    <div class="form-check form-check-sm form-check-custom form-check-solid mt-3">
-                        <input class="form-check-input" type="checkbox" value="1" />
-                    </div>
-                </td>
-                
-                <td class="w-150px w-md-175px">
-                    <a href="<?php echo e(route('author.journal',$user->id)); ?>" class="d-flex align-items-center text-dark">
-                        <!--begin::Avatar-->
-                                 <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
-                                    <div class="symbol-label bg-light-danger">
-                                    <?php $image = "";?>
-                                            <?php
-                                            if ($user->avatar == NULL || !isset($user->avatar) ){
-                                                $image =  'unnamed.png';
-                                            }else {
-                                            $image =  $user->avatar;
-                                            }
-                                       ?>
-                                 <img src="<?php echo e(Storage::url('images/staffavatar/'.$image)); ?>" alt="<?php echo e($user->name); ?>" class="w-100" />
-                                </div>
-                            </div>
-                                                <!--end::Avatar-->
+        <?php $__currentLoopData = $journals; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $journal): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <tr>
+                                            <td class="ps-9">
+                                                <div class="form-check form-check-sm form-check-custom form-check-solid mt-3">
+                                                    <input class="form-check-input" type="checkbox" value="1" />
+                                                </div>
+                                            </td>
+                                            
+                                            <td class="w-150px w-md-300px">
+                                                <a href="#" class="d-flex align-items-center text-dark">
+                                                    <!--begin::Avatar-->
+                                                            <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
+                                                                <div class="symbol-label ">
+                                                                <?php $image = "";?>
+                                                                        <?php
+                                                                        if ($user->avatar == NULL || !isset($user->avatar) ){
+                                                                            $image =  'unnamed.png';
+                                                                        }else {
+                                                                        $image =  $user->avatar;
+                                                                        }
+                                                                ?>
+                                                            <img src="<?php echo e(Storage::url('images/staffavatar/'.$image)); ?>" alt="<?php echo e($user->name); ?>" class="w-100" />
+                                                            </div>
+                                                        </div>
+                                                                            <!--end::Avatar-->
 
-                        <!--begin::Name-->
-                        <span class="fw-semibold"><?php echo e($user->name); ?></span>
-                        <!--end::Name-->
-                    </a>
-                </td>
-                <td>
-                    <div class="text-dark gap-1 pt-2">
-                        <!--begin::Heading-->
-                        <a href="<?php echo e(route('author.journal',$user->id)); ?>" class="text-dark">
-                            <span class="fw-bold"><?php echo e($journals->title); ?></span>
+                                                    <!--begin::Name-->
+                                                    <span class="fw-semibold"><?php echo e($user->name); ?></span>
+                                                    <!--end::Name-->
+                                                </a>
+                                            </td>
+                                            <td>
+                                                    <div class="text-dark ">
+                                                            <!--begin::Heading-->
+                                                            <a href="<?php echo e(route('author.journal',$journal->jid)); ?>" class="text-dark">
+                                                                <span class="fw-bold"><?php echo e($journal->title); ?></span>
 
-                        </a>
-                        <!--end::Heading-->
-                    </div>
+                                                            </a>
+                                                            <!--end::Heading-->
+                                                      </div>
 
-                                            <!--begin::Badges-->
-                                                    <div class="badge badge-light-primary">Reviewer 1</div>
-                                                    <div class="badge badge-light-warning">Reviewer 2</div>
-                                                <!--end::Badges-->
-                                    </td>
-                <td class="w-100px text-end fs-7 pe-9">
-                                            <span class="fw-semibold">8:30 PM</span>
-                                    </td>
-            </tr>
+                                                                            <!--begin::Badges-->
+                                                                                    <div class="badge badge-warning">Pending</div>
+                                                                                    <div class="badge badge-info">Under Review</div>
+                                                                                    <div class="badge badge-danger">Rejected</div>
+                                                                                   <div class="badge badge-primary">Accepted</div>
+                                                                                    <div class="badge badge-success">Published</div>
+                                                                                <!--end::Badges-->
+                                            </td>
+                                            <td class="w-100px text-end fs-7 pe-9">
+                                                                    <span class="fw-semibold">
+                                                                        <?php echo e($journal->updated_at); ?>
+
+                                                                    </span>
+                                             </td>
+
+                            </tr>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
 
             </tbody>
 </table>

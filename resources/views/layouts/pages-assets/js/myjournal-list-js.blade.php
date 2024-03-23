@@ -6,6 +6,7 @@
 <!--begin::Vendors Javascript(used for this page only)-->
     <script src="{{ asset('html/assets/assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
 <!--end::Vendors Javascript-->
+    <script src="{{ asset('html/assets/assets/js/custom/apps/inbox/compose.js')}}"></script>
 
 <!--begin::Custom Javascript(used for this page only)-->
     <script src="{{ asset('html/assets/assets/js/custom/apps/user-management/myjournal/list/add.js')}}"></script>

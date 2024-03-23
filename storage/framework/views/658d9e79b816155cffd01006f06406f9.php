@@ -22,7 +22,7 @@
       <!--begin::Aside content-->
       <div class="card-body">
           <!--begin::Button-->
-          <a href="<?php echo e(route('authors.index')); ?>" class="btn btn-primary fw-bold w-100 mb-8"><?php echo e($user->name); ?>'s Journals</a>
+          <a href="<?php echo e(route('authors.index')); ?>" class="btn btn-primary fw-bold w-100 mb-8"><?php echo e($user->name); ?>'s Journal Papers</a>
           <!--end::Button-->
 
           <!--begin::Menu-->
@@ -41,18 +41,7 @@
               </div>
               <!--end::Menu item-->
 
-              <!--begin::Menu item-->
-              <div class="menu-item mb-3">
-                  <!--begin::Marked-->
-                  <span class="menu-link <?php echo e(request()->is('author.review') ? 'active' : ''); ?>">
-                      <span class="menu-icon"><i class="ki-duotone ki-abstract-23 fs-2 me-3"><span class="path1"></span><span class="path2"></span></i></span>
-                      <a href="<?php echo e(route('author.review',$user->id)); ?>">
-                      <span class="menu-title fw-bold">Under Review</span>
-                      </a>
-                  </span>
-                  <!--end::Marked-->
-              </div>
-              <!--end::Menu item-->
+              
 
 
           </div>

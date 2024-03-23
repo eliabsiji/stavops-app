@@ -18,135 +18,18 @@
 <div  class="page-title d-flex flex-column justify-content-center flex-wrap me-3 ">
     <!--begin::Title-->
     <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">
-        Reply
+
             </h1>
     <!--end::Title-->
 
 
-        <!--begin::Breadcrumb-->
-        <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
-                            <!--begin::Item-->
-                                    <li class="breadcrumb-item text-muted">
-                                                    <a href="../../index.html" class="text-muted text-hover-primary">
-                                Home                            </a>
-                                            </li>
-                                <!--end::Item-->
-                                    <!--begin::Item-->
-                    <li class="breadcrumb-item">
-                        <span class="bullet bg-gray-400 w-5px h-2px"></span>
-                    </li>
-                    <!--end::Item-->
 
-                            <!--begin::Item-->
-                                    <li class="breadcrumb-item text-muted">
-                                                    Inbox                                            </li>
-                                <!--end::Item-->
-
-                    </ul>
         <!--end::Breadcrumb-->
     </div>
 <!--end::Page title-->
 <!--begin::Actions-->
 <div class="d-flex align-items-center gap-2 gap-lg-3">
-            <!--begin::Filter menu-->
-        <div class="m-0">
-            <!--begin::Menu toggle-->
-            <a href="#" class="btn btn-sm btn-flex bg-body btn-color-gray-700 btn-active-color-primary fw-bold" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                <i class="ki-duotone ki-filter fs-6 text-muted me-1"><span class="path1"></span><span class="path2"></span></i>
-                Filter
-            </a>
-            <!--end::Menu toggle-->
 
-
-
-<!--begin::Menu 1-->
-<div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true" id="kt_menu_6486986aa855d">
-
-
-    <!--begin::Menu separator-->
-    <div class="separator border-gray-200"></div>
-    <!--end::Menu separator-->
-
-    <!--begin::Form-->
-    <div class="px-7 py-5">
-        <!--begin::Input group-->
-        <div class="mb-10">
-            <!--begin::Label-->
-            <label class="form-label fw-semibold">Status:</label>
-            <!--end::Label-->
-
-            <!--begin::Input-->
-            <div>
-                <select class="form-select form-select-solid" data-kt-select2="true" data-placeholder="Select option" data-dropdown-parent="#kt_menu_6486986aa855d" data-allow-clear="true">
-                    <option></option>
-                    <option value="1">Approved</option>
-                    <option value="2">Pending</option>
-                    <option value="2">In Process</option>
-                    <option value="2">Rejected</option>
-                </select>
-            </div>
-            <!--end::Input-->
-        </div>
-        <!--end::Input group-->
-
-        <!--begin::Input group-->
-        <div class="mb-10">
-            <!--begin::Label-->
-            <label class="form-label fw-semibold">Member Type:</label>
-            <!--end::Label-->
-
-            <!--begin::Options-->
-            <div class="d-flex">
-                <!--begin::Options-->
-                <label class="form-check form-check-sm form-check-custom form-check-solid me-5">
-                    <input class="form-check-input" type="checkbox" value="1"/>
-                    <span class="form-check-label">
-                        Author
-                    </span>
-                </label>
-                <!--end::Options-->
-
-                <!--begin::Options-->
-                <label class="form-check form-check-sm form-check-custom form-check-solid">
-                    <input class="form-check-input" type="checkbox" value="2" checked="checked"/>
-                    <span class="form-check-label">
-                        Customer
-                    </span>
-                </label>
-                <!--end::Options-->
-            </div>
-            <!--end::Options-->
-        </div>
-        <!--end::Input group-->
-
-        <!--begin::Input group-->
-        <div class="mb-10">
-            <!--begin::Label-->
-            <label class="form-label fw-semibold">Notifications:</label>
-            <!--end::Label-->
-
-            <!--begin::Switch-->
-            <div class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
-                <input class="form-check-input" type="checkbox" value="" name="notifications" checked />
-                <label class="form-check-label">
-                    Enabled
-                </label>
-            </div>
-            <!--end::Switch-->
-        </div>
-        <!--end::Input group-->
-
-        <!--begin::Actions-->
-        <div class="d-flex justify-content-end">
-            <button type="reset" class="btn btn-sm btn-light btn-active-light-primary me-2" data-kt-menu-dismiss="true">Reset</button>
-
-            <button type="submit" class="btn btn-sm btn-primary" data-kt-menu-dismiss="true">Apply</button>
-        </div>
-        <!--end::Actions-->
-    </div>
-    <!--end::Form-->
-</div>
-<!--end::Menu 1-->        </div>
         <!--end::Filter menu-->
 
 
@@ -154,8 +37,12 @@
         <!--end::Secondary button-->
 
     <!--begin::Primary button-->
-            <a href="#" class="btn btn-sm fw-bold btn-primary"  data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">
-            Create        </a>
+
+            <a href="<?php echo e(route('authors.show',$user->id)); ?>" class="btn btn-sm fw-bold btn-warning" >
+                 <<  Back
+            </a>
+
+
         <!--end::Primary button-->
 </div>
 <!--end::Actions-->
@@ -176,143 +63,111 @@
 
     <?php echo $__env->make('journalauthors.inc.journal_nav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
+
+
+
+    <?php $__currentLoopData = $journals; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $journal): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
+
     <!--begin::Content-->
     <div class="flex-lg-row-fluid ms-lg-7 ms-xl-10">
 
     <!--begin::Card-->
-    <div class="card">
-        <div class="card-header align-items-center py-5 gap-5">
+            <div class="card">
+                <div class="card-header align-items-center py-5 gap-5">
+                    <!--begin::Heading-->
+                    <h2 class="fw-semibold me-3 my-1">TITLE: <?php echo e($journal->title); ?></h2>
+                    <!--begin::Heading-->
+            </div>
 
-     </div>
+                <div class="card-body">
 
-        <div class="card-body">
-            <!--begin::Title-->
-<div class="d-flex flex-wrap gap-2 justify-content-between mb-8">
-    <div class="d-flex align-items-center flex-wrap gap-2">
-        <!--begin::Heading-->
-        <h2 class="fw-semibold me-3 my-1">Trip Reminder. Thank you for flying with us!</h2>
-        <!--begin::Heading-->
-
-        <!--begin::Badges-->
-        <span class="badge badge-light-primary my-1 me-2">inbox</span>
-        <span class="badge badge-light-danger my-1">important</span>
-        <!--end::Badges-->
-    </div>
-
-    <div class="d-flex">
+          <!--begin::Title-->
+          <div class="d-flex flex-wrap gap-2 justify-content-between mb-8">
+            <div class="d-flex align-items-center flex-wrap gap-2">
+                <span class="badge badge-primary my-1 me-2">inbox</span>
+                <span class="badge badge-danger my-1">important</span>
+                <!--end::Badges-->
+            </div>
 
 
-        <!--begin::Print-->
-        <a href="#" class="btn btn-sm btn-icon btn-light btn-active-light-primary me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Download Journal">
-            <i class="ki-duotone ki-printer fs-2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>        </a>
-        <!--end::Print-->
-    </div>
-</div>
+            <div class="d-flex">
+                <!--begin::Print-->
+                <p class="fw-bold">    <span class="badge badge-light-primary my-1 me-2">Paper ID :</span><span class="badge badge-light-primary my-1 me-2"><?php echo e($journal->paperid); ?></span></p>
+                <a href="<?php echo e(route('author.viewpaper',$journal->paperid)); ?>" target="_blank" class="btn btn-sm btn-icon btn-light btn-active-light-primary me-2"  data-bs-toggle="tooltip" data-bs-placement="top" title="View Journal Paper">
+                    <i class="ki-duotone ki-printer fs-2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>
+                 </a>
+                <!--end::Print-->
+            </div>
+        </div>
 <!--end::Title-->
 
-<!--begin::Message accordion-->
-<div data-kt-inbox-message="message_wrapper">
-    <!--begin::Message header-->
-    <div class="d-flex flex-wrap gap-2 flex-stack cursor-pointer" data-kt-inbox-message="header">
-        <!--begin::Author-->
-        <div class="d-flex align-items-center">
-            <!--begin::Avatar-->
-            <div class="symbol symbol-50 me-4">
-                <span class="symbol-label" style="background-image:url(../../assets/media/avatars/300-6.jpg);"></span>
-            </div>
-            <!--end::Avatar-->
 
-            <div class="pe-5">
-                <!--begin::Author details-->
-                <div class="d-flex align-items-center flex-wrap gap-1">
-                    <a href="#" class="fw-bold text-dark text-hover-primary">Emma Smith</a>
-                    <i class="ki-duotone ki-abstract-8 fs-7 text-success mx-3"><span class="path1"></span><span class="path2"></span></i>                    <span class="text-muted fw-bold">1 day ago</span>
-                </div>
-                <!--end::Author details-->
 
-                <!--begin::Message details-->
-                <div data-kt-inbox-message="details">
-                    <span class="text-muted fw-semibold">More Action</span>
+        <!--begin::Message accordion-->
+        <div data-kt-inbox-message="message_wrapper">
+            <!--begin::Message header-->
+                    <div class="d-flex flex-wrap gap-2 flex-stack cursor-pointer" data-kt-inbox-message="header">
+                        <!--begin::Author-->
+                    <div class="d-flex align-items-center">
+                         <!--begin::Avatar-->
+                         <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
+                            <div class="symbol-label ">
+                            <?php $image = "";?>
+                                    <?php
+                                    if ($user->avatar == NULL || !isset($user->avatar) ){
+                                        $image =  'unnamed.png';
+                                    }else {
+                                    $image =  $user->avatar;
+                                    }
+                            ?>
+                        <img src="<?php echo e(Storage::url('images/staffavatar/'.$image)); ?>" alt="<?php echo e($user->name); ?>" class="w-100" />
+                        </div>
+                    </div>
+                                        <!--end::Avatar-->
 
-                    <!--begin::Menu toggle-->
-                    <a href="#" class="me-1" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start">
-                        <i class="ki-duotone ki-down fs-5 m-0"></i>                    </a>
-                    <!--end::Menu toggle-->
 
-                    <!--begin::Menu-->
-<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-300px p-4" data-kt-menu="true">
-    <!--begin::Table-->
-    <table class="table mb-0">
-        <tbody>
-            <tr>
-                <td class="w-75px text-muted">Accepted</td>
-                <td> <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                    <input class="form-check-input w-45px h-30px" type="checkbox" id="allowmarketing" checked />
-                    <label class="form-check-label" for="allowmarketing"></label>
-                </div></td>
-            </tr>
-            <tr>
-                <td class="text-muted">Rejected</td>
-                <td>15 Apr 2023, 6:05 pm</td>
-            </tr>
-            <tr>
-                <td class="text-muted">Under Review</td>
-                <td>Trip Reminder. Thank you for flying with us!</td>
-            </tr>
-            <tr>
-                <td class="text-muted">Published</td>
-                <td>emma@intenso.com</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<!--end::Menu-->                </div>
-                <!--end::Message details-->
+                        <div class="pe-5">
+                            <!--begin::Author details-->
+                            <div class="d-flex align-items-center flex-wrap gap-1">
+                                <a href="#" class="fw-bold text-dark text-hover-primary"><?php echo e($user->name); ?></a>
+                                <i class="ki-duotone ki-abstract-8 fs-7 text-success mx-3"><span class="path1"></span><span class="path2"></span></i>
+                                                 <span class="text-muted fw-bold"><?php echo e($journal->updated_at->diffForHumans()); ?></span>
+                            </div>
+                            <!--end::Author details-->
 
-                <!--begin::Preview message-->
-                <div class="text-muted fw-semibold mw-450px d-none" data-kt-inbox-message="preview">
-                    With resrpect, i must disagree with Mr.Zinsser. We all know the most part of important part....
-                </div>
-                <!--end::Preview message-->
+
+
+
+
             </div>
         </div>
         <!--end::Author-->
 
-          <!--begin::Actions-->
-  <div class="d-flex align-items-center flex-wrap gap-2">
-      <!--begin::Date-->
-      <span class="fw-semibold text-muted text-end me-3">20 Dec 2023, 10:30 am</span>
-      <!--end::Date-->
+                        <!--begin::Actions-->
+                <div class="d-flex align-items-center flex-wrap gap-2">
+                    <!--begin::Date-->
+                    <span class="fw-semibold text-muted text-end me-3"><?php echo e($journal->updated_at->toDayDateTimeString()); ?></span>
+                    <!--end::Date-->
 
 
-  </div>
-  <!--end::Actions-->    </div>
+                </div>
+                <!--end::Actions-->
+</div>
     <!--end::Message header-->
 
-    <!--begin::Message content-->
-    <div class="collapse fade show" data-kt-inbox-message="message">
-        <div class="py-5">
-            <p>Hi Bob,</p>
-            <p>
-                With resrpect, i must disagree with Mr.Zinsser. We all know the most part of important part of
-                any article is the title.Without a compelleing title, your reader won't even get to the first
-                sentence.After the title, however, the first few sentences of your article are certainly
-                the most important part.
-            </p>
-            <p>
-                Jornalists call this critical, introductory section the "Lede," and when bridge properly executed,
-                it's the that carries your reader from an headine try at attention-grabbing to the body of your
-                blog post, if you want to get it right on of these 10 clever ways to omen your next blog posr with a bang
-            </p>
-            <p>
-                Best regards,
-            </p>
-            <p class="mb-0">
-                Jason Muller
-            </p>
-        </div>
-    </div>
-    <!--end::Message content-->
+                    <!--begin::Message content-->
+                    <div class="collapse fade show" data-kt-inbox-message="message">
+                        <div class="py-5">
+
+                            <p>
+                               <?php echo e($journal->abtract); ?>
+
+                            </p>
+
+                        </div>
+                    </div>
+                    <!--end::Message content-->
 </div>
 <!--end::Message accordion-->
 
@@ -333,7 +188,7 @@
                     <td class="w-75px ">Pending</td>
                     <td>
                         <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                            <input class="form-check-input w-45px h-30px" type="checkbox" name="pending" id="allowmarketing" checked onclick="return false" />
+                            <input class="form-check-input w-45px h-30px" type="checkbox" name="underreview" id="allowmarketing" checked />
                             <label class="form-check-label" for="allowmarketing"></label>
                         </div>
                     </td>
@@ -608,14 +463,9 @@
 
     </div>
     <!--end::Content-->
-</div>
-<!--end::Inbox App - View & Reply -->
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
-
-
-        </div>
-        <!--end::Content container-->
     </div>
 <!--end::Content-->
     <?php $__env->stopSection(); ?>

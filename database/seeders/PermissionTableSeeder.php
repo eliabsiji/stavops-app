@@ -44,6 +44,7 @@ class PermissionTableSeeder extends Seeder
            'author-list',
            'author-create',
            'author-edit',
+           'author-viewpaper',
            'author-delete',
            'myjournals-list',
            'myjournals-create',

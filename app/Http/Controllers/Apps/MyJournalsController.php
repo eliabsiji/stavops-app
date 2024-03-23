@@ -4,14 +4,15 @@ namespace App\Http\Controllers\Apps;
 
 use Carbon\Carbon;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Models\Journal\Journal_category;
-use App\Models\Journal\Journals;
-use App\Models\JournalpaperfilesModel;
-use App\Models\Pictures\ImageModel;
-use Illuminate\Support\Facades\Auth;
 use Spatie\PdfToText\Pdf;
+use Illuminate\Http\Request;
+use App\Models\Journal\Journals;
+use Illuminate\Support\Facades\DB;
+use App\Models\Pictures\ImageModel;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use App\Models\JournalpaperfilesModel;
+use App\Models\Journal\Journal_category;
 
 class MyJournalsController extends Controller
 {
@@ -83,7 +84,10 @@ class MyJournalsController extends Controller
      */
     public function show(string $id)
     {
-        //
+
+        
+
+
     }
 
     /**
@@ -91,7 +95,16 @@ class MyJournalsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+
+        $journal = Journals::find($id);
+        $category = Journal_category::all();
+        $pre_cat = Journals::where('journals.id',$id)
+                            ->leftjoin('journal_categories','journal_categories.id','=','journals.categoryid')
+                            ->get(['journal_categories.journal_category as pre_category']);
+
+        return view('myjournal.edit')->with('journal',$journal)
+                                           ->with('category',$category)
+                                           ->with('pre_cat',$pre_cat);
     }
 
     /**
@@ -99,7 +112,18 @@ class MyJournalsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+
+        DB::table('journals')
+        ->where('id',$id)
+        ->where('user_id',Auth::user()->id)
+        ->update([
+            'title'=>$request->title,
+            'abtract'=>$request->abtract,
+            'categoryid'=>$request->categoryid
+        ]);
+
+
+       return redirect()->back()->with('success', ' Journal Submitted Successfully.');
     }
 
     /**

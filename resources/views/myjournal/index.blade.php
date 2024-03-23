@@ -213,7 +213,7 @@
                     <!--begin::Input group-->
                     <div class="fv-row mb-7">
                         <!--begin::Label-->
-                        <label class="required fw-semibold fs-6 mb-2">Abracts </label>
+                        <label class="required fw-semibold fs-6 mb-2">Abstracts </label>
                         <!--end::Label-->
 
                         <!--begin::Input-->
@@ -309,16 +309,15 @@
             </div>
         </th>
         <th class="min-w-125px">SN</th>
-        <th class="min-w-125px">Title</th>
-        <th class="min-w-125px">Journal ID</th>
+        <th class="min-w-80px">Title</th>
         <th class="min-w-125px">Category</th>
         <th class="min-w-125px">Status</th>
         <th class="min-w-125px">Submit Date</th>
-        <th class="min-w-100px">Actions</th>
+        <th >Actions</th>
     </tr>
 </thead>
 <tbody class="text-gray-600 fw-semibold">
-    @php
+        @php
              $i= 0
          @endphp
          @foreach ($journals as $j)
@@ -330,10 +329,22 @@
             </td>
 
             <td>{{ ++$i }}</td>
-            <td class="min-w-125px">{{ $j->title }}</td>
-            <td> {{ $j->paperid }}</td>
+            <td class="min-w-125px"> <div class="text-dark ">
+                <!--begin::Heading-->
+                <a href="{{ route('author.journal',$j->jid) }}" class="text-dark">
+                    <span class="fw-bold">{{ $j->title }}</span>
+
+                </a>
+                <!--end::Heading-->
+          </div>
+
+          </td>
             <td>{{ $j->category }} </td>
-            <td>{{ $j->category }} </td>
+            <td>  <div class="badge badge-warning">Pending</div>
+                <div class="badge badge-info">Under Review</div>
+                <div class="badge badge-danger">Rejected</div>
+               <div class="badge badge-primary">Accepted</div>
+                <div class="badge badge-success">Published</div> </td>
             <td>{{ $j->updated_at }} </td>
             <td class="text-end">
                 <a href="#" class="btn btn-light btn-active-light-primary btn-flex btn-center btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -353,7 +364,7 @@
                         @can('myjournals-edit')
                                 <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="" class="menu-link px-3">
+                                <a href="{{ route('myjournals.edit',$j->jid)}}" class="menu-link px-3">
                                     Edit journal
                                 </a>
                             </div>

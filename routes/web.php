@@ -98,6 +98,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('authors', AuthorController::class);
     Route::get('/review/{id}',[AuthorController::class, 'showreview'])->name('author.review');
     Route::get('/journal/{id}',[AuthorController::class, 'showjournal'])->name('author.journal');
+    Route::get('/viewjournal/{id}',[AuthorController::class, 'viewpaper'])->name('author.viewpaper');
 
 
     //user apps routes
