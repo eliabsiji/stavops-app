@@ -16,7 +16,11 @@ return new class extends Migration
             $table->string('journal_id');
             $table->string('author_id');
             $table->string('reviewer_id');
-            $table->string('reviewerstatus');
+            $table->string('Pending');
+            $table->string('review');
+            $table->string('rejected');
+            $table->string('accepted');
+            $table->string('Published');
             $table->timestamps();
         });
     }
