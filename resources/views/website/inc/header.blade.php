@@ -119,7 +119,7 @@
 
                                 <div class="main-header-one__bottom-left" style="background-color: darkgreen";>
                                     <div class="logo-one">
-                                        <a href="index.html"><img src="{{ asset('dapafue/assets/images/resources/logo-1.png')}}" alt="#"></a>
+                                        <a href="/"><img src="{{ asset('dapafue/assets/images/resources/logo-1.png')}}" alt="#"></a>
                                     </div>
 
                                     <div class="main-menu__main-menu-box" style="background-color: darkgreen";>
