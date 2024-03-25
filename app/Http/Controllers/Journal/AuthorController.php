@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Journal\Journals;
 use Spatie\Permission\Models\Role;
 use App\Http\Controllers\Controller;
+use App\Models\Journal\Journal_status;
 use App\Models\JournalpaperfilesModel;
 
 class AuthorController extends Controller
@@ -60,15 +61,20 @@ class AuthorController extends Controller
         $journals = Journals::where('user_id',$id)
         ->leftjoin('journalpaperfiles','journalpaperfiles.journalid','=','journals.id')
         ->leftjoin('journal_categories','journal_categories.id','=','journals.categoryid')
+        ->leftjoin('journal_status','journal_status.journal_id','=','journals.id')
         ->orderBy('updated_at', 'desc')
         ->get(['journals.id as jid','journals.title as title','journals.status as status','journalpaperfiles.journal as journal',
                'journal_categories.journal_category as category','journalpaperfiles.paperid as paperid',
+               'journal_status.Pending as pending','journal_status.review as review','journal_status.rejected as rejected',
+               'journal_status.accepted as accepted','journal_status.Published as published',
                'journals.updated_at as updated_at']);
 
+        $published = Journal_status::where('author_id',$id)->where('Published','=','on')->count();
 
 
         return view('journalauthors.journallists',compact('user'))
-                    ->with('journals', $journals);
+                    ->with('journals', $journals)
+                    ->with('published',$published);
     }
 
 
@@ -95,12 +101,21 @@ class AuthorController extends Controller
         $journals = Journals::where('journals.id',$id)
         ->leftjoin('journalpaperfiles','journalpaperfiles.journalid','=','journals.id')
         ->leftjoin('journal_categories','journal_categories.id','=','journals.categoryid')
+        ->leftjoin('journal_status','journal_status.journal_id','=','journals.id')
         ->orderBy('updated_at', 'desc')
-        ->get(['journals.id as jid','journals.title as title','journals.abtract as abtract','journals.status as status','journalpaperfiles.journal as journal',
+        ->get(['journals.id as jid','journals.title as title','journals.abtract as abtract','journals.status as status',
+               'journalpaperfiles.journal as journal',
                'journal_categories.journal_category as category','journalpaperfiles.paperid as paperid',
-               'journals.updated_at as updated_at']);
+               'journal_status.Pending as pending','journal_status.review as review','journal_status.rejected as rejected',
+               'journal_status.accepted as accepted','journal_status.Published as published','journals.updated_at as updated_at']);
 
-        return view('journalauthors.journal',compact('user'))->with('journals',$journals);
+
+        $published = Journal_status::where('author_id',$userid)->where('Published','=','on')->count();
+
+
+        return view('journalauthors.journal',compact('user'))
+                                            ->with('journals',$journals)
+                                            ->with('published',$published);
     }
 
 

@@ -306,56 +306,6 @@
                                     </div>
                                     <!--end:Menu item-->
                                  @endcan
-                                    <!--begin:Menu item-->
-                                    <div  class="menu-item" >
-                                        <!--begin:Menu link-->
-                                        <a class="menu-link {{ request()->is('roles*')
-                                            ? ' active' : '' }}"
-                                         href="{{ route('roles.index') }}" >
-                                            <span  class="menu-bullet" >
-                                                <span class="bullet bullet-dot">
-                                                    </span>
-                                                </span>
-                                                <span  class="menu-title" >
-                                                 Manage   Publihers
-                                                </span>
-                                            </a>
-                                            <!--end:Menu link-->
-                                    </div>
-                                        <!--end:Menu item-->
-                                        <!--begin:Menu item-->
-                                     <div  class="menu-item" >
-                                            <!--begin:Menu link-->
-                                            <a class="menu-link {{ request()->is('permissions*')
-                                                ? ' active' : '' }}"
-                                              href="{{ route('permissions.index') }}" >
-                                                <span  class="menu-bullet" >
-                                                    <span class="bullet bullet-dot">
-                                                        </span></span>
-                                                        <span  class="menu-title" >
-                                                        Manage  Reviewers
-                                                        </span>
-                                            </a>
-                                           <!--end:Menu link-->
-                                    </div>
-                                        <!--end:Menu item-->
-                                     <!--begin:Menu item-->
-                                     <div  class="menu-item" >
-                                        <!--begin:Menu link-->
-                                        <a class="menu-link {{ request()->is('permissions*')
-                                            ? ' active' : '' }}"
-                                          href="{{ route('permissions.index') }}" >
-                                            <span  class="menu-bullet" >
-                                                <span class="bullet bullet-dot">
-                                                    </span></span>
-                                                    <span  class="menu-title" >
-                                                     Manage Editors
-                                                    </span>
-                                        </a>
-                                       <!--end:Menu link-->
-                                     </div>
-                                    <!--end:Menu item-->
-
 
                                     <!--begin:Menu item-->
                                     <div  class="menu-item" >
@@ -392,7 +342,7 @@
                                      </div>
                                     <!--end:Menu item-->
 
-                                      <!--begin:Menu item-->
+                                      {{-- <!--begin:Menu item-->
                                       <div  class="menu-item" >
                                         <!--begin:Menu link-->
                                         <a class="menu-link {{ request()->is('permissions*')
@@ -407,9 +357,9 @@
                                         </a>
                                        <!--end:Menu link-->
                                      </div>
-                                    <!--end:Menu item-->
+                                    <!--end:Menu item--> --}}
 
-                                     <!--begin:Menu item-->
+                                     {{-- <!--begin:Menu item-->
                                      <div  class="menu-item" >
                                         <!--begin:Menu link-->
                                         <a class="menu-link {{ request()->is('permissions*')
@@ -424,7 +374,7 @@
                                         </a>
                                        <!--end:Menu link-->
                                      </div>
-                                    <!--end:Menu item-->
+                                    <!--end:Menu item--> --}}
                             </div>
                               <!--end:Menu sub-->
         </div>

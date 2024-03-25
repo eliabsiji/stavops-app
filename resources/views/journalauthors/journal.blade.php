@@ -31,13 +31,29 @@
 <!--begin::Actions-->
 <div class="d-flex align-items-center gap-2 gap-lg-3">
 
-        <!--end::Filter menu-->
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
 
-
-    <!--begin::Secondary button-->
-        <!--end::Secondary button-->
-
-    <!--begin::Primary button-->
+    @if (\Session::has('status'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ \Session::get('status') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
+    @if (\Session::has('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ \Session::get('success') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
 
             <a href="{{ route('authors.show',$user->id) }}" class="btn btn-sm fw-bold btn-warning" >
                  <<  Back
@@ -86,8 +102,26 @@
           <!--begin::Title-->
           <div class="d-flex flex-wrap gap-2 justify-content-between mb-8">
             <div class="d-flex align-items-center flex-wrap gap-2">
-                <span class="badge badge-primary my-1 me-2">inbox</span>
-                <span class="badge badge-danger my-1">important</span>
+                @if ($journal->pending == "on")
+                    <span class="badge badge-warning my-1 me-2">Pending...</span>
+                @endif
+                @if ($journal->review == "on")
+                <span class="badge badge-info my-1 me-2">Under Review</span>
+                @endif
+                @if ($journal->rejected == "on")
+                <span class="badge badge-info my-1 me-2">Reviewed </span> but
+                <span class="badge badge-danger my-1 me-2">Rejected</span>
+                @endif
+                @if ($journal->accepted == "on")
+                <span class="badge badge-info my-1 me-2">Reviewed </span>
+                <span class="badge badge-primary my-1 me-2">Accepted</span>
+                @endif
+                @if ($journal->published == "on")
+                <span class="badge badge-info my-1 me-2">Reviewed </span>
+                <span class="badge badge-primary my-1 me-2">Accepted</span>
+                <span class="badge badge-success my-1 me-2">Published</span>
+                @endif
+
                 <!--end::Badges-->
             </div>
 
@@ -172,38 +206,45 @@
 <!--end::Message accordion-->
 
 <div class="separator my-6"></div>
-
-
-
-
-
             <!--begin::Form-->
-<form id="kt_inbox_reply_form" class="rounded border mt-10">
+<form id="kt_inbox_reply_form" class="rounded border mt-10" action="{{ route('publishing.store') }}" method="POST">
+    @csrf
     <!--begin::Body-->
     <div class="d-block">
 
         <table class="table mb-0">
             <tbody>
+                <input type="hidden" name="journalid" value="{{ $journal->jid }}">
                 <tr>
                     <td class="w-75px ">Pending</td>
                     <td>
                         <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                            <input class="form-check-input w-45px h-30px" type="checkbox" name="underreview" id="allowmarketing" checked />
+                            <input class="form-check-input w-45px h-30px" type="checkbox" name="pending"
+                             @if ($journal->pending =="on")
+                                checked
+                             @endif id="allowmarketing" />
                             <label class="form-check-label" for="allowmarketing"></label>
                         </div>
                     </td>
 
-                    <td class="w-75px ">Under Review</td>
+                    <td class="w-75px ">Under Review</td>{{ $journal->review  }}
                     <td>
                         <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                            <input class="form-check-input w-45px h-30px" type="checkbox" name="underreview" id="allowmarketing" checked />
+                            <input class="form-check-input w-45px h-30px" type="checkbox" name="underreview"
+                            @if ($journal->review =="on")
+                               checked
+                            @endif id="allowmarketing" />
                             <label class="form-check-label" for="allowmarketing"></label>
                         </div>
                     </td>
                     <td class="w-75px ">Rejected</td>
                     <td>
                         <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                            <input class="form-check-input w-45px h-30px" type="checkbox" name="rejected" id="allowmarketing" checked />
+                            <input class="form-check-input w-45px h-30px" type="checkbox" name="rejected"
+                            @if ($journal->rejected =="on")
+                               checked
+                            @endif />
+
                             <label class="form-check-label" for="allowmarketing"></label>
                         </div>
                     </td>
@@ -211,7 +252,11 @@
                     <td class="w-75px ">Accepted</td>
                     <td>
                         <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                            <input class="form-check-input w-45px h-30px" type="checkbox"  name="accepted" id="allowmarketing" checked />
+                            <input class="form-check-input w-45px h-30px" type="checkbox"  name="accepted"
+                            @if ($journal->accepted =="on")
+                               checked
+                            @endif
+                            />
                             <label class="form-check-label" for="allowmarketing"></label>
                         </div>
                     </td>
@@ -219,7 +264,10 @@
                     <td class="w-75px ">Published</td>
                     <td>
                         <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                            <input class="form-check-input w-45px h-30px" type="checkbox" name="published" id="allowmarketing" checked />
+                            <input class="form-check-input w-45px h-30px" type="checkbox" name="published"
+                            @if ($journal->published =="on")
+                               checked
+                            @endif />
                             <label class="form-check-label" for="allowmarketing"></label>
                         </div>
                     </td>
@@ -238,14 +286,12 @@
             <!--begin::Send-->
             <div class="btn-group me-4">
                 <!--begin::Submit-->
-                <span class="btn btn-primary fs-bold px-6" data-kt-inbox-form="send">
+                <button class="btn btn-primary fs-bold px-6" data-kt-inbox-form="send">
                     <span class="indicator-label">
                         Send
                     </span>
-                    <span class="indicator-progress">
-                        Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-                    </span>
-                </span>
+
+                </button>
                 <!--end::Submit-->
 
 

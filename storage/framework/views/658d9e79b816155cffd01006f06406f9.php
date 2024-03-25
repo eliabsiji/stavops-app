@@ -22,7 +22,7 @@
       <!--begin::Aside content-->
       <div class="card-body">
           <!--begin::Button-->
-          <a href="<?php echo e(route('authors.index')); ?>" class="btn btn-primary fw-bold w-100 mb-8"><?php echo e($user->name); ?>'s Journal Papers</a>
+          <a href="#" class="btn btn-primary fw-bold w-100 mb-8"><?php echo e($user->name); ?>'s Journal Papers</a>
           <!--end::Button-->
 
           <!--begin::Menu-->
@@ -35,7 +35,7 @@
                       <a href="<?php echo e(route('authors.show',$user->id)); ?>">
                          <span class="menu-title fw-bold">Published</span>
                       </a>
-                      <span class="badge badge-light-success">3</span>
+                      <span class="badge badge-light-success"><?php echo e($published); ?></span>
                   </span>
                   <!--end::Inbox-->
               </div>

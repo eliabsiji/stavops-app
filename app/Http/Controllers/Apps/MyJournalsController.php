@@ -13,6 +13,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Models\JournalpaperfilesModel;
 use App\Models\Journal\Journal_category;
+use App\Models\Journal\Journal_status;
 
 class MyJournalsController extends Controller
 {
@@ -76,6 +77,11 @@ class MyJournalsController extends Controller
      $jp->journalid = $journalid;
      $jp->paperid = $this->paperid($j->id);
      $jp->save();
+     $journal_status =  new Journal_status();
+     $journal_status->journal_id = $j->id;
+     $journal_status->author_id = Auth::user()->id;
+     $journal_status->Pending  = "on";
+     $journal_status->save();
      return redirect()->back()->with('success', ' Journal Submitted Successfully.');
     }
 
@@ -85,7 +91,7 @@ class MyJournalsController extends Controller
     public function show(string $id)
     {
 
-        
+
 
 
     }

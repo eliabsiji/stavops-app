@@ -153,13 +153,25 @@ Published Journals
                                                             <!--end::Heading-->
                                                       </div>
 
-                                                                            <!--begin::Badges-->
-                                                                                    <div class="badge badge-warning">Pending</div>
-                                                                                    <div class="badge badge-info">Under Review</div>
-                                                                                    <div class="badge badge-danger">Rejected</div>
-                                                                                   <div class="badge badge-primary">Accepted</div>
-                                                                                    <div class="badge badge-success">Published</div>
-                                                                                <!--end::Badges-->
+                                                        <?php if($journal->pending == "on"): ?>
+                                                            <span class="badge badge-warning my-1 me-2">Pending...</span>
+                                                        <?php endif; ?>
+                                                        <?php if($journal->review == "on"): ?>
+                                                            <span class="badge badge-info my-1 me-2">Under Review</span>
+                                                        <?php endif; ?>
+                                                        <?php if($journal->rejected == "on"): ?>
+                                                            <span class="badge badge-info my-1 me-2">Reviewed </span> but
+                                                            <span class="badge badge-danger my-1 me-2">Rejected</span>
+                                                        <?php endif; ?>
+                                                        <?php if($journal->accepted == "on"): ?>
+                                                            <span class="badge badge-info my-1 me-2">Reviewed </span>
+                                                            <span class="badge badge-primary my-1 me-2">Accepted</span>
+                                                        <?php endif; ?>
+                                                        <?php if($journal->published == "on"): ?>
+                                                            <span class="badge badge-info my-1 me-2">Reviewed </span>
+                                                            <span class="badge badge-primary my-1 me-2">Accepted</span>
+                                                            <span class="badge badge-success my-1 me-2">Published</span>
+                                                        <?php endif; ?>
                                             </td>
                                             <td class="w-100px text-end fs-7 pe-9">
                                                                     <span class="fw-semibold">

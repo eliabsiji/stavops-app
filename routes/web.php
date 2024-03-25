@@ -100,6 +100,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/journal/{id}',[AuthorController::class, 'showjournal'])->name('author.journal');
     Route::get('/viewjournal/{id}',[AuthorController::class, 'viewpaper'])->name('author.viewpaper');
 
+    //journal publishing
+    Route::resource('publishing', PublishController::class);
 
     //user apps routes
     Route::resource('myjournals', MyJournalsController::class);

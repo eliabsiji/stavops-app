@@ -30,13 +30,31 @@
 <!--begin::Actions-->
 <div class="d-flex align-items-center gap-2 gap-lg-3">
 
-        <!--end::Filter menu-->
+    <?php if($errors->any()): ?>
+    <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <ul>
+            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <li><?php echo e($error); ?></li>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </ul>
+    </div>
+    <?php endif; ?>
 
+    <?php if(\Session::has('status')): ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <?php echo e(\Session::get('status')); ?>
 
-    <!--begin::Secondary button-->
-        <!--end::Secondary button-->
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php endif; ?>
+    <?php if(\Session::has('success')): ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <?php echo e(\Session::get('success')); ?>
 
-    <!--begin::Primary button-->
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php endif; ?>
 
             <a href="<?php echo e(route('authors.show',$user->id)); ?>" class="btn btn-sm fw-bold btn-warning" >
                  <<  Back
@@ -85,8 +103,26 @@
           <!--begin::Title-->
           <div class="d-flex flex-wrap gap-2 justify-content-between mb-8">
             <div class="d-flex align-items-center flex-wrap gap-2">
-                <span class="badge badge-primary my-1 me-2">inbox</span>
-                <span class="badge badge-danger my-1">important</span>
+                <?php if($journal->pending == "on"): ?>
+                    <span class="badge badge-warning my-1 me-2">Pending...</span>
+                <?php endif; ?>
+                <?php if($journal->review == "on"): ?>
+                <span class="badge badge-info my-1 me-2">Under Review</span>
+                <?php endif; ?>
+                <?php if($journal->rejected == "on"): ?>
+                <span class="badge badge-info my-1 me-2">Reviewed </span> but
+                <span class="badge badge-danger my-1 me-2">Rejected</span>
+                <?php endif; ?>
+                <?php if($journal->accepted == "on"): ?>
+                <span class="badge badge-info my-1 me-2">Reviewed </span>
+                <span class="badge badge-primary my-1 me-2">Accepted</span>
+                <?php endif; ?>
+                <?php if($journal->published == "on"): ?>
+                <span class="badge badge-info my-1 me-2">Reviewed </span>
+                <span class="badge badge-primary my-1 me-2">Accepted</span>
+                <span class="badge badge-success my-1 me-2">Published</span>
+                <?php endif; ?>
+
                 <!--end::Badges-->
             </div>
 
@@ -172,38 +208,46 @@
 <!--end::Message accordion-->
 
 <div class="separator my-6"></div>
-
-
-
-
-
             <!--begin::Form-->
-<form id="kt_inbox_reply_form" class="rounded border mt-10">
+<form id="kt_inbox_reply_form" class="rounded border mt-10" action="<?php echo e(route('publishing.store')); ?>" method="POST">
+    <?php echo csrf_field(); ?>
     <!--begin::Body-->
     <div class="d-block">
 
         <table class="table mb-0">
             <tbody>
+                <input type="hidden" name="journalid" value="<?php echo e($journal->jid); ?>">
                 <tr>
                     <td class="w-75px ">Pending</td>
                     <td>
                         <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                            <input class="form-check-input w-45px h-30px" type="checkbox" name="underreview" id="allowmarketing" checked />
+                            <input class="form-check-input w-45px h-30px" type="checkbox" name="pending"
+                             <?php if($journal->pending =="on"): ?>
+                                checked
+                             <?php endif; ?> id="allowmarketing" />
                             <label class="form-check-label" for="allowmarketing"></label>
                         </div>
                     </td>
 
-                    <td class="w-75px ">Under Review</td>
+                    <td class="w-75px ">Under Review</td><?php echo e($journal->review); ?>
+
                     <td>
                         <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                            <input class="form-check-input w-45px h-30px" type="checkbox" name="underreview" id="allowmarketing" checked />
+                            <input class="form-check-input w-45px h-30px" type="checkbox" name="underreview"
+                            <?php if($journal->review =="on"): ?>
+                               checked
+                            <?php endif; ?> id="allowmarketing" />
                             <label class="form-check-label" for="allowmarketing"></label>
                         </div>
                     </td>
                     <td class="w-75px ">Rejected</td>
                     <td>
                         <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                            <input class="form-check-input w-45px h-30px" type="checkbox" name="rejected" id="allowmarketing" checked />
+                            <input class="form-check-input w-45px h-30px" type="checkbox" name="rejected"
+                            <?php if($journal->rejected =="on"): ?>
+                               checked
+                            <?php endif; ?> />
+
                             <label class="form-check-label" for="allowmarketing"></label>
                         </div>
                     </td>
@@ -211,7 +255,11 @@
                     <td class="w-75px ">Accepted</td>
                     <td>
                         <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                            <input class="form-check-input w-45px h-30px" type="checkbox"  name="accepted" id="allowmarketing" checked />
+                            <input class="form-check-input w-45px h-30px" type="checkbox"  name="accepted"
+                            <?php if($journal->accepted =="on"): ?>
+                               checked
+                            <?php endif; ?>
+                            />
                             <label class="form-check-label" for="allowmarketing"></label>
                         </div>
                     </td>
@@ -219,7 +267,10 @@
                     <td class="w-75px ">Published</td>
                     <td>
                         <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                            <input class="form-check-input w-45px h-30px" type="checkbox" name="published" id="allowmarketing" checked />
+                            <input class="form-check-input w-45px h-30px" type="checkbox" name="published"
+                            <?php if($journal->published =="on"): ?>
+                               checked
+                            <?php endif; ?> />
                             <label class="form-check-label" for="allowmarketing"></label>
                         </div>
                     </td>
@@ -238,14 +289,12 @@
             <!--begin::Send-->
             <div class="btn-group me-4">
                 <!--begin::Submit-->
-                <span class="btn btn-primary fs-bold px-6" data-kt-inbox-form="send">
+                <button class="btn btn-primary fs-bold px-6" data-kt-inbox-form="send">
                     <span class="indicator-label">
                         Send
                     </span>
-                    <span class="indicator-progress">
-                        Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-                    </span>
-                </span>
+
+                </button>
                 <!--end::Submit-->
 
 

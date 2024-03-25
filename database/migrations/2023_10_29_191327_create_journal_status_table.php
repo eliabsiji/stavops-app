@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('journal_status', function (Blueprint $table) {
             $table->id();
-            $table->string('journal_id');
-            $table->string('author_id');
-            $table->string('reviewer_id');
-            $table->string('Pending');
-            $table->string('review');
-            $table->string('rejected');
-            $table->string('accepted');
-            $table->string('Published');
+            $table->string('journal_id')->nullable();
+            $table->string('author_id')->nullable();
+            $table->string('reviewer_id')->nullable();
+            $table->string('Pending')->nullable();
+            $table->string('review')->nullable();
+            $table->string('rejected')->nullable();
+            $table->string('accepted')->nullable();
+            $table->string('Published')->nullable();
             $table->timestamps();
         });
     }
