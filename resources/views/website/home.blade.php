@@ -317,7 +317,7 @@
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="{{ asset('dapafue/assets/images/team/team-v1-img1.jpg')}}" alt="#">
+                            <img src="{{ asset('dapafue/assets/images/team/team1.jpg')}}" alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -350,7 +350,7 @@
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="{{ asset('dapafue/assets/images/team/team-v1-img2.jpg')}}" alt="#">
+                            <img src="{{ asset('dapafue/assets/images/team/team2.jpg')}}" alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -383,7 +383,7 @@
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="{{ asset('dapafue/assets/images/team/team-v1-img3.jpg')}}" alt="#">
+                            <img src="{{ asset('dapafue/assets/images/team/team3.jpg')}}" alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -416,7 +416,7 @@
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="{{ asset('dapafue/assets/images/team/team-v1-img4.jpg')}}" alt="#">
+                            <img src="{{ asset('dapafue/assets/images/team/team4.jpg')}}" alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -442,42 +442,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.4s">
-                <div class="team-one__single">
-                    <div class="team-one__single-img">
-                        <div class="inner">
-                            <img src="{{ asset('dapafue/assets/images/team/team-v1-img4.jpg')}}" alt="#">
-                            <div class="social-link">
-                                <ul>
-                                    <li>
-                                        <a class="fb" href="#"><span class="icon-facebook"></span></a>
-                                    </li>
-                                    <li>
-                                        <a class="tw" href="#"><span class="icon-twitter"></span></a>
-                                    </li>
-                                    <li>
-                                        <a class="pin" href="#"><span class="icon-pinterest"></span></a>
-                                    </li>
-                                    <li>
-                                        <a class="in" href="#"><span class="icon-instagram"></span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="team-one__single-content text-center">
-                        <h2><a href="#">Mr. Akinmusere</a></h2>
-                        <p>Business Editor</p>
-                    </div>
-                </div>
-            </div>
+
             <!--End Team One Single-->
             <div class="col-xl-3 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.4s">
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="{{ asset('dapafue/assets/images/team/team-v1-img4.jpg')}}" alt="#">
+                            <img src="{{ asset('dapafue/assets/images/team/team6.jpg')}}" alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -498,7 +470,7 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#">Dr. M.A Ayoola </a></h2>
+                        <h2><a href="#">Dr. Dr. Akinbobola </a></h2>
                         <p>Member</p>
                     </div>
                 </div>
@@ -508,7 +480,7 @@
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="{{ asset('dapafue/assets/images/team/team-v1-img4.jpg') }}" alt="#">
+                            <img src="{{ asset('dapafue/assets/images/team/team5.jpg') }}" alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>

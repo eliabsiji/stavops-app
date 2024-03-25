@@ -4,13 +4,14 @@
 <section class="team-one team-one--team">
     <div class="container">
 
+
         <div class="row">
             <!--Start Team One Single-->
-            <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.1s">
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="assets/images/team/team-v1-img1.jpg" alt="#">
+                            <img src="<?php echo e(asset('dapafue/assets/images/team/team1.jpg')); ?>" alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -31,19 +32,19 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="team-details.html">Adam Andeson</a></h2>
-                        <p>Senior technician</p>
+                        <h2><a href="#">Dr. S.A. Akintunde</a></h2>
+                        <p>Editor in Chief</p>
                     </div>
                 </div>
             </div>
             <!--End Team One Single-->
 
             <!--Start Team One Single-->
-            <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.2s">
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="assets/images/team/team-v1-img2.jpg" alt="#">
+                            <img src="<?php echo e(asset('dapafue/assets/images/team/team2.jpg')); ?>" alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -64,19 +65,19 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="team-details.html">Adam Andeson</a></h2>
-                        <p>Senior technician</p>
+                        <h2><a href="#">Dr. A.O Olajuyigbe </a></h2>
+                        <p>Deputy Editor in Chief</p>
                     </div>
                 </div>
             </div>
             <!--End Team One Single-->
 
             <!--Start Team One Single-->
-            <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.3s">
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="assets/images/team/team-v1-img3.jpg" alt="#">
+                            <img src="<?php echo e(asset('dapafue/assets/images/team/team3.jpg')); ?>" alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -97,19 +98,19 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="team-details.html">Adam Andeson</a></h2>
-                        <p>Senior technician</p>
+                        <h2><a href="#">Dr. T.R Oziegbe</a></h2>
+                        <p>Managing Editor</p>
                     </div>
                 </div>
             </div>
             <!--End Team One Single-->
 
             <!--Start Team One Single-->
-            <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.4s">
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="assets/images/team/team-v1-img5.jpg" alt="#">
+                            <img src="<?php echo e(asset('dapafue/assets/images/team/team4.jpg')); ?>" alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -130,19 +131,19 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="team-details.html">Alex Jackson</a></h2>
-                        <p>Senior Developer</p>
+                        <h2><a href="#">Mr. Akinmusere</a></h2>
+                        <p>Business Editor</p>
                     </div>
                 </div>
             </div>
-            <!--End Team One Single-->
 
-            <!--Start Team One Single-->
-            <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+
+            <!--End Team One Single-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.4s">
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="assets/images/team/team-v1-img6.jpg" alt="#">
+                            <img src="<?php echo e(asset('dapafue/assets/images/team/team6.jpg')); ?>" alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -163,19 +164,17 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="team-details.html">Kabir Khan</a></h2>
-                        <p>Senior Designer</p>
+                        <h2><a href="#">Dr. Dr. Akinbobola </a></h2>
+                        <p>Member</p>
                     </div>
                 </div>
             </div>
-            <!--End Team One Single-->
 
-            <!--Start Team One Single-->
-            <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.4s">
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="assets/images/team/team-v1-img7.jpg" alt="#">
+                            <img src="<?php echo e(asset('dapafue/assets/images/team/team5.jpg')); ?>" alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -196,13 +195,14 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="team-details.html">Lora Tony</a></h2>
-                        <p>Senior Counselor</p>
+                        <h2><a href="#">Mr. G.O Batimehin</a></h2>
+                        <p>Business Editor</p>
                     </div>
                 </div>
             </div>
-            <!--End Team One Single-->
         </div>
+
+
     </div>
 </section>
 <!--End Team One-->
