@@ -8,7 +8,7 @@
 <!--begin::Logo-->
 <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
     <!--begin::Logo image-->
-    <a href="{{ route('home') }}">
+    <a href="{{ route('dashboard') }}">
                     <img alt="Logo" src="{{ asset('html/assets/assets/media/logos/logo1.png') }}"
                      class="h-65px app-sidebar-logo-default" style=:<"margin-left: 70px"/>
     </a>
