@@ -310,9 +310,9 @@
                                     <!--begin:Menu item-->
                                     <div  class="menu-item" >
                                         <!--begin:Menu link-->
-                                        <a class="menu-link {{ request()->is('permissions*')
+                                        <a class="menu-link {{ request()->is('alljournals*')
                                             ? ' active' : '' }}"
-                                          href="{{ route('permissions.index') }}" >
+                                          href="{{ route('alljournals.index') }}" >
                                             <span  class="menu-bullet" >
                                                 <span class="bullet bullet-dot">
                                                     </span></span>
@@ -330,7 +330,7 @@
                                         <!--begin:Menu link-->
                                         <a class="menu-link {{ request()->is('permissions*')
                                             ? ' active' : '' }}"
-                                          href="{{ route('permissions.index') }}" >
+                                          href="#" >
                                             <span  class="menu-bullet" >
                                                 <span class="bullet bullet-dot">
                                                     </span></span>

@@ -46,6 +46,7 @@ class PermissionTableSeeder extends Seeder
            'author-edit',
            'author-viewpaper',
            'author-delete',
+           'alljournals-list',
            'myjournals-list',
            'myjournals-create',
            'myjournals-edit',
@@ -89,6 +90,9 @@ class PermissionTableSeeder extends Seeder
 
                 if($word == "author")
                 Permission::create(['name' => $permission,'title'=>"Author Management"]);
+
+                if($word == "alljournals")
+                Permission::create(['name' => $permission,'title'=>"All Journals Management"]);
 
                 if($word == "journalvolume")
                 Permission::create(['name' => $permission,'title'=>"Journal Volume Management"]);

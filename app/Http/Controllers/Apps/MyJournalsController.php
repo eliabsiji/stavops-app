@@ -39,9 +39,12 @@ class MyJournalsController extends Controller
                             ->leftjoin('journalpaperfiles','journalpaperfiles.journalid','=','journals.id')
                             ->leftjoin('journal_categories','journal_categories.id','=','journals.categoryid')
                             ->orderBy('updated_at', 'desc')
+                            ->leftjoin('journal_status','journal_status.journal_id','=','journals.id')
                             ->get(['journals.id as jid','journals.title as title','journals.status as status','journalpaperfiles.journal as journal',
-                                   'journal_categories.journal_category as category','journalpaperfiles.paperid as paperid',
-                                   'journals.updated_at as updated_at']);
+                            'journal_categories.journal_category as category','journalpaperfiles.paperid as paperid',
+                            'journal_status.Pending as pending','journal_status.review as review','journal_status.rejected as rejected',
+                            'journal_status.accepted as accepted','journal_status.Published as published',
+                            'journals.updated_at as updated_at']);
 
         return view('myjournal.index')->with('category',$category)
                                             ->with('journals',$journals);

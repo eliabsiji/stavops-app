@@ -50,6 +50,9 @@
        @if (Route::is('myjournals.*'))
            @include('layouts.pages-assets.css.users-list-css')
        @endif
+       @if (Route::is('alljournals.*'))
+            @include('layouts.pages-assets.css.users-list-css')
+       @endif
 
 
 

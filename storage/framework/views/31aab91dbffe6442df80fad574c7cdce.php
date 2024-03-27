@@ -341,11 +341,28 @@
 
           </td>
             <td><?php echo e($j->category); ?> </td>
-            <td>  <div class="badge badge-warning">Pending</div>
-                <div class="badge badge-info">Under Review</div>
-                <div class="badge badge-danger">Rejected</div>
-               <div class="badge badge-primary">Accepted</div>
-                <div class="badge badge-success">Published</div> </td>
+            <td>
+
+                <?php if($j->pending == "on"): ?>
+                <span class="badge badge-warning my-1 me-2">Pending...</span>
+            <?php endif; ?>
+            <?php if($j->review == "on"): ?>
+                <span class="badge badge-info my-1 me-2">Under Review</span>
+            <?php endif; ?>
+            <?php if($j->rejected == "on"): ?>
+                <span class="badge badge-info my-1 me-2">Reviewed </span> but
+                <span class="badge badge-danger my-1 me-2">Rejected</span>
+            <?php endif; ?>
+            <?php if($j->accepted == "on"): ?>
+                <span class="badge badge-info my-1 me-2">Reviewed </span>
+                <span class="badge badge-primary my-1 me-2">Accepted</span>
+            <?php endif; ?>
+            <?php if($j->published == "on"): ?>
+                <span class="badge badge-info my-1 me-2">Reviewed </span>
+                <span class="badge badge-primary my-1 me-2">Accepted</span>
+                <span class="badge badge-success my-1 me-2">Published</span>
+            <?php endif; ?>
+            </td>
             <td><?php echo e($j->updated_at); ?> </td>
             <td class="text-end">
                 <a href="#" class="btn btn-light btn-active-light-primary btn-flex btn-center btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">

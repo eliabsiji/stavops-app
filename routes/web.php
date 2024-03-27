@@ -9,41 +9,42 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\BiodataController;
-use App\Http\Controllers\Journal\PublishController;
-
 use App\Http\Controllers\WebsiteController;
 
-
 use App\Http\Controllers\OverviewController;
+
+
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\Journal\AuthorController;
 use App\Http\Controllers\Apps\MyJournalsController;
+use App\Http\Controllers\Journal\JournalController;
 
 
 
 
+use App\Http\Controllers\Journal\PublishController;
 use App\Http\Controllers\Junior\JuniorAperAController;
 use App\Http\Controllers\Junior\JuniorAperBController;
 use App\Http\Controllers\Junior\JuniorAperCController;
 use App\Http\Controllers\Junior\JuniorAperDController;
 use App\Http\Controllers\Junior\JuniorAperEController;
+
+
 use App\Http\Controllers\Senior\SeniorAperAController;
-
-
 use App\Http\Controllers\Senior\SeniorAperBController;
 use App\Http\Controllers\Senior\SeniorAperCController;
 use App\Http\Controllers\Senior\SeniorAperDController;
 use App\Http\Controllers\Senior\SeniorAperEController;
-use App\Http\Controllers\Journal\JournalYearController;
 
 //use journal...
+use App\Http\Controllers\Journal\JournalYearController;
 use App\Http\Controllers\Journal\JournalVolumeController;
 use App\Http\Controllers\Academics\AcademicAperAController;
-use App\Http\Controllers\Academics\AcademicAperBController;
 
 //user apps
-use App\Http\Controllers\Academics\AcademicAperCController;
+use App\Http\Controllers\Academics\AcademicAperBController;
 
+use App\Http\Controllers\Academics\AcademicAperCController;
 use App\Http\Controllers\Academics\AcademicAperDController;
 use App\Http\Controllers\Academics\AcademicAperEController;
 use App\Http\Controllers\Journal\JournalCategoryController;
@@ -96,6 +97,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('journalyear', JournalYearController::class);
 
     Route::resource('authors', AuthorController::class);
+    Route::resource('alljournals', JournalController::class);
     Route::get('/review/{id}',[AuthorController::class, 'showreview'])->name('author.review');
     Route::get('/journal/{id}',[AuthorController::class, 'showjournal'])->name('author.journal');
     Route::get('/viewjournal/{id}',[AuthorController::class, 'viewpaper'])->name('author.viewpaper');

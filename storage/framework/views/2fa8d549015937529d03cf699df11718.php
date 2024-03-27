@@ -306,9 +306,9 @@
                                     <!--begin:Menu item-->
                                     <div  class="menu-item" >
                                         <!--begin:Menu link-->
-                                        <a class="menu-link <?php echo e(request()->is('permissions*')
+                                        <a class="menu-link <?php echo e(request()->is('alljournals*')
                                             ? ' active' : ''); ?>"
-                                          href="<?php echo e(route('permissions.index')); ?>" >
+                                          href="<?php echo e(route('alljournals.index')); ?>" >
                                             <span  class="menu-bullet" >
                                                 <span class="bullet bullet-dot">
                                                     </span></span>
@@ -326,7 +326,7 @@
                                         <!--begin:Menu link-->
                                         <a class="menu-link <?php echo e(request()->is('permissions*')
                                             ? ' active' : ''); ?>"
-                                          href="<?php echo e(route('permissions.index')); ?>" >
+                                          href="#" >
                                             <span  class="menu-bullet" >
                                                 <span class="bullet bullet-dot">
                                                     </span></span>
