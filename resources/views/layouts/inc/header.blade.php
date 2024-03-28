@@ -8,7 +8,7 @@
             <i class="ki-duotone ki-notification-status fs-2 fs-lg-1"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>        </div>
 
 <!--begin::Menu-->
-<div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true" id="kt_menu_notifications">
+{{-- <div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true" id="kt_menu_notifications">
 	<!--begin::Heading-->
     <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url('{{ asset('html/assets/assets/media/misc/menu-header-bg.jpg')}}')">
         <!--begin::Title-->
@@ -521,8 +521,9 @@
         <!--end::Tab panel-->
     </div>
     <!--end::Tab content-->
-</div>
-<!--end::Menu-->        <!--end::Menu wrapper-->
+</div> --}}
+<!--end::Menu-->
+ <!--end::Menu wrapper-->
     </div>
     <!--end::Notifications-->
 
