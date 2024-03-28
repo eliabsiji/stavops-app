@@ -325,7 +325,7 @@
                                     <!--end:Menu item-->
 
 
-                                     <!--begin:Menu item-->
+                                     {{-- <!--begin:Menu item-->
                                      <div  class="menu-item" >
                                         <!--begin:Menu link-->
                                         <a class="menu-link {{ request()->is('permissions*')
@@ -340,7 +340,7 @@
                                         </a>
                                        <!--end:Menu link-->
                                      </div>
-                                    <!--end:Menu item-->
+                                    <!--end:Menu item--> --}}
 
                                       {{-- <!--begin:Menu item-->
                                       <div  class="menu-item" >
@@ -436,7 +436,7 @@
                                                 </div>
                                                 <!--end:Menu item-->
                                                 <!--begin:Menu item-->
-                                                <div  class="menu-item" >
+                                                {{-- <div  class="menu-item" >
                                                     <!--begin:Menu link-->
                                                     <a class="menu-link  {{ request()->is('journalvolume*')
                                                         ? ' active' : '' }}"  href="{{ route('journalvolume.index') }}" >
@@ -449,10 +449,10 @@
                                                             </span>
                                                     </a>
                                                     <!--end:Menu link-->
-                                                </div>
+                                                </div> --}}
                                                 <!--end:Menu item-->
                                                     <!--begin:Menu item-->
-                                                <div  class="menu-item" >
+                                                {{-- <div  class="menu-item" >
                                                         <!--begin:Menu link-->
                                                         <a class="menu-link {{ request()->is('journalyear*')
                                                             ? ' active' : '' }}"
@@ -466,10 +466,10 @@
                                                         </a>
                                                         <!--end:Menu link-->
                                                 </div>
-                                                    <!--end:Menu item-->
+                                                    <!--end:Menu item--> --}}
 
                                                 <!--begin:Menu item-->
-                                                <div  class="menu-item" >
+                                                {{-- <div  class="menu-item" >
                                                     <!--begin:Menu link-->
                                                     <a class="menu-link {{ request()->is('journalyear*')
                                                         ? ' active' : '' }}"
@@ -482,7 +482,7 @@
                                                                 </span>
                                                     </a>
                                                     <!--end:Menu link-->
-                                            </div>
+                                            </div> --}}
                                                 <!--end:Menu item-->
                                         </div>
                                         <!--end:Menu sub-->
@@ -558,7 +558,7 @@
                                         </div>
                                         <!--end:Menu item-->
                                             <!--begin:Menu item-->
-                                        <div  class="menu-item" >
+                                        {{-- <div  class="menu-item" >
                                                 <!--begin:Menu link-->
                                                 <a class="menu-link {{ request()->is('journalyear*')
                                                     ? ' active' : '' }}"
@@ -571,7 +571,7 @@
                                                             </span>
                                                 </a>
                                                 <!--end:Menu link-->
-                                        </div>
+                                        </div> --}}
                                             <!--end:Menu item-->
                                 </div>
                                 <!--end:Menu sub-->
