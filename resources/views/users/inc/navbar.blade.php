@@ -69,7 +69,7 @@
                                 <!--begin::Number-->
                                 <div class="d-flex align-items-center">
                                     <i class="ki-duotone ki-arrow-up fs-3 text-primary me-2"><span class="path1"></span><span class="path2"></span></i>
-                                    <div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="4500" data-kt-countup-prefix="$">0</div>
+                                    <div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="{{ $journals }}" >0</div>
                                 </div>
                                 <!--end::Number-->
 
@@ -84,7 +84,7 @@
                                 <!--begin::Number-->
                                 <div class="d-flex align-items-center">
                                     <i class="ki-duotone ki-arrow-up fs-3 text-success me-2"><span class="path1"></span><span class="path2"></span></i>
-                                    <div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="80">0</div>
+                                    <div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="{{ $published }}">0</div>
                                 </div>
                                 <!--end::Number-->
 

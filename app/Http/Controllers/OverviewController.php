@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Journal\Journal_status;
+use App\Models\Journal\Journals;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OverviewController extends Controller
 {
@@ -42,10 +45,16 @@ class OverviewController extends Controller
         $user = User::find($id);
         $userroles = $user->roles->all();
         $userbio = $user->bio;
+
+        $userid = Auth::user()->id;
+        $published = Journal_status::where('author_id','=',$userid)->where('Published','=','on')->count();
+        $journals = Journals::where('user_id','=',$userid)->count();
         return view('users.overview',
                           compact('user'),
                       compact('userroles'))
-                           ->with("userbio",$userbio);
+                           ->with("userbio",$userbio)
+                           ->with("journals",$journals)
+                           ->with("published",$published);
 
     }
 

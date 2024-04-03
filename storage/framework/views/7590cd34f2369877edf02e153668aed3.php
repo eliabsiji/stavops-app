@@ -340,7 +340,7 @@
                                             <!--begin::Tap pane-->
                 <div class="tab-pane fade show active" id="kt_chart_widget_19_tab_content_1">
                     <!--begin::Chart container-->
-                    <div id="kt_charts_widget_19_chartk_1" class="w-100 h-400px mb-13 mt-n4"></div>
+                    <div id="kt_charts_widget_19_chart_1" class="w-100 h-400px mb-13 mt-n4"></div>
                     <!--end::Chart container-->
 
                     <!--begin::Items-->
