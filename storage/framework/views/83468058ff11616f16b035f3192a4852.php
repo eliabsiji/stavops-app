@@ -108,11 +108,7 @@
         <?php echo csrf_field(); ?>
     <!--begin::Heading-->
     <div class="text-center mb-11">
-        <a href="/dashboard">
-
-
-
-        </a>
+        
         <!--begin::Title-->
         <h1 class="text-dark fw-bolder mb-3">
             Sign In

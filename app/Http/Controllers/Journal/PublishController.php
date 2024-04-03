@@ -8,6 +8,16 @@ use Illuminate\Http\Request;
 
 class PublishController extends Controller
 {
+
+
+    function __construct()
+    {
+         $this->middleware('permission:publish-list|publish-create|publish-edit|publish-delete', ['only' => ['index','store']]);
+         $this->middleware('permission:publish-create', ['only' => ['create','store']]);
+         $this->middleware('permission:publish-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:publish-delete', ['only' => ['destroy']]);
+    }
+
     /**
      * Display a listing of the resource.
      */

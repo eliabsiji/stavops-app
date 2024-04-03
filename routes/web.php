@@ -107,6 +107,7 @@ Route::group(['middleware' => ['auth']], function() {
 
     //user apps routes
     Route::resource('myjournals', MyJournalsController::class);
+    Route::get('/viewjournal/{journalid}',[MyJournalsController::class, 'deletejournal'])->name('myjournal.viewjournal');
     Route::get('/journalid/{journalid}',[MyJournalsController::class, 'deletejournal'])->name('myjournal.deletejournal');
     Route::get('/viewpaper/{journalid}',[MyJournalsController::class, 'viewpaper'])->name('myjournal.viewpaper');
 

@@ -570,27 +570,27 @@
                 <div class="row g-2">
                                             <!--begin::Col-->
                         <div class="col-4">
-                            <a href="{{ route('journalcategory.index') }}" class="d-flex flex-column flex-center text-center text-gray-800 text-hover-primary bg-hover-light rounded py-4 px-3 mb-3">
-                                <img src="{{ asset('html/assets/assets/media/svg/brand-logos/amazon.svg')}}" class="w-25px h-25px mb-2" alt=""/>
+                            <a href="{{ route('myjournals.index') }}" class="d-flex flex-column flex-center text-center text-gray-800 text-hover-primary bg-hover-light rounded py-4 px-3 mb-3">
+                                <img src="{{ asset('html/assets/assets/media/logos/journal.JPEG')}}" class="w-25px h-25px mb-2" alt=""/>
                                 <span class="fw-semibold">Journal & Publications</span>
                             </a>
                         </div>
                         <!--end::Col-->
                                             <!--begin::Col-->
-                        <div class="col-4">
+                        {{-- <div class="col-4">
                             <a href="#" class="d-flex flex-column flex-center text-center text-gray-800 text-hover-primary bg-hover-light rounded py-4 px-3 mb-3">
                                 <img src="{{ asset('html/assets/assets/media/svg/brand-logos/angular-icon-1.svg')}}" class="w-25px h-25px mb-2" alt=""/>
                                 <span class="fw-semibold">AngularJS</span>
                             </a>
-                        </div>
+                        </div> --}}
                         <!--end::Col-->
                                             <!--begin::Col-->
-                        <div class="col-4">
+                        {{-- <div class="col-4">
                             <a href="#" class="d-flex flex-column flex-center text-center text-gray-800 text-hover-primary bg-hover-light rounded py-4 px-3 mb-3">
                                 <img src="{{ asset('html/assets/assets/media/svg/brand-logos/atica.svg')}}" class="w-25px h-25px mb-2" alt=""/>
                                 <span class="fw-semibold">Atica</span>
                             </a>
-                        </div>
+                        </div> --}}
                         <!--end::Col-->
                                             <!--begin::Col-->
 

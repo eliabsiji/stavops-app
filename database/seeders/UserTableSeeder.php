@@ -39,8 +39,8 @@ class UserTableSeeder extends Seeder
                                    'address' => 'ondo',
                                    'gender' =>'male',
                                    'maritalstatus' =>'Single',
-                                    'nationality' =>'nigerian',
-                                    'dob' => '12-12-12']);
+                                   'nationality' =>'nigerian',
+                                   'dob' => '12-12-12']);
 
         // $role = Role::find(1);
         $role = Role::create(['name' => 'Admin','badge'=>'badge badge-light']);

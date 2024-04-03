@@ -142,7 +142,7 @@
                                                 <a href="#">Join Us</a>
                                                 <ul>
                                                     <li><a href="/login">Sign In</a></li>
-                                                    <li><a href="#">Register</a></li>
+                                                    <li><a href="/register">Register</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="<?php echo e(route('contact')); ?>">Contact Us</a></li>

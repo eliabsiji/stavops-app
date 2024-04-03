@@ -98,7 +98,7 @@
             </div>
             <!--end:Menu item-->
 
-
+            @can('usermanagement-link')
              <!--begin:Menu item-->
              <div  class="menu-item pt-5" >
                 <!--begin:Menu content-->
@@ -110,6 +110,8 @@
                     <!--end:Menu content-->
                 </div>
                 <!--end:Menu item-->
+
+
 
                <!--begin:Menu item-->
                <div  data-kt-menu-trigger="click"  class="menu-item {{
@@ -188,7 +190,7 @@
             </div>
             <!--end:Menu item-->
 
-
+            @endcan
 
 
               <!--begin:Menu item-->
@@ -264,7 +266,7 @@
             </div>
             <!--end:Menu item-->
 
-
+            @can('journalmanagement-link')
              <!--begin:Menu item-->
              <div  data-kt-menu-trigger="click"  class="menu-item {{
                 request()->is('authors*') ||
@@ -379,9 +381,9 @@
                               <!--end:Menu sub-->
         </div>
         <!--end:Menu item-->
+        @endcan
 
-
-
+        @can('apps-link')
 
             <!--begin:Menu item-->
             <div  class="menu-item pt-5" >
@@ -489,7 +491,8 @@
                     </div>
                     <!--end:Menu item-->
 
-
+        @endcan
+        @can('basicsettingsmanagement-link')
             <!--begin:Menu item-->
             <div  class="menu-item pt-5" >
                 <!--begin:Menu content-->
@@ -578,7 +581,7 @@
             </div>
             <!--end:Menu item-->
 
-
+            @endcan
                 </div>
                 <!--end::Menu -->
             </div>

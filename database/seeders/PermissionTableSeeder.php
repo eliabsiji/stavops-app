@@ -52,6 +52,11 @@ class PermissionTableSeeder extends Seeder
            'myjournals-edit',
            'myjournals-delete',
            'myjournals-viewpaper',
+           'publish-store',
+           'publish-create',
+           'publish-list',
+           'publish-delete',
+           'publish-edit',
 
            'dashboard-list',
            'usermanagement-link',
@@ -63,6 +68,7 @@ class PermissionTableSeeder extends Seeder
            'journalmanagement-link',
            'basicsettingsmanagement-link',
            'apps-link',
+           'userdashboard-list',
 
         ];
 
@@ -84,6 +90,10 @@ class PermissionTableSeeder extends Seeder
                 if($word == "dashboard")
                 Permission::create(['name' => $permission,'title'=>"Dashboard Pages"]);
 
+                if($word == "userdashboard")
+                Permission::create(['name' => $permission,'title'=>"User Dashboard Pages"]);
+
+
                 if($word == "journalcategory")
                 Permission::create(['name' => $permission,'title'=>"Journal Category Management"]);
 
@@ -102,6 +112,11 @@ class PermissionTableSeeder extends Seeder
 
                 if($word == "myjournals")
                 Permission::create(['name' => $permission,'title'=>"User Journals Management"]);
+
+                if($word == "publish")
+                Permission::create(['name' => $permission,'title'=>"Journal Publish Management"]);
+
+                //management links...
 
                 if($word == "usermanagement")
                 Permission::create(['name' => $permission,'title'=>"User Management Link"]);
@@ -124,8 +139,13 @@ class PermissionTableSeeder extends Seeder
                 if($word == "journalmanagement")
                 Permission::create(['name' => $permission,'title'=>"Journal Management Link"]);
 
+
+
                 if($word == "basicsettingsmanagement")
                 Permission::create(['name' => $permission,'title'=>"Basic Settings Management Link"]);
+
+                if($word == "apps")
+                Permission::create(['name' => $permission,'title'=>"Apps Link"]);
 
 
             }

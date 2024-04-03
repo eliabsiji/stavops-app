@@ -97,7 +97,7 @@
             </div>
             <!--end:Menu item-->
 
-
+            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('usermanagement-link')): ?>
              <!--begin:Menu item-->
              <div  class="menu-item pt-5" >
                 <!--begin:Menu content-->
@@ -109,6 +109,8 @@
                     <!--end:Menu content-->
                 </div>
                 <!--end:Menu item-->
+
+
 
                <!--begin:Menu item-->
                <div  data-kt-menu-trigger="click"  class="menu-item <?php echo e(request()->is('users*') ||
@@ -186,7 +188,7 @@
             </div>
             <!--end:Menu item-->
 
-
+            <?php endif; ?>
 
 
               <!--begin:Menu item-->
@@ -261,7 +263,7 @@
             </div>
             <!--end:Menu item-->
 
-
+            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('journalmanagement-link')): ?>
              <!--begin:Menu item-->
              <div  data-kt-menu-trigger="click"  class="menu-item <?php echo e(request()->is('authors*') ||
                 request()->is('roles*') ||
@@ -321,22 +323,7 @@
                                     <!--end:Menu item-->
 
 
-                                     <!--begin:Menu item-->
-                                     <div  class="menu-item" >
-                                        <!--begin:Menu link-->
-                                        <a class="menu-link <?php echo e(request()->is('permissions*')
-                                            ? ' active' : ''); ?>"
-                                          href="#" >
-                                            <span  class="menu-bullet" >
-                                                <span class="bullet bullet-dot">
-                                                    </span></span>
-                                                    <span  class="menu-title" >
-                                                    Manage Editions
-                                                    </span>
-                                        </a>
-                                       <!--end:Menu link-->
-                                     </div>
-                                    <!--end:Menu item-->
+                                     
 
                                       
 
@@ -345,9 +332,9 @@
                               <!--end:Menu sub-->
         </div>
         <!--end:Menu item-->
+        <?php endif; ?>
 
-
-
+        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('apps-link')): ?>
 
             <!--begin:Menu item-->
             <div  class="menu-item pt-5" >
@@ -401,60 +388,21 @@
                                                 </div>
                                                 <!--end:Menu item-->
                                                 <!--begin:Menu item-->
-                                                <div  class="menu-item" >
-                                                    <!--begin:Menu link-->
-                                                    <a class="menu-link  <?php echo e(request()->is('journalvolume*')
-                                                        ? ' active' : ''); ?>"  href="<?php echo e(route('journalvolume.index')); ?>" >
-                                                        <span  class="menu-bullet" >
-                                                            <span class="bullet bullet-dot">
-                                                                </span>
-                                                            </span>
-                                                            <span  class="menu-title" >
-                                                                Journals Under Review
-                                                            </span>
-                                                    </a>
-                                                    <!--end:Menu link-->
-                                                </div>
+                                                
                                                 <!--end:Menu item-->
                                                     <!--begin:Menu item-->
-                                                <div  class="menu-item" >
-                                                        <!--begin:Menu link-->
-                                                        <a class="menu-link <?php echo e(request()->is('journalyear*')
-                                                            ? ' active' : ''); ?>"
-                                                        href="<?php echo e(route('journalyear.index')); ?>" >
-                                                            <span  class="menu-bullet" >
-                                                                <span class="bullet bullet-dot">
-                                                                    </span></span>
-                                                                    <span  class="menu-title" >
-                                                                       Published Journals
-                                                                    </span>
-                                                        </a>
-                                                        <!--end:Menu link-->
-                                                </div>
-                                                    <!--end:Menu item-->
+                                                
 
                                                 <!--begin:Menu item-->
-                                                <div  class="menu-item" >
-                                                    <!--begin:Menu link-->
-                                                    <a class="menu-link <?php echo e(request()->is('journalyear*')
-                                                        ? ' active' : ''); ?>"
-                                                    href="<?php echo e(route('journalyear.index')); ?>" >
-                                                        <span  class="menu-bullet" >
-                                                            <span class="bullet bullet-dot">
-                                                                </span></span>
-                                                                <span  class="menu-title" >
-                                                                  Editorials
-                                                                </span>
-                                                    </a>
-                                                    <!--end:Menu link-->
-                                            </div>
+                                                
                                                 <!--end:Menu item-->
                                         </div>
                                         <!--end:Menu sub-->
                     </div>
                     <!--end:Menu item-->
 
-
+        <?php endif; ?>
+        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('basicsettingsmanagement-link')): ?>
             <!--begin:Menu item-->
             <div  class="menu-item pt-5" >
                 <!--begin:Menu content-->
@@ -522,27 +470,14 @@
                                         </div>
                                         <!--end:Menu item-->
                                             <!--begin:Menu item-->
-                                        <div  class="menu-item" >
-                                                <!--begin:Menu link-->
-                                                <a class="menu-link <?php echo e(request()->is('journalyear*')
-                                                    ? ' active' : ''); ?>"
-                                                href="<?php echo e(route('journalyear.index')); ?>" >
-                                                    <span  class="menu-bullet" >
-                                                        <span class="bullet bullet-dot">
-                                                            </span></span>
-                                                            <span  class="menu-title" >
-                                                                Journal Year Management
-                                                            </span>
-                                                </a>
-                                                <!--end:Menu link-->
-                                        </div>
+                                        
                                             <!--end:Menu item-->
                                 </div>
                                 <!--end:Menu sub-->
             </div>
             <!--end:Menu item-->
 
-
+            <?php endif; ?>
                 </div>
                 <!--end::Menu -->
             </div>

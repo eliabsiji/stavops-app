@@ -17,6 +17,7 @@
   <script src="{{ asset('html/assets/cdn.amcharts.com/lib/5/geodata/usaLow.js')}}"></script>
   <script src="{{ asset('html/assets/cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js')}}"></script>
   <script src="{{ asset('html/assets/cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js')}}"></script>
+  
 <!--end::Vendors Javascript-->
 
 <!--begin::Custom Javascript(used for this page only)-->

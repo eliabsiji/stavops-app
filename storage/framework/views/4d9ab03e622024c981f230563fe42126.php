@@ -6,7 +6,7 @@
 <!-- Mirrored from preview.keenthemes.com/metronic8/demo1/authentication/layouts/creative/sign-in.html')}} by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Jun 2023 04:07:02 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-      <title>Login | Adrahstudios</title>
+      <title>Login | AFUED</title>
         <meta charset="utf-8"/>
 
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -16,14 +16,10 @@
         <!--begin::Fonts(mandatory for all pages)-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700"/>        <!--end::Fonts-->
 
-
-
-                    <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
-                            <link href="<?php echo e(asset('html/assets/assets/plugins/global/plugins.bundle.css')); ?>" rel="stylesheet" type="text/css"/>
-                            <link href="<?php echo e(asset('html/assets/assets/css/style.bundle.css')); ?>" rel="stylesheet" type="text/css"/>
-                        <!--end::Global Stylesheets Bundle-->
-
-
+        <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
+        <link href="<?php echo e(asset('html/assets/assets/plugins/global/plugins.bundle.css')); ?>" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo e(asset('html/assets/assets/css/style.bundle.css')); ?>" rel="stylesheet" type="text/css"/>
+        <!--end::Global Stylesheets Bundle-->
         <script>
             // Frame-busting to prevent site from being loaded within a frame without permission (click-jacking)
             if (window.top != window.self) {
@@ -87,7 +83,7 @@
 
             <!--begin::Title-->
             <h2 class="text-white fw-normal m-0">
-                <img alt="Logo" src="<?php echo e(asset('html/assets/assets/media/logos/logo.png')); ?>" class="h-100px app-sidebar-logo-default"/> Adrahstudios
+                <img alt="Logo" src="<?php echo e(asset('html/assets/assets/media/logos/logo1.png')); ?>" class="h-100px app-sidebar-logo-default"/> JOURNAL MANAGEMENT SYSTEM
             </h2>
             <!--end::Title-->
         </div>
@@ -233,7 +229,7 @@ unset($__errorArgs, $__bag); ?>
     <!--end::Input group--->
     <div class="fv-row mb-8">
         <!--begin::Repeat Password-->
-        <input type="text" placeholder="Repeat Password" name="password_confirmation" type="password" autocomplete="off" class="form-control bg-transparent"/>
+        <input type="password" placeholder="Repeat Password" name="password_confirmation" type="password" autocomplete="off" class="form-control bg-transparent"/>
         <!--end::Repeat Password-->
     </div>
     <!--end::Input group--->
@@ -303,7 +299,7 @@ unset($__errorArgs, $__bag); ?>
 
         <!--begin::Javascript-->
         <script>
-            var hostUrl = "<?php echo e(asset('html/assets/assets/index.html')); ?>";        </script>
+            // var hostUrl = "<?php echo e(asset('html/assets/assets/index.html')); ?>";        </script>
 
                     <!--begin::Global Javascript Bundle(mandatory for all pages)-->
                             <script src="<?php echo e(asset('html/assets/assets/plugins/global/plugins.bundle.js')); ?>"></script>
