@@ -162,7 +162,7 @@
                 <?php $image = "";?>
                     <?php
                     if ($userdata->avatar == NULL || $userdata->avatar =="" || !isset($userdata->avatar) ){
-                           $image =  'unnamed.png';
+                           $image =  'unnamed.JPG';
                     }else {
                        $image =  $userdata->avatar;
                     }

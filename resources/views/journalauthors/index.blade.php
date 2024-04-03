@@ -204,7 +204,7 @@ Authors
                                 <?php $image = "";?>
                                 <?php
                                 if ($user->avatar == NULL || !isset($user->avatar) ){
-                                    $image =  'unnamed.png';
+                                    $image =  'unnamed.JPG';
                                 }else {
                                 $image =  $user->avatar;
                                 }
