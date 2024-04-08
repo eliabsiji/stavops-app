@@ -313,7 +313,7 @@
                     </div>
                 </div>
             </div>
-            <h2 class="sec-title__title">m Our Team</h2>
+            <h2 class="sec-title__title">Our Team</h2>
         </div>
         <div class="row">
             <!--Start Team One Single-->
