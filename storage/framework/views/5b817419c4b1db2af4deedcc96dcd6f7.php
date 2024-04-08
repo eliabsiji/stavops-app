@@ -166,8 +166,9 @@
                     }else {
                        $image =  $userdata->avatar;
                     }
+                    echo $userdata->avatar;
                     ?>
-                <img alt="Logo" src="<?php echo e(Storage::url('images/staffavatar/'.$image)); ?>"/>
+                <img alt="Logo" src="<?php echo e(Storage::url('images/staffavatar/'.$userdata->avatar)); ?>"/>
             </div>
             <!--end::Avatar-->
 
