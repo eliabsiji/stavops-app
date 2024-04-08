@@ -689,9 +689,8 @@
                     }else {
                        $image =  $userdata->avatar;
                     }
-                    echo $userdata->avatar;
                     ?>
-                <img alt="Logo" src="{{ Storage::url('images/staffavatar/'.$userdata->avatar)}}"/>
+                <img alt="Logo" src="{{ Storage::url('images/staffavatar/'.$image)}}"/>
             </div>
             <!--end::Avatar-->
 
