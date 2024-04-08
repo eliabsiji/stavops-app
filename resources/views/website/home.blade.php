@@ -123,7 +123,7 @@
                     </h2>
                     <div class="about-two__content-text1">
                         <p>At acejournals, we pride ourselves on offering high-quality, original content that delves deep in
-                            discourse on interdisciplinarity in the study of accademics: implication for adequate training of education teacher.
+                            discourse on interdisciplinarity in the academic studies : implication for adequate training of education teacher.
                         Our team of experts and contributors are passionate about sharing their knowledge and expertise with our readers. </p>
                     </div>
 
@@ -181,7 +181,7 @@
     <div class="shape4"><img src="{{ asset('dapafue/assets/images/shapes/intro-v1-shape4.png')}}" alt=""></div>
     <div class="container">
 
-        {{-- <div class="row">
+        <div class="row">
             <!--Start Intro One Single-->
             <div class="col-xl-4 col-lg-4 wow animated fadeInUp" data-wow-delay="0.1s">
                 <div class="intro-one__single">
@@ -293,7 +293,7 @@
                 </div>
             </div>
             <!--End Intro One Single-->
-        </div> --}}
+        </div>
     </div>
 </section>
 <!--Start Team One-->
@@ -309,7 +309,7 @@
                     </div>
                 </div>
             </div>
-            <h2 class="sec-title__title">Our Team</h2>
+            <h2 class="sec-title__title">m Our Team</h2>
         </div>
         <div class="row">
             <!--Start Team One Single-->
@@ -383,7 +383,7 @@
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="{{ asset('dapafue/assets/images/team/team3.jpg')}}" alt="#">
+                            <img src="{{ asset('dapafue/assets/images/team/team3.jpg')}}"  alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -437,7 +437,7 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#">Mr. A.K Akinmusere</a></h2>
+                        <h2><a href="#">Mr. Akinmusere</a></h2>
                         <p>Business Editor</p>
                     </div>
                 </div>
@@ -502,7 +502,7 @@
 
                     <div class="team-one__single-content text-center">
                         <h2><a href="#">Mr. G.O Batimehin</a></h2>
-                        <p>Secretary</p>
+                        <p>Business Editor</p>
                     </div>
                 </div>
             </div>
