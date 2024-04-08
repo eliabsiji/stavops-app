@@ -502,7 +502,7 @@
 
                     <div class="team-one__single-content text-center">
                         <h2><a href="#">Mr. G.O Batimehin</a></h2>
-                        <p>Business Editor</p>
+                        <p>Secretary</p>
                     </div>
                 </div>
             </div>
