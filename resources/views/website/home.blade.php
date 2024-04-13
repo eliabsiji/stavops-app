@@ -114,7 +114,7 @@
                     </div>
 
                     <div class="about-two__content-text1">
-                        <p>Welcome to Acejournals, your premier destination for insightful and engaging content on quality reseach on our journals. Whether you're a seasoned professional or a curious enthusiast, we have somwthing for you.</p>
+                        <p>Welcome to Acejournals, your premier destination for insightful and engaging content on quality reseach on our journals. Whether you're a seasoned professional or a curious enthusiast, we have something for you.</p>
                     </div>
                     <h2>
                         <br>
@@ -123,11 +123,7 @@
                     </h2>
                     <div class="about-two__content-text1">
                         <p>At acejournals, we pride ourselves on offering high-quality, original content that delves deep in
-<<<<<<< HEAD
                             discourse on interdisciplinarity in the academic studies : implication for adequate training of education teacher.
-=======
-                            discourse on interdisciplinarity in the study of religion: implication for adequate training of religious education teacher.
->>>>>>> 23a0f74a3be183652580e4fb1dbe08fe45160e3e
                         Our team of experts and contributors are passionate about sharing their knowledge and expertise with our readers. </p>
                     </div>
 
@@ -166,9 +162,9 @@
                     </div> --}}
 
 
-                    <div class="about-two__content-btn">
+                    {{-- <div class="about-two__content-btn">
                         <a class="thm-btn" href="about.html">Discover more</a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <!--End About Two Content-->
@@ -178,7 +174,7 @@
 <!--End About Two-->
 
 
-   <!--Start Intro One-->
+   {{-- <!--Start Intro One-->
    <section class="intro-one intro-one--two">
 
     <div class="shape3"><img src="{{ asset('dapafue/assets/images/shapes/intro-v1-shape3.png')}}" alt=""></div>
@@ -299,7 +295,8 @@
             <!--End Intro One Single-->
         </div>
     </div>
-</section>
+</section> --}}
+
 <!--Start Team One-->
 <section class="team-one team-one--two">
     <div class="container">
@@ -506,7 +503,7 @@
 
                     <div class="team-one__single-content text-center">
                         <h2><a href="#">Mr. G.O Batimehin</a></h2>
-                        <p>Business Editor</p>
+                        <p>Secretary</p>
                     </div>
                 </div>
             </div>

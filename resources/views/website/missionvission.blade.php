@@ -50,7 +50,7 @@
     <p class="text1">I. Strenghten the professional and academic commitments of staff through their fields.</p>
     <p class="text1">II. Provide members of staff equall opportunity to get involved in varios professional and academics activities including leadership services, presentations, publications and workshops.</p>
     <p class="text1">III. Encourage increased involment of academics activities ad programmes.</p>
-    <p class="text1">IV. Provide allm memberrs of staff equal development opportunities as provided by TETFUND.The Directorate of Academic Planning is headed by a Director who oversees its activities. The Directorate is prensently headed by Dr. Oziegbe Temitope Rufus.</p>
+    <p class="text1">IV. Provide all memberrs of staff equal development opportunities as provided by TETFUND.The Directorate of Academic Planning is headed by a Director who oversees its activities. The Directorate is prensently headed by Dr. Oziegbe Temitope Rufus.</p>
 
                             </ul>
                         </div>
