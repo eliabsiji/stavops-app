@@ -174,14 +174,14 @@
 <!--End About Two-->
 
 
-   <!--Start Intro One-->
+   {{-- <!--Start Intro One-->
    <section class="intro-one intro-one--two">
 
     <div class="shape3"><img src="{{ asset('dapafue/assets/images/shapes/intro-v1-shape3.png')}}" alt=""></div>
     <div class="shape4"><img src="{{ asset('dapafue/assets/images/shapes/intro-v1-shape4.png')}}" alt=""></div>
     <div class="container">
 
-        <div class="row">
+        {{-- <div class="row">
             <!--Start Intro One Single-->
             <div class="col-xl-4 col-lg-4 wow animated fadeInUp" data-wow-delay="0.1s">
                 <div class="intro-one__single">
@@ -293,9 +293,9 @@
                 </div>
             </div>
             <!--End Intro One Single-->
-        </div>
+        </div> --}}
     </div>
-</section>
+</section> --}}
 
 <!--Start Team One-->
 <section class="team-one team-one--two">
