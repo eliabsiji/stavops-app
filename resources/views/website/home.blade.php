@@ -438,7 +438,7 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#">Mr. A.K  Akinmusere</a></h2>
+                        <h2><a href="#"> A.K  Akinmusere</a></h2>
                         <p>Business Editor</p>
                     </div>
                 </div>
@@ -502,7 +502,7 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#">Mr. G.O Batimehin</a></h2>
+                        <h2><a href="#">G.O Batimehin</a></h2>
                         <p>Secretary</p>
                     </div>
                 </div>

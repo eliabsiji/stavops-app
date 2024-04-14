@@ -126,7 +126,9 @@
                     
 
 
-                    
+                    <div class="about-two__content-btn">
+                        <a class="thm-btn" href="about.html">Discover more</a>
+                    </div>
                 </div>
             </div>
             <!--End About Two Content-->
@@ -137,6 +139,8 @@
 
 
    
+    </div>
+</section> --}}
 
 <!--Start Team One-->
 <section class="team-one team-one--two">
