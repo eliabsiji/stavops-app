@@ -1,10 +1,20 @@
   @extends('website.inc.master')
   @section('content')
    <!--Start Team One-->
-<section class="team-one team-one--team">
+   <section class="team-one team-one--two">
     <div class="container">
-
-
+        <div class="sec-title text-center">
+            <div class="sec-title__tagline">
+                <div class="inner">
+                    <div class="round-box"><img src="{{ asset('dapafue/assets/images/shapes/sec-title-shape.png')}}" alt="#">
+                    </div>
+                    <div class="text">
+                        <p>Our Team</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="sec-title__title">Our Team</h2>
+        </div>
         <div class="row">
             <!--Start Team One Single-->
             <div class="col-xl-3 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.1s">
@@ -77,7 +87,7 @@
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="{{ asset('dapafue/assets/images/team/team3.jpg')}}" alt="#">
+                            <img src="{{ asset('dapafue/assets/images/team/team3.jpg')}}"  alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -131,7 +141,7 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#">Mr. Akinmusere</a></h2>
+                        <h2><a href="#"> A.K  Akinmusere</a></h2>
                         <p>Business Editor</p>
                     </div>
                 </div>
@@ -164,7 +174,7 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#">Dr. Dr. Akinbobola </a></h2>
+                        <h2><a href="#"> Dr. Akinbobola </a></h2>
                         <p>Member</p>
                     </div>
                 </div>
@@ -195,14 +205,12 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#">Mr. G.O Batimehin</a></h2>
-                        <p>Business Editor</p>
+                        <h2><a href="#">G.O Batimehin</a></h2>
+                        <p>Secretary</p>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
 </section>
 <!--End Team One-->
