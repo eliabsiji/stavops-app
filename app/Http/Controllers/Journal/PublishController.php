@@ -57,7 +57,7 @@ class PublishController extends Controller
          ]);
          return redirect()->back()->with('success', ' Journal status is now Pending.');
        }
-       else if ($request->underreview == "on") {
+       if ($request->underreview == "on") {
         Journal_status::where('journal_id', $request->journalid)
         ->update([
             'Pending' => "",
@@ -68,7 +68,7 @@ class PublishController extends Controller
          ]);
          return redirect()->back()->with('success', ' Journal status is now Under Review.');
        }
-       else if ($request->rejected == "on") {
+       if ($request->rejected == "on") {
         Journal_status::where('journal_id', $request->journalid)
         ->update([
             'Pending' => "",
@@ -80,7 +80,7 @@ class PublishController extends Controller
          ]);
          return redirect()->back()->with('success', ' Journal status is Rejected.');
        }
-       else if ($request->accepted == "on") {
+      if ($request->accepted == "on") {
         Journal_status::where('journal_id', $request->journalid)
         ->update([
             'Pending' => "",
@@ -91,7 +91,7 @@ class PublishController extends Controller
          ]);
          return redirect()->back()->with('success', ' Journal status is now Accepted.');
        }
-       else if ($request->published == "on") {
+       if ($request->published == "on") {
         Journal_status::where('journal_id', $request->journalid)
         ->update([
             'Pending' => "",

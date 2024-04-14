@@ -40,9 +40,9 @@ class WebsiteController extends Controller
 
     public function journalcategory($id){
         $jcat = Journal_category::find($id);
-
         $journals = Journals::where('journals.categoryid',$id)
-                 ->leftjoin('journal_status','journal_status.journal_id','=','journals.id')->where('journal_status.Published','=','onPside')
+                 ->leftjoin('journal_status','journal_status.journal_id','=','journals.id')
+                 ->where('journal_status.Published','=','on')
                  ->leftjoin('users','users.id','=','journals.user_id')
                  ->leftJoin('journal_categories', 'journal_categories.id','=','journals.categoryid')
                  -> leftJoin('journalpaperfiles', 'journalpaperfiles.journalid','=','journals.id')

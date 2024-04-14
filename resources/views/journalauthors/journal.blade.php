@@ -182,7 +182,7 @@
                         <!--begin::Actions-->
                 <div class="d-flex align-items-center flex-wrap gap-2">
                     <!--begin::Date-->
-                    <span class="fw-semibold text-muted text-end me-3">{{ $journal->updated_at->toDayDateTimeString() }}</span>
+                    <span class="fw-semibold text-muted text-end me-3">{{ $journal->updated_at}}</span>
                     <!--end::Date-->
 
 
