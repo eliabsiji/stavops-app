@@ -162,9 +162,9 @@
                     </div> --}}
 
 
-                    {{-- <div class="about-two__content-btn">
+                    <div class="about-two__content-btn">
                         <a class="thm-btn" href="about.html">Discover more</a>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
             <!--End About Two Content-->
@@ -174,7 +174,7 @@
 <!--End About Two-->
 
 
-   {{-- <!--Start Intro One-->
+   <!--Start Intro One-->
    <section class="intro-one intro-one--two">
 
     <div class="shape3"><img src="{{ asset('dapafue/assets/images/shapes/intro-v1-shape3.png')}}" alt=""></div>
@@ -295,7 +295,7 @@
             <!--End Intro One Single-->
         </div>
     </div>
-</section> --}}
+</section>
 
 <!--Start Team One-->
 <section class="team-one team-one--two">
