@@ -55,7 +55,7 @@ Manuscripts, including the abstract, should be typed double spaced on one side o
 <p>1.  Each article should include an abstract of between 150 and 200 words which succinctly presents the content of the paper.</p>
 <p>2.  The contribution submitted to ISEL should not have been published previously and should not be under consideration elsewhere.</p>
 <p>3.  A hard copy of the paper should be submitted (where possible) with an e-mail attachment of the paper to the Editor, Department of Directorate Academic Planning,Nigeria.</p>
-<p>4.  Submissions should be made by e-mail to info@dapafued.com</p>
+<p>4.  Submissions should be made by e-mail to info@acejournals.ng</p>
 <p>5.  Submissions should be accompanied by a short biography, stating qualifications, areas of interest/specialization, institutional affiliation, etc</p>
 <h3>Privacy Statement</h3>
 <p>The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.
