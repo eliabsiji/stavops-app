@@ -123,7 +123,7 @@
                     </h2>
                     <div class="about-two__content-text1">
                         <p>At acejournals, we pride ourselves on offering high-quality, original content that delves deep in
-                            discourse on interdisciplinarity in the study of religion: implication for adequate training of religious education teacher.
+                            discourse on interdisciplinarity in the study of accademics: implication for adequate training of education teacher.
                         Our team of experts and contributors are passionate about sharing their knowledge and expertise with our readers. </p>
                     </div>
 
@@ -296,6 +296,7 @@
         </div>
     </div>
 </section>
+
 <!--Start Team One-->
 <section class="team-one team-one--two">
     <div class="container">
@@ -383,7 +384,7 @@
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="{{ asset('dapafue/assets/images/team/team3.jpg')}}" alt="#">
+                            <img src="{{ asset('dapafue/assets/images/team/team3.jpg')}}"  alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -437,7 +438,7 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#">Mr. Akinmusere</a></h2>
+                        <h2><a href="#">Mr. A.K Akinmusere</a></h2>
                         <p>Business Editor</p>
                     </div>
                 </div>
@@ -470,7 +471,7 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#">Dr. Dr. Akinbobola </a></h2>
+                        <h2><a href="#"> Dr. Akinbobola </a></h2>
                         <p>Member</p>
                     </div>
                 </div>

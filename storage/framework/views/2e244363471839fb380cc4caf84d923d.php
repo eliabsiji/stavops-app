@@ -1,4 +1,4 @@
-  
+
   <?php $__env->startSection('content'); ?>
   <!--Start Main Slider Two-->
   <section class="main-slider main-slider-one style2">
@@ -16,7 +16,7 @@
 
                 <div class="container">
                     <div class="main-slider-one__content">
-                        
+
 
                         <div class="title">
                             <h2>ACE <br>
@@ -47,7 +47,7 @@
 
                     <div class="container">
                         <div class="main-slider-one__content">
-                            
+
 
                             <div class="title">
                                 <h2>ACE <br>
@@ -119,11 +119,13 @@
                     </h2>
                     <div class="about-two__content-text1">
                         <p>At acejournals, we pride ourselves on offering high-quality, original content that delves deep in
-                            discourse on interdisciplinarity in the study of religion: implication for adequate training of religious education teacher.
+
+                            discourse on interdisciplinarity in the academic studies : implication for adequate training of education teacher.
+
                         Our team of experts and contributors are passionate about sharing their knowledge and expertise with our readers. </p>
                     </div>
 
-                    
+
 
 
                     <div class="about-two__content-btn">
@@ -138,12 +140,11 @@
 <!--End About Two-->
 
 
-   <!--Start Intro One-->
-   <section class="intro-one intro-one--two">
 
-    <div class="shape3"><img src="<?php echo e(asset('dapafue/assets/images/shapes/intro-v1-shape3.png')); ?>" alt=""></div>
-    <div class="shape4"><img src="<?php echo e(asset('dapafue/assets/images/shapes/intro-v1-shape4.png')); ?>" alt=""></div>
-    <div class="container">
+
+    <!-- <div class="shape3"><img src="<?php echo e(asset('dapafue/assets/images/shapes/intro-v1-shape3.png')); ?>" alt=""></div>
+    <div class="shape4"><img src="<?php echo e(asset('dapafue/assets/images/shapes/intro-v1-shape4.png')); ?>" alt=""></div> -->
+    <!-- <div class="container">
 
         <div class="row">
             <!--Start Intro One Single-->
@@ -258,8 +259,9 @@
             </div>
             <!--End Intro One Single-->
         </div>
-    </div>
+    </div> -->
 </section>
+
 <!--Start Team One-->
 <section class="team-one team-one--two">
     <div class="container">
@@ -347,7 +349,7 @@
                 <div class="team-one__single">
                     <div class="team-one__single-img">
                         <div class="inner">
-                            <img src="<?php echo e(asset('dapafue/assets/images/team/team3.jpg')); ?>" alt="#">
+                            <img src="<?php echo e(asset('dapafue/assets/images/team/team3.jpg')); ?>"  alt="#">
                             <div class="social-link">
                                 <ul>
                                     <li>
@@ -401,7 +403,9 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#">Mr. Akinmusere</a></h2>
+
+                        <h2><a href="#">A.K  Akinmusere</a></h2>
+
                         <p>Business Editor</p>
                     </div>
                 </div>
@@ -434,7 +438,7 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#">Dr. Dr. Akinbobola </a></h2>
+                        <h2><a href="#"> Dr. Akinbobola </a></h2>
                         <p>Member</p>
                     </div>
                 </div>
@@ -465,8 +469,8 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#">Mr. G.O Batimehin</a></h2>
-                        <p>Business Editor</p>
+                        <h2><a href="#"> G.O Batimehin</a></h2>
+                        <p>Secretary</p>
                     </div>
                 </div>
             </div>
