@@ -25,7 +25,7 @@
 
                                 <div class="bottom-text">
                                     <div class="text-box text-center">
-                                        {{$journal->paperid}}
+
                                         <h4><a href="{{ route('websiteviewjournal',['journalid'=>$journal->paperid] ) }}">{{ $journal->title }} </a></h4>
 
                                     </div>
