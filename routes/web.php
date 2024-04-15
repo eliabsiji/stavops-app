@@ -69,7 +69,7 @@ Route::get('/contact',[WebsiteController::class, 'contact'])->name('contact');
 Route::get('/journal',[WebsiteController::class, 'journals'])->name('journals');
 Route::get('/submission',[WebsiteController::class, 'submission'])->name('submission');
 Route::get('/journalcategory/{id}',[WebsiteController::class, 'journalcategory'])->name('journalcategory');
-Route::get('/viewjournal/{journalid}',[WebsiteController::class, 'viewpaper'])->name('viewjournal');
+Route::get('/websiteviewjournal/{journalid}',[WebsiteController::class, 'viewpaper'])->name('websiteviewjournal');
 
 
 Auth::routes();
