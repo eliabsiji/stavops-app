@@ -57,7 +57,7 @@ class PublishController extends Controller
          ]);
          return redirect()->back()->with('success', ' Journal status is now Pending.');
        }
-       if ($request->underreview == "on") {
+        if ($request->underreview == "on") {
         Journal_status::where('journal_id', $request->journalid)
         ->update([
             'Pending' => "",

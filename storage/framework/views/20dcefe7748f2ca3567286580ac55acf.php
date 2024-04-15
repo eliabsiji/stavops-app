@@ -24,14 +24,16 @@
 
                                 <div class="bottom-text">
                                     <div class="text-box text-center">
+                                        <?php echo e($journal->paperid); ?>
 
-                                        <h4><a href="<?php echo e(route('viewjournal',['journalid'=>$journal->paperid])); ?>"><?php echo e($journal->title); ?> </a></h4>
+                                        <h4><a href="<?php echo e(route('websiteviewjournal',['journalid'=>$journal->paperid] )); ?>"><?php echo e($journal->title); ?> </a></h4>
 
                                     </div>
 
 
                                 </div>
-                                <h6>  <?php echo e(ucfirst($journal->author)); ?>, Sodiq Tunde AROGUNDADE, Eze Benneth UCHENNA
+                                <h6>  <?php echo e(ucfirst($journal->author)); ?>
+
                                 1-7</h6>
                             </div>
                         </div>

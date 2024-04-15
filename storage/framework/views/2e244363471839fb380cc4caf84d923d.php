@@ -140,126 +140,15 @@
 <!--End About Two-->
 
 
+    <!--Start Intro One-->
+   <section class="intro-one intro-one--two">
+
+    <div class="shape3"><img src="<?php echo e(asset('dapafue/assets/images/shapes/intro-v1-shape3.png')); ?>" alt=""></div>
+    <div class="shape4"><img src="<?php echo e(asset('dapafue/assets/images/shapes/intro-v1-shape4.png')); ?>" alt=""></div>
+    <div class="container">
 
 
-    <!-- <div class="shape3"><img src="<?php echo e(asset('dapafue/assets/images/shapes/intro-v1-shape3.png')); ?>" alt=""></div>
-    <div class="shape4"><img src="<?php echo e(asset('dapafue/assets/images/shapes/intro-v1-shape4.png')); ?>" alt=""></div> -->
-    <!-- <div class="container">
-
-        <div class="row">
-            <!--Start Intro One Single-->
-            <div class="col-xl-4 col-lg-4 wow animated fadeInUp" data-wow-delay="0.1s">
-                <div class="intro-one__single">
-                    <div class="intro-one__single-img">
-                        <div class="inner">
-                            <img src="<?php echo e(asset('dapafue/assets/images/resources/intro-v1-img1.jpg')); ?>" alt="#">
-                        </div>
-                        <div class="icon-box">
-                            <span class="icon-privacy"></span>
-                        </div>
-                    </div>
-
-                    <div class="intro-one__single-content text-center">
-                        <div class="shape1"><img src="<?php echo e(asset('dapafue/assets/images/shapes/intro-v1-shape1.png')); ?>" alt="#"></div>
-                        <h2><a href="#">School of Laguage</a></h2>
-                        <p>What is today known as the School of Languages started as an <br>
-                            unnamed body of three foundation Departments in May 1964.</p>
-                    </div>
-                </div>
-            </div>
-            <!--End Intro One Single-->
-
-            <!--Start Intro One Single-->
-            <div class="col-xl-4 col-lg-4 wow animated fadeInUp" data-wow-delay="0.2s">
-                <div class="intro-one__single">
-                    <div class="intro-one__single-img">
-                        <div class="inner">
-                            <img src="<?php echo e(asset('dapafue/assets/images/resources/intro-v1-img2.jpg')); ?>" alt="#">
-                        </div>
-                        <div class="icon-box">
-                            <span class="icon-filter"></span>
-                        </div>
-                    </div>
-
-                    <div class="intro-one__single-content text-center">
-                        <div class="shape1"><img src="<?php echo e(asset('dapafue/assets/images/shapes/intro-v1-shape1.png')); ?>" alt="#"></div>
-                        <h2><a href="#">School of Art & Social Sciences</a></h2>
-                        <p>
-                            The School of Arts and Social Sciences is one of the foundation Schools in the College.
-                             <br>
-                             It was formerly known as the School of Arts</p>
-                    </div>
-                </div>
-            </div>
-            <!--End Intro One Single-->
-
-            <!--Start Intro One Single-->
-            <div class="col-xl-4 col-lg-4 wow animated fadeInUp" data-wow-delay="0.3s">
-                <div class="intro-one__single">
-                    <div class="intro-one__single-img">
-                        <div class="inner">
-                            <img src="<?php echo e(asset('dapafue/assets/images/resources/intro-v1-img3.jpg')); ?>" alt="#">
-                        </div>
-                        <div class="icon-box">
-                            <span class="icon-laptop"></span>
-                        </div>
-                    </div>
-
-                    <div class="intro-one__single-content text-center">
-                        <div class="shape1"><img src="<?php echo e(asset('dapafue/assets/images/shapes/intro-v1-shape1.png')); ?>" alt="#"></div>
-                        <h2><a href="#">School of Vocation and Technical Education</a></h2>
-                        <p>The School of Vocational and Technical Education started as School of  <br>
-                            Applied Arts and Sciences in 1964</p>
-                    </div>
-                </div>
-            </div>
-            <!--End Intro One Single-->
-
-            <!--Start Intro One Single-->
-            <div class="col-xl-4 col-lg-4 wow animated fadeInUp" data-wow-delay="0.3s">
-                <div class="intro-one__single">
-                    <div class="intro-one__single-img">
-                        <div class="inner">
-                            <img src="<?php echo e(asset('dapafue/assets/images/resources/intro-v1-img3.jpg')); ?>" alt="#">
-                        </div>
-                        <div class="icon-box">
-                            <span class="icon-laptop"></span>
-                        </div>
-                    </div>
-
-                    <div class="intro-one__single-content text-center">
-                        <div class="shape1"><img src="<?php echo e(asset('dapafue/assets/images/shapes/intro-v1-shape1.png')); ?>" alt="#"></div>
-                        <h2><a href="#">School of Science</a></h2>
-                        <p>The School of Vocational and Technical Education started as School of  <br>
-                            Applied Arts and Sciences in 1964</p>
-                    </div>
-                </div>
-            </div>
-            <!--End Intro One Single-->
-
-            <!--Start Intro One Single-->
-            <div class="col-xl-4 col-lg-4 wow animated fadeInUp" data-wow-delay="0.3s">
-                <div class="intro-one__single">
-                    <div class="intro-one__single-img">
-                        <div class="inner">
-                            <img src="<?php echo e(asset('dapafue/assets/images/resources/intro-v1-img3.jpg')); ?>" alt="#">
-                        </div>
-                        <div class="icon-box">
-                            <span class="icon-laptop"></span>
-                        </div>
-                    </div>
-
-                    <div class="intro-one__single-content text-center">
-                        <div class="shape1"><img src="<?php echo e(asset('dapafue/assets/images/shapes/intro-v1-shape1.png')); ?>" alt="#"></div>
-                        <h2><a href="#">School of General Education</a></h2>
-                        <p>The School of Vocational and Technical Education started as School of  <br>
-                            Applied Arts and Sciences in 1964</p>
-                    </div>
-                </div>
-            </div>
-            <!--End Intro One Single-->
-        </div>
-    </div> -->
+    </div>
 </section>
 
 <!--Start Team One-->
@@ -403,9 +292,7 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-
-                        <h2><a href="#">A.K  Akinmusere</a></h2>
-
+                        <h2><a href="#"> A.K  Akinmusere</a></h2>
                         <p>Business Editor</p>
                     </div>
                 </div>
@@ -469,7 +356,7 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#"> G.O Batimehin</a></h2>
+                        <h2><a href="#">G.O Batimehin</a></h2>
                         <p>Secretary</p>
                     </div>
                 </div>

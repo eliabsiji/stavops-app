@@ -26,13 +26,13 @@
                                 <div class="bottom-text">
                                     <div class="text-box text-center">
 
-                                        <h4><a href="{{ route('viewjournal',['journalid'=>$journal->paperid]) }}">{{ $journal->title }} </a></h4>
+                                        <h4><a href="{{ route('websiteviewjournal',['journalid'=>$journal->paperid] ) }}">{{ $journal->title }} </a></h4>
 
                                     </div>
 
 
                                 </div>
-                                <h6>  {{ ucfirst($journal->author)}}, Sodiq Tunde AROGUNDADE, Eze Benneth UCHENNA
+                                <h6>  {{ ucfirst($journal->author)}}
                                 1-7</h6>
                             </div>
                         </div>

@@ -162,9 +162,9 @@
                     </div> --}}
 
 
-                    <div class="about-two__content-btn">
+                    {{-- <div class="about-two__content-btn">
                         <a class="thm-btn" href="about.html">Discover more</a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <!--End About Two Content-->
@@ -174,14 +174,14 @@
 <!--End About Two-->
 
 
-   <!--Start Intro One-->
+    <!--Start Intro One-->
    <section class="intro-one intro-one--two">
 
     <div class="shape3"><img src="{{ asset('dapafue/assets/images/shapes/intro-v1-shape3.png')}}" alt=""></div>
     <div class="shape4"><img src="{{ asset('dapafue/assets/images/shapes/intro-v1-shape4.png')}}" alt=""></div>
     <div class="container">
 
-        <div class="row">
+        {{-- <div class="row">
             <!--Start Intro One Single-->
             <div class="col-xl-4 col-lg-4 wow animated fadeInUp" data-wow-delay="0.1s">
                 <div class="intro-one__single">
@@ -293,7 +293,7 @@
                 </div>
             </div>
             <!--End Intro One Single-->
-        </div>
+        </div> --}}
     </div>
 </section>
 
@@ -438,7 +438,7 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#">Mr. A.K Akinmusere</a></h2>
+                        <h2><a href="#"> A.K  Akinmusere</a></h2>
                         <p>Business Editor</p>
                     </div>
                 </div>
@@ -502,12 +502,12 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
+
                         <h2><a href="#">Mr. G.O Batimehin</a></h2>
                         <p>Business Editor</p>
-                    </div>
+
                 </div>
             </div>
-        </div>
     </div>
 </section>
 <!--End Team One-->
