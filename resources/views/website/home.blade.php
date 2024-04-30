@@ -90,7 +90,7 @@
                     <div class="shape1"><img src="{{ asset('dapafue/assets/images/shapes/about-v2-shape1.png')}}" alt="#"></div>
                     <div class="shape2 rotate-me"><img src="{{ asset('dapafue/assets/images/shapes/about-v2-shape2.png')}}" alt="#">
                     </div>
-                    <img src="{{ asset('dapafue/assets/images/about/about-v2-img1.jpg')}}" alt="#">
+                    <img src="{{ asset('dapafue/assets/images/about/school.jpg')}}" alt="#">
                 </div>
             </div>
             <!--End About Two Img-->
@@ -101,9 +101,9 @@
                     <div class="sec-title">
                         <div class="sec-title__tagline">
                             <div class="inner">
-                                <div class="round-box"><img src="{{ asset('dapafue/assets/images/shapes/sec-title-shape.png')}}"
+                                {{-- <div class="round-box"><img src="{{ asset('dapafue/assets/images/shapes/school.jpg')}}"
                                         alt="#">
-                                </div>
+                                </div> --}}
                                 <div class="text">
                                     <p>WHO WE ARE</p>
                                 </div>
@@ -470,7 +470,7 @@
                     </div>
 
                     <div class="team-one__single-content text-center">
-                        <h2><a href="#"> Dr. Akinbobola </a></h2>
+                        <h2><a href="#"> Dr. A.O Akinbobola </a></h2>
                         <p>Member</p>
                     </div>
                 </div>
