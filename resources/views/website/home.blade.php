@@ -123,8 +123,7 @@
                     </h2>
                     <div class="about-two__content-text1">
                         <p>At acejournals, we pride ourselves on offering high-quality, original content that delves deep in
-                            discourse on interdisciplinarity in the academic studies : implication for adequate training of education teacher.
-                        Our team of experts and contributors are passionate about sharing their knowledge and expertise with our readers. </p>
+                            discourse on interdisciplinarity in the academic studies.  </p>
                     </div>
 
                     {{-- <div class="about-two__content-text2">
