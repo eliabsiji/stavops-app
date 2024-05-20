@@ -46,9 +46,6 @@ trait RegistersUsers
           'nationality' =>'',
           'dob' => '']);
         $role = Role::find(2);
-        $permissions = Permission::pluck('id', 'id')->all();
-        $role->syncPermissions($permissions);
-
 
         $role->syncPermissions(['apps-link',
         'userdashboard-list',
